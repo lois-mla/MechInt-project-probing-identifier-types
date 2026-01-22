@@ -20,20 +20,20 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 # # Fill-in-the-middle example
-# prefix = "def "   # Start of function
-# suffix = "(x, y):\n    return x + y\n\nsum = addition(2, 3)"
+prefix = "def "   # Start of function
+suffix = "(x, y):\n    return x + y\n\nsum = addition(2, 3)"
 
 # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
 # The model supports <fim-prefix> and <fim-suffix> for infilling
-# input_text = f"<fim-prefix>{prefix}<fim-suffix>{suffix}<fim-middle>"
+prompt = f"<fim-prefix>{prefix}<fim-suffix>{suffix}<fim-middle>"
 
-prompt = (
-    "<fim-prefix>def "
-    "<fim-middle>"
-    "<fim-suffix>(x, y):\n"
-    "    return x + y\n\n"
-    "sum = addition(2, 3)"
-)
+# prompt = (
+#     "<fim-prefix>def "
+#     "<fim-middle>"
+#     "<fim-suffix>(x, y):\n"
+#     "    return x + y\n\n"
+#     "sum = addition(2, 3)"
+# )
 
 inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
@@ -42,6 +42,8 @@ outputs = model.generate(
     **inputs,
     max_new_tokens=5,
     do_sample=False,
+    early_stopping=False,
+    eos_token_id=None,   # allow generation past EOS prediction
     # temperature=0.7,
 )
 
