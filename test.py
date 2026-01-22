@@ -19,15 +19,23 @@ model = AutoModelForCausalLM.from_pretrained(
     # torch_dtype="float16"
 )
 
-# Fill-in-the-middle example
-prefix = "def "   # Start of function
-suffix = "(x, y):\n    return x + y\n\nsum = addition(2, 3)"
+# # Fill-in-the-middle example
+# prefix = "def "   # Start of function
+# suffix = "(x, y):\n    return x + y\n\nsum = addition(2, 3)"
 
 # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
 # The model supports <fim-prefix> and <fim-suffix> for infilling
-input_text = f"<fim-prefix>{prefix}<fim-suffix>{suffix}<fim-middle>"
+# input_text = f"<fim-prefix>{prefix}<fim-suffix>{suffix}<fim-middle>"
 
-inputs = tokenizer(input_text, return_tensors="pt").to(model.device)
+prompt = (
+    "<fim-prefix>def "
+    "<fim-middle>"
+    "<fim-suffix>(x, y):\n"
+    "    return x + y\n\n"
+    "sum = addition(2, 3)"
+)
+
+inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
 # Generate the missing middle
 outputs = model.generate(
