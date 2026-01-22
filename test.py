@@ -20,8 +20,8 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 # # Fill-in-the-middle example
-prefix = "def "   # Start of function
-suffix = "(x, y):\n    return x + y\n\nsum = addition(2, 3)"
+prefix = "def addition(x, y):\n    return x + y\n\nsum = "   # Start of function
+suffix = "(2, 3)"
 
 # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
 # The model supports <fim-prefix> and <fim-suffix> for infilling
@@ -42,14 +42,24 @@ outputs = model.generate(
     **inputs,
     max_new_tokens=5,
     do_sample=False,
-    early_stopping=False,
-    eos_token_id=None,   # allow generation past EOS prediction
+    # early_stopping=False,
+    # eos_token_id=None,   # allow generation past EOS prediction
     # temperature=0.7,
 )
 
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 
+with torch.no_grad():
+    logits = model(**inputs).logits[:, -1]
+    probs = logits.softmax(dim=-1)
+
+topk = torch.topk(probs, 10)
+tokens = tokenizer.convert_ids_to_tokens(topk.indices)
+scores = topk.values
+
+for t, p in zip(tokens, scores):
+    print(f"{t:15s} {p.item():.3f}")
 
 # # function that adds two numbers
 # def ....(x, y):
