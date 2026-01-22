@@ -32,9 +32,9 @@ inputs = tokenizer(input_text, return_tensors="pt").to(model.device)
 # Generate the missing middle
 outputs = model.generate(
     **inputs,
-    max_new_tokens=128,
-    do_sample=True,
-    temperature=0.7,
+    max_new_tokens=1,
+    do_sample=False,
+    # temperature=0.7,
 )
 
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
