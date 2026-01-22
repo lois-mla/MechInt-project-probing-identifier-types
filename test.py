@@ -20,7 +20,7 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 # # Fill-in-the-middle example
-prefix = "def addition(x, y):\n    return x + y\n\nsum = "   # Start of function
+prefix = "# function that adds two numbers \ndef addition(x, y):\n    return x + y\n\n# add 2 and 3 together\nsum = "   # Start of function
 suffix = "(2, 3)"
 
 # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
