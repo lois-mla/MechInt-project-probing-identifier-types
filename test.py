@@ -25,7 +25,7 @@ suffix = "(2, 3)"
 
 # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
 # The model supports <fim-prefix> and <fim-suffix> for infilling
-prompt = f"<fim-prefix>{prefix}<fim-suffix>{suffix}<fim-middle>"
+prompt = f"<PRE> {prefix} <SUF>{suffix} <MID>"
 
 # prompt = (
 #     "<fim-prefix>def "
