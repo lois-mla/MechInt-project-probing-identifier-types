@@ -27,14 +27,14 @@ print(tokenizer.convert_tokens_to_ids("<PRE>"))
 print(tokenizer.convert_tokens_to_ids("<SUF>"))
 print(tokenizer.convert_tokens_to_ids("<MID>"))
 
-print(tokenizer.convert_tokens_to_ids("<_PRE>"))
-print(tokenizer.convert_tokens_to_ids("<_SUF>"))
-print(tokenizer.convert_tokens_to_ids("<_MID>"))
+print(tokenizer.convert_tokens_to_ids("_<PRE>"))
+print(tokenizer.convert_tokens_to_ids("_<SUF>"))
+print(tokenizer.convert_tokens_to_ids("_<MID>"))
 
 def fill_in_middle(prefix: str, suffix: str):
     # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
     # The model supports <fim-prefix> and <fim-suffix> for infilling
-    prompt = f"<_PRE> {prefix} <_SUF>{suffix} <_MID>"
+    prompt = f"_<PRE> {prefix} _<SUF>{suffix} _<MID>"
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
