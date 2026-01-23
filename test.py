@@ -23,8 +23,8 @@ model = AutoModelForCausalLM.from_pretrained(
 # prefix = "# function that adds two numbers \ndef "   # Start of function
 # suffix = "(x, y):\n    return x + y\n\n# add 2 and 3 together\nsum = addition(2, 3)"
 
-prefix = "# function that adds two numbers \ndef "   # Start of function
-suffix = "(x, y):\n    return x + y\n\n# add 2 and 3 together\nsum = addition(2, 3)"
+prefix = "# set var to 0\n"   # Start of function
+suffix = " = 0\n# add 1 to var\n var +=1 "
 
 # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
 # The model supports <fim-prefix> and <fim-suffix> for infilling
@@ -54,16 +54,16 @@ outputs = model.generate(
 print(tokenizer.decode(outputs[0]))
 
 
-with torch.no_grad():
-    logits = model(**inputs).logits[:, -1]
-    probs = logits.softmax(dim=-1)
+# with torch.no_grad():
+#     logits = model(**inputs).logits[:, -1]
+#     probs = logits.softmax(dim=-1)
 
-topk = torch.topk(probs, 10)
-tokens = tokenizer.convert_ids_to_tokens(topk.indices)
-scores = topk.values
+# topk = torch.topk(probs, 10)
+# tokens = tokenizer.convert_ids_to_tokens(topk.indices)
+# scores = topk.values
 
-for t, p in zip(tokens, scores):
-    print(f"{t:15s} {p.item():.3f}")
+# for t, p in zip(tokens, scores):
+#     print(f"{t:15s} {p.item():.3f}")
 
 # # function that adds two numbers
 # def ....(x, y):
