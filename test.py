@@ -20,8 +20,11 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 # # Fill-in-the-middle example
-prefix = "# function that adds two numbers \ndef addition(x, y):\n    return x + y\n\n# add 2 and 3 together\nsum = "   # Start of function
-suffix = "(2, 3)"
+# prefix = "# function that adds two numbers \ndef "   # Start of function
+# suffix = "(x, y):\n    return x + y\n\n# add 2 and 3 together\nsum = addition(2, 3)"
+
+prefix = "# function that adds two numbers \ndef "   # Start of function
+suffix = "(x, y):\n    return x + y\n\n# add 2 and 3 together\nsum = addition(2, 3)"
 
 # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
 # The model supports <fim-prefix> and <fim-suffix> for infilling
@@ -40,14 +43,15 @@ inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 # Generate the missing middle
 outputs = model.generate(
     **inputs,
-    max_new_tokens=5,
+    max_new_tokens=10,
     do_sample=False,
     # early_stopping=False,
     # eos_token_id=None,   # allow generation past EOS prediction
     # temperature=0.7,
 )
 
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+# print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+print(tokenizer.decode(outputs[0]))
 
 
 with torch.no_grad():
