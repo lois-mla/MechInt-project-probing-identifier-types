@@ -19,25 +19,29 @@ model = AutoModelForCausalLM.from_pretrained(
     # torch_dtype="float16"
 )
 
+print(tokenizer.convert_tokens_to_ids("<fim_prefix>"))
+print(tokenizer.convert_tokens_to_ids("<fim_suffix>"))
+print(tokenizer.convert_tokens_to_ids("<fim_middle>"))
+
+print(tokenizer.convert_tokens_to_ids("<PRE>"))
+print(tokenizer.convert_tokens_to_ids("<SUF>"))
+print(tokenizer.convert_tokens_to_ids("<MID>"))
+
+print(tokenizer.convert_tokens_to_ids("<_PRE>"))
+print(tokenizer.convert_tokens_to_ids("<_SUF>"))
+print(tokenizer.convert_tokens_to_ids("<_MID>"))
+
 def fill_in_middle(prefix: str, suffix: str):
     # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
     # The model supports <fim-prefix> and <fim-suffix> for infilling
-    prompt = f"<PRE> {prefix} <SUF>{suffix} <MID>"
-
-    # prompt = (
-    #     "<fim-prefix>def "
-    #     "<fim-middle>"
-    #     "<fim-suffix>(x, y):\n"
-    #     "    return x + y\n\n"
-    #     "sum = addition(2, 3)"
-    # )
+    prompt = f"<_PRE> {prefix} <_SUF>{suffix} <_MID>"
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
     # Generate the missing middle
     outputs = model.generate(
         **inputs,
-        max_new_tokens=5,
+        max_new_tokens=10,
         do_sample=False,
         # early_stopping=False,
         # eos_token_id=None,   # allow generation past EOS prediction
@@ -49,25 +53,6 @@ def fill_in_middle(prefix: str, suffix: str):
     print(tokenizer.decode(outputs[0]))
     print("end")
 
-
-# Fill-in-the-middle example
-
-# prefix = "def " 
-# suffix = "(x, y):\n    return x + y\n\nsum = addition(2, 3)"
-# fill_in_middle(prefix, suffix)
-
-# prefix = "# function that adds two numbers \ndef " 
-# suffix = "(x, y):\n    return x + y\n\n# add 2 and 3 together \nsum = addition(2, 3)"
-# fill_in_middle(prefix, suffix)
-
-
-# prefix = "# set var to 0 \n"
-# suffix = " = 0\n# add 1 to var\n var +=1 "
-# fill_in_middle(prefix, suffix)
-
-# prefix = ""
-# suffix = " = 0\nvar +=1 "
-# fill_in_middle(prefix, suffix)
 
 prefix = """def """
 suffix = """(x, y):
