@@ -9,7 +9,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
-model_id = "codellama/CodeLlama-7b-hf"
+model_id = "codellama/CodeLlama-7b-Python-hf"
 
 # Load tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(model_id)
