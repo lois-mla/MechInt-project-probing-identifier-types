@@ -19,22 +19,29 @@ model = AutoModelForCausalLM.from_pretrained(
     # torch_dtype="float16"
 )
 
-print(tokenizer.convert_tokens_to_ids("<fim_prefix>"))
-print(tokenizer.convert_tokens_to_ids("<fim_suffix>"))
-print(tokenizer.convert_tokens_to_ids("<fim_middle>"))
+# print(tokenizer.convert_tokens_to_ids("<fim_prefix>"))
+# print(tokenizer.convert_tokens_to_ids("<fim_suffix>"))
+# print(tokenizer.convert_tokens_to_ids("<fim_middle>"))
 
-print(tokenizer.convert_tokens_to_ids("<PRE>"))
-print(tokenizer.convert_tokens_to_ids("<SUF>"))
-print(tokenizer.convert_tokens_to_ids("<MID>"))
+# print(tokenizer.convert_tokens_to_ids("<PRE>"))
+# print(tokenizer.convert_tokens_to_ids("<SUF>"))
+# print(tokenizer.convert_tokens_to_ids("<MID>"))
 
-print(tokenizer.convert_tokens_to_ids("_<PRE>"))
-print(tokenizer.convert_tokens_to_ids("_<SUF>"))
-print(tokenizer.convert_tokens_to_ids("_<MID>"))
+# print(tokenizer.convert_tokens_to_ids("_<PRE>"))
+# print(tokenizer.convert_tokens_to_ids("_<SUF>"))
+# print(tokenizer.convert_tokens_to_ids("_<MID>"))
+
+print(tokenizer.special_tokens_map)
+print(tokenizer.additional_special_tokens)
+
+print(tokenizer.convert_tokens_to_ids("▁<PRE>"))  # correct
+print(tokenizer.convert_tokens_to_ids("▁<MID>"))  # correct
+print(tokenizer.convert_tokens_to_ids("▁<SUF>"))  # correct
 
 def fill_in_middle(prefix: str, suffix: str):
     # CodeLlama FIM convention: use special <fim-prefix> and <fim-suffix> tokens
     # The model supports <fim-prefix> and <fim-suffix> for infilling
-    prompt = f"_<PRE> {prefix} _<SUF>{suffix} _<MID>"
+    prompt = f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
 
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
