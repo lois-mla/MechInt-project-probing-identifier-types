@@ -3,23 +3,24 @@ import transformer_lens
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# model_id = "meta-llama/Llama-2-7b-hf"
+model_id = "meta-llama/Llama-2-7b-hf"
 
-# Load tokenizer and model
-# tokenizer = AutoTokenizer.from_pretrained(model_id)
-# hf_model = AutoModelForCausalLM.from_pretrained(
-#     model_id,
-#     device_map="auto",
-#     # torch_dtype="float16"
-# )
+Load tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+hf_model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    device_map="auto",
+    # torch_dtype="float16"
+)
 
-# model = transformer_lens.HookedTransformer.from_pretrained(
-#     model_id,
-#     hf_model=hf_model,
-#     tokenizer=tokenizer,
-#     device="cuda"
-# )
-model = transformer_lens.HookedTransformer.from_pretrained("bigcode/santacoder")
+model = transformer_lens.HookedTransformer.from_pretrained(
+    model_id,
+    hf_model=hf_model,
+    tokenizer=tokenizer,
+    device="cuda"
+)
+# model = transformer_lens.HookedTransformer.from_pretrained("bigcode/santacoder")
+
 
 
 def fill_in_middle(prefix: str, suffix: str):
