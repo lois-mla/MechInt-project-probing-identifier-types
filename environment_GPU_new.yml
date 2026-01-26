@@ -334,7 +334,7 @@
 #       - markdown==3.10.1
 #       # add any remaining pip packages from your CPU env here
 
-name: mechint-gpu
+name: mechint-gpu-new
 channels:
   - nvidia
   - pytorch
