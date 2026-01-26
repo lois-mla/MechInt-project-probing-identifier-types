@@ -363,7 +363,7 @@ dependencies:
   # ---- PyTorch stack (GPU builds pinned) ----
   - pytorch=2.2.2=*cuda*
   - torchvision=0.17.2=*cuda*
-  - torchaudio=2.2.2=*cuda*
+  - torchaudio=2.2.2
 
   # ---- Compiler runtime safety (prevents GLIBCXX errors) ----
   - libstdcxx-ng>=12
