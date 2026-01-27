@@ -334,21 +334,80 @@
 #       - markdown==3.10.1
 #       # add any remaining pip packages from your CPU env here
 
-name: mechint-gpu-new
+# name: mechint-gpu-new
+# channels:
+#   - pytorch
+#   - nvidia
+#   - conda-forge
+#   - defaults
+
+# dependencies:
+#   # ---- Core ----
+#   - python=3.10.13
+#   - pip=24.2
+#   - numpy<2
+#   - pandas
+#   - matplotlib
+#   - seaborn
+#   - scikit-learn
+#   - jupyterlab
+#   - notebook
+#   - ipykernel
+#   - ipywidgets
+#   - pillow
+
+#   # ---- CUDA runtime (managed by conda) ----
+#   - cuda-toolkit=11.8
+#   - pytorch-cuda=11.8
+
+#   # ---- PyTorch stack (GPU builds pinned) ----
+#   - pytorch=2.2.2=*cuda*
+#   - torchvision=0.17.2
+#   - torchaudio=2.2.2
+
+#   # ---- Compiler runtime safety (prevents GLIBCXX errors) ----
+#   - libstdcxx-ng>=12
+#   - gcc_impl_linux-64>=12
+
+#   # ---- Pip packages ----
+#   - pip:
+#       - transformer-lens==2.17.0
+#       - transformers==4.57.6
+#       - accelerate>=0.27.0
+#       - tensorboard==2.17.1
+#       - pytorch-lightning==2.2.5
+#       - pytest>=8.0.0
+#       - typeguard>=4.0.0
+#       - tabulate>=0.9.0
+#       - tqdm>=4.66.5
+#       - datasets>=2.18.0
+#       - sentencepiece>=0.2.0
+#       - litellm>=1.81.1
+#       - openai==2.15.0
+#       - safetensors==0.7.0
+#       - torchmetrics==1.8.2
+#       - wandb==0.24.0
+#       - jupyterlab-widgets==3.0.16
+#       - jupyter-server==2.17.0
+#       - jupyter-client==8.8.0
+#       - jupyter-core==5.9.1
+#       - markdown-it-py==4.0.0
+#       - markdown==3.10.1
+
+name: mechint-gpu
 channels:
-  - nvidia
   - pytorch
-  - conda-forge
+  - nvidia
   - defaults
+  - conda-forge
 
 dependencies:
   # ---- Core ----
-  - python=3.10.13
-  - pip=24.2
+  - python=3.10
+  - pip=24.2.0
   - numpy<2
   - pandas
   - matplotlib
-  - seaborn
   - scikit-learn
   - jupyterlab
   - notebook
@@ -356,18 +415,15 @@ dependencies:
   - ipywidgets
   - pillow
 
-  # ---- CUDA runtime (managed by conda) ----
-  - cuda-toolkit=11.8
-  - pytorch-cuda=11.8
-
-  # ---- PyTorch stack (GPU builds pinned) ----
-  - pytorch=2.2.2=*cuda*
+  # ---- PyTorch stack (single-channel controlled) ----
+  - pytorch=2.2.2
   - torchvision=0.17.2
   - torchaudio=2.2.2
+  - pytorch-cuda=11.8
 
-  # ---- Compiler runtime safety (prevents GLIBCXX errors) ----
-  - libstdcxx-ng>=12
-  - gcc_impl_linux-64>=12
+  # ---- Runtime ABI safety (important on HPC) ----
+  - libgcc-ng
+  - libstdcxx-ng
 
   # ---- Pip packages ----
   - pip:
@@ -376,20 +432,8 @@ dependencies:
       - accelerate>=0.27.0
       - tensorboard==2.17.1
       - pytorch-lightning==2.2.5
-      - pytest>=8.0.0
-      - typeguard>=4.0.0
-      - tabulate>=0.9.0
-      - tqdm>=4.66.5
       - datasets>=2.18.0
       - sentencepiece>=0.2.0
-      - litellm>=1.81.1
-      - openai==2.15.0
       - safetensors==0.7.0
       - torchmetrics==1.8.2
       - wandb==0.24.0
-      - jupyterlab-widgets==3.0.16
-      - jupyter-server==2.17.0
-      - jupyter-client==8.8.0
-      - jupyter-core==5.9.1
-      - markdown-it-py==4.0.0
-      - markdown==3.10.1
