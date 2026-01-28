@@ -438,7 +438,7 @@
 #       - torchmetrics==1.8.2
 #       - wandb==0.24.0
 
-name: mechint-gpu2
+name: mechint-gpu3
 channels:
   - conda-forge
   - defaults
@@ -545,7 +545,7 @@ dependencies:
       - pycurl==7.43.0.6
       - pydantic==2.12.5
       - pydantic_core==2.41.5
-      - pygit2==1.14.0
+      # - pygit2==1.14.0
       - Pygments==2.19.2
       - PyGObject==3.40.1
       - pyinotify==0.9.6
