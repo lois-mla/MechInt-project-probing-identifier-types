@@ -1,3 +1,17 @@
+"""
+This file contains the necessary class and functions to train and use a linear probe.
+
+get_residual_activations() takes as input a list of strings (the prompts we will use to train the linear probe),
+and returns the residual activations for the <MID> token from the specified layer. (so output shape: [N, d_model])
+
+The LinearProbe class is a simple linear layer that takes the residual activations as input and outputs class logits.
+In order to use the LinearProbe, we will need to feed the examples to get_residual_activations (this is x for training),
+and get a tensor with corresponding label indices (this is y for training).
+
+Still need to add how to use the learned weight matrix W, to get insight into possible
+feature directions for the different identifier types.
+"""
+
 # importing stuff
 import transformer_lens
 import torch
@@ -7,23 +21,17 @@ import torch.nn.functional as F
 
 # model_id = "meta-llama/Llama-2-7b-hf"
 
-# # Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained("bigcode/santacoder")
+# Load tokenizer and model
+# CodeLlama 7B has d_model=4096, n_layers = 32, n_heads=32, d_head=128
+model_id = "codellama/CodeLlama-7b-hf"
+tokenizer = AutoTokenizer.from_pretrained(model_id)
 tokenizer.pad_token = tokenizer.eos_token # padding works with eos tokens
-# hf_model = AutoModelForCausalLM.from_pretrained(
-#     model_id,
-#     device_map="auto",
-#     # torch_dtype="float16"
-# )
 
-# model = transformer_lens.HookedTransformer.from_pretrained(
-#     model_id,
-
-#     hf_model=hf_model,
-#     tokenizer=tokenizer,
-#     device="cuda"
-# )
-model = transformer_lens.HookedTransformer.from_pretrained("bigcode/santacoder")
+model = transformer_lens.HookedTransformer.from_pretrained(
+    model_id,
+    torch_dtype=torch.float16,
+    device="cuda"
+)
 
 def fill_in_middle(prefix: str, suffix: str):
     
@@ -94,10 +102,10 @@ prompt_5 = fill_in_middle(prefix, suffix)
 def get_residual_activations(
     model: transformer_lens.HookedTransformer,
     data: list[str],
-    layer: int,
+    layer: int,  
     resid_type: str = "mlp_out", # where in the layer you retrieve activations
     batch_size: int = 8, # for computational efficiency
-    max_length: int = 256,
+    max_length: int = 256, # how long is a prompt allowed to be
     device: str = "cuda",
 ) -> torch.Tensor:
     """
@@ -127,31 +135,56 @@ def get_residual_activations(
             return_tensors="pt",
         )
 
-        tokens = enc["input_ids"].to(device)
+        tokens = enc["input_ids"].to(device) # shape: [batch, pos]
 
-        # use the attention mask to get the position of the last non-padding token
-        # because real tokens get 1, padding tokens get 0
-        mask = enc["attention_mask"]  # shape: [batch, pos]
-
-        # Index of last non-padding token for each sequence (prompt)
-        last_token_idx = mask.sum(dim=1) - 1  # [batch]
-
-        # sanity check, should return the <MID> token 
-        for seq, idx in zip(batch, last_token_idx):
-            print("last non-padding token:")
-            print(tokenizer.decode(tokens[0, idx]))
-
-        # Run the model and cache *all* intermediate activations
-        _, cache = model.run_with_cache(tokens, return_type=None)
+        # Run the model and cache *all* intermediate activations up until necessary layer
+        # _, cache = model.run_with_cache(tokens, return_type=None)
+        _, cache = model.run_with_cache(
+            tokens,
+            return_type=None,
+            stop_at_layer=layer + 1
+        )
 
         # Extract a specific activation:
         # e.g. ("mlp_out", layer) → [batch, pos, d_model]
         # pos: sequence length after padding
         acts = cache[(resid_type, layer)] 
 
-        # Gather the activations at those positions
-        mid_acts = acts[torch.arange(acts.size(0)), last_token_idx]
-        # shape: [batch, d_model]
+        # Gather the activations at the ▁<MID> position
+        mid_token_id = tokenizer.convert_tokens_to_ids("▁<MID>")
+        print("MID token ID:", mid_token_id)
+
+        mid_acts = []
+
+        # Iterate over each sequence in the batch
+        for b in range(tokens.size(0)):
+            # Find all positions in this sequence where the token ID equals <MID>
+            # (tokens[b] has shape [pos])
+            mid_pos = (tokens[b] == mid_token_id).nonzero(as_tuple=True)[0]
+
+            # Sanity check: we expect exactly ONE <MID> token per prompt
+            # If this fails, something is wrong with prompt construction or tokenization
+            assert len(mid_pos) == 1, (
+                f"Expected exactly one <MID> token, "
+                f"but found {len(mid_pos)} in sequence {b}"
+            )
+
+            # Extract the position index of the <MID> token
+            pos = mid_pos.item()
+
+            # --- SANITY CHECK ---
+            # Decode and print the token at this position to verify correctness
+            # This should print "<MID>" for CodeLLaMA
+            # found_token = tokenizer.decode(tokens[b, pos])
+            # print(f"Sequence {b}: found token at <MID> position → {found_token}")
+
+            # Extract the activation vector at the <MID> position
+            # acts has shape [batch, pos, d_model]
+            mid_acts.append(acts[b, pos])
+
+        # Stack all <MID> activations into a single tensor
+        # Final shape: [batch, d_model]
+        mid_acts = torch.stack(mid_acts)
 
         # Move to CPU so GPU memory can be freed
         all_acts.append(mid_acts.cpu())
@@ -162,7 +195,7 @@ def get_residual_activations(
 res_activations = get_residual_activations(
     model,
     data=[prompt, prompt_2, prompt_3, prompt_4, prompt_5],
-    layer=1,
+    layer=30,
     resid_type="mlp_out"
 )
 
@@ -177,15 +210,13 @@ class LinearProbe(nn.Module):
     This probe takes a single residual stream vector
     (e.g. mlp_out at the <MID> position) and predicts
     an identifier type.
-
-    Uses class indices (0, 1, 2, ...)
-    so labels = torch.tensor([0, 2, 1, 0, ...], dtype=torch.long)
-
-    PyTorch internally treats this as the corresponding one-hot target.
     """
 
     def __init__(self, d_model: int, num_classes: int):
         super().__init__()
+        # model consists of 1 linear layer, so one matrix W and vector b
+        # self.linear.weight retrieves W
+        # self.linear.bias retrieves b
         self.linear = nn.Linear(d_model, num_classes, bias=True)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -197,29 +228,116 @@ class LinearProbe(nn.Module):
 
 def train_probe(
     probe: LinearProbe,
-    X: torch.Tensor,
-    y: torch.Tensor,
+    X: torch.Tensor, # [N (#examples), d_model]
+    y: torch.Tensor, # [N] (class indices; 0, 1, 2)
     num_epochs: int = 10,
     lr: float = 1e-3,
     batch_size: int = 32,
 ):
     probe.train()
     optimizer = torch.optim.Adam(probe.parameters(), lr=lr)
-    criterion = nn.CrossEntropyLoss()
+    criterion = nn.CrossEntropyLoss() # for multi-class classification
+    # (PyTorch internally uses one-hot targets)
 
     for epoch in range(num_epochs):
+        # Shuffle the data at the beginning of each epoch
         perm = torch.randperm(X.size(0))
         X_shuf = X[perm]
         y_shuf = y[perm]
 
+        # Iterate over mini-batches
         for i in range(0, X.size(0), batch_size):
             xb = X_shuf[i:i+batch_size]
             yb = y_shuf[i:i+batch_size]
 
-            logits = probe(xb)
+            logits = probe(xb) # calls probe.forward() implicitly
             loss = criterion(logits, yb)
 
+            # Backpropagation, baby
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
+
+@torch.inference_mode()
+def predict_probe(
+    probe: LinearProbe,
+    X: torch.Tensor, # [N, d_model]
+    batch_size: int = 32,
+) -> torch.Tensor:
+    """
+    Predict class labels using a trained linear probe.
+
+    X: [N, d_model]
+    Returns: [N] predicted class indices
+    """
+    probe.eval()
+    preds = []
+
+    for i in range(0, X.size(0), batch_size):
+        xb = X[i:i+batch_size]
+        logits = probe(xb)
+        predicted = torch.argmax(logits, dim=-1)
+        preds.append(predicted.cpu())
+
+    return torch.cat(preds, dim=0)
+
+@torch.inference_mode()
+def evaluate_probe(
+    probe: LinearProbe,
+    X: torch.Tensor,
+    y: torch.Tensor,
+    batch_size: int = 32,
+) -> float:
+    """
+    Evaluate probe accuracy.
+
+    X: [N, d_model]
+    y: [N]
+    """
+    probe.eval()
+    correct = 0
+    total = 0
+
+    for i in range(0, X.size(0), batch_size):
+        xb = X[i:i+batch_size]
+        yb = y[i:i+batch_size]
+
+        logits = probe(xb)
+        preds = torch.argmax(logits, dim=-1)
+
+        correct += (preds == yb).sum().item()
+        total += yb.size(0)
+
+    return correct / total
+
+# Toy example to test the probe
+torch.manual_seed(0)
+
+# Create toy data
+N = 300
+D = 2
+C = 3
+
+X0 = torch.randn(N//3, D) + torch.tensor([2.0, 0.0])
+X1 = torch.randn(N//3, D) + torch.tensor([-2.0, 0.0])
+X2 = torch.randn(N//3, D) + torch.tensor([0.0, 2.0])
+
+X = torch.cat([X0, X1, X2], dim=0)
+y = torch.tensor([0]*(N//3) + [1]*(N//3) + [2]*(N//3))
+
+# Train probe
+probe = LinearProbe(d_model=D, num_classes=C)
+train_probe(probe, X, y, num_epochs=50, lr=1e-2)
+
+# Evaluate
+probe.eval()
+with torch.no_grad():
+    logits = probe(X)
+    preds = logits.argmax(dim=-1)
+    acc = (preds == y).float().mean()
+
+print("Toy accuracy:", acc.item())
+# gives 0.89, is around the expected value 
+
+
 
