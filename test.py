@@ -64,9 +64,9 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 
         correct, ID = after_arrow.split("\nID:")
 
-        prefix = f'"""{before_fim}"""'
-        suffix = f'"""{middle}"""'
-        correct = f'"""{after_arrow}"""'
+        prefix = before_fim
+        suffix = middle
+        correct = after_arrow
 
         examples.append({
             "identifier_type": int(ID),
