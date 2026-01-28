@@ -25,8 +25,6 @@ tokenizer.pad_token = tokenizer.eos_token
 # )
 model = transformer_lens.HookedTransformer.from_pretrained("bigcode/santacoder")
 
-
-
 def fill_in_middle(prefix: str, suffix: str):
     
     return f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
