@@ -84,28 +84,28 @@ def get_prompt(prefix: str, suffix: str):
     return f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
 
 def fill_in_middle(data):
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-data = read_fim_dataset("training_data/template.txt")
+    data = read_fim_dataset("training_data/template.txt")
 
-for item in data:
-    prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+    for item in data:
+        prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+        
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
+        # Generate the missing middle
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=10,
+            do_sample=False,
+            # early_stopping=False,
+            # eos_token_id=None,   # allow generation past EOS prediction
+            # temperature=0.7,
+        )
 
-    # Generate the missing middle
-    outputs = model.generate(
-        prompt,
-        max_new_tokens=10,
-        do_sample=False,
-        # early_stopping=False,
-        # eos_token_id=None,   # allow generation past EOS prediction
-        # temperature=0.7,
-    )
-
-    print("begin")
-    # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-    print(tokenizer.decode(outputs[0]))
-    print("end")
+        print("begin")
+        # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+        print(tokenizer.decode(outputs[0]))
+        print("end")
 
 
 
