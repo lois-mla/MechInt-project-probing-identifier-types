@@ -107,13 +107,13 @@ def fill_in_middle(file):
         print(tokenizer.decode(outputs[0]))
         print("end")
 
-# fill_in_middle("training_data/template.txt")
+fill_in_middle("training_data/template.txt")
 
-data = read_fim_dataset("training_data/template.txt")
+# data = read_fim_dataset("training_data/template.txt")
 
-for item in data:
-    prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
-    print(prompt)
+# for item in data:
+#     prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+#     print(prompt)
 
 # prefix = """def """
 # suffix = """(x, y):
