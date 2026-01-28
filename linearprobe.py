@@ -9,7 +9,7 @@ import torch.nn.functional as F
 
 # # Load tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained("bigcode/santacoder")
-tokenizer.pad_token = tokenizer.eos_token
+tokenizer.pad_token = tokenizer.eos_token # padding works with eos tokens
 # hf_model = AutoModelForCausalLM.from_pretrained(
 #     model_id,
 #     device_map="auto",
@@ -51,26 +51,65 @@ print("Logits shape:", prompt_logits.shape)
 activations = prompt_cache["mlp_out", 1]
 print("Activations shape:", activations.shape)
 
+prefix = """# function that adds two numbers
+def """
+suffix = """(x, y):
+    return x + y
+
+# add 2 and 3 together
+sum = addition(2, 3)
+"""
+
+prompt_2 = fill_in_middle(prefix, suffix)
+
+prefix = """# set var to 0
+"""
+suffix = """ = 0
+# add 1 to var
+var += 1
+"""
+
+prompt_3 = fill_in_middle(prefix, suffix)
+
+prefix = ""
+suffix = """ = 0
+var += 1
+"""
+
+prompt_4 = fill_in_middle(prefix, suffix)
+
+
+prefix = """class """ 
+suffix = """:
+    def __init__(self):
+        self.data = []
+
+    def add(self, x):
+        self.data.append(x)
+
+bag = Bag()"""
+
+prompt_5 = fill_in_middle(prefix, suffix)
+
 
 @torch.inference_mode()
 def get_residual_activations(
     model: transformer_lens.HookedTransformer,
     data: list[str],
     layer: int,
-    resid_type: str = "mlp_out",
-    batch_size: int = 8,
+    resid_type: str = "mlp_out", # where in the layer you retrieve activations
+    batch_size: int = 8, # for computational efficiency
     max_length: int = 256,
     device: str = "cuda",
 ) -> torch.Tensor:
     """
     Returns activations suitable for linear probing.
+    Returns the activations at the <MID> position. (last token before padding)
 
-    Output shape: [N, L, D]
-        N = number of sequences
-        L = number of token positions per sequence
+    Output shape: [N, D]
+        N = number of sequences (# prompts)
         D = d_model (hidden size)
 
-    Each token position gets its own vector.
     """
 
     all_acts = []
@@ -80,7 +119,7 @@ def get_residual_activations(
         batch = data[i : i + batch_size]
 
         # Convert text → token IDs
-        # Padding ensures all sequences in batch have same L
+        # Padding ensures all sequences in batch have same L 
         # Tokenize with HF tokenizer (this supports padding/truncation)
         enc = tokenizer(
             batch,
@@ -92,27 +131,46 @@ def get_residual_activations(
 
         tokens = enc["input_ids"].to(device)
 
+        # use the attention mask to get the position of the last non-padding token
+        # because real tokens get 1, padding tokens get 0
+        mask = enc["attention_mask"]  # shape: [batch, pos]
+
+        # Index of last non-padding token for each sequence (prompt)
+        last_token_idx = mask.sum(dim=1) - 1  # [batch]
+
+        # sanity check, should return the <MID> token 
+        for seq, idx in zip(batch, last_token_idx):
+            print("last non-padding token:")
+            print(tokenizer.decode(tokens[0, idx]))
+
         # Run the model and cache *all* intermediate activations
         _, cache = model.run_with_cache(tokens, return_type=None)
 
         # Extract a specific activation:
         # e.g. ("mlp_out", layer) → [batch, pos, d_model]
-        acts = cache[(resid_type, layer)]
+        # pos: sequence length after padding
+        acts = cache[(resid_type, layer)] 
+
+        # Gather the activations at those positions
+        mid_acts = acts[torch.arange(acts.size(0)), last_token_idx]
+        # shape: [batch, d_model]
 
         # Move to CPU so GPU memory can be freed
-        all_acts.append(acts.cpu())
+        all_acts.append(mid_acts.cpu())
 
-    # Stack all batches → [N, L, D]
+    # Stack all batches → [N, d_model]
     return torch.cat(all_acts, dim=0)
 
 res_activations = get_residual_activations(
     model,
-    data=[prompt],
+    data=[prompt, prompt_2, prompt_3, prompt_4, prompt_5],
     layer=1,
     resid_type="mlp_out"
 )
 
-print("Residual activations shape:", res_activations.shape)
+# get the activations at the <MID> position (last token of the prompt)
+
+print("Residual activations shape for the last non-padding token position:", res_activations.shape)
 
 class LinearProbe(nn.Module):
     """
