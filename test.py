@@ -81,7 +81,7 @@ def get_prompt(prefix: str, suffix: str):
     """
     returns prompt
     """
-    return f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
+    return f"▁<PRE>{prefix}▁<SUF>{suffix}▁<MID>"
 
 def fill_in_middle(file):
 
@@ -110,6 +110,7 @@ def fill_in_middle(file):
 fill_in_middle("training_data/template.txt")
 
 # data = read_fim_dataset("training_data/template.txt")
+# print(data)
 
 # for item in data:
 #     prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
