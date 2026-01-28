@@ -7,7 +7,6 @@ class MyClass():
 FIM = 12
 
 sum = addition(1, 2)
-
 bop = MyClass()
 one = bop.x
 zee = z
@@ -23,7 +22,6 @@ class MyClass():
 z = 12
 
 sum = addition(1, 2)
-
 bop = MyClass()
 one = bop.x
 zee = z
@@ -39,7 +37,6 @@ class FIM():
 z = 12
 
 sum = addition(1, 2)
-
 bop = MyClass()
 one = bop.x
 zee = z
@@ -55,7 +52,6 @@ class MyClass():
 z = 12
 
 sum = addition(1, 2)
-
 bop = MyClass()
 one = bop.x
 zee = FIM
@@ -86,10 +82,8 @@ class MyClass():
 z = 12
 
 sum = addition(1, 2)
-
 bop = FIM()
 one = bop.x
 zee = z
 >>>MyClass
 ID:2
-#####

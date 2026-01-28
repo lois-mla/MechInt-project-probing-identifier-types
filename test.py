@@ -64,9 +64,9 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 
         correct, ID = after_arrow.split("\nID:")
 
-        prefix = f'"""{before_fim.rstrip()}"""'
-        suffix = f'"""{middle.strip()}"""'
-        correct = f'"""{after_arrow.strip()}"""'
+        prefix = f'"""{before_fim}"""'
+        suffix = f'"""{middle}"""'
+        correct = f'"""{after_arrow}"""'
 
         examples.append({
             "identifier_type": int(ID),
@@ -107,7 +107,13 @@ def fill_in_middle(file):
         print(tokenizer.decode(outputs[0]))
         print("end")
 
-fill_in_middle("training_data/template.txt")
+# fill_in_middle("training_data/template.txt")
+
+data = read_fim_dataset("training_data/template.txt")
+
+for item in data:
+    prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+    print(prompt)
 
 # prefix = """def """
 # suffix = """(x, y):
