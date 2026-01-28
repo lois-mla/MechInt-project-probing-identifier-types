@@ -83,9 +83,9 @@ def get_prompt(prefix: str, suffix: str):
     """
     return f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
 
-def fill_in_middle(data):
+def fill_in_middle(file):
 
-    data = read_fim_dataset("training_data/template.txt")
+    data = read_fim_dataset(file)
 
     for item in data:
         prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
@@ -107,7 +107,7 @@ def fill_in_middle(data):
         print(tokenizer.decode(outputs[0]))
         print("end")
 
-
+fill_in_middle("training_data/template.txt")
 
 # prefix = """def """
 # suffix = """(x, y):
