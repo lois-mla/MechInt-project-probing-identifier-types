@@ -28,11 +28,11 @@ print("Logit difference directions shape:", logit_diff_directions.shape)
 
 # NBVAL_IGNORE_OUTPUT
 model = HookedTransformer.from_pretrained(
-    "gpt2-small",
-    center_unembed=True,
-    center_writing_weights=True,
-    fold_ln=True,
-    refactor_factored_attn_matrices=True,
+    "codellama/CodeLlama-7b-hf",
+#    center_unembed=True,
+#    center_writing_weights=True,
+#    fold_ln=True,
+#    refactor_factored_attn_matrices=True,
 )
 
 # Get the default device used
@@ -42,9 +42,10 @@ device: torch.device = utils.get_device()
 
 
 
-example_prompt = "After John and Mary went to the store, John gave a bottle of milk to"
-example_answer = " Mary"
+example_prompt = "<▁PRE>def pet(a,b):\n   return(a+b)\nx=3\ny=5\n#new variable z equal to 8\nz=<▁SUF>(x,y)<▁MID>"
+example_answer = "pet"
 utils.test_prompt(example_prompt, example_answer, model, prepend_bos=True)
+
 
 
 
