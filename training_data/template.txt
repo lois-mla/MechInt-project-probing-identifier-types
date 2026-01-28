@@ -1,0 +1,95 @@
+def addition(x, y):
+    return x + y
+
+class MyClass():
+    x = 1
+
+FIM = 12
+
+sum = addition(1, 2)
+
+bop = MyClass()
+one = bop.x
+zee = z
+>>>z
+ID:0
+#####
+def FIM(x, y):
+    return x + y
+
+class MyClass():
+    x = 1
+
+z = 12
+
+sum = addition(1, 2)
+
+bop = MyClass()
+one = bop.x
+zee = z
+>>>addition
+ID:1
+#####
+def addition(x, y):
+    return x + y
+
+class FIM():
+    x = 1
+
+z = 12
+
+sum = addition(1, 2)
+
+bop = MyClass()
+one = bop.x
+zee = z
+>>>MyClass
+ID:2
+#####
+def addition(x, y):
+    return x + y
+
+class MyClass():
+    x = 1
+
+z = 12
+
+sum = addition(1, 2)
+
+bop = MyClass()
+one = bop.x
+zee = FIM
+>>>z
+ID:0
+#####
+def addition(x, y):
+    return x + y
+
+class MyClass():
+    x = 1
+
+z = 12
+
+sum = FIM(1, 2)
+bop = MyClass()
+one = bop.x
+zee = z
+>>>addition
+ID:1
+#####
+def addition(x, y):
+    return x + y
+
+class MyClass():
+    x = 1
+
+z = 12
+
+sum = addition(1, 2)
+
+bop = FIM()
+one = bop.x
+zee = z
+>>>MyClass
+ID:2
+#####
