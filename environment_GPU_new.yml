@@ -438,7 +438,7 @@
 #       - torchmetrics==1.8.2
 #       - wandb==0.24.0
 
-name: mechint-gpu1
+name: mechint-gpu2
 channels:
   - conda-forge
   - defaults
@@ -461,8 +461,8 @@ dependencies:
       - Babel==2.9.1
       - beartype==0.14.1
       - better-abc==0.0.3
-      - boto3==1.28.62
-      - botocore==1.31.62
+      # - boto3==1.28.62
+      # - botocore==1.31.62
       - certifi==2023.5.7
       - cffi==1.14.5
       - chardet==4.0.0
@@ -584,7 +584,7 @@ dependencies:
       - typing-inspection==0.4.2
       - typing_extensions==4.15.0
       - tzdata==2025.3
-      - urllib3==2.6.3
+      # - urllib3==2.6.3
       - virtualenv==20.21.1
       - wandb==0.24.0
       - websockify==0.11.0
