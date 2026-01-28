@@ -6,13 +6,13 @@ import torch
 model_id = "codellama/CodeLlama-7b-hf"
 # model_id = "llama-7b-hf"
 
-# Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    device_map="auto",
-    # torch_dtype="float16"
-)
+# # Load tokenizer and model
+# tokenizer = AutoTokenizer.from_pretrained(model_id)
+# model = AutoModelForCausalLM.from_pretrained(
+#     model_id,
+#     device_map="auto",
+#     # torch_dtype="float16"
+# )
 
 # load a model
 model = transformer_lens.HookedTransformer.from_pretrained(model_id)
