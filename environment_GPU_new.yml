@@ -438,7 +438,7 @@
 #       - torchmetrics==1.8.2
 #       - wandb==0.24.0
 
-name: mechint-gpu3
+# name: mechint-gpu3
 # channels:
 #   - conda-forge
 #   - defaults
