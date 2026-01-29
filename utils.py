@@ -7,6 +7,7 @@
 # model = AutoModelForCausalLM.from_pretrained("codellama/CodeLlama-7b-Python-hf")
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
+import transformer_lens
 from pathlib import Path
 from typing import List, Dict
 
@@ -83,6 +84,7 @@ def get_prompt(prefix: str, suffix: str):
     """
     return f"▁<PRE>{prefix}▁<SUF>{suffix}▁<MID>"
 
+
 def get_prompts_and_IDS(data):
     prompts = []
     ids = []
@@ -93,7 +95,69 @@ def get_prompts_and_IDS(data):
 
     return prompts, ids
 
+
+def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    tokenizer.pad_token = tokenizer.eos_token
+
+    model = transformer_lens.HookedTransformer.from_pretrained(
+        model_id,
+        torch_dtype=torch.float16,
+        device=device,
+    )
+
+    return model, tokenizer
+
+
+def load_dataset(part="FULL"):
+    def_fim_dict = read_fim_dataset("training_data/def_FIM_data.txt")
+    call_fim_dict = read_fim_dataset("training_data/call_FIM_data.txt")
+
+    def_prompts, def_ids = get_prompts_and_IDS(def_fim_dict)
+    call_prompts, call_ids = get_prompts_and_IDS(call_fim_dict)
+
+    if part == "FULL":
+        prompts = def_prompts + call_prompts
+        ids = def_ids + call_ids
+    elif part == "DEF":
+        prompts = def_prompts
+        ids = def_ids
+    elif part == "CALL":
+        prompts = call_prompts
+        ids = call_ids
+
+    return prompts, torch.tensor(ids, dtype=torch.long)
+
+
+def train_test_split(
+    X: torch.Tensor,
+    y: torch.Tensor,
+    test_frac: float = 0.2,
+    seed: int = 0,
+):
+    """
+    Randomly split tensors into train and test sets.
+    """
+    assert X.size(0) == y.size(0)
+    N = X.size(0)
+
+    g = torch.Generator().manual_seed(seed)
+    perm = torch.randperm(N, generator=g)
+
+    n_test = int(test_frac * N)
+    test_idx = perm[:n_test]
+    train_idx = perm[n_test:]
+
+    return (
+        X[train_idx],
+        y[train_idx],
+        X[test_idx],
+        y[test_idx],
+    )
+
     
+
+
 
 def fill_in_middle(file):
 
@@ -119,4 +183,4 @@ def fill_in_middle(file):
         print(tokenizer.decode(outputs[0]))
         print("end")
 
-fill_in_middle("training_data/template.txt")
+# fill_in_middle("training_data/template.txt")
