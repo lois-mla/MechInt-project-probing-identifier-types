@@ -143,9 +143,9 @@ def get_residual_activations(
         _, cache = model.run_with_cache(
             tokens,
             return_type=None,
-            stop_at_layer=layer + 1
+            stop_at_layer=layer + 1,
+            names_filter=[(resid_type, layer)],
         )
-
         # Extract a specific activation:
         # e.g. ("mlp_out", layer) → [batch, pos, d_model]
         # pos: sequence length after padding
