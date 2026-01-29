@@ -14,9 +14,23 @@ model = HookedTransformer.from_pretrained("codellama/CodeLlama-7b-hf")
 device = utils.get_device()
 
 # FIM example
+'''
 example_prompt = "<PRE>def pet(a,b):\n   return(a+b)\nclass cat:\n  x=5\nx=3\ny=5\n#new variable z equal to 8\nz=<SUF>(x,y)<MID>"
 correct_answer = "pet"
 incorrect_answer = "cat" 
+'''
+'''
+example_prompt = "<PRE>def square(x):\n   return x * x\nclass Counter:\ndef __init__(self, start=0):\n        self.value = start\n    def inc(self):\n      self.value += 1\n        return self.value\n<SUF> = True\nsq = square(2)\nctr = Counter(0)\nafter = ctr.inc()\ntotal = ctr.value\nneg = not flag\nboth = flag and False<MID>"
+
+correct_answer = "flag"
+incorrect_answer = "square"
+'''
+
+example_prompt = "class ing:\n    def __init__(self, name):\n        self.name = name\n    def greet(self):\n        return f'Hi {self.name}'\nn = 10\nres = add(1, 7)\ng = FIM('name3')\nmsg = g.greet()\nn = g.name\nm = n + 3\ncheck = n > 5\ndef add(a, b):\n    return a + b"
+
+correct_answer = "ing"
+incorrect_answer = "n"
+
 
 # answer_tokens should be a tensor of shape [batch, 2]
 correct_token = model.to_single_token(correct_answer)
@@ -75,7 +89,43 @@ logit_lens_values = (scaled_resid @ logit_diff_direction).cpu().numpy()
 
 labels = ["Embed"] + [f"L{i}" for i in range(model.cfg.n_layers)]
 
+full_logits = scaled_resid @ model.W_U # [33, vocab_size]
 
+layer_stats = []
+for i, label in enumerate(labels):
+    # Get logits for this specific layer
+    layer_logits = full_logits[i]
+    
+    # Calculate Rank of the correct token
+    # We sort the logits and see where our 'correct_token' sits
+    sorted_logits = torch.argsort(layer_logits, descending=True)
+    rank = (sorted_logits == correct_token).nonzero().item() + 1
+    
+    # Get the top 1 token string for context at this layer
+    top_token_id = sorted_logits[0].item()
+    top_token_str = model.to_string(top_token_id)
+    
+    layer_stats.append({
+        "Layer": label,
+        "Logit Diff": logit_lens_values[i],
+        "Rank": rank,
+        "Top Prediction": top_token_str
+    })
+
+# Convert to DataFrame for a clear view
+stats_df = pd.DataFrame(layer_stats)
+print(stats_df)
+
+# Plotting the evolution of Rank (Log scale is often better for Rank)
+fig = px.line(stats_df, x="Layer", y="Logit Diff", title="Logit Difference Across Layers")
+fig.show()
+
+fig_rank = px.line(stats_df, x="Layer", y="Rank", title="Rank of Correct Token Across Layers")
+fig_rank.update_yaxes(type="log", autorange="reversed") # Ranks are better viewed on log scale
+fig_rank.show()
+
+
+'''
 df = pd.DataFrame({
     "Layer": labels,
     "Logit Difference": logit_lens_values
@@ -86,3 +136,4 @@ fig = px.line(df, x="Layer", y="Logit Difference",
              template="plotly_white")
 fig.update_traces(mode='lines+markers')
 fig.show()
+'''
