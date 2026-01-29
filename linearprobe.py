@@ -18,6 +18,8 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch.nn as nn
 import torch.nn.functional as F
+from utils import read_fim_dataset, get_prompts_and_IDS
+
 
 # model_id = "meta-llama/Llama-2-7b-hf"
 
@@ -339,5 +341,36 @@ with torch.no_grad():
 print("Toy accuracy:", acc.item())
 # gives 0.89, is around the expected value 
 
+########## very messy how to get the data
+# should probably do this in other file idk
+def_fim_dict = read_fim_dataset("training_data/def_FIM_data.txt")
+call_fim_dict = read_fim_dataset("training_data/call_FIM_data.txt")
 
+# get list of prompts to train on, and their corresponding identifier types (0: variable, 1: function, 2: class)
+def_prompts, def_IDS = get_prompts_and_IDS(def_fim_dict)
+call_prompts, call_IDS = get_prompts_and_IDS(call_fim_dict)
 
+prompts, ids = def_prompts + call_prompts, def_IDS + call_IDS
+
+res_activations = get_residual_activations(
+    model,
+    data=prompts,
+    layer=30,
+    resid_type="mlp_out"
+)
+
+D = len(prompts)
+C = 3
+
+# Train probe
+probe = LinearProbe(d_model=D, num_classes=C)
+train_probe(probe, res_activations, ids, num_epochs=50, lr=1e-2)
+
+# Evaluate
+probe.eval()
+with torch.no_grad():
+    logits = probe(X)
+    preds = logits.argmax(dim=-1)
+    acc = (preds == y).float().mean()
+
+print("accuracy:", acc.item())

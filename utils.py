@@ -83,6 +83,18 @@ def get_prompt(prefix: str, suffix: str):
     """
     return f"▁<PRE>{prefix}▁<SUF>{suffix}▁<MID>"
 
+def get_prompts_and_IDS(data):
+    prompts = []
+    ids = []
+    for item in data:
+        prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+        prompts.append(prompt)
+        ids.append(item["identifier_type"])
+
+    return prompts, ids
+
+    
+
 def fill_in_middle(file):
 
     data = read_fim_dataset(file)
@@ -108,82 +120,3 @@ def fill_in_middle(file):
         print("end")
 
 fill_in_middle("training_data/template.txt")
-
-# data = read_fim_dataset("training_data/template.txt")
-# print(data)
-
-# for item in data:
-#     prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
-#     print(prompt)
-
-# prefix = """def """
-# suffix = """(x, y):
-#     return x + y
-
-# sum = addition(2, 3)
-# """
-
-# fill_in_middle(prefix, suffix)
-
-# prefix = """# function that adds two numbers
-# def """
-# suffix = """(x, y):
-#     return x + y
-
-# # add 2 and 3 together
-# sum = addition(2, 3)
-# """
-
-# fill_in_middle(prefix, suffix)
-
-# prefix = """# set var to 0
-# """
-# suffix = """ = 0
-# # add 1 to var
-# var += 1
-# """
-
-# fill_in_middle(prefix, suffix)
-
-# prefix = ""
-# suffix = """ = 0
-# var += 1
-# """
-
-# fill_in_middle(prefix, suffix)
-
-
-# prefix = """class """ 
-# suffix = """:
-#     def __init__(self):
-#         self.data = []
-
-#     def add(self, x):
-#         self.data.append(x)
-
-# bag = Bag()"""
-
-# fill_in_middle(prefix, suffix)
-
-
-# with torch.no_grad():
-#     logits = model(**inputs).logits[:, -1]
-#     probs = logits.softmax(dim=-1)
-
-# topk = torch.topk(probs, 10)
-# tokens = tokenizer.convert_ids_to_tokens(topk.indices)
-# scores = topk.values
-
-# for t, p in zip(tokens, scores):
-#     print(f"{t:15s} {p.item():.3f}")
-
-# # function that adds two numbers
-# def ....(x, y):
-#     return x + y
-# sum = add(2, 3)
-
-
-# x = 1
-# y = 'str'
-# z = 2 + ...
-
