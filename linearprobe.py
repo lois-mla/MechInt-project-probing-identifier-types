@@ -34,70 +34,69 @@ model = transformer_lens.HookedTransformer.from_pretrained(
     torch_dtype=torch.float16,
     device="cuda"
 )
-
-def fill_in_middle(prefix: str, suffix: str):
+# def fill_in_middle(prefix: str, suffix: str):
     
-    return f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
+#     return f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
 
-# print the loss of running a prompt
-prefix = """def """
-suffix = """(x, y):
-    return x + y
+# # print the loss of running a prompt
+# prefix = """def """
+# suffix = """(x, y):
+#     return x + y
 
-sum = addition(2, 3)
-"""
-prompt = fill_in_middle(prefix, suffix)
+# sum = addition(2, 3)
+# """
+# prompt = fill_in_middle(prefix, suffix)
 
-loss = model(prompt, return_type="loss")
-print("Model loss:", loss)
+# loss = model(prompt, return_type="loss")
+# print("Model loss:", loss)
 
-# caching activations
-prompt_tokens = model.to_tokens(prompt)
-prompt_logits, prompt_cache = model.run_with_cache(prompt_tokens, remove_batch_dim=True)
-# print the shape of the logits and cache
-print("Logits shape:", prompt_logits.shape)
-activations = prompt_cache["mlp_out", 1]
-print("Activations shape:", activations.shape)
+# # caching activations
+# prompt_tokens = model.to_tokens(prompt)
+# prompt_logits, prompt_cache = model.run_with_cache(prompt_tokens, remove_batch_dim=True)
+# # print the shape of the logits and cache
+# print("Logits shape:", prompt_logits.shape)
+# activations = prompt_cache["mlp_out", 1]
+# print("Activations shape:", activations.shape)
 
-prefix = """# function that adds two numbers
-def """
-suffix = """(x, y):
-    return x + y
+# prefix = """# function that adds two numbers
+# def """
+# suffix = """(x, y):
+#     return x + y
 
-# add 2 and 3 together
-sum = addition(2, 3)
-"""
+# # add 2 and 3 together
+# sum = addition(2, 3)
+# """
 
-prompt_2 = fill_in_middle(prefix, suffix)
+# prompt_2 = fill_in_middle(prefix, suffix)
 
-prefix = """# set var to 0
-"""
-suffix = """ = 0
-# add 1 to var
-var += 1
-"""
+# prefix = """# set var to 0
+# """
+# suffix = """ = 0
+# # add 1 to var
+# var += 1
+# """
 
-prompt_3 = fill_in_middle(prefix, suffix)
+# prompt_3 = fill_in_middle(prefix, suffix)
 
-prefix = ""
-suffix = """ = 0
-var += 1
-"""
+# prefix = ""
+# suffix = """ = 0
+# var += 1
+# """
 
-prompt_4 = fill_in_middle(prefix, suffix)
+# prompt_4 = fill_in_middle(prefix, suffix)
 
 
-prefix = """class """ 
-suffix = """:
-    def __init__(self):
-        self.data = []
+# prefix = """class """ 
+# suffix = """:
+#     def __init__(self):
+#         self.data = []
 
-    def add(self, x):
-        self.data.append(x)
+#     def add(self, x):
+#         self.data.append(x)
 
-bag = Bag()"""
+# bag = Bag()"""
 
-prompt_5 = fill_in_middle(prefix, suffix)
+# prompt_5 = fill_in_middle(prefix, suffix)
 
 
 @torch.inference_mode()
@@ -194,16 +193,16 @@ def get_residual_activations(
     # Stack all batches → [N, d_model]
     return torch.cat(all_acts, dim=0)
 
-res_activations = get_residual_activations(
-    model,
-    data=[prompt, prompt_2, prompt_3, prompt_4, prompt_5],
-    layer=30,
-    resid_type="mlp_out"
-)
+# res_activations = get_residual_activations(
+#     model,
+#     data=[prompt, prompt_2, prompt_3, prompt_4, prompt_5],
+#     layer=30,
+#     resid_type="mlp_out"
+# )
 
 # get the activations at the <MID> position (last token of the prompt)
 
-print("Residual activations shape for the last non-padding token position:", res_activations.shape)
+# print("Residual activations shape for the last non-padding token position:", res_activations.shape)
 
 class LinearProbe(nn.Module):
     """
@@ -312,33 +311,33 @@ def evaluate_probe(
 
     return correct / total
 
-# Toy example to test the probe
-torch.manual_seed(0)
+# # Toy example to test the probe
+# torch.manual_seed(0)
 
-# Create toy data
-N = 300
-D = 2
-C = 3
+# # Create toy data
+# N = 300
+# D = 2
+# C = 3
 
-X0 = torch.randn(N//3, D) + torch.tensor([2.0, 0.0])
-X1 = torch.randn(N//3, D) + torch.tensor([-2.0, 0.0])
-X2 = torch.randn(N//3, D) + torch.tensor([0.0, 2.0])
+# X0 = torch.randn(N//3, D) + torch.tensor([2.0, 0.0])
+# X1 = torch.randn(N//3, D) + torch.tensor([-2.0, 0.0])
+# X2 = torch.randn(N//3, D) + torch.tensor([0.0, 2.0])
 
-X = torch.cat([X0, X1, X2], dim=0)
-y = torch.tensor([0]*(N//3) + [1]*(N//3) + [2]*(N//3))
+# X = torch.cat([X0, X1, X2], dim=0)
+# y = torch.tensor([0]*(N//3) + [1]*(N//3) + [2]*(N//3))
 
-# Train probe
-probe = LinearProbe(d_model=D, num_classes=C)
-train_probe(probe, X, y, num_epochs=50, lr=1e-2)
+# # Train probe
+# probe = LinearProbe(d_model=D, num_classes=C)
+# train_probe(probe, X, y, num_epochs=50, lr=1e-2)
 
-# Evaluate
-probe.eval()
-with torch.no_grad():
-    logits = probe(X)
-    preds = logits.argmax(dim=-1)
-    acc = (preds == y).float().mean()
+# # Evaluate
+# probe.eval()
+# with torch.no_grad():
+#     logits = probe(X)
+#     preds = logits.argmax(dim=-1)
+#     acc = (preds == y).float().mean()
 
-print("Toy accuracy:", acc.item())
+# print("Toy accuracy:", acc.item())
 # gives 0.89, is around the expected value 
 
 ########## very messy how to get the data
@@ -359,7 +358,7 @@ res_activations = get_residual_activations(
     resid_type="mlp_out"
 )
 
-D = len(prompts)
+D = res_activations.shape[1]
 C = 3
 
 # Train probe
