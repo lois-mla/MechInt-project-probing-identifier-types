@@ -74,12 +74,13 @@ test_acc = [
 
 
 
+
 plt.figure()
 plt.plot(layers, train_acc, label="Train accuracy")
 plt.plot(layers, test_acc, label="Test accuracy")
 plt.xlabel("Layer")
 plt.ylabel("Accuracy")
-plt.title("Probe accuracy vs layer")
+plt.title("Probe accuracy vs layer resid_pre")
 plt.legend()
 plt.grid(True)
 plt.show()
