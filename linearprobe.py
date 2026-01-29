@@ -363,6 +363,10 @@ call_prompts, call_IDS = get_prompts_and_IDS(call_fim_dict)
 
 prompts, ids = def_prompts[:100] + call_prompts[:100], def_IDS[:100] + call_IDS[:100]
 
+ids = torch.tensor(ids, dtype=torch.long)
+device = "cuda"
+
+
 res_activations = get_residual_activations(
     model,
     data=prompts,
@@ -373,9 +377,13 @@ res_activations = get_residual_activations(
 D = res_activations.shape[1]
 C = 3
 
+res_activations = res_activations.to(device)
+ids = ids.to(device)
+
 # Train probe
 probe = LinearProbe(d_model=D, num_classes=C)
 train_probe(probe, res_activations, ids, num_epochs=50, lr=1e-2)
+probe = probe.to(device)
 
 # Evaluate
 probe.eval()
