@@ -377,7 +377,7 @@ res_activations = get_residual_activations(
 D = res_activations.shape[1]
 C = 3
 
-res_activations = res_activations.to(device)
+res_activations = res_activations.float().to(device)
 ids = ids.to(device)
 
 # Train probe
@@ -390,6 +390,5 @@ probe.eval()
 with torch.no_grad():
     logits = probe(res_activations)
     preds = logits.argmax(dim=-1)
-    acc = (preds == torch.tensor(ids)).float().mean()
-
+    acc = (preds == ids).float().mean()
 print("accuracy:", acc.item())
