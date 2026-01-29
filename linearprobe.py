@@ -165,7 +165,7 @@ def get_residual_activations(
 
         # Gather the activations at the ▁<MID> position
         mid_token_id = tokenizer.convert_tokens_to_ids("▁<MID>")
-        print("MID token ID:", mid_token_id)
+        # print("MID token ID:", mid_token_id)
 
         mid_acts = []
 
@@ -323,6 +323,103 @@ def evaluate_probe(
 
     return correct / total
 
+
+def get_class_steering_vector(
+    probe: LinearProbe,
+    class_id: int,
+    normalize: bool = True,
+) -> torch.Tensor:
+    """
+    Returns steering vector s for a given class.
+    s has shape [d_model].
+    """
+    W = probe.linear.weight.detach()   # [C, d_model]
+    s = W[class_id].clone()
+
+    if normalize:
+        s = s / (s.norm() + 1e-8)
+
+    return s
+
+
+def get_contrastive_steering_vector(
+    probe: LinearProbe,
+    pos_class: int,
+    neg_class: int,
+    normalize: bool = True,
+) -> torch.Tensor:
+    """
+    Steering vector that pushes toward pos_class and away from neg_class.
+    """
+    W = probe.linear.weight.detach()
+    s = W[pos_class] - W[neg_class]
+
+    if normalize:
+        s = s / (s.norm() + 1e-8)
+
+    return s
+
+def make_steering_hook(
+    steering_vector: torch.Tensor,   # [d_model]
+    alpha: float,
+    mid_token_id: int,
+):
+    """
+    Returns a hook function that adds alpha * steering_vector
+    to the activation at the <MID> token position.
+    """
+
+    steering_vector = steering_vector.to("cuda")
+
+    def hook_fn(acts: torch.Tensor, hook):
+        """
+        acts: [batch, seq_len, d_model]
+        """
+        # We need access to the tokens to find <MID>.
+        # TransformerLens stores tokens on the hook context:
+        tokens = hook.ctx["tokens"]   # [batch, seq_len]
+
+        for b in range(tokens.size(0)):
+            mid_pos = (tokens[b] == mid_token_id).nonzero(as_tuple=True)[0]
+            if len(mid_pos) != 1:
+                continue  # safety
+
+            pos = mid_pos.item()
+            acts[b, pos] += alpha * steering_vector
+
+        return acts
+
+    return hook_fn
+
+@torch.inference_mode()
+def run_with_steering(
+    model: transformer_lens.HookedTransformer,
+    prompt: str,
+    steering_vector: torch.Tensor,
+    alpha: float,
+    layer: int,
+    resid_type: str = "mlp_out",
+):
+    """
+    Runs the model on a prompt while applying steering at a given layer.
+    Returns logits.
+    """
+
+    tokens = model.to_tokens(prompt).to("cuda")
+    mid_token_id = tokenizer.convert_tokens_to_ids("▁<MID>")
+    hook_name = f"blocks.{layer}.hook_{resid_type}"
+
+    steering_hook = make_steering_hook(
+        steering_vector=steering_vector,
+        alpha=alpha,
+        mid_token_id=mid_token_id,
+    )
+
+    with model.hooks(fwd_hooks=[(hook_name, steering_hook)]):
+        logits = model(tokens)
+
+    return logits
+
 # # Toy example to test the probe
 # torch.manual_seed(0)
 
@@ -374,6 +471,28 @@ res_activations = get_residual_activations(
     resid_type="mlp_out"
 )
 
+# for the def and call subsets of the data
+res_activations_def = get_residual_activations(
+    model,
+    data=def_prompts,
+    layer=30,
+    resid_type="mlp_out"
+)
+res_activations_def = res_activations_def.float().to(device)
+def_IDS = torch.tensor(def_IDS, dtype=torch.long).to(device)
+
+res_activations_call = get_residual_activations(
+    model,
+    data=call_prompts,
+    layer=30,
+    resid_type="mlp_out"
+)
+
+res_activations_call = res_activations_call.float().to(device)
+call_IDS = torch.tensor(call_IDS, dtype=torch.long).to(device)
+
+
+
 D = res_activations.shape[1]
 C = 3
 
@@ -384,11 +503,69 @@ ids = ids.to(device)
 probe = LinearProbe(d_model=D, num_classes=C).to(device)
 train_probe(probe, res_activations, ids, num_epochs=50, lr=1e-2)
 
+# train probe on def data
+probe_def = LinearProbe(d_model=D, num_classes=C).to(device)
+train_probe(probe_def, res_activations_def, def_IDS, num_epochs=50, lr=1e-2)
 
-# Evaluate
+# train probe on call data
+probe_call = LinearProbe(d_model=D, num_classes=C).to(device)
+train_probe(probe_call, res_activations_call, call_IDS, num_epochs=50, lr=1e-2)
+
+# Evaluate; accuracy on the training set 
+# Do we also want to evaluate on a test set?
 probe.eval()
 with torch.no_grad():
     logits = probe(res_activations)
     preds = logits.argmax(dim=-1)
     acc = (preds == ids).float().mean()
 print("accuracy:", acc.item())
+
+
+full_feature_direction_1 = get_class_steering_vector(probe, 0)
+full_feature_direction_2 = get_class_steering_vector(probe, 1)
+full_feature_direction_3 = get_class_steering_vector(probe, 2)
+call_feature_direction_1 = get_class_steering_vector(probe_call, 0)
+call_feature_direction_2 = get_class_steering_vector(probe_call, 1)
+call_feature_direction_3 = get_class_steering_vector(probe_call, 2)
+def_feature_direction_1 = get_class_steering_vector(probe_def, 0)
+def_feature_direction_2 = get_class_steering_vector(probe_def, 1)
+def_feature_direction_3 = get_class_steering_vector(probe_def, 2)
+
+
+print("feature direction 1:", full_feature_direction_1)
+print("feature direction 2:", full_feature_direction_2)
+print("feature direction 3:", full_feature_direction_3)
+print("Not normalised:", get_class_steering_vector(probe, 0, normalized=False))
+print("Not normalised:", get_class_steering_vector(probe, 1, normalized=False))
+print("Not normalised:", get_class_steering_vector(probe, 2, normalized=False))
+
+print("feature direction 1 for def:", def_feature_direction_1)
+print("feature direction 2 for def:", def_feature_direction_2)
+print("feature direction 3 for def:", def_feature_direction_3)
+print("feature direction 1 for call:", call_feature_direction_1)
+print("feature direction 2 for call:", call_feature_direction_2)
+print("feature direction 3 for call:", call_feature_direction_3)
+
+# similarity feature direction 1 between all datasets
+similarity_full_def = torch.cosine_similarity(full_feature_direction_1, def_feature_direction_1, dim=0)
+similarity_def_call = torch.cosine_similarity(def_feature_direction_1, call_feature_direction_1, dim=0)
+similarity_full_call = torch.cosine_similarity(full_feature_direction_1, call_feature_direction_1, dim=0)
+print("Similarity between feature direction 1 for full and def:", similarity_full_def.item())
+print("Similarity between feature direction 1 for def and call:", similarity_def_call.item())
+print("Similarity between feature direction 1 for full and call:", similarity_full_call.item())
+
+# same for feature direction 2
+similarity_full_def = torch.cosine_similarity(full_feature_direction_2, def_feature_direction_2, dim=0)
+similarity_def_call = torch.cosine_similarity(def_feature_direction_2, call_feature_direction_2, dim=0)
+similarity_full_call = torch.cosine_similarity(full_feature_direction_2, call_feature_direction_2, dim=0)
+print("Similarity between feature direction 2 for full and def:", similarity_full_def.item())
+print("Similarity between feature direction 2 for def and call:", similarity_def_call.item())
+print("Similarity between feature direction 2 for full and call:", similarity_full_call.item())
+
+# same for feature direction 3
+similarity_full_def = torch.cosine_similarity(full_feature_direction_3, def_feature_direction_3, dim=0)
+similarity_def_call = torch.cosine_similarity(def_feature_direction_3, call_feature_direction_3, dim=0)
+similarity_full_call = torch.cosine_similarity(full_feature_direction_3, call_feature_direction_3, dim=0)
+print("Similarity between feature direction 3 for full and def:", similarity_full_def.item())
+print("Similarity between feature direction 3 for def and call:", similarity_def_call.item())
+print("Similarity between feature direction 3 for full and call:", similarity_full_call.item())
