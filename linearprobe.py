@@ -535,9 +535,9 @@ def_feature_direction_3 = get_class_steering_vector(probe_def, 2)
 print("feature direction 1:", full_feature_direction_1)
 print("feature direction 2:", full_feature_direction_2)
 print("feature direction 3:", full_feature_direction_3)
-print("Not normalised:", get_class_steering_vector(probe, 0, normalized=False))
-print("Not normalised:", get_class_steering_vector(probe, 1, normalized=False))
-print("Not normalised:", get_class_steering_vector(probe, 2, normalized=False))
+print("Not normalised:", get_class_steering_vector(probe, 0, normalize=False))
+print("Not normalised:", get_class_steering_vector(probe, 1, normalize=False))
+print("Not normalised:", get_class_steering_vector(probe, 2, normalize=False))
 
 print("feature direction 1 for def:", def_feature_direction_1)
 print("feature direction 2 for def:", def_feature_direction_2)
@@ -569,3 +569,27 @@ similarity_full_call = torch.cosine_similarity(full_feature_direction_3, call_fe
 print("Similarity between feature direction 3 for full and def:", similarity_full_def.item())
 print("Similarity between feature direction 3 for def and call:", similarity_def_call.item())
 print("Similarity between feature direction 3 for full and call:", similarity_full_call.item())
+
+
+print("try steering")
+# Example: steer toward CLASS identifiers (class_id = 0)
+s_class = get_class_steering_vector(probe, class_id=0)
+
+prompt = prompts[0]
+
+# No steering
+logits_base = model(prompt)
+
+# With steering
+logits_steered = run_with_steering(
+    model=model,
+    prompt=prompt,
+    steering_vector=s_class,
+    alpha=5.0,        # try 0.5 → 10.0
+    layer=30,
+    resid_type="mlp_out",
+)
+
+# Compare predictions / generations
+print("Base next token:", model.to_string(logits_base.argmax(dim=-1)[0, -1]))
+print("Steered next token:", model.to_string(logits_steered.argmax(dim=-1)[0, -1]))
