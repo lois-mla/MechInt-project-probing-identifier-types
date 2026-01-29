@@ -3,7 +3,7 @@ import transformer_lens
 from transformers import AutoTokenizer
 
 from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
-from linearprobe import (
+from linearprobe_new import (
     ResidualActivationExtractor,
     LinearProbe,
     train_probe,

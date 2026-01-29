@@ -1,5 +1,3 @@
-# steering.py
-
 import torch
 import transformer_lens
 
@@ -38,10 +36,6 @@ def get_contrastive_steering_vector(
 
     return s
 
-
-# ----------------------------
-# Hooks
-# ----------------------------
 
 def make_steering_hook(
     steering_vector: torch.Tensor,
@@ -89,3 +83,5 @@ def run_with_steering(
         logits = model(tokens)
 
     return logits
+
+if __name__ == "__main__":
