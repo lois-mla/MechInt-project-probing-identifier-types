@@ -84,4 +84,4 @@ def run_with_steering(
 
     return logits
 
-if __name__ == "__main__":
+
