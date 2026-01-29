@@ -361,11 +361,11 @@ call_fim_dict = read_fim_dataset("training_data/call_FIM_data.txt")
 def_prompts, def_IDS = get_prompts_and_IDS(def_fim_dict)
 call_prompts, call_IDS = get_prompts_and_IDS(call_fim_dict)
 
-prompts, ids = def_prompts[:100] + call_prompts[:100], def_IDS[:100] + call_IDS[:100]
+# prompts, ids = def_prompts[:100] + call_prompts[:100], def_IDS[:100] + call_IDS[:100]
+prompts, ids = def_prompts + call_prompts, def_IDS + call_IDS
 
 ids = torch.tensor(ids, dtype=torch.long)
 device = "cuda"
-
 
 res_activations = get_residual_activations(
     model,
