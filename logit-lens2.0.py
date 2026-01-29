@@ -12,13 +12,17 @@ device = utils.get_device()
 # FIM example
 example_prompt = "<PRE>def pet(a,b):\n   return(a+b)\nclass cat:\n  x=5\nx=3\ny=5\n#new variable z equal to 8\nz=<SUF>(x,y)<MID>"
 correct_answer = "pet"
-incorrect_answer = "cat"
-
+incorrect_answer = "cat" 
 
 # answer_tokens should be a tensor of shape [batch, 2]
 correct_token = model.to_single_token(correct_answer)
 incorrect_token = model.to_single_token(incorrect_answer)
 answer_tokens = torch.tensor([[correct_token, incorrect_token]]).to(device)
+
+# Check whether model predicts correctly
+utils.test_prompt(example_prompt, correct_answer, model, prepend_bos=True)
+
+
 
 # Logit Difference
 # finds the vector in the residual stream that points from the wrong logit to the correct logit
