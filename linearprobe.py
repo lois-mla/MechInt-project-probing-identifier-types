@@ -138,18 +138,30 @@ def get_residual_activations(
 
         tokens = enc["input_ids"].to(device) # shape: [batch, pos]
 
-        # Run the model and cache *all* intermediate activations up until necessary layer
-        # _, cache = model.run_with_cache(tokens, return_type=None)
+        hook_name = f"blocks.{layer}.hook_{resid_type}"
+
         _, cache = model.run_with_cache(
             tokens,
             return_type=None,
             stop_at_layer=layer + 1,
-            names_filter=[(resid_type, layer)],
+            names_filter=[hook_name],
         )
-        # Extract a specific activation:
-        # e.g. ("mlp_out", layer) → [batch, pos, d_model]
-        # pos: sequence length after padding
-        acts = cache[(resid_type, layer)] 
+
+        acts = cache[hook_name]
+
+
+        # Run the model and cache *all* intermediate activations up until necessary layer
+        # _, cache = model.run_with_cache(tokens, return_type=None)
+        # _, cache = model.run_with_cache(
+        #     tokens,
+        #     return_type=None,
+        #     stop_at_layer=layer + 1,
+        #     names_filter=[(resid_type, layer)],
+        # )
+        # # Extract a specific activation:
+        # # e.g. ("mlp_out", layer) → [batch, pos, d_model]
+        # # pos: sequence length after padding
+        # acts = cache[(resid_type, layer)] 
 
         # Gather the activations at the ▁<MID> position
         mid_token_id = tokenizer.convert_tokens_to_ids("▁<MID>")
@@ -368,8 +380,8 @@ train_probe(probe, res_activations, ids, num_epochs=50, lr=1e-2)
 # Evaluate
 probe.eval()
 with torch.no_grad():
-    logits = probe(X)
+    logits = probe(res_activations)
     preds = logits.argmax(dim=-1)
-    acc = (preds == y).float().mean()
+    acc = (preds == torch.tensor(ids)).float().mean()
 
 print("accuracy:", acc.item())
