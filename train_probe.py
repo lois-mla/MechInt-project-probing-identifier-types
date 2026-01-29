@@ -1,6 +1,7 @@
 import torch
 import transformer_lens
 from transformers import AutoTokenizer
+from steering import get_class_steering_vector
 
 from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
 from linearprobe_new import (
@@ -77,6 +78,9 @@ def main():
     model, tokenizer = load_model()
     prompts, labels = load_dataset()
 
+    prompts_def, labels_def = load_dataset(part="DEF")
+    prompts_call, labels_call = load_dataset(part="CALL")
+
     extractor = ResidualActivationExtractor(
         model=model,
         tokenizer=tokenizer,
@@ -85,20 +89,65 @@ def main():
     )
 
     n_layers = model.cfg.n_layers
+    layer = 25 # the layer to probe, found using logitlens
 
-    results = probe_all_layers(
+    results_def = probe_layer(
+        extractor=extractor,
+        prompts=prompts_def,
+        labels=labels_def,
+        layer=layer,
+    )
+    probe_def = results_def["probe"]
+
+    results_call = probe_layer(
+        extractor=extractor,
+        prompts=prompts_call,
+        labels=labels_call,
+        layer=layer,
+    )
+    probe_call = results_call["probe"]
+
+    results_full = probe_layer(
         extractor=extractor,
         prompts=prompts,
         labels=labels,
-        n_layers=n_layers,
+        layer=layer,
     )
+    probe_full = results_full["probe"]
 
-    # print best layer
-    best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    print("Best layer:", best_layer)
-    print("Test accuracy:", results[best_layer]["test_acc"])
+    for i in range(3):
+        full_feature_direction_i = get_class_steering_vector(probe_full, i)
+        call_feature_direction_i = get_class_steering_vector(probe_call, i)
+        def_feature_direction_i = get_class_steering_vector(probe_def, i)
+        print(f"feature direction {i} norm full:", full_feature_direction_i)
+        print(f"feature direction {i} norm call:", call_feature_direction_i)
+        print(f"feature direction {i} norm def:", def_feature_direction_i)
 
-    print("All results:", results)
+        # similarity between the feature directions
+        similarity_full_call = torch.cosine_similarity(full_feature_direction_i, call_feature_direction_i, dim=0)
+        similarity_full_def = torch.cosine_similarity(full_feature_direction_i, def_feature_direction_i, dim=0)
+        similarity_def_call = torch.cosine_similarity(def_feature_direction_i, call_feature_direction_i, dim=0)
+
+        print(f"Similarity between feature direction {i} for full and call:", similarity_full_call.item())
+        print(f"Similarity between feature direction {i} for full and def:", similarity_full_def.item())
+        print(f"Similarity between feature direction {i} for def and call:", similarity_def_call.item())
+
+
+
+    # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
+    # results = probe_all_layers(
+    #     extractor=extractor,
+    #     prompts=prompts,
+    #     labels=labels,
+    #     n_layers=n_layers,
+    # )
+
+    # # print best layer
+    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    # print("Best layer:", best_layer)
+    # print("Test accuracy:", results[best_layer]["test_acc"])
+
+    # print("All results:", results)
 
 
 if __name__ == "__main__":
