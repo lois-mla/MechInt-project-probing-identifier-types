@@ -381,9 +381,9 @@ res_activations = res_activations.to(device)
 ids = ids.to(device)
 
 # Train probe
-probe = LinearProbe(d_model=D, num_classes=C)
+probe = LinearProbe(d_model=D, num_classes=C).to(device)
 train_probe(probe, res_activations, ids, num_epochs=50, lr=1e-2)
-probe = probe.to(device)
+
 
 # Evaluate
 probe.eval()
