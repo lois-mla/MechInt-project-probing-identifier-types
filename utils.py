@@ -64,9 +64,9 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 
         correct, ID = after_arrow.split("\nID:")
 
-        prefix = f'"""{before_fim.rstrip()}"""'
-        suffix = f'"""{middle.strip()}"""'
-        correct = f'"""{after_arrow.strip()}"""'
+        prefix = before_fim
+        suffix = middle
+        correct = after_arrow
 
         examples.append({
             "identifier_type": int(ID),
@@ -81,102 +81,42 @@ def get_prompt(prefix: str, suffix: str):
     """
     returns prompt
     """
-    return f"▁<PRE> {prefix} ▁<SUF>{suffix} ▁<MID>"
+    return f"▁<PRE>{prefix}▁<SUF>{suffix}▁<MID>"
 
-def fill_in_middle(data):
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+def get_prompts_and_IDS(data):
+    prompts = []
+    ids = []
+    for item in data:
+        prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+        prompts.append(prompt)
+        ids.append(item["identifier_type"])
 
-data = read_fim_dataset("training_data/template.txt")
+    return prompts, ids
 
-for item in data:
-    prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+    
 
+def fill_in_middle(file):
 
-    # Generate the missing middle
-    outputs = model.generate(
-        prompt,
-        max_new_tokens=10,
-        do_sample=False,
-        # early_stopping=False,
-        # eos_token_id=None,   # allow generation past EOS prediction
-        # temperature=0.7,
-    )
+    data = read_fim_dataset(file)
 
-    print("begin")
-    # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-    print(tokenizer.decode(outputs[0]))
-    print("end")
+    for item in data:
+        prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+        
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
+        # Generate the missing middle
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=10,
+            do_sample=False,
+            # early_stopping=False,
+            # eos_token_id=None,   # allow generation past EOS prediction
+            # temperature=0.7,
+        )
 
+        print("begin")
+        # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+        print(tokenizer.decode(outputs[0]))
+        print("end")
 
-# prefix = """def """
-# suffix = """(x, y):
-#     return x + y
-
-# sum = addition(2, 3)
-# """
-
-# fill_in_middle(prefix, suffix)
-
-# prefix = """# function that adds two numbers
-# def """
-# suffix = """(x, y):
-#     return x + y
-
-# # add 2 and 3 together
-# sum = addition(2, 3)
-# """
-
-# fill_in_middle(prefix, suffix)
-
-# prefix = """# set var to 0
-# """
-# suffix = """ = 0
-# # add 1 to var
-# var += 1
-# """
-
-# fill_in_middle(prefix, suffix)
-
-# prefix = ""
-# suffix = """ = 0
-# var += 1
-# """
-
-# fill_in_middle(prefix, suffix)
-
-
-# prefix = """class """ 
-# suffix = """:
-#     def __init__(self):
-#         self.data = []
-
-#     def add(self, x):
-#         self.data.append(x)
-
-# bag = Bag()"""
-
-# fill_in_middle(prefix, suffix)
-
-
-# with torch.no_grad():
-#     logits = model(**inputs).logits[:, -1]
-#     probs = logits.softmax(dim=-1)
-
-# topk = torch.topk(probs, 10)
-# tokens = tokenizer.convert_ids_to_tokens(topk.indices)
-# scores = topk.values
-
-# for t, p in zip(tokens, scores):
-#     print(f"{t:15s} {p.item():.3f}")
-
-# # function that adds two numbers
-# def ....(x, y):
-#     return x + y
-# sum = add(2, 3)
-
-
-# x = 1
-# y = 'str'
-# z = 2 + ...
-
+fill_in_middle("training_data/template.txt")
