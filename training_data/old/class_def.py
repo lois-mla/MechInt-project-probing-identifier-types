@@ -6,5 +6,22 @@ class FIM:
         self.data.append(x)
 
 bag = Bag()
+
+
+
+def addition(x, y):
+    return x + y
+
+class MyClass():
+    x = 1
+
+z = 12
+
+sum = addition(1, 2)
+
+bop = MyClass()
+one = bop.x
+zee = z
+
 #####
 

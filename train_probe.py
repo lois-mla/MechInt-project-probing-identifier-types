@@ -1,7 +1,7 @@
 import torch
 import transformer_lens
 from transformers import AutoTokenizer
-from steering import get_class_steering_vector
+import matplotlib.pyplot as plt
 
 from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
 from linearprobe_new import (
@@ -10,7 +10,7 @@ from linearprobe_new import (
     train_probe,
     evaluate_probe,
 )
-
+# from steering import 
 
 def probe_layer(
     extractor,
@@ -78,9 +78,6 @@ def main():
     model, tokenizer = load_model()
     prompts, labels = load_dataset()
 
-    prompts_def, labels_def = load_dataset(part="DEF")
-    prompts_call, labels_call = load_dataset(part="CALL")
-
     extractor = ResidualActivationExtractor(
         model=model,
         tokenizer=tokenizer,
@@ -89,66 +86,45 @@ def main():
     )
 
     n_layers = model.cfg.n_layers
-    layer = 25 # the layer to probe, found using logitlens
 
-    results_def = probe_layer(
-        extractor=extractor,
-        prompts=prompts_def,
-        labels=labels_def,
-        layer=layer,
-    )
-    probe_def = results_def["probe"]
-
-    results_call = probe_layer(
-        extractor=extractor,
-        prompts=prompts_call,
-        labels=labels_call,
-        layer=layer,
-    )
-    probe_call = results_call["probe"]
-
-    results_full = probe_layer(
+    results = probe_all_layers(
         extractor=extractor,
         prompts=prompts,
         labels=labels,
-        layer=layer,
+        n_layers=n_layers,
     )
-    probe_full = results_full["probe"]
 
-    for i in range(3):
-        full_feature_direction_i = get_class_steering_vector(probe_full, i)
-        call_feature_direction_i = get_class_steering_vector(probe_call, i)
-        def_feature_direction_i = get_class_steering_vector(probe_def, i)
-        print(f"feature direction {i} norm full:", full_feature_direction_i)
-        print(f"feature direction {i} norm call:", call_feature_direction_i)
-        print(f"feature direction {i} norm def:", def_feature_direction_i)
+    # print best layer
+    best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    print("Best layer:", best_layer)
+    print("Test accuracy:", results[best_layer]["test_acc"])
+    print("All results:", results)
+    plot_accuracy_vs_layer(results)
 
-        # similarity between the feature directions
-        similarity_full_call = torch.cosine_similarity(full_feature_direction_i, call_feature_direction_i, dim=0)
-        similarity_full_def = torch.cosine_similarity(full_feature_direction_i, def_feature_direction_i, dim=0)
-        similarity_def_call = torch.cosine_similarity(def_feature_direction_i, call_feature_direction_i, dim=0)
+def plot_accuracy_vs_layer(results: dict):
+    """
+    results: dict[layer] -> {
+        "probe": LinearProbe,
+        "train_acc": float,
+        "test_acc": float,
+    }
+    """
 
-        print(f"Similarity between feature direction {i} for full and call:", similarity_full_call.item())
-        print(f"Similarity between feature direction {i} for full and def:", similarity_full_def.item())
-        print(f"Similarity between feature direction {i} for def and call:", similarity_def_call.item())
+    layers = sorted(results.keys())
+    train_accs = [results[l]["train_acc"] for l in layers]
+    test_accs  = [results[l]["test_acc"]  for l in layers]
 
-
-
-    # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    # )
-
-    # # print best layer
-    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    # print("Best layer:", best_layer)
-    # print("Test accuracy:", results[best_layer]["test_acc"])
-
-    # print("All results:", results)
+    plt.figure()
+    plt.plot(layers, train_accs, label="Train accuracy")
+    plt.plot(layers, test_accs, label="Test accuracy")
+    plt.xlabel("Layer")
+    plt.ylabel("Accuracy")
+    plt.title("Linear probe accuracy vs layer")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 
 if __name__ == "__main__":
     main()
+
