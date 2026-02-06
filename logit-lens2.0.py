@@ -25,11 +25,28 @@ example_prompt = "<PRE>def square(x):\n   return x * x\nclass Counter:\ndef __in
 correct_answer = "flag"
 incorrect_answer = "square"
 '''
-
+'''
 example_prompt = "class ing:\n    def __init__(self, name):\n        self.name = name\n    def greet(self):\n        return f'Hi {self.name}'\nn = 10\nres = add(1, 7)\ng = FIM('name3')\nmsg = g.greet()\nn = g.name\nm = n + 3\ncheck = n > 5\ndef add(a, b):\n    return a + b"
 
 correct_answer = "ing"
 incorrect_answer = "n"
+'''
+'''
+example_prompt = "<PRE>def ing(j,c):\n    return j+c\nclass rat:\n    a=5\nk=3\nh=<SUF>()\no=h.a\nat=ing(o,k)\nd=k+3<MID>"
+correct_answer = "rat"
+incorrect_answer = "rat" 
+'''
+example_prompt = """
+▁<PRE>
+def foo(j,c):
+    return j+c
+o=7
+k=32
+at=▁<SUF>(o,k)
+▁<MID>
+"""
+correct_answer = "foo"
+incorrect_answer = "at"
 
 
 # answer_tokens should be a tensor of shape [batch, 2]
