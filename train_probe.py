@@ -184,7 +184,7 @@ if __name__ == "__main__":
         prompt=prompt,
         id=0,                    # positive class
         contrastive_id=1,        # negative class
-        alpha=5.0,
+        alpha=50.0,
         layer=layer,                
         resid_type="mlp_out",    # must match extractor
     )
