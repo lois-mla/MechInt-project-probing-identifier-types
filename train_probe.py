@@ -158,19 +158,19 @@ if __name__ == "__main__":
 
     print(prompt)
 
+    model, tokenizer = load_model()
+    prompts, labels = load_dataset()
+    device = "cuda"
+
+    extractor = ResidualActivationExtractor(
+        model=model,
+        tokenizer=tokenizer,
+        device=device,
+        batch_size=8,
+    )
+    
+
     for layer in range (32):
-        device = "cuda"
-
-        model, tokenizer = load_model()
-        prompts, labels = load_dataset()
-
-        extractor = ResidualActivationExtractor(
-            model=model,
-            tokenizer=tokenizer,
-            device=device,
-            batch_size=8,
-        )
-        
         results_full = probe_layer(
             extractor=extractor,
             prompts=prompts,
@@ -190,5 +190,11 @@ if __name__ == "__main__":
             layer=layer,                
             resid_type="mlp_out",    # must match extractor
         )
+
+            # clean probe tensors
+        del probe_full
+        torch.cuda.empty_cache()
+
+
 
 
