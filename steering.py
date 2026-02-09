@@ -136,8 +136,15 @@ def compare_steering(
 
     )
 
-    print("Baseline next token:", tokenizer.decode(logits_base[0, -1].argmax()))
-    print("Steered  next token:", tokenizer.decode(logits_steered[0, -1].argmax()))
+    token_id = logits_base[0, -1].argmax().item()
+
+    print("Token id:     ", token_id)
+    print("Token string: ", tokenizer.convert_ids_to_tokens(token_id))
+    print("Decoded repr: ", repr(tokenizer.decode([token_id], skip_special_tokens=False)))
+
+
+    # print("Baseline next token:", tokenizer.decode(logits_base[0, -1].argmax()))
+    # print("Steered  next token:", tokenizer.decode(logits_steered[0, -1].argmax()))
 
 
 # @torch.inference_mode()
