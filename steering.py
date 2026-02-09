@@ -147,62 +147,65 @@ def compare_steering(
     print("\n=== BASELINE ===")
     print(text_base)
     print("\n=== STEERED ===")
-    print(text_steered)def decode_output(model, logits, tokens):
-    # take argmax for simplicity
-    next_tokens = logits.argmax(dim=-1)
-    return model.to_string(next_tokens)
-
-
-@torch.inference_mode()
-def compare_steering(
-    model: transformer_lens.HookedTransformer,
-    tokenizer,
-    probe,
-    prompt: str,
-    id: int,
-    contrastive_id: int,
-    alpha: float = 5.0,
-    layer: int = 24,
-    resid_type: str = "mlp_out",
-):
-    model = model.to("cuda")
-
-    # tokens
-    tokens = model.to_tokens(prompt).to("cuda")
-
-    # steering vector
-    # steering_vector = get_class_steering_vector(
-    #     probe,
-    #     class_id=class_id,
-    #     normalize=True,
-    # )
-    steering_vector = get_contrastive_steering_vector(
-    probe,
-    pos_class=id,
-    neg_class=contrastive_id,
-    normalize=True,
-)
-
-    # ---- baseline ----
-    logits_base = model(tokens)
-    text_base = decode_output(model, logits_base, tokens)
-
-    # ---- steered ----
-    logits_steered = run_with_steering(
-        model=model,
-        tokenizer=tokenizer,
-        prompt=prompt,
-        steering_vector=steering_vector,
-        alpha=alpha,
-        layer=layer,
-        resid_type=resid_type,
-    )
-    text_steered = decode_output(model, logits_steered, tokens)
-
-    print("=== PROMPT ===")
-    print(prompt)
-    print("\n=== BASELINE ===")
-    print(text_base)
-    print("\n=== STEERED ===")
     print(text_steered)
+    
+# def decode_output(model, logits, tokens):
+#     # take argmax for simplicity
+#     next_tokens = logits.argmax(dim=-1)
+
+#     return model.to_string(next_tokens)
+
+
+# @torch.inference_mode()
+# def compare_steering(
+#     model: transformer_lens.HookedTransformer,
+#     tokenizer,
+#     probe,
+#     prompt: str,
+#     id: int,
+#     contrastive_id: int,
+#     alpha: float = 5.0,
+#     layer: int = 24,
+#     resid_type: str = "mlp_out",
+# ):
+#     model = model.to("cuda")
+
+#     # tokens
+#     tokens = model.to_tokens(prompt).to("cuda")
+
+#     # steering vector
+#     # steering_vector = get_class_steering_vector(
+#     #     probe,
+#     #     class_id=class_id,
+#     #     normalize=True,
+#     # )
+#     steering_vector = get_contrastive_steering_vector(
+#     probe,
+#     pos_class=id,
+#     neg_class=contrastive_id,
+#     normalize=True,
+# )
+
+#     # ---- baseline ----
+#     logits_base = model(tokens)
+#     text_base = decode_output(model, logits_base, tokens)
+
+#     # ---- steered ----
+#     logits_steered = run_with_steering(
+#         model=model,
+#         tokenizer=tokenizer,
+#         prompt=prompt,
+#         steering_vector=steering_vector,
+#         alpha=alpha,
+#         layer=layer,
+#         resid_type=resid_type,
+#     )
+#     text_steered = decode_output(model, logits_steered, tokens)
+
+#     print("=== PROMPT ===")
+#     print(prompt)
+#     print("\n=== BASELINE ===")
+#     print(text_base)
+#     print("\n=== STEERED ===")
+#     print(text_steered)
 
