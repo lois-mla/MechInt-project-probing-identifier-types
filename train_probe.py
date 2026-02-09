@@ -4,6 +4,7 @@ from transformers import AutoTokenizer
 from steering import get_class_steering_vector
 
 from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
+from steering import compare_steering
 from linearprobe_new import (
     ResidualActivationExtractor,
     LinearProbe,
@@ -133,7 +134,6 @@ def main():
         print(f"Similarity between feature direction {i} for def and call:", similarity_def_call.item())
 
 
-
     # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
     # results = probe_all_layers(
     #     extractor=extractor,
@@ -149,6 +149,49 @@ def main():
 
     # print("All results:", results)
 
-
 if __name__ == "__main__":
-    main()
+    # main()
+
+    prompt = """
+    def add(a, b):
+        return a + b
+
+    <MID>
+
+    add(2, 3)
+    """
+
+    layer =25
+    device = "cuda"
+
+    model, tokenizer = load_model()
+    prompts, labels = load_dataset()
+
+    extractor = ResidualActivationExtractor(
+        model=model,
+        tokenizer=tokenizer,
+        device=device,
+        batch_size=8,
+    )
+    
+    results_full = probe_layer(
+        extractor=extractor,
+        prompts=prompts,
+        labels=labels,
+        layer=layer,
+    )
+    probe_full = results_full["probe"]
+
+    compare_steering(
+        model=model,
+        tokenizer=tokenizer,
+        probe=probe_full,        # ← trained on layer 25
+        prompt=prompt,
+        id=0,                    # positive class
+        contrastive_id=1,        # negative class
+        alpha=5.0,
+        layer=layer,                # ← THIS is the key
+        resid_type="mlp_out",    # must match extractor
+    )
+
+
