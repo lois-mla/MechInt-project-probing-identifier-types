@@ -158,7 +158,7 @@ if __name__ == "__main__":
 
     print(prompt)
 
-    layer = 5
+    layer = 25
     device = "cuda"
 
     model, tokenizer = load_model()

@@ -139,10 +139,10 @@ def compare_steering(
     token_id = logits_base[0, -1].argmax().item()
 
     print("=== BASELINE ===")
-    show_topk(logits_base, tokenizer)
+    show_topk(logits_base, tokenizer, k=50)
 
     print("\n=== STEERED ===")
-    show_topk(logits_steered, tokenizer)
+    show_topk(logits_steered, tokenizer, k=50)
     # print("Token id:     ", token_id)
     # print("Token string: ", tokenizer.convert_ids_to_tokens(token_id))
     # print("Decoded repr: ", repr(tokenizer.decode([token_id], skip_special_tokens=False)))
