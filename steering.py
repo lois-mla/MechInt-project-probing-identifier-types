@@ -138,14 +138,26 @@ def compare_steering(
 
     token_id = logits_base[0, -1].argmax().item()
 
-    print("Token id:     ", token_id)
-    print("Token string: ", tokenizer.convert_ids_to_tokens(token_id))
-    print("Decoded repr: ", repr(tokenizer.decode([token_id], skip_special_tokens=False)))
+    print("=== BASELINE ===")
+    show_topk(logits_base, tokenizer)
+
+    print("\n=== STEERED ===")
+    show_topk(logits_steered, tokenizer)
+    # print("Token id:     ", token_id)
+    # print("Token string: ", tokenizer.convert_ids_to_tokens(token_id))
+    # print("Decoded repr: ", repr(tokenizer.decode([token_id], skip_special_tokens=False)))
 
 
     # print("Baseline next token:", tokenizer.decode(logits_base[0, -1].argmax()))
     # print("Steered  next token:", tokenizer.decode(logits_steered[0, -1].argmax()))
 
+def show_topk(logits, tokenizer, k=10):
+    vals, ids = torch.topk(logits[0, -1], k)
+    for v, i in zip(vals, ids):
+        tok_id = i.item()
+        tok = tokenizer.convert_ids_to_tokens(tok_id)
+        dec = tokenizer.decode([tok_id], skip_special_tokens=False)
+        print(f"{tok!r:12s} | {dec!r:12s} | logit={v.item():.2f}")
 
 # @torch.inference_mode()
 # def run_with_steering(
