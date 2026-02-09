@@ -185,7 +185,7 @@ if __name__ == "__main__":
             probe=probe_full,        # trained on layer 25
             prompt=prompt,
             id=0,                    # positive class
-            contrastive_id=1,        # negative class
+            contrastive_id=2,        # negative class
             alpha=50.0,
             layer=layer,                
             resid_type="mlp_out",    # must match extractor
