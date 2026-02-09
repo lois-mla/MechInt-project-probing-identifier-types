@@ -158,7 +158,7 @@ if __name__ == "__main__":
 
     print(prompt)
 
-    layer = 25
+    layer = 5
     device = "cuda"
 
     model, tokenizer = load_model()
@@ -186,7 +186,7 @@ if __name__ == "__main__":
         prompt=prompt,
         id=0,                    # positive class
         contrastive_id=1,        # negative class
-        alpha=5.0,
+        alpha=25.0,
         layer=layer,                
         resid_type="mlp_out",    # must match extractor
     )
