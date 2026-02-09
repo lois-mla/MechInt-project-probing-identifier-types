@@ -156,7 +156,9 @@ if __name__ == "__main__":
 
     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
-    layer =25
+    print(prompt)
+
+    layer = 5
     device = "cuda"
 
     model, tokenizer = load_model()
