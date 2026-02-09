@@ -133,12 +133,23 @@ if __name__ == "__main__":
     # main()
 
     prompt = """
-    def add(a, b):
-        return a + b
+    def join(a, b):
+        return f"{a}:{b}"
 
-    <MID>
+    flag = True
 
-    add(2, 3)
+    text = join('a2', 'b2')
+    g = Greeter('name2')
+    msg = g.greet()
+    n = g.name
+    neg = not FIM
+    both = flag and False
+
+    class Greeter:
+        def __init__(self, name):
+            self.name = name
+        def greet(self):
+            return f"Hi {self.name}"
     """
 
     layer =25
@@ -165,12 +176,12 @@ if __name__ == "__main__":
     compare_steering(
         model=model,
         tokenizer=tokenizer,
-        probe=probe_full,        # ← trained on layer 25
+        probe=probe_full,        # trained on layer 25
         prompt=prompt,
         id=0,                    # positive class
         contrastive_id=1,        # negative class
         alpha=5.0,
-        layer=layer,                # ← THIS is the key
+        layer=layer,                
         resid_type="mlp_out",    # must match extractor
     )
 
