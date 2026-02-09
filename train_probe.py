@@ -158,37 +158,37 @@ if __name__ == "__main__":
 
     print(prompt)
 
-    layer = 5
-    device = "cuda"
+    for layer in range (32):
+        device = "cuda"
 
-    model, tokenizer = load_model()
-    prompts, labels = load_dataset()
+        model, tokenizer = load_model()
+        prompts, labels = load_dataset()
 
-    extractor = ResidualActivationExtractor(
-        model=model,
-        tokenizer=tokenizer,
-        device=device,
-        batch_size=8,
-    )
-    
-    results_full = probe_layer(
-        extractor=extractor,
-        prompts=prompts,
-        labels=labels,
-        layer=layer,
-    )
-    probe_full = results_full["probe"]
+        extractor = ResidualActivationExtractor(
+            model=model,
+            tokenizer=tokenizer,
+            device=device,
+            batch_size=8,
+        )
+        
+        results_full = probe_layer(
+            extractor=extractor,
+            prompts=prompts,
+            labels=labels,
+            layer=layer,
+        )
+        probe_full = results_full["probe"]
 
-    compare_steering(
-        model=model,
-        tokenizer=tokenizer,
-        probe=probe_full,        # trained on layer 25
-        prompt=prompt,
-        id=0,                    # positive class
-        contrastive_id=1,        # negative class
-        alpha=50.0,
-        layer=layer,                
-        resid_type="mlp_out",    # must match extractor
-    )
+        compare_steering(
+            model=model,
+            tokenizer=tokenizer,
+            probe=probe_full,        # trained on layer 25
+            prompt=prompt,
+            id=0,                    # positive class
+            contrastive_id=1,        # negative class
+            alpha=50.0,
+            layer=layer,                
+            resid_type="mlp_out",    # must match extractor
+        )
 
 
