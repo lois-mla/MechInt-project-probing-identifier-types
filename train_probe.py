@@ -1,7 +1,7 @@
 import torch
 import transformer_lens
 from transformers import AutoTokenizer
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
 from steering import compare_steering
