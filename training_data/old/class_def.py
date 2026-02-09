@@ -9,6 +9,8 @@ bag = Bag()
 
 
 
+def addition(x, y):
+    return x + y
 
 class MyClass():
     x = 1
