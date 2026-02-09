@@ -1,7 +1,7 @@
 import torch
 import transformer_lens
 from transformers import AutoTokenizer
-from steering import get_class_steering_vector
+import matplotlib.pyplot as plt
 
 from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
 from steering import compare_steering
@@ -11,7 +11,7 @@ from linearprobe_new import (
     train_probe,
     evaluate_probe,
 )
-
+# from steering import 
 
 def probe_layer(
     extractor,
@@ -79,9 +79,6 @@ def main():
     model, tokenizer = load_model()
     prompts, labels = load_dataset()
 
-    prompts_def, labels_def = load_dataset(part="DEF")
-    prompts_call, labels_call = load_dataset(part="CALL")
-
     extractor = ResidualActivationExtractor(
         model=model,
         tokenizer=tokenizer,
@@ -90,29 +87,12 @@ def main():
     )
 
     n_layers = model.cfg.n_layers
-    layer = 25 # the layer to probe, found using logitlens
 
-    results_def = probe_layer(
-        extractor=extractor,
-        prompts=prompts_def,
-        labels=labels_def,
-        layer=layer,
-    )
-    probe_def = results_def["probe"]
-
-    results_call = probe_layer(
-        extractor=extractor,
-        prompts=prompts_call,
-        labels=labels_call,
-        layer=layer,
-    )
-    probe_call = results_call["probe"]
-
-    results_full = probe_layer(
+    results = probe_all_layers(
         extractor=extractor,
         prompts=prompts,
         labels=labels,
-        layer=layer,
+        n_layers=n_layers,
     )
     probe_full = results_full["probe"]
 

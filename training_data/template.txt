@@ -53,8 +53,8 @@ z = 12
 
 sum = addition(1, 2)
 bop = MyClass()
-one = bop.x
 zee = FIM
+one = bop.x
 >>>z
 ID:0
 #####
