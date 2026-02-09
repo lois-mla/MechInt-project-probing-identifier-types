@@ -3,7 +3,7 @@ import transformer_lens
 from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
-from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
+from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model
 from steering import compare_steering
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -132,7 +132,7 @@ def main():
 if __name__ == "__main__":
     # main()
 
-    prompt = """
+    prompt_prefix = """
     def join(a, b):
         return f"{a}:{b}"
 
@@ -142,7 +142,9 @@ if __name__ == "__main__":
     g = Greeter('name2')
     msg = g.greet()
     n = g.name
-    neg = not FIM
+    neg = not """
+    
+    prompt_suffix = """
     both = flag and False
 
     class Greeter:
@@ -151,6 +153,8 @@ if __name__ == "__main__":
         def greet(self):
             return f"Hi {self.name}"
     """
+
+    prompt = get_prompt(prompt_prefix, prompt_suffix)
 
     layer =25
     device = "cuda"
