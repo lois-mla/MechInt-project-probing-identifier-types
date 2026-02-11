@@ -3,7 +3,7 @@ import transformer_lens
 from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
-from utils import read_fim_dataset, get_prompts_and_IDS, train_test_split, load_dataset, load_model
+from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model
 from steering import compare_steering
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -132,20 +132,35 @@ def main():
 if __name__ == "__main__":
     # main()
 
-    prompt = """
-    def add(a, b):
-        return a + b
+    prompt_prefix = """
+    def join(a, b):
+        return f"{a}:{b}"
 
-    <MID>
+    flag = True
 
-    add(2, 3)
+    text = join('a2', 'b2')
+    g = Greeter('name2')
+    msg = g.greet()
+    n = g.name
+    neg = not """
+    
+    prompt_suffix = """
+    both = flag and False
+
+    class Greeter:
+        def __init__(self, name):
+            self.name = name
+        def greet(self):
+            return f"Hi {self.name}"
     """
 
-    layer =25
-    device = "cuda"
+    prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+    print(prompt)
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset()
+    device = "cuda"
 
     extractor = ResidualActivationExtractor(
         model=model,
@@ -154,24 +169,32 @@ if __name__ == "__main__":
         batch_size=8,
     )
     
-    results_full = probe_layer(
-        extractor=extractor,
-        prompts=prompts,
-        labels=labels,
-        layer=layer,
-    )
-    probe_full = results_full["probe"]
 
-    compare_steering(
-        model=model,
-        tokenizer=tokenizer,
-        probe=probe_full,        # ← trained on layer 25
-        prompt=prompt,
-        id=0,                    # positive class
-        contrastive_id=1,        # negative class
-        alpha=5.0,
-        layer=layer,                # ← THIS is the key
-        resid_type="mlp_out",    # must match extractor
-    )
+    for layer in range (32):
+        results_full = probe_layer(
+            extractor=extractor,
+            prompts=prompts,
+            labels=labels,
+            layer=layer,
+        )
+        probe_full = results_full["probe"]
+
+        compare_steering(
+            model=model,
+            tokenizer=tokenizer,
+            probe=probe_full,        # trained on layer 25
+            prompt=prompt,
+            id=0,                    # positive class
+            contrastive_id=2,        # negative class
+            alpha=1000.0,
+            layer=layer,                
+            resid_type="mlp_out",    # must match extractor
+        )
+
+            # clean probe tensors
+        del probe_full
+        torch.cuda.empty_cache()
+
+
 
 
