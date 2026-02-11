@@ -4,7 +4,7 @@ from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
 from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model
-from steering import compare_steering
+from steering import compare_steering, get_class_steering_vector
 from linearprobe_new import (
     ResidualActivationExtractor,
     LinearProbe,
@@ -74,64 +74,8 @@ def probe_all_layers(
     return results
 
 def main():
-    device = "cuda"
 
-    model, tokenizer = load_model()
-    prompts, labels = load_dataset()
-
-    extractor = ResidualActivationExtractor(
-        model=model,
-        tokenizer=tokenizer,
-        device=device,
-        batch_size=8,
-    )
-
-    n_layers = model.cfg.n_layers
-
-    results = probe_all_layers(
-        extractor=extractor,
-        prompts=prompts,
-        labels=labels,
-        n_layers=n_layers,
-    )
-    probe_full = results_full["probe"]
-
-    for i in range(3):
-        full_feature_direction_i = get_class_steering_vector(probe_full, i)
-        call_feature_direction_i = get_class_steering_vector(probe_call, i)
-        def_feature_direction_i = get_class_steering_vector(probe_def, i)
-        print(f"feature direction {i} norm full:", full_feature_direction_i)
-        print(f"feature direction {i} norm call:", call_feature_direction_i)
-        print(f"feature direction {i} norm def:", def_feature_direction_i)
-
-        # similarity between the feature directions
-        similarity_full_call = torch.cosine_similarity(full_feature_direction_i, call_feature_direction_i, dim=0)
-        similarity_full_def = torch.cosine_similarity(full_feature_direction_i, def_feature_direction_i, dim=0)
-        similarity_def_call = torch.cosine_similarity(def_feature_direction_i, call_feature_direction_i, dim=0)
-
-        print(f"Similarity between feature direction {i} for full and call:", similarity_full_call.item())
-        print(f"Similarity between feature direction {i} for full and def:", similarity_full_def.item())
-        print(f"Similarity between feature direction {i} for def and call:", similarity_def_call.item())
-
-
-    # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    # )
-
-    # # print best layer
-    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    # print("Best layer:", best_layer)
-    # print("Test accuracy:", results[best_layer]["test_acc"])
-
-    # print("All results:", results)
-
-if __name__ == "__main__":
-    # main()
-
+    # put new prompt here
     prompt_prefix = """
     def join(a, b):
         return f"{a}:{b}"
@@ -170,6 +114,7 @@ if __name__ == "__main__":
     )
     
 
+    # probe all layers
     for layer in range (32):
         results_full = probe_layer(
             extractor=extractor,
@@ -178,6 +123,8 @@ if __name__ == "__main__":
             layer=layer,
         )
         probe_full = results_full["probe"]
+        # print the train and test accuracy of this layer
+        
 
         compare_steering(
             model=model,
@@ -198,3 +145,63 @@ if __name__ == "__main__":
 
 
 
+
+    # device = "cuda"
+
+    # model, tokenizer = load_model()
+    # prompts, labels = load_dataset()
+
+    # extractor = ResidualActivationExtractor(
+    #     model=model,
+    #     tokenizer=tokenizer,
+    #     device=device,
+    #     batch_size=8,
+    # )
+
+    # n_layers = model.cfg.n_layers
+
+    # results = probe_all_layers(
+    #     extractor=extractor,
+    #     prompts=prompts,
+    #     labels=labels,
+    #     n_layers=n_layers,
+    # )
+    # probe_full = results_full["probe"]
+
+    # for i in range(3):
+    #     full_feature_direction_i = get_class_steering_vector(probe_full, i)
+    #     call_feature_direction_i = get_class_steering_vector(probe_call, i)
+    #     def_feature_direction_i = get_class_steering_vector(probe_def, i)
+    #     print(f"feature direction {i} norm full:", full_feature_direction_i)
+    #     print(f"feature direction {i} norm call:", call_feature_direction_i)
+    #     print(f"feature direction {i} norm def:", def_feature_direction_i)
+
+    #     # similarity between the feature directions
+    #     similarity_full_call = torch.cosine_similarity(full_feature_direction_i, call_feature_direction_i, dim=0)
+    #     similarity_full_def = torch.cosine_similarity(full_feature_direction_i, def_feature_direction_i, dim=0)
+    #     similarity_def_call = torch.cosine_similarity(def_feature_direction_i, call_feature_direction_i, dim=0)
+
+    #     print(f"Similarity between feature direction {i} for full and call:", similarity_full_call.item())
+    #     print(f"Similarity between feature direction {i} for full and def:", similarity_full_def.item())
+    #     print(f"Similarity between feature direction {i} for def and call:", similarity_def_call.item())
+
+
+    # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
+    # results = probe_all_layers(
+    #     extractor=extractor,
+    #     prompts=prompts,
+    #     labels=labels,
+    #     n_layers=n_layers,
+    # )
+
+    # # print best layer
+    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    # print("Best layer:", best_layer)
+    # print("Test accuracy:", results[best_layer]["test_acc"])
+
+    # print("All results:", results)
+
+if __name__ == "__main__":
+    main()
+
+    
