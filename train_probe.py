@@ -132,9 +132,9 @@ def main():
             tokenizer=tokenizer,
             probe=probe_full,        # trained on layer 25
             prompt=prompt,
-            id=0,                    # positive class
+            id=1,                    # positive class
             contrastive_id=2,        # negative class
-            alpha=1000.0,            # 'how much' you steer
+            alpha=50.0,            # 'how much' you steer
             layer=layer,
             resid_type="mlp_out",    # must match extractor
         )
