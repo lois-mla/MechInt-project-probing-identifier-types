@@ -133,7 +133,7 @@ def main():
             prompt=prompt,
             id=0,                    # positive class
             contrastive_id=2,        # negative class
-            alpha=1000.0,
+            alpha=50.0,
             layer=layer,                
             resid_type="mlp_out",    # must match extractor
         )
