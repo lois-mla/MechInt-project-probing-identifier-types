@@ -51,14 +51,14 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
         if not block:
             continue
 
-        if block.count("<FIM>") != 1:
+        if block.count("FIM") != 1:
             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
 
         if block.count(">>>") != 1:
             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
 
         # Split at FIM
-        before_fim, rest = block.split("<FIM>", 1)
+        before_fim, rest = block.split("FIM", 1)
 
         # Split rest at >>>
         middle, after_arrow = rest.split("\n>>>", 1)
@@ -110,8 +110,8 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
 
 
 def load_dataset(part="FULL"):
-    def_fim_dict = read_fim_dataset("def_FIM_data2.txt")
-    call_fim_dict = read_fim_dataset("call_FIM_data2.txt")
+    def_fim_dict = read_fim_dataset("def_FIM_data_final.txt")
+    call_fim_dict = read_fim_dataset("call_FIM_data_final.txt")
 
     def_prompts, def_ids = get_prompts_and_IDS(def_fim_dict)
     call_prompts, call_ids = get_prompts_and_IDS(call_fim_dict)
