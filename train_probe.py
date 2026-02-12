@@ -129,38 +129,12 @@ def main():
 
     print("All results:", results)
 
-
-
     # steering:
 
-    prompt_prefix = """k = 587
-
-def b(z):
-    X = z * 6
-    W = z ** 1
-    I = z / 3
-    I = z - 10
-    E = z / 7
-    return z
-
-class s:
-    def __init__(self, z):
-        self.z = z
-    def h(self, x):
-        return x * 2
-    q = 704
-    def d(self, x):
-        return x + 2
-    def i(self, x):
-        return x - 2
-
-i = 
+    prompt_prefix = """
 """
     
-    prompt_suffix = """ + 4
-e = c.d(8)
-m = b([15, 14])
-c = s('T')
+    prompt_suffix = """ 
 """
 
     prompt = get_prompt(prompt_prefix, prompt_suffix)
