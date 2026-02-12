@@ -75,28 +75,103 @@ def probe_all_layers(
 
 def main():
 
+#     ["""def a(x, y):
+#     return x * y
+
+# class q:
+#     b = 4
+#     def m(self, z):
+#         return z + 1
+
+# c = [1, 2]
+
+# o = q()
+# p = o.b
+# r = a(p, p)
+# s = FIM    
+#     """, """class FIM:
+#     k = 7
+
+# d = 3.5
+
+# def n(u, v):
+#     return u - v
+
+# o = FIM()
+# p = o.k
+# r = n(p, d)
+# s = d * 2
+#     """, """x = {1, 2, 3}
+
+# def FIM(a, b, c):
+#     a = a + b
+#     return a
+
+# class l:
+#     y = 5
+
+# o = l()
+# p = o.y
+# r = FIM(p, p, p)
+# s = x
+# """, """class t:
+#     a = 2
+#     def f(self, q):
+#         return q * 3
+
+# def w(e):
+#     return e + 1
+
+# FIM = {"x": 9}
+
+# o = t()
+# p = o.a
+# r = w(p)
+# s = FIM
+# """, """def k(a, b):
+#     return a + b
+
+# class s:
+#     m = 8
+
+# v = 10
+
+# o = FIM()
+# p = o.m
+# r = k(p, v)
+# u = v + 1
+# ""","""class j:
+#     r = 6
+
+# def c(x):
+#     return x * 2
+
+# FIM = [4, 5]
+
+# o = j()
+# p = o.r
+# q = c(p)
+# z = FIM
+# """]    
+
 
     # put new prompt here
     # answer should be m
-    prompt_prefix = """
-    class r:
-        k = 9
-        def j(self, q):
-            return q + 4
+    prompt_prefix = """def k(a, b):
+    return a + b
 
-    t = {"a": 3}
+class s:
+    m = 8
 
-    def m(x, y, z):
-        x = x + y
-        z = z + x
-        return z
+v = 10
 
-    o = r()
-    p = o.k
-    u = """
+o = 
+"""
     
-    prompt_suffix = """(p, p, p)
-    v = t
+    prompt_suffix = """()
+p = o.m
+r = k(p, v)
+u = v + 1
     """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
@@ -215,8 +290,8 @@ def main():
             tokenizer=tokenizer,
             probe=probe,        # trained on layer 25
             prompt=prompt,
-            id=0,                    # positive class
-            contrastive_id=2,        # negative class
+            id=2,                    # positive class
+            contrastive_id=1,        # negative class
             alpha=50.0,
             layer=layer,                
             resid_type="mlp_out",    # must match extractor
