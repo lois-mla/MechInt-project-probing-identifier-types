@@ -4,7 +4,7 @@ from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
 from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model
-from steering import compare_steering, get_class_steering_vector
+from steering import compare_steering
 from linearprobe_new import (
     ResidualActivationExtractor,
     LinearProbe,
@@ -74,37 +74,10 @@ def probe_all_layers(
     return results
 
 def main():
-
-    # put new prompt here
-    prompt_prefix = """
-    def join(a, b):
-        return f"{a}:{b}"
-
-    flag = True
-
-    text = join('a2', 'b2')
-    g = Greeter('name2')
-    msg = g.greet()
-    n = g.name
-    neg = not """
-    
-    prompt_suffix = """
-    both = flag and False
-
-    class Greeter:
-        def __init__(self, name):
-            self.name = name
-        def greet(self):
-            return f"Hi {self.name}"
-    """
-
-    prompt = get_prompt(prompt_prefix, prompt_suffix)
-
-    print(prompt)
+    device = "cuda"
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset()
-    device = "cuda"
 
     extractor = ResidualActivationExtractor(
         model=model,
@@ -112,53 +85,8 @@ def main():
         device=device,
         batch_size=8,
     )
-    
 
-    # probe all layers
-    for layer in range (32):
-        results_full = probe_layer(
-            extractor=extractor,
-            prompts=prompts,
-            labels=labels,
-            layer=layer,
-        )
-        probe_full = results_full["probe"]
-        # print the train and test accuracy of this layer
-        
-
-        compare_steering(
-            model=model,
-            tokenizer=tokenizer,
-            probe=probe_full,        # trained on layer 25
-            prompt=prompt,
-            id=0,                    # positive class
-            contrastive_id=2,        # negative class
-            alpha=50.0,
-            layer=layer,                
-            resid_type="mlp_out",    # must match extractor
-        )
-
-            # clean probe tensors
-        del probe_full
-        torch.cuda.empty_cache()
-
-
-
-
-
-    # device = "cuda"
-
-    # model, tokenizer = load_model()
-    # prompts, labels = load_dataset()
-
-    # extractor = ResidualActivationExtractor(
-    #     model=model,
-    #     tokenizer=tokenizer,
-    #     device=device,
-    #     batch_size=8,
-    # )
-
-    # n_layers = model.cfg.n_layers
+    n_layers = model.cfg.n_layers
 
     # results = probe_all_layers(
     #     extractor=extractor,
@@ -187,21 +115,145 @@ def main():
 
 
     # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    # )
+    results = probe_all_layers(
+        extractor=extractor,
+        prompts=prompts,
+        labels=labels,
+        n_layers=n_layers,
+    )
 
-    # # print best layer
-    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    # print("Best layer:", best_layer)
-    # print("Test accuracy:", results[best_layer]["test_acc"])
+    # print best layer
+    best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    print("Best layer:", best_layer)
+    print("Test accuracy:", results[best_layer]["test_acc"])
 
-    # print("All results:", results)
+    print("All results:", results)
+
+
+
+    # steering:
+
+    prompt_prefix = """k = 587
+
+def b(z):
+    X = z * 6
+    W = z ** 1
+    I = z / 3
+    I = z - 10
+    E = z / 7
+    return z
+
+class s:
+    def __init__(self, z):
+        self.z = z
+    def h(self, x):
+        return x * 2
+    q = 704
+    def d(self, x):
+        return x + 2
+    def i(self, x):
+        return x - 2
+
+i = 
+"""
+    
+    prompt_suffix = """ + 4
+e = c.d(8)
+m = b([15, 14])
+c = s('T')
+"""
+
+    prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+    layer=0
+    for result in results:
+        probe = result["probe"]
+
+        compare_steering(
+            model=model,
+            tokenizer=tokenizer,
+            probe=probe,        # trained on layer 25
+            prompt=prompt,
+            id=0,                    # positive class
+            contrastive_id=2,        # negative class
+            alpha=50.0,
+            layer=layer,                
+            resid_type="mlp_out",    # must match extractor
+        )
+
+        layer += 1
+        del probe
+        torch.cuda.empty_cache()
+
+
+
 
 if __name__ == "__main__":
     main()
 
+    # prompt_prefix = """
+    # def join(a, b):
+    #     return f"{a}:{b}"
+
+    # flag = True
+
+    # text = join('a2', 'b2')
+    # g = Greeter('name2')
+    # msg = g.greet()
+    # n = g.name
+    # neg = not """
     
+    # prompt_suffix = """
+    # both = flag and False
+
+    # class Greeter:
+    #     def __init__(self, name):
+    #         self.name = name
+    #     def greet(self):
+    #         return f"Hi {self.name}"
+    # """
+
+    # prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+    # print(prompt)
+
+    # model, tokenizer = load_model()
+    # prompts, labels = load_dataset()
+    # device = "cuda"
+
+    # extractor = ResidualActivationExtractor(
+    #     model=model,
+    #     tokenizer=tokenizer,
+    #     device=device,
+    #     batch_size=8,
+    # )
+    
+
+    # for layer in range (32):
+    #     results_full = probe_layer(
+    #         extractor=extractor,
+    #         prompts=prompts,
+    #         labels=labels,
+    #         layer=layer,
+    #     )
+    #     probe_full = results_full["probe"]
+
+    #     compare_steering(
+    #         model=model,
+    #         tokenizer=tokenizer,
+    #         probe=probe_full,        # trained on layer 25
+    #         prompt=prompt,
+    #         id=0,                    # positive class
+    #         contrastive_id=2,        # negative class
+    #         alpha=50.0,
+    #         layer=layer,                
+    #         resid_type="mlp_out",    # must match extractor
+    #     )
+
+    #         # clean probe tensors
+    #     del probe_full
+    #     torch.cuda.empty_cache()
+
+
+
+
