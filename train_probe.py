@@ -129,60 +129,50 @@ def main():
 
     print("All results:", results)
 
-if __name__ == "__main__":
-    main()
 
-    prompt_prefix = """
-    def join(a, b):
-        return f"{a}:{b}"
 
-    flag = True
+    # steering:
 
-    text = join('a2', 'b2')
-    g = Greeter('name2')
-    msg = g.greet()
-    n = g.name
-    neg = not """
+    prompt_prefix = """k = 587
+
+def b(z):
+    X = z * 6
+    W = z ** 1
+    I = z / 3
+    I = z - 10
+    E = z / 7
+    return z
+
+class s:
+    def __init__(self, z):
+        self.z = z
+    def h(self, x):
+        return x * 2
+    q = 704
+    def d(self, x):
+        return x + 2
+    def i(self, x):
+        return x - 2
+
+i = 
+"""
     
-    prompt_suffix = """
-    both = flag and False
-
-    class Greeter:
-        def __init__(self, name):
-            self.name = name
-        def greet(self):
-            return f"Hi {self.name}"
-    """
+    prompt_suffix = """ + 4
+e = c.d(8)
+m = b([15, 14])
+c = s('T')
+"""
 
     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
-    print(prompt)
-
-    model, tokenizer = load_model()
-    prompts, labels = load_dataset()
-    device = "cuda"
-
-    extractor = ResidualActivationExtractor(
-        model=model,
-        tokenizer=tokenizer,
-        device=device,
-        batch_size=8,
-    )
-    
-
-    for layer in range (32):
-        results_full = probe_layer(
-            extractor=extractor,
-            prompts=prompts,
-            labels=labels,
-            layer=layer,
-        )
-        probe_full = results_full["probe"]
+    layer=0
+    for result in results:
+        probe = result["probe"]
 
         compare_steering(
             model=model,
             tokenizer=tokenizer,
-            probe=probe_full,        # trained on layer 25
+            probe=probe,        # trained on layer 25
             prompt=prompt,
             id=0,                    # positive class
             contrastive_id=2,        # negative class
@@ -191,9 +181,78 @@ if __name__ == "__main__":
             resid_type="mlp_out",    # must match extractor
         )
 
-            # clean probe tensors
-        del probe_full
+        layer += 1
+        del probe
         torch.cuda.empty_cache()
+
+
+
+
+if __name__ == "__main__":
+    main()
+
+    # prompt_prefix = """
+    # def join(a, b):
+    #     return f"{a}:{b}"
+
+    # flag = True
+
+    # text = join('a2', 'b2')
+    # g = Greeter('name2')
+    # msg = g.greet()
+    # n = g.name
+    # neg = not """
+    
+    # prompt_suffix = """
+    # both = flag and False
+
+    # class Greeter:
+    #     def __init__(self, name):
+    #         self.name = name
+    #     def greet(self):
+    #         return f"Hi {self.name}"
+    # """
+
+    # prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+    # print(prompt)
+
+    # model, tokenizer = load_model()
+    # prompts, labels = load_dataset()
+    # device = "cuda"
+
+    # extractor = ResidualActivationExtractor(
+    #     model=model,
+    #     tokenizer=tokenizer,
+    #     device=device,
+    #     batch_size=8,
+    # )
+    
+
+    # for layer in range (32):
+    #     results_full = probe_layer(
+    #         extractor=extractor,
+    #         prompts=prompts,
+    #         labels=labels,
+    #         layer=layer,
+    #     )
+    #     probe_full = results_full["probe"]
+
+    #     compare_steering(
+    #         model=model,
+    #         tokenizer=tokenizer,
+    #         probe=probe_full,        # trained on layer 25
+    #         prompt=prompt,
+    #         id=0,                    # positive class
+    #         contrastive_id=2,        # negative class
+    #         alpha=50.0,
+    #         layer=layer,                
+    #         resid_type="mlp_out",    # must match extractor
+    #     )
+
+    #         # clean probe tensors
+    #     del probe_full
+    #     torch.cuda.empty_cache()
 
 
 
