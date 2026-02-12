@@ -283,7 +283,7 @@ u = v + 1
 
     layer=0
     for result in results:
-        probe = result["probe"]
+        probe = result[layer]["probe"]
 
         compare_steering(
             model=model,
