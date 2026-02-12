@@ -31,7 +31,7 @@ def get_contrastive_steering_vector(
     normalize: bool = True,
 ) -> torch.Tensor:
     """
-    pos - neg steering direction.
+    neg - pos steering direction.
     """
     W = probe.linear.weight.detach()
     s = W[neg_class] - W[pos_class]
