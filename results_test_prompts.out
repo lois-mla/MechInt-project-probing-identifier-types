@@ -1,0 +1,145 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.50s/it]
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+{'bos_token': '<s>', 'eos_token': '</s>', 'unk_token': '<unk>', 'additional_special_tokens': ['▁<PRE>', '▁<MID>', '▁<SUF>', '▁<EOT>']}
+['▁<PRE>', '▁<MID>', '▁<SUF>', '▁<EOT>']
+32007
+32009
+32008
+begin
+<s> <PRE>  def   <SUF> (x, y):
+    return x + y
+
+sum = g(2, 3)
+  <MID>g <EOT></s>
+end
+correct: g
+begin
+<s> <PRE>  # function that adds two numbers
+def   <SUF> (x, y):
+    return x + y
+
+# add 2 and 3 together
+sum = g(2, 3)
+  <MID>g <EOT></s>
+end
+begin
+<s> <PRE>  # set var to 0
+  <SUF>  = 0
+# add 1 to var
+t += 1
+  <MID>var <EOT></s>
+end
+correct: t
+begin
+<s> <PRE>    <SUF>  = 0
+t += 1
+  <MID>t = 0
+while t < 1
+end
+correct: t
+begin
+<s> <PRE>  class   <SUF> :
+    def __init__(self):
+        self.data = []
+
+    def add(self, x):
+        self.data.append(x)
+
+bag = e()  <MID>e <EOT></s>
+end
+correct: e
+begin
+<s> <PRE>  def p(a,b):
+    return(a+b)
+class c:
+    x=5
+x=3
+y=5
+#new variable z equal to 8
+z=  <SUF> (x,y)  <MID>p <EOT></s>
+end
+correct: p
+begin
+<s> <PRE>  def s(x):
+    return x * x
+class c:
+    def _init_(self, start=0):  
+        self.value = start
+    def inc(self):
+        self.value += 1
+        return self.value  <SUF>   = True
+sq = s(2)
+ctr = c(0)
+after = ctr.inc()
+total = ctr.value
+neg = not f
+both = f and False  <MID>
+    def dec(self):
+        self
+end
+correct: f
+begin
+<s> <PRE>  class i:
+    def _init_(self, name):
+        self.name = name
+        def greet(self):
+            return f'Hi {self.name}'
+def a(a, b):
+    return a + b
+n = 10
+res = a(1, 7)
+g =   <SUF> ('name3')
+msg = g.greet()
+n = g.name
+m = n + 3
+check = n > 5
+  <MID>i <EOT></s>
+end
+correct: i
+begin
+<s> <PRE>  def i(j,c):
+    return j+c
+class r:
+    a=5
+k=3
+h =  <SUF>  ()
+o=h.a
+at=i(o,k)
+d=k+3  <MID>r()
+print(h.a)
+
+end
+correct: r
+begin
+<s> <PRE>  
+def p(j,c):
+    return j+c
+o=7
+k=32
+w=  <SUF> (o,k)  <MID>p <EOT></s>
+end
+correct: p
