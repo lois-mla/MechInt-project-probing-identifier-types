@@ -159,7 +159,7 @@ def main():
     #     batch_size=8,
     # )
 
-    # n_layers = model.cfg.n_layers
+    n_layers = model.cfg.n_layers
 
     # results = probe_all_layers(
     #     extractor=extractor,
