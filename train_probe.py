@@ -157,21 +157,26 @@ def main():
 
     # put new prompt here
     # answer should be m
-    prompt_prefix = """def k(a, b):
-    return a + b
+    prompt_prefix = """class x:
+    y = 'base'
+    def __init__(self, z):
+        self.z = z
+    def a(self, b):
+        return self.y + self.z + b
 
-class s:
-    m = 8
+def c(d, e):
+    return d - e
 
-v = 10
+f = 100
 
-o = 
+g = c(f, 10)
+h = 
+
 """
     
-    prompt_suffix = """()
-p = o.m
-r = k(p, v)
-u = v + 1
+    prompt_suffix = """('mid')
+i = h.a('end')
+j = f // 2
     """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
@@ -282,7 +287,7 @@ u = v + 1
     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
     layer=0
-    for layer, result in results:
+    for layer, result in results.items():
         probe = result["probe"]
 
         compare_steering(
