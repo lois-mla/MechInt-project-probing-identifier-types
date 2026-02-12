@@ -1,0 +1,8767 @@
+def t(a, o):
+    return a.upper()
+class m:
+    p = 23
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def u(self, i):
+        return ((self.p * x) * y)
+n = [3, 9]
+w = m(2, 2)
+l = w.u(10)
+n.append(2)
+g = FIM('q', 'h')
+>>>t
+ID:1
+#####
+
+z = [4, 6]
+class w:
+    q = [3, 6]
+    def __init__(self, a):
+        self.a = a
+    def u(self, i):
+        return self.q * 2
+def m(f, t, v):
+    return ((f * t) + v)
+p = m(5, 7, 10)
+z.append(3)
+h = FIM('s')
+j = h.u('d')
+>>>w
+ID:2
+#####
+
+class i:
+    f = [1, 7]
+    def __init__(self, j):
+        self.j = j
+    def h(self, o):
+        return self.f[0]
+def c(q, g):
+    return q[0]
+e = 10.27
+a = c([4], [4])
+b = i([1])
+p = b.h([1, 2])
+k = FIM * 1.5
+>>>e
+ID:0
+#####
+
+class v:
+    e = 18
+    def __init__(self, d):
+        self.d = d
+    def i(self, g):
+        return (self.e * d)
+def q(u, l, t):
+    return ((u * l) * t)
+s = 29
+f = FIM(5, 9, 1)
+p = s + 5
+c = v(5)
+o = c.i(10)
+>>>q
+ID:1
+#####
+
+def o(w, k, u):
+    return ((w + k) - u)
+b = 4.12
+class m:
+    q = 'e'
+    def __init__(self, h, p):
+        self.h = h
+        self.p = p
+    def j(self, c):
+        return self.q + h
+e = FIM(9, 7, 2)
+z = m('r', 'a')
+x = z.j('t')
+v = b * 1.5
+>>>o
+ID:1
+#####
+
+def l(v, j):
+    return v[1:]
+f = 13
+class g:
+    o = [3, 7]
+    def __init__(self, n):
+        self.n = n
+    def m(self, b):
+        return self.o.upper()
+t = FIM + 5
+c = g('k')
+e = c.m('z')
+a = l([3], [2])
+>>>f
+ID:0
+#####
+
+v = 13.06
+class s:
+    f = 't'
+    def __init__(self, n, d):
+        self.n = n
+        self.d = d
+    def w(self, q):
+        return self.f + [n]
+def e(l, b):
+    return (l - b)
+j = v * 1.5
+k = FIM(5, 9)
+g = s([1], [3])
+m = g.w([1, 2])
+>>>e
+ID:1
+#####
+
+c = 1.57
+def t(q, u):
+    return q[1:]
+class j:
+    n = 48
+    def __init__(self, s):
+        self.s = s
+    def h(self, d):
+        return (self.n - s)
+x = FIM * 1.5
+k = j(3)
+i = k.h(10)
+l = t([2], [4])
+>>>c
+ID:0
+#####
+
+class e:
+    o = [2, 8]
+    def __init__(self, z, y):
+        self.z = z
+        self.y = y
+    def u(self, l):
+        return self.o + z
+def c(p, j):
+    return p.upper()
+k = 7.25
+n = c('h', 'a')
+f = k * 1.5
+q = FIM('t', 'd')
+x = q.u('g')
+>>>e
+ID:2
+#####
+
+i = 'w'
+class m:
+    y = 42
+    def __init__(self, u):
+        self.u = u
+    def l(self, k):
+        return self.y + [u]
+def t(p, r, b, o):
+    return p.upper()
+a = FIM.replace('a', 'b')
+w = m([1])
+s = w.l([1, 2])
+n = t('j', 'x', 'h', 'v')
+>>>i
+ID:0
+#####
+
+def e(z):
+    return z
+s = [3, 8]
+class g:
+    u = 7
+    def __init__(self, a, p):
+        self.a = a
+        self.p = p
+    def c(self, k):
+        return ((self.u - a) / p)
+s.append(2)
+y = g(4, 1)
+i = y.c(10)
+t = FIM(5)
+>>>e
+ID:1
+#####
+
+i = [3, 6]
+def y(h, l):
+    return (h - l)
+class n:
+    d = 42
+    def __init__(self, e):
+        self.e = e
+    def a(self, w):
+        return (self.d + e)
+z = FIM(1)
+r = z.a(10)
+t = y(3, 10)
+i.append(1)
+>>>n
+ID:2
+#####
+
+def i(s):
+    return s
+class q:
+    r = 46
+    def __init__(self, b, y):
+        self.b = b
+        self.y = y
+    def u(self, p):
+        return self.r.upper()
+x = [1, 6]
+o = q('g', 'd')
+t = o.u('m')
+x.append(4)
+e = FIM(7)
+>>>i
+ID:1
+#####
+
+class a:
+    t = [4, 6]
+    def __init__(self, i):
+        self.i = i
+    def q(self, e):
+        return self.t * 2
+c = [3, 7]
+def w(r, h, p, n):
+    return r[1:]
+u = w([3], [1], [5], [3])
+c.append(1)
+b = FIM('y')
+o = b.q('k')
+>>>a
+ID:2
+#####
+
+u = [3, 9]
+class m:
+    b = 'l'
+    def __init__(self, s):
+        self.s = s
+    def g(self, c):
+        return (self.b - s)
+def d(r, i, o):
+    return r[1:]
+u.append(3)
+a = m(1)
+k = a.g(10)
+x = FIM([5], [4], [4])
+>>>d
+ID:1
+#####
+
+def s(w, y, h, g):
+    return (((w / y) - h) * g)
+class n:
+    o = [1, 7]
+    def __init__(self, z, i):
+        self.z = z
+        self.i = i
+    def k(self, e):
+        return ((self.o + z) * i)
+f = [4, 6]
+c = n(3, 5)
+l = c.k(10)
+a = s(2, 5, 10, 1)
+FIM.append(1)
+>>>f
+ID:0
+#####
+
+def v(e, t):
+    return (e / t)
+class m:
+    d = 'b'
+    def __init__(self, x, w):
+        self.x = x
+        self.w = w
+    def h(self, u):
+        return self.d[1:]
+l = [1, 8]
+i = v(10, 3)
+b = FIM([5], [2])
+a = b.h([1, 2])
+l.append(4)
+>>>m
+ID:2
+#####
+
+def e(y, s):
+    return y[1:]
+h = 50
+class o:
+    c = [1, 7]
+    def __init__(self, g, d):
+        self.g = g
+        self.d = d
+    def x(self, a):
+        return ((self.c / g) + d)
+m = FIM([3], [1])
+b = h + 5
+q = o(3, 4)
+i = q.x(10)
+>>>e
+ID:1
+#####
+
+class z:
+    u = [3, 7]
+    def __init__(self, v, a):
+        self.v = v
+        self.a = a
+    def i(self, k):
+        return self.u + [v]
+def n(c, m, e, o):
+    return c + [m]
+s = [5, 7]
+s.append(4)
+d = n([4], [4], [2], [5])
+p = FIM([1], [1])
+j = p.i([1, 2])
+>>>z
+ID:2
+#####
+
+x = 'b'
+def z(a):
+    return a.capitalize()
+class j:
+    k = 'a'
+    def __init__(self, d, c):
+        self.d = d
+        self.c = c
+    def b(self, i):
+        return self.k.upper()
+h = j('u', 'm')
+r = h.b('p')
+s = z('l')
+t = FIM.replace('a', 'b')
+>>>x
+ID:0
+#####
+
+class o:
+    y = [4, 9]
+    def __init__(self, i, l):
+        self.i = i
+        self.l = l
+    def r(self, u):
+        return self.y * 2
+def c(p, b):
+    return p.upper()
+z = [1, 9]
+q = FIM('j', 'd')
+z.append(2)
+s = o('x', 'a')
+f = s.r('h')
+>>>c
+ID:1
+#####
+
+k = 35
+def i(r):
+    return r.capitalize()
+class j:
+    s = [1, 7]
+    def __init__(self, o, v):
+        self.o = o
+        self.v = v
+    def h(self, e):
+        return self.s * 2
+a = FIM('y', 'q')
+g = a.h('x')
+f = i('p')
+b = k + 5
+>>>j
+ID:2
+#####
+
+s = [3, 9]
+class p:
+    r = 20
+    def __init__(self, j, z):
+        self.j = j
+        self.z = z
+    def y(self, v):
+        return ((self.r / j) + z)
+def a(b, d, q, o):
+    return b.upper()
+g = FIM(3, 1)
+w = g.y(10)
+c = a('e', 't', 'n', 'f')
+s.append(3)
+>>>p
+ID:2
+#####
+
+class k:
+    r = [3, 6]
+    def __init__(self, m, t):
+        self.m = m
+        self.t = t
+    def z(self, x):
+        return self.r[0]
+n = 'k'
+def d(h, o, a, u):
+    return (((h * o) * a) / u)
+j = FIM([2], [4])
+i = j.z([1, 2])
+b = d(1, 5, 4, 3)
+q = n.replace('a', 'b')
+>>>k
+ID:2
+#####
+
+def u(f, b, p, v):
+    return f * 2
+class h:
+    r = 'a'
+    def __init__(self, m, z):
+        self.m = m
+        self.z = z
+    def k(self, i):
+        return self.r[0]
+s = [3, 8]
+g = u('x', 't', 'a', 'q')
+o = h([3], [3])
+c = o.k([1, 2])
+FIM.append(5)
+>>>s
+ID:0
+#####
+
+def i(s, z, m, h):
+    return s * 2
+q = [3, 9]
+class j:
+    o = 22
+    def __init__(self, v, u):
+        self.v = v
+        self.u = u
+    def x(self, c):
+        return self.o[1:]
+f = i('y', 'd', 'a', 't')
+g = j([1], [3])
+e = g.x([1, 2])
+FIM.append(3)
+>>>q
+ID:0
+#####
+
+class b:
+    r = [3, 9]
+    def __init__(self, e, d):
+        self.e = e
+        self.d = d
+    def o(self, c):
+        return self.r + [e]
+h = [4, 9]
+def i(z, n, p):
+    return z * 2
+h.append(2)
+a = i('w', 'q', 'u')
+m = FIM([5], [1])
+y = m.o([1, 2])
+>>>b
+ID:2
+#####
+
+i = [4, 7]
+def n(q, d, t):
+    return q[1:]
+class a:
+    x = [3, 7]
+    def __init__(self, j, v):
+        self.j = j
+        self.v = v
+    def s(self, b):
+        return self.x[0]
+w = FIM([3], [3])
+f = w.s([1, 2])
+p = n([5], [1], [2])
+i.append(1)
+>>>a
+ID:2
+#####
+
+class r:
+    e = [3, 6]
+    def __init__(self, v, g):
+        self.v = v
+        self.g = g
+    def d(self, w):
+        return self.e[0]
+f = 10.34
+def q(o, h, a):
+    return o + [h]
+s = r([4], [1])
+i = s.d([1, 2])
+m = f * 1.5
+j = FIM([5], [5], [2])
+>>>q
+ID:1
+#####
+
+class e:
+    q = 37
+    def __init__(self, h):
+        self.h = h
+    def k(self, n):
+        return self.q[0]
+m = 38
+def d(g, s, v):
+    return ((g / s) / v)
+i = e([4])
+p = i.k([1, 2])
+u = FIM(5, 10, 3)
+b = m + 5
+>>>d
+ID:1
+#####
+
+def x(c, k, u, i):
+    return (((c + k) - u) * i)
+r = 'h'
+class e:
+    h = 40
+    def __init__(self, f, w):
+        self.f = f
+        self.w = w
+    def a(self, d):
+        return self.h[1:]
+o = FIM([1], [5])
+n = o.a([1, 2])
+l = x(3, 10, 1, 7)
+g = r.replace('a', 'b')
+>>>e
+ID:2
+#####
+
+class x:
+    m = 23
+    def __init__(self, j, f):
+        self.j = j
+        self.f = f
+    def s(self, q):
+        return self.m[1:]
+h = 4
+def v(k, y):
+    return (k / y)
+l = x([5], [1])
+w = l.s([1, 2])
+z = v(10, 5)
+i = FIM + 5
+>>>h
+ID:0
+#####
+
+class b:
+    n = 'i'
+    def __init__(self, o):
+        self.o = o
+    def r(self, u):
+        return (self.n - o)
+t = 14.8
+def h(y, w):
+    return y * 2
+f = h('m', 'i')
+k = t * 1.5
+s = FIM(4)
+z = s.r(10)
+>>>b
+ID:2
+#####
+
+def p(m):
+    return m.capitalize()
+class a:
+    n = [4, 6]
+    def __init__(self, u):
+        self.u = u
+    def e(self, z):
+        return self.n * 2
+r = 'y'
+w = p('j')
+i = FIM.replace('a', 'b')
+h = a('x')
+y = h.e('g')
+>>>r
+ID:0
+#####
+
+l = [4, 7]
+class k:
+    j = 'a'
+    def __init__(self, i, t):
+        self.i = i
+        self.t = t
+    def w(self, b):
+        return self.j + [i]
+def o(u, s):
+    return u.upper()
+r = o('q', 'm')
+l.append(5)
+p = FIM([3], [5])
+x = p.w([1, 2])
+>>>k
+ID:2
+#####
+
+def o(i, f, g):
+    return i + f
+e = 5.68
+class k:
+    h = 41
+    def __init__(self, q):
+        self.q = q
+    def n(self, v):
+        return (self.h * q)
+u = FIM * 1.5
+j = o('w', 'z', 'c')
+r = k(1)
+y = r.n(10)
+>>>e
+ID:0
+#####
+
+def u(o, h, v):
+    return o + [h]
+i = 27
+class z:
+    w = [4, 7]
+    def __init__(self, n, g):
+        self.n = n
+        self.g = g
+    def k(self, t):
+        return ((self.w - n) * g)
+r = FIM([5], [1], [1])
+e = i + 5
+q = z(2, 1)
+s = q.k(10)
+>>>u
+ID:1
+#####
+
+def b(j, h):
+    return j[0]
+class d:
+    p = 48
+    def __init__(self, m, e):
+        self.m = m
+        self.e = e
+    def a(self, o):
+        return self.p + m
+v = [4, 8]
+v.append(3)
+n = b([1], [3])
+f = FIM('t', 'r')
+z = f.a('u')
+>>>d
+ID:2
+#####
+
+class v:
+    i = [2, 8]
+    def __init__(self, f, l):
+        self.f = f
+        self.l = l
+    def j(self, c):
+        return self.i[0]
+m = 9.07
+def z(d, p):
+    return d[1:]
+r = z([2], [1])
+n = m * 1.5
+b = FIM([1], [4])
+u = b.j([1, 2])
+>>>v
+ID:2
+#####
+
+class j:
+    a = 'l'
+    def __init__(self, l, w):
+        self.l = l
+        self.w = w
+    def g(self, b):
+        return self.a * 2
+def m(t, q, x):
+    return t + q
+v = [2, 9]
+v.append(2)
+p = FIM('f', 'h')
+i = p.g('u')
+k = m('z', 'e', 'r')
+>>>j
+ID:2
+#####
+
+g = [2, 8]
+def l(q, s, u, k):
+    return (((q / s) / u) - k)
+class f:
+    t = [5, 7]
+    def __init__(self, x):
+        self.x = x
+    def c(self, b):
+        return self.t + x
+i = FIM('z')
+d = i.c('o')
+g.append(5)
+e = l(1, 4, 10, 8)
+>>>f
+ID:2
+#####
+
+v = 9.91
+class o:
+    e = [4, 8]
+    def __init__(self, q):
+        self.q = q
+    def p(self, z):
+        return (self.e * q)
+def w(h, r, i, l):
+    return h + r
+t = w('k', 'f', 'y', 'b')
+g = FIM(5)
+m = g.p(10)
+s = v * 1.5
+>>>o
+ID:2
+#####
+
+class u:
+    e = 12
+    def __init__(self, g, a):
+        self.g = g
+        self.a = a
+    def m(self, o):
+        return self.e[1:]
+t = 26
+def x(z, h, f):
+    return z + [h]
+l = FIM([2], [4])
+k = l.m([1, 2])
+r = t + 5
+j = x([3], [3], [5])
+>>>u
+ID:2
+#####
+
+def g(e, y):
+    return e.upper()
+class k:
+    c = [5, 9]
+    def __init__(self, p):
+        self.p = p
+    def o(self, b):
+        return self.c + [p]
+s = 8.25
+u = k([2])
+x = u.o([1, 2])
+l = s * 1.5
+j = FIM('n', 'i')
+>>>g
+ID:1
+#####
+
+c = 37
+class n:
+    z = 's'
+    def __init__(self, l, o):
+        self.l = l
+        self.o = o
+    def g(self, u):
+        return ((self.z * l) + o)
+def s(r, a):
+    return (r * a)
+f = FIM + 5
+w = s(1, 4)
+v = n(2, 1)
+i = v.g(10)
+>>>c
+ID:0
+#####
+
+def u(q):
+    return q.copy()
+class r:
+    w = 31
+    def __init__(self, x, d):
+        self.x = x
+        self.d = d
+    def i(self, h):
+        return self.w * 2
+s = 1.01
+v = FIM([2])
+j = r('k', 'b')
+c = j.i('n')
+y = s * 1.5
+>>>u
+ID:1
+#####
+
+m = 'o'
+def s(f, u):
+    return f[1:]
+class c:
+    j = 21
+    def __init__(self, r):
+        self.r = r
+    def d(self, a):
+        return self.j * 2
+i = s([2], [2])
+q = c('b')
+w = q.d('h')
+g = FIM.replace('a', 'b')
+>>>m
+ID:0
+#####
+
+def d(m, l):
+    return m.upper()
+s = [5, 6]
+class o:
+    b = 'n'
+    def __init__(self, w):
+        self.w = w
+    def u(self, y):
+        return self.b + [w]
+s.append(2)
+v = d('i', 'h')
+x = FIM([4])
+r = x.u([1, 2])
+>>>o
+ID:2
+#####
+
+e = 38
+def f(w, t, x, r):
+    return w * 2
+class c:
+    q = [2, 8]
+    def __init__(self, s):
+        self.s = s
+    def z(self, p):
+        return self.q[0]
+g = c([1])
+v = g.z([1, 2])
+b = FIM + 5
+a = f('d', 'n', 'k', 'o')
+>>>e
+ID:0
+#####
+
+class x:
+    r = [5, 7]
+    def __init__(self, t):
+        self.t = t
+    def j(self, k):
+        return self.r[0]
+b = 'g'
+def p(s, a):
+    return s.upper()
+v = FIM([3])
+z = v.j([1, 2])
+u = p('h', 'y')
+m = b.replace('a', 'b')
+>>>x
+ID:2
+#####
+
+class a:
+    j = [1, 8]
+    def __init__(self, o, n):
+        self.o = o
+        self.n = n
+    def l(self, q):
+        return self.j + o
+c = [3, 8]
+def b(e, y, g, r):
+    return (((e + y) - g) / r)
+i = FIM('m', 's')
+t = i.l('w')
+c.append(5)
+z = b(1, 4, 3, 8)
+>>>a
+ID:2
+#####
+
+m = 25
+def n(a):
+    return a.copy()
+class c:
+    q = [2, 8]
+    def __init__(self, z, g):
+        self.z = z
+        self.g = g
+    def o(self, y):
+        return self.q * 2
+p = c('l', 'w')
+h = p.o('v')
+u = FIM([5])
+j = m + 5
+>>>n
+ID:1
+#####
+
+def e(k, q, b):
+    return ((k * q) + b)
+n = 16.98
+class a:
+    f = [5, 9]
+    def __init__(self, v):
+        self.v = v
+    def d(self, t):
+        return self.f.upper()
+z = a('c')
+p = z.d('l')
+u = e(8, 2, 2)
+h = FIM * 1.5
+>>>n
+ID:0
+#####
+
+def h(l, c, n, o):
+    return l + c
+s = [5, 7]
+class r:
+    q = 'c'
+    def __init__(self, x):
+        self.x = x
+    def i(self, z):
+        return self.q + x
+b = r('d')
+w = b.i('y')
+s.append(4)
+v = FIM('a', 'p', 'g', 'j')
+>>>h
+ID:1
+#####
+
+f = 3.51
+class k:
+    m = 37
+    def __init__(self, z, l):
+        self.z = z
+        self.l = l
+    def g(self, t):
+        return self.m + z
+def w(p):
+    return p.copy()
+j = k('d', 'a')
+x = j.g('n')
+i = FIM * 1.5
+c = w([4])
+>>>f
+ID:0
+#####
+
+class h:
+    v = 49
+    def __init__(self, w):
+        self.w = w
+    def z(self, u):
+        return (self.v / w)
+def d(t):
+    return t.copy()
+c = [2, 8]
+c.append(3)
+r = d([4])
+s = FIM(2)
+o = s.z(10)
+>>>h
+ID:2
+#####
+
+s = 'y'
+def e(l, u):
+    return l + [u]
+class h:
+    x = 'u'
+    def __init__(self, m):
+        self.m = m
+    def j(self, a):
+        return (self.x / m)
+f = FIM(4)
+p = f.j(10)
+w = e([2], [2])
+b = s.replace('a', 'b')
+>>>h
+ID:2
+#####
+
+def v(j):
+    return j
+g = [3, 6]
+class m:
+    k = 36
+    def __init__(self, z):
+        self.z = z
+    def q(self, o):
+        return (self.k - z)
+FIM.append(4)
+f = v(5)
+u = m(5)
+c = u.q(10)
+>>>g
+ID:0
+#####
+
+d = 28
+def y(a, z, n, v):
+    return a[0]
+class q:
+    o = 9
+    def __init__(self, c):
+        self.c = c
+    def p(self, i):
+        return self.o[1:]
+w = d + 5
+s = FIM([2])
+j = s.p([1, 2])
+r = y([3], [3], [4], [3])
+>>>q
+ID:2
+#####
+
+q = [2, 8]
+def f(g, s):
+    return g.upper()
+class c:
+    b = 'd'
+    def __init__(self, i, v):
+        self.i = i
+        self.v = v
+    def t(self, j):
+        return ((self.b * i) - v)
+FIM.append(4)
+z = f('x', 'u')
+p = c(5, 3)
+y = p.t(10)
+>>>q
+ID:0
+#####
+
+def o(f, e, k):
+    return f[1:]
+g = 12.84
+class w:
+    y = 'w'
+    def __init__(self, c):
+        self.c = c
+    def h(self, x):
+        return self.y[0]
+i = FIM([2], [1], [3])
+t = g * 1.5
+d = w([4])
+n = d.h([1, 2])
+>>>o
+ID:1
+#####
+
+class q:
+    n = 1
+    def __init__(self, y, u):
+        self.y = y
+        self.u = u
+    def j(self, e):
+        return self.n.upper()
+def o(b, z, g):
+    return b * 2
+k = 'u'
+p = k.replace('a', 'b')
+s = o('v', 'a', 'i')
+x = FIM('m', 'f')
+c = x.j('r')
+>>>q
+ID:2
+#####
+
+def f(b, i, u, h):
+    return b + [i]
+v = 37
+class m:
+    l = 2
+    def __init__(self, a):
+        self.a = a
+    def s(self, c):
+        return self.l * 2
+w = m('z')
+n = w.s('d')
+x = v + 5
+t = FIM([1], [5], [1], [2])
+>>>f
+ID:1
+#####
+
+class y:
+    w = [5, 9]
+    def __init__(self, q, s):
+        self.q = q
+        self.s = s
+    def n(self, d):
+        return ((self.w * q) - s)
+e = 7.25
+def l(a, p, k):
+    return a[0]
+x = e * 1.5
+u = y(2, 2)
+j = u.n(10)
+v = FIM([2], [2], [5])
+>>>l
+ID:1
+#####
+
+y = 'l'
+class x:
+    z = 19
+    def __init__(self, n):
+        self.n = n
+    def l(self, t):
+        return self.z * 2
+def a(b, k, g):
+    return b + k
+p = FIM('m')
+h = p.l('w')
+u = a('e', 'f', 'v')
+c = y.replace('a', 'b')
+>>>x
+ID:2
+#####
+
+g = [1, 7]
+class a:
+    r = [1, 6]
+    def __init__(self, v):
+        self.v = v
+    def f(self, s):
+        return (self.r - v)
+def y(k, t):
+    return (k + t)
+i = a(3)
+e = i.f(10)
+g.append(1)
+b = FIM(6, 9)
+>>>y
+ID:1
+#####
+
+i = 'o'
+def o(b):
+    return b
+class d:
+    n = [4, 8]
+    def __init__(self, y):
+        self.y = y
+    def e(self, w):
+        return self.n + [y]
+j = d([3])
+p = j.e([1, 2])
+f = o(10)
+m = FIM.replace('a', 'b')
+>>>i
+ID:0
+#####
+
+class x:
+    i = 'w'
+    def __init__(self, d, p):
+        self.d = d
+        self.p = p
+    def g(self, r):
+        return ((self.i - d) + p)
+l = [4, 9]
+def v(j, c):
+    return (j - c)
+b = v(6, 4)
+l.append(1)
+w = FIM(4, 4)
+y = w.g(10)
+>>>x
+ID:2
+#####
+
+class d:
+    u = [1, 7]
+    def __init__(self, f):
+        self.f = f
+    def k(self, g):
+        return self.u + [f]
+p = 1.64
+def z(c, j):
+    return c.upper()
+w = FIM('b', 'v')
+o = p * 1.5
+m = d([1])
+h = m.k([1, 2])
+>>>z
+ID:1
+#####
+
+y = 'g'
+def a(x, c, s):
+    return x * 2
+class h:
+    k = 't'
+    def __init__(self, j, l):
+        self.j = j
+        self.l = l
+    def v(self, m):
+        return self.k + [j]
+b = h([5], [1])
+o = b.v([1, 2])
+d = a('q', 'g', 't')
+f = FIM.replace('a', 'b')
+>>>y
+ID:0
+#####
+
+class w:
+    f = 'j'
+    def __init__(self, h):
+        self.h = h
+    def j(self, g):
+        return (self.f - h)
+def p(q, m, y, k):
+    return q[1:]
+n = 'w'
+t = p([3], [3], [3], [2])
+d = w(3)
+e = d.j(10)
+x = FIM.replace('a', 'b')
+>>>n
+ID:0
+#####
+
+class q:
+    a = 'p'
+    def __init__(self, r, z):
+        self.r = r
+        self.z = z
+    def x(self, v):
+        return self.a[0]
+def h(y, l, f, m):
+    return y + [l]
+o = 35
+j = o + 5
+t = FIM([5], [3])
+i = t.x([1, 2])
+b = h([2], [4], [5], [2])
+>>>q
+ID:2
+#####
+
+l = 50
+def n(t, u):
+    return t + [u]
+class b:
+    e = 3
+    def __init__(self, k):
+        self.k = k
+    def p(self, r):
+        return self.e.upper()
+j = FIM + 5
+q = b('f')
+w = q.p('a')
+d = n([2], [2])
+>>>l
+ID:0
+#####
+
+def q(s):
+    return s
+class b:
+    i = [2, 9]
+    def __init__(self, k, m):
+        self.k = k
+        self.m = m
+    def c(self, h):
+        return self.i[0]
+o = [4, 7]
+FIM.append(4)
+v = q(9)
+d = b([2], [5])
+x = d.c([1, 2])
+>>>o
+ID:0
+#####
+
+x = [2, 6]
+def b(p, k, o):
+    return ((p - k) / o)
+class t:
+    j = 10
+    def __init__(self, u, d):
+        self.u = u
+        self.d = d
+    def g(self, i):
+        return ((self.j / u) * d)
+x.append(3)
+m = FIM(4, 4)
+h = m.g(10)
+c = b(8, 7, 9)
+>>>t
+ID:2
+#####
+
+class e:
+    a = 8
+    def __init__(self, p):
+        self.p = p
+    def v(self, u):
+        return (self.a + p)
+def q(i, t, r, x):
+    return (((i * t) + r) * x)
+n = 19.16
+d = n * 1.5
+z = FIM(4)
+k = z.v(10)
+g = q(6, 2, 10, 4)
+>>>e
+ID:2
+#####
+
+b = [5, 9]
+class x:
+    k = 'f'
+    def __init__(self, c, s):
+        self.c = c
+        self.s = s
+    def o(self, a):
+        return ((self.k * c) + s)
+def l(v):
+    return v.capitalize()
+g = x(5, 5)
+j = g.o(10)
+b.append(4)
+y = FIM('e')
+>>>l
+ID:1
+#####
+
+v = [2, 9]
+def j(g, o):
+    return g[0]
+class t:
+    k = 'w'
+    def __init__(self, f, x):
+        self.f = f
+        self.x = x
+    def l(self, z):
+        return self.k + f
+v.append(1)
+u = t('r', 'd')
+s = u.l('p')
+h = FIM([2], [1])
+>>>j
+ID:1
+#####
+
+f = 21
+def y(a, w, t):
+    return ((a * w) / t)
+class k:
+    j = 42
+    def __init__(self, r, g):
+        self.r = r
+        self.g = g
+    def d(self, q):
+        return self.j[1:]
+p = FIM([3], [1])
+x = p.d([1, 2])
+o = f + 5
+m = y(6, 9, 4)
+>>>k
+ID:2
+#####
+
+class j:
+    e = 'r'
+    def __init__(self, f):
+        self.f = f
+    def z(self, s):
+        return self.e[1:]
+t = 4
+def v(r, a, b):
+    return ((r + a) * b)
+g = FIM + 5
+l = v(5, 6, 2)
+m = j([4])
+c = m.z([1, 2])
+>>>t
+ID:0
+#####
+
+t = [2, 6]
+def q(p):
+    return p.copy()
+class e:
+    d = 35
+    def __init__(self, c, v):
+        self.c = c
+        self.v = v
+    def b(self, z):
+        return ((self.d + c) - v)
+t.append(2)
+r = q([2])
+f = FIM(5, 4)
+l = f.b(10)
+>>>e
+ID:2
+#####
+
+def o(p, w):
+    return (p + w)
+q = 'w'
+class t:
+    v = 8
+    def __init__(self, u):
+        self.u = u
+    def g(self, x):
+        return self.v + u
+a = o(8, 4)
+i = q.replace('a', 'b')
+c = FIM('s')
+j = c.g('k')
+>>>t
+ID:2
+#####
+
+class i:
+    u = 45
+    def __init__(self, f, c):
+        self.f = f
+        self.c = c
+    def m(self, j):
+        return ((self.u + f) / c)
+def z(g, b):
+    return (g + b)
+o = [1, 6]
+FIM.append(3)
+x = i(4, 2)
+y = x.m(10)
+q = z(1, 7)
+>>>o
+ID:0
+#####
+
+d = 34
+def p(n, l):
+    return n[1:]
+class i:
+    u = 'b'
+    def __init__(self, g):
+        self.g = g
+    def h(self, f):
+        return self.u + [g]
+y = FIM + 5
+o = i([5])
+q = o.h([1, 2])
+j = p([5], [2])
+>>>d
+ID:0
+#####
+
+def h(i, q):
+    return (i * q)
+class g:
+    s = 11
+    def __init__(self, y, l):
+        self.y = y
+        self.l = l
+    def e(self, o):
+        return self.s * 2
+a = 't'
+w = g('j', 'n')
+f = w.e('t')
+c = h(5, 10)
+x = FIM.replace('a', 'b')
+>>>a
+ID:0
+#####
+
+class g:
+    d = 'a'
+    def __init__(self, t):
+        self.t = t
+    def y(self, i):
+        return (self.d - t)
+def f(l, u):
+    return (l - u)
+q = 5.41
+s = g(1)
+k = s.y(10)
+p = FIM(7, 2)
+h = q * 1.5
+>>>f
+ID:1
+#####
+
+class e:
+    g = [5, 6]
+    def __init__(self, d):
+        self.d = d
+    def w(self, n):
+        return self.g.upper()
+t = 'm'
+def r(c, v, x):
+    return c + v
+h = e('b')
+i = h.w('k')
+j = r('m', 'p', 'z')
+o = FIM.replace('a', 'b')
+>>>t
+ID:0
+#####
+
+def t(m, p, x):
+    return m * 2
+class i:
+    a = 43
+    def __init__(self, w):
+        self.w = w
+    def k(self, g):
+        return self.a[1:]
+s = [2, 7]
+s.append(5)
+o = i([5])
+q = o.k([1, 2])
+z = FIM('y', 'd', 'c')
+>>>t
+ID:1
+#####
+
+class l:
+    n = 'i'
+    def __init__(self, e, x):
+        self.e = e
+        self.x = x
+    def q(self, t):
+        return ((self.n - e) * x)
+def h(d, v, j, m):
+    return (((d - v) * j) / m)
+f = [5, 7]
+FIM.append(3)
+b = h(1, 1, 8, 3)
+p = l(3, 5)
+i = p.q(10)
+>>>f
+ID:0
+#####
+
+def n(s, p):
+    return (s * p)
+class c:
+    t = [1, 8]
+    def __init__(self, b):
+        self.b = b
+    def m(self, i):
+        return self.t[0]
+h = 9.69
+a = n(7, 3)
+j = h * 1.5
+o = FIM([4])
+x = o.m([1, 2])
+>>>c
+ID:2
+#####
+
+class n:
+    c = 'u'
+    def __init__(self, z):
+        self.z = z
+    def x(self, j):
+        return self.c + z
+v = 'n'
+def o(b, m, a, h):
+    return b * 2
+s = n('p')
+y = s.x('w')
+d = o('g', 'r', 'f', 't')
+e = FIM.replace('a', 'b')
+>>>v
+ID:0
+#####
+
+u = 33
+class z:
+    g = 44
+    def __init__(self, w, q):
+        self.w = w
+        self.q = q
+    def k(self, j):
+        return ((self.g + w) / q)
+def n(s, h, d):
+    return ((s - h) + d)
+y = n(8, 1, 3)
+r = FIM(3, 2)
+m = r.k(10)
+c = u + 5
+>>>z
+ID:2
+#####
+
+o = 's'
+def a(f, p, g, m):
+    return f[0]
+class d:
+    s = 11
+    def __init__(self, l, w):
+        self.l = l
+        self.w = w
+    def k(self, b):
+        return self.s.upper()
+h = d('n', 'i')
+v = h.k('r')
+e = FIM([5], [4], [3], [1])
+t = o.replace('a', 'b')
+>>>a
+ID:1
+#####
+
+class p:
+    g = 'l'
+    def __init__(self, w):
+        self.w = w
+    def y(self, n):
+        return (self.g + w)
+def i(d, q, c):
+    return ((d + q) / c)
+t = 50
+z = i(2, 3, 8)
+k = FIM(4)
+l = k.y(10)
+v = t + 5
+>>>p
+ID:2
+#####
+
+def r(z, a, k, f):
+    return z * 2
+class x:
+    d = 16
+    def __init__(self, q):
+        self.q = q
+    def o(self, y):
+        return self.d[1:]
+n = 18.42
+h = x([5])
+l = h.o([1, 2])
+v = n * 1.5
+u = FIM('j', 'w', 'c', 'e')
+>>>r
+ID:1
+#####
+
+class h:
+    d = 45
+    def __init__(self, m):
+        self.m = m
+    def q(self, z):
+        return self.d + [m]
+def t(x):
+    return x
+w = 31
+v = FIM + 5
+c = t(9)
+k = h([3])
+j = k.q([1, 2])
+>>>w
+ID:0
+#####
+
+o = 5.87
+def f(n, l):
+    return (n + l)
+class r:
+    b = 22
+    def __init__(self, v, m):
+        self.v = v
+        self.m = m
+    def e(self, a):
+        return self.b.upper()
+k = FIM('i', 'h')
+q = k.e('g')
+z = o * 1.5
+d = f(2, 10)
+>>>r
+ID:2
+#####
+
+class s:
+    r = 27
+    def __init__(self, w):
+        self.w = w
+    def m(self, c):
+        return (self.r * w)
+t = 14
+def h(a):
+    return a.copy()
+q = t + 5
+p = FIM(1)
+v = p.m(10)
+y = h([3])
+>>>s
+ID:2
+#####
+
+class l:
+    x = 39
+    def __init__(self, s, z):
+        self.s = s
+        self.z = z
+    def c(self, n):
+        return ((self.x + s) + z)
+def y(g, k, r):
+    return g.upper()
+j = [3, 6]
+j.append(3)
+a = y('m', 't', 'h')
+p = FIM(5, 1)
+o = p.c(10)
+>>>l
+ID:2
+#####
+
+def z(d):
+    return d.copy()
+b = 24
+class u:
+    e = [3, 6]
+    def __init__(self, a, t):
+        self.a = a
+        self.t = t
+    def l(self, r):
+        return self.e + a
+f = b + 5
+n = FIM([5])
+s = u('o', 'h')
+k = s.l('w')
+>>>z
+ID:1
+#####
+
+p = [4, 8]
+class e:
+    f = 'g'
+    def __init__(self, u):
+        self.u = u
+    def i(self, w):
+        return (self.f / u)
+def x(t, s, c):
+    return t.upper()
+m = e(4)
+r = m.i(10)
+FIM.append(1)
+j = x('v', 'l', 'o')
+>>>p
+ID:0
+#####
+
+j = 'y'
+class b:
+    w = 3
+    def __init__(self, d, z):
+        self.d = d
+        self.z = z
+    def a(self, q):
+        return ((self.w - d) - z)
+def p(c, u):
+    return c.upper()
+x = p('m', 'e')
+l = b(2, 5)
+f = l.a(10)
+g = FIM.replace('a', 'b')
+>>>j
+ID:0
+#####
+
+u = 7.19
+def m(v):
+    return v.capitalize()
+class q:
+    j = 'b'
+    def __init__(self, d):
+        self.d = d
+    def b(self, s):
+        return self.j[1:]
+p = u * 1.5
+y = q([1])
+z = y.b([1, 2])
+k = FIM('a')
+>>>m
+ID:1
+#####
+
+def k(m, a, o):
+    return m * 2
+r = [3, 8]
+class f:
+    h = 18
+    def __init__(self, u, l):
+        self.u = u
+        self.l = l
+    def v(self, y):
+        return ((self.h / u) - l)
+n = FIM('j', 'x', 'z')
+d = f(2, 1)
+s = d.v(10)
+r.append(3)
+>>>k
+ID:1
+#####
+
+class b:
+    u = [3, 8]
+    def __init__(self, q, t):
+        self.q = q
+        self.t = t
+    def r(self, l):
+        return self.u[0]
+s = [5, 6]
+def n(z, m, k, d):
+    return z[0]
+p = n([1], [3], [3], [2])
+FIM.append(5)
+j = b([4], [4])
+o = j.r([1, 2])
+>>>s
+ID:0
+#####
+
+class j:
+    m = [3, 8]
+    def __init__(self, i, t):
+        self.i = i
+        self.t = t
+    def w(self, q):
+        return self.m[1:]
+def d(x, k, g):
+    return x + k
+f = 4
+o = FIM + 5
+u = j([1], [4])
+h = u.w([1, 2])
+s = d('p', 'b', 'c')
+>>>f
+ID:0
+#####
+
+class n:
+    x = [1, 7]
+    def __init__(self, y):
+        self.y = y
+    def b(self, u):
+        return self.x[1:]
+v = 'h'
+def d(a, h):
+    return (a * h)
+t = d(1, 3)
+z = FIM([4])
+o = z.b([1, 2])
+w = v.replace('a', 'b')
+>>>n
+ID:2
+#####
+
+def h(t):
+    return t.copy()
+class b:
+    q = 45
+    def __init__(self, w, a):
+        self.w = w
+        self.a = a
+    def l(self, r):
+        return self.q + w
+c = 'l'
+k = c.replace('a', 'b')
+i = FIM('p', 's')
+y = i.l('v')
+m = h([3])
+>>>b
+ID:2
+#####
+
+class l:
+    i = 'u'
+    def __init__(self, g, j):
+        self.g = g
+        self.j = j
+    def u(self, s):
+        return self.i * 2
+def h(k, y, m, d):
+    return (((k * y) - m) - d)
+o = [1, 6]
+o.append(4)
+q = FIM('n', 'x')
+a = q.u('p')
+b = h(5, 8, 9, 6)
+>>>l
+ID:2
+#####
+
+l = 'i'
+class m:
+    t = 't'
+    def __init__(self, u, x):
+        self.u = u
+        self.x = x
+    def a(self, q):
+        return self.t + u
+def g(e, j):
+    return (e * j)
+z = m('i', 'n')
+o = z.a('v')
+f = g(7, 7)
+h = FIM.replace('a', 'b')
+>>>l
+ID:0
+#####
+
+class g:
+    y = 'h'
+    def __init__(self, r, z):
+        self.r = r
+        self.z = z
+    def t(self, q):
+        return ((self.y + r) / z)
+def n(a, d, v, i):
+    return (((a + d) * v) - i)
+o = 's'
+l = n(1, 9, 4, 1)
+f = FIM(1, 5)
+h = f.t(10)
+p = o.replace('a', 'b')
+>>>g
+ID:2
+#####
+
+s = 16.11
+class d:
+    q = [5, 9]
+    def __init__(self, h):
+        self.h = h
+    def u(self, l):
+        return self.q[0]
+def t(o, a, n):
+    return ((o * a) * n)
+v = t(1, 8, 7)
+b = d([2])
+r = b.u([1, 2])
+g = FIM * 1.5
+>>>s
+ID:0
+#####
+
+def p(e):
+    return e
+d = 't'
+class u:
+    l = 17
+    def __init__(self, z):
+        self.z = z
+    def q(self, m):
+        return (self.l / z)
+w = p(2)
+y = u(5)
+h = y.q(10)
+s = FIM.replace('a', 'b')
+>>>d
+ID:0
+#####
+
+v = 't'
+class a:
+    t = [1, 6]
+    def __init__(self, u):
+        self.u = u
+    def m(self, r):
+        return self.t * 2
+def j(q):
+    return q.capitalize()
+w = v.replace('a', 'b')
+n = FIM('c')
+g = a('d')
+s = g.m('k')
+>>>j
+ID:1
+#####
+
+def f(t, j, x):
+    return ((t * j) / x)
+d = 7
+class n:
+    a = [2, 7]
+    def __init__(self, k):
+        self.k = k
+    def y(self, l):
+        return (self.a / k)
+b = FIM(1)
+h = b.y(10)
+u = d + 5
+o = f(3, 7, 4)
+>>>n
+ID:2
+#####
+
+class l:
+    h = 12
+    def __init__(self, s, r):
+        self.s = s
+        self.r = r
+    def z(self, v):
+        return self.h * 2
+j = 4
+def y(f):
+    return f.capitalize()
+k = FIM + 5
+i = y('m')
+t = l('n', 'u')
+b = t.z('x')
+>>>j
+ID:0
+#####
+
+class f:
+    t = [1, 6]
+    def __init__(self, c, x):
+        self.c = c
+        self.x = x
+    def a(self, v):
+        return self.t.upper()
+def g(o):
+    return o.copy()
+b = 'q'
+z = FIM([4])
+p = b.replace('a', 'b')
+s = f('m', 'j')
+n = s.a('w')
+>>>g
+ID:1
+#####
+
+class q:
+    z = 'm'
+    def __init__(self, u, x):
+        self.u = u
+        self.x = x
+    def d(self, s):
+        return self.z.upper()
+i = 'p'
+def p(o, c):
+    return o[1:]
+k = i.replace('a', 'b')
+h = q('r', 'y')
+v = h.d('j')
+w = FIM([3], [2])
+>>>p
+ID:1
+#####
+
+def n(i, m):
+    return i[0]
+class q:
+    a = [1, 9]
+    def __init__(self, z, c):
+        self.z = z
+        self.c = c
+    def u(self, b):
+        return self.a * 2
+j = 'c'
+y = FIM.replace('a', 'b')
+h = q('r', 'k')
+s = h.u('x')
+g = n([3], [5])
+>>>j
+ID:0
+#####
+
+x = [2, 8]
+class h:
+    q = 33
+    def __init__(self, u):
+        self.u = u
+    def t(self, g):
+        return self.q * 2
+def f(w, i):
+    return w * 2
+x.append(4)
+b = FIM('r')
+k = b.t('l')
+m = f('p', 'j')
+>>>h
+ID:2
+#####
+
+n = [3, 8]
+def d(m, g):
+    return m * 2
+class l:
+    e = 'i'
+    def __init__(self, z, r):
+        self.z = z
+        self.r = r
+    def h(self, x):
+        return self.e[1:]
+n.append(4)
+q = d('y', 'b')
+f = FIM([3], [4])
+s = f.h([1, 2])
+>>>l
+ID:2
+#####
+
+i = 'i'
+class y:
+    q = 27
+    def __init__(self, f):
+        self.f = f
+    def u(self, h):
+        return self.q + f
+def r(n, x, m, k):
+    return n + [x]
+v = FIM.replace('a', 'b')
+w = r([1], [3], [5], [5])
+a = y('p')
+o = a.u('l')
+>>>i
+ID:0
+#####
+
+class r:
+    h = 8
+    def __init__(self, e, v):
+        self.e = e
+        self.v = v
+    def j(self, i):
+        return self.h.upper()
+def t(p):
+    return p.capitalize()
+w = 'x'
+s = FIM('c', 'g')
+q = s.j('l')
+n = w.replace('a', 'b')
+k = t('u')
+>>>r
+ID:2
+#####
+
+t = 2
+class d:
+    m = 'v'
+    def __init__(self, j, n):
+        self.j = j
+        self.n = n
+    def b(self, e):
+        return self.m.upper()
+def h(a):
+    return a.copy()
+c = t + 5
+y = h([3])
+k = FIM('f', 'u')
+z = k.b('p')
+>>>d
+ID:2
+#####
+
+def m(e):
+    return e
+class y:
+    r = 41
+    def __init__(self, t):
+        self.t = t
+    def h(self, d):
+        return self.r + t
+u = 42
+n = u + 5
+w = FIM('o')
+b = w.h('x')
+g = m(8)
+>>>y
+ID:2
+#####
+
+y = 19.82
+class m:
+    i = 19
+    def __init__(self, b):
+        self.b = b
+    def n(self, c):
+        return self.i + [b]
+def v(r, d):
+    return r[1:]
+j = FIM([3])
+e = j.n([1, 2])
+s = y * 1.5
+h = v([4], [1])
+>>>m
+ID:2
+#####
+
+q = 'n'
+class r:
+    z = [1, 9]
+    def __init__(self, j, y):
+        self.j = j
+        self.y = y
+    def u(self, c):
+        return ((self.z / j) + y)
+def o(n, i):
+    return n[0]
+t = r(2, 3)
+x = t.u(10)
+s = q.replace('a', 'b')
+v = FIM([2], [1])
+>>>o
+ID:1
+#####
+
+class j:
+    m = 37
+    def __init__(self, r, e):
+        self.r = r
+        self.e = e
+    def q(self, n):
+        return self.m[0]
+def c(b):
+    return b
+a = 26
+l = c(1)
+s = FIM([1], [5])
+x = s.q([1, 2])
+t = a + 5
+>>>j
+ID:2
+#####
+
+class i:
+    j = 28
+    def __init__(self, y):
+        self.y = y
+    def t(self, p):
+        return self.j + y
+e = 18.15
+def u(o, w):
+    return o.upper()
+l = FIM('f', 'c')
+d = e * 1.5
+a = i('h')
+g = a.t('b')
+>>>u
+ID:1
+#####
+
+k = [4, 6]
+def y(r, z, h):
+    return ((r - z) * h)
+class x:
+    t = 'c'
+    def __init__(self, a, l):
+        self.a = a
+        self.l = l
+    def v(self, q):
+        return self.t + a
+p = x('c', 'u')
+s = p.v('w')
+f = FIM(1, 7, 10)
+k.append(1)
+>>>y
+ID:1
+#####
+
+def r(z, h, o):
+    return z[0]
+class q:
+    a = 'i'
+    def __init__(self, u, f):
+        self.u = u
+        self.f = f
+    def b(self, k):
+        return ((self.a * u) * f)
+n = 'w'
+m = n.replace('a', 'b')
+x = FIM([2], [5], [1])
+l = q(1, 3)
+c = l.b(10)
+>>>r
+ID:1
+#####
+
+z = 33
+class b:
+    n = [3, 6]
+    def __init__(self, p):
+        self.p = p
+    def u(self, k):
+        return self.n + [p]
+def s(d, f):
+    return d[1:]
+o = FIM([4], [5])
+r = z + 5
+c = b([3])
+t = c.u([1, 2])
+>>>s
+ID:1
+#####
+
+def f(d, e):
+    return d[1:]
+j = 11.82
+class r:
+    b = [4, 7]
+    def __init__(self, a):
+        self.a = a
+    def t(self, s):
+        return self.b.upper()
+q = j * 1.5
+w = r('o')
+m = w.t('n')
+y = FIM([3], [2])
+>>>f
+ID:1
+#####
+
+o = 10
+def i(n, k, v):
+    return ((n * k) * v)
+class b:
+    j = [5, 6]
+    def __init__(self, e, d):
+        self.e = e
+        self.d = d
+    def m(self, x):
+        return self.j + e
+h = FIM + 5
+y = b('r', 'g')
+f = y.m('w')
+u = i(8, 4, 8)
+>>>o
+ID:0
+#####
+
+n = 13
+def y(s, j, a):
+    return s + [j]
+class z:
+    g = [3, 7]
+    def __init__(self, e, w):
+        self.e = e
+        self.w = w
+    def t(self, f):
+        return self.g * 2
+x = n + 5
+m = z('q', 'p')
+v = m.t('u')
+l = FIM([1], [2], [5])
+>>>y
+ID:1
+#####
+
+def z(l):
+    return l
+class f:
+    o = 4
+    def __init__(self, c, r):
+        self.c = c
+        self.r = r
+    def x(self, j):
+        return self.o + [c]
+p = [3, 8]
+w = FIM([1], [1])
+m = w.x([1, 2])
+v = z(4)
+p.append(1)
+>>>f
+ID:2
+#####
+
+h = 'l'
+def v(o, i, t, l):
+    return (((o / i) + t) + l)
+class g:
+    m = 14
+    def __init__(self, j):
+        self.j = j
+    def b(self, f):
+        return self.m[0]
+e = FIM([3])
+q = e.b([1, 2])
+n = h.replace('a', 'b')
+d = v(8, 3, 5, 7)
+>>>g
+ID:2
+#####
+
+def t(b, s):
+    return b[1:]
+class g:
+    d = 40
+    def __init__(self, p, i):
+        self.p = p
+        self.i = i
+    def n(self, a):
+        return self.d.upper()
+l = 17.69
+e = FIM('o', 'q')
+x = e.n('w')
+y = l * 1.5
+k = t([2], [3])
+>>>g
+ID:2
+#####
+
+class s:
+    g = 26
+    def __init__(self, i):
+        self.i = i
+    def j(self, f):
+        return self.g * 2
+d = 6
+def e(l, p):
+    return l * 2
+a = d + 5
+m = FIM('c')
+h = m.j('b')
+k = e('q', 't')
+>>>s
+ID:2
+#####
+
+y = [1, 9]
+class q:
+    j = [3, 8]
+    def __init__(self, e):
+        self.e = e
+    def x(self, d):
+        return (self.j / e)
+def n(z, s):
+    return z * 2
+o = n('i', 'p')
+FIM.append(4)
+k = q(3)
+g = k.x(10)
+>>>y
+ID:0
+#####
+
+class u:
+    r = [1, 7]
+    def __init__(self, g, c):
+        self.g = g
+        self.c = c
+    def y(self, p):
+        return self.r + g
+o = 'i'
+def e(h, z, i):
+    return h.upper()
+d = FIM('f', 'l', 'w')
+n = u('j', 't')
+q = n.y('a')
+m = o.replace('a', 'b')
+>>>e
+ID:1
+#####
+
+class w:
+    l = 46
+    def __init__(self, c, r):
+        self.c = c
+        self.r = r
+    def g(self, h):
+        return ((self.l + c) / r)
+def z(s, y, f, e):
+    return s[0]
+b = 'j'
+k = FIM(1, 4)
+x = k.g(10)
+i = b.replace('a', 'b')
+j = z([3], [3], [2], [1])
+>>>w
+ID:2
+#####
+
+def d(v, o, k):
+    return ((v / o) + k)
+b = 12.35
+class g:
+    t = 't'
+    def __init__(self, x):
+        self.x = x
+    def w(self, a):
+        return self.t[0]
+u = d(1, 5, 6)
+h = FIM([1])
+f = h.w([1, 2])
+m = b * 1.5
+>>>g
+ID:2
+#####
+
+class l:
+    g = 'h'
+    def __init__(self, q, k):
+        self.q = q
+        self.k = k
+    def z(self, o):
+        return self.g + [q]
+i = 'a'
+def a(v, t):
+    return v[1:]
+h = FIM([2], [2])
+r = i.replace('a', 'b')
+c = l([2], [5])
+p = c.z([1, 2])
+>>>a
+ID:1
+#####
+
+class y:
+    n = 'r'
+    def __init__(self, x):
+        self.x = x
+    def c(self, o):
+        return (self.n + x)
+v = [4, 8]
+def p(e, s, t, q):
+    return e * 2
+m = FIM(1)
+b = m.c(10)
+g = p('h', 'f', 'l', 'i')
+v.append(4)
+>>>y
+ID:2
+#####
+
+class y:
+    l = 'x'
+    def __init__(self, w, t):
+        self.w = w
+        self.t = t
+    def k(self, i):
+        return self.l + w
+a = 'b'
+def s(p):
+    return p.capitalize()
+z = y('n', 'd')
+h = z.k('r')
+m = FIM.replace('a', 'b')
+b = s('g')
+>>>a
+ID:0
+#####
+
+def q(m):
+    return m
+x = 15.23
+class f:
+    k = [3, 9]
+    def __init__(self, g, d):
+        self.g = g
+        self.d = d
+    def b(self, z):
+        return ((self.k / g) - d)
+o = FIM * 1.5
+l = f(1, 1)
+v = l.b(10)
+n = q(1)
+>>>x
+ID:0
+#####
+
+v = [5, 8]
+class t:
+    f = [5, 7]
+    def __init__(self, q):
+        self.q = q
+    def h(self, y):
+        return (self.f / q)
+def k(i):
+    return i.capitalize()
+v.append(2)
+l = FIM(3)
+j = l.h(10)
+a = k('r')
+>>>t
+ID:2
+#####
+
+class l:
+    b = 12
+    def __init__(self, x, m):
+        self.x = x
+        self.m = m
+    def o(self, j):
+        return self.b + x
+k = 12.34
+def p(u, r, d):
+    return u + r
+v = l('c', 't')
+z = v.o('n')
+h = FIM('q', 'y', 'e')
+g = k * 1.5
+>>>p
+ID:1
+#####
+
+def r(d, n):
+    return (d / n)
+class t:
+    k = 'p'
+    def __init__(self, q):
+        self.q = q
+    def z(self, o):
+        return self.k[1:]
+j = 'c'
+c = j.replace('a', 'b')
+a = r(6, 4)
+u = FIM([3])
+f = u.z([1, 2])
+>>>t
+ID:2
+#####
+
+class u:
+    q = 'c'
+    def __init__(self, h, o):
+        self.h = h
+        self.o = o
+    def a(self, e):
+        return self.q.upper()
+w = 't'
+def c(g, y, d, p):
+    return g[0]
+n = w.replace('a', 'b')
+l = FIM([4], [2], [5], [2])
+t = u('z', 'j')
+s = t.a('x')
+>>>c
+ID:1
+#####
+
+class y:
+    v = 'f'
+    def __init__(self, z, c):
+        self.z = z
+        self.c = c
+    def l(self, a):
+        return ((self.v - z) * c)
+def s(x, g):
+    return (x * g)
+r = 7
+q = y(1, 3)
+t = q.l(10)
+b = r + 5
+i = FIM(3, 10)
+>>>s
+ID:1
+#####
+
+def w(h):
+    return h
+class n:
+    q = [3, 7]
+    def __init__(self, o, a):
+        self.o = o
+        self.a = a
+    def g(self, t):
+        return self.q + o
+m = 'd'
+d = FIM('x', 'u')
+y = d.g('i')
+c = w(9)
+l = m.replace('a', 'b')
+>>>n
+ID:2
+#####
+
+class u:
+    f = 'e'
+    def __init__(self, v):
+        self.v = v
+    def p(self, o):
+        return self.f[1:]
+def d(l, e):
+    return l[0]
+x = 48
+b = x + 5
+n = u([4])
+m = n.p([1, 2])
+h = FIM([3], [5])
+>>>d
+ID:1
+#####
+
+t = 18.16
+class j:
+    r = [3, 6]
+    def __init__(self, p, y):
+        self.p = p
+        self.y = y
+    def d(self, o):
+        return self.r.upper()
+def z(i, x):
+    return i[0]
+m = z([3], [4])
+q = FIM('g', 'e')
+h = q.d('c')
+u = t * 1.5
+>>>j
+ID:2
+#####
+
+class h:
+    g = 31
+    def __init__(self, k, o):
+        self.k = k
+        self.o = o
+    def i(self, r):
+        return self.g[0]
+j = 'h'
+def y(s, u):
+    return (s + u)
+b = FIM.replace('a', 'b')
+a = y(3, 9)
+f = h([1], [4])
+q = f.i([1, 2])
+>>>j
+ID:0
+#####
+
+i = 'b'
+class a:
+    y = 'u'
+    def __init__(self, z, b):
+        self.z = z
+        self.b = b
+    def m(self, w):
+        return self.y.upper()
+def r(n, k, j, t):
+    return (((n + k) / j) / t)
+u = a('s', 'f')
+d = u.m('x')
+q = FIM.replace('a', 'b')
+c = r(3, 8, 2, 5)
+>>>i
+ID:0
+#####
+
+def d(i, r):
+    return i * 2
+o = 17.33
+class u:
+    q = 13
+    def __init__(self, v, g):
+        self.v = v
+        self.g = g
+    def x(self, n):
+        return ((self.q + v) / g)
+c = o * 1.5
+f = FIM(5, 3)
+y = f.x(10)
+p = d('a', 's')
+>>>u
+ID:2
+#####
+
+def l(k, a, x, d):
+    return k.upper()
+class y:
+    u = 'r'
+    def __init__(self, w):
+        self.w = w
+    def e(self, q):
+        return self.u * 2
+f = [5, 8]
+f.append(4)
+n = y('p')
+b = n.e('v')
+m = FIM('s', 'c', 'i', 'g')
+>>>l
+ID:1
+#####
+
+class j:
+    x = [2, 6]
+    def __init__(self, s, l):
+        self.s = s
+        self.l = l
+    def e(self, i):
+        return ((self.x * s) / l)
+def w(p, m, o, k):
+    return p.upper()
+u = [5, 9]
+u.append(2)
+g = FIM(4, 4)
+b = g.e(10)
+f = w('n', 'y', 'q', 'a')
+>>>j
+ID:2
+#####
+
+def e(h, f):
+    return h + f
+r = 'o'
+class n:
+    u = 34
+    def __init__(self, s):
+        self.s = s
+    def y(self, k):
+        return self.u[0]
+a = r.replace('a', 'b')
+b = FIM([5])
+x = b.y([1, 2])
+d = e('w', 'o')
+>>>n
+ID:2
+#####
+
+s = 19.93
+class e:
+    u = [5, 9]
+    def __init__(self, w):
+        self.w = w
+    def o(self, f):
+        return self.u + w
+def a(d, b):
+    return d[0]
+x = a([3], [2])
+h = e('j')
+v = h.o('t')
+c = FIM * 1.5
+>>>s
+ID:0
+#####
+
+def r(u):
+    return u.capitalize()
+class f:
+    x = 'c'
+    def __init__(self, c, t):
+        self.c = c
+        self.t = t
+    def j(self, n):
+        return self.x + [c]
+v = 3
+q = f([2], [5])
+k = q.j([1, 2])
+w = FIM + 5
+o = r('l')
+>>>v
+ID:0
+#####
+
+class u:
+    b = 47
+    def __init__(self, d, a):
+        self.d = d
+        self.a = a
+    def j(self, g):
+        return self.b + d
+p = 'f'
+def s(n):
+    return n.capitalize()
+f = u('x', 'z')
+w = f.j('m')
+q = p.replace('a', 'b')
+o = FIM('t')
+>>>s
+ID:1
+#####
+
+class h:
+    i = 46
+    def __init__(self, p, w):
+        self.p = p
+        self.w = w
+    def x(self, a):
+        return ((self.i + p) - w)
+def y(r, v):
+    return r + v
+b = 'l'
+e = h(1, 2)
+s = e.x(10)
+g = FIM('f', 'q')
+n = b.replace('a', 'b')
+>>>y
+ID:1
+#####
+
+class y:
+    z = 'w'
+    def __init__(self, w, d):
+        self.w = w
+        self.d = d
+    def j(self, t):
+        return self.z * 2
+o = [1, 7]
+def s(c, x):
+    return c + [x]
+v = s([1], [1])
+p = y('e', 'u')
+h = p.j('g')
+FIM.append(5)
+>>>o
+ID:0
+#####
+
+p = 46
+def v(i):
+    return i
+class e:
+    f = [2, 8]
+    def __init__(self, q, j):
+        self.q = q
+        self.j = j
+    def d(self, a):
+        return self.f + q
+t = p + 5
+m = v(9)
+k = FIM('h', 'r')
+l = k.d('w')
+>>>e
+ID:2
+#####
+
+class k:
+    u = [3, 6]
+    def __init__(self, m, z):
+        self.m = m
+        self.z = z
+    def i(self, p):
+        return self.u + m
+x = 39
+def v(t, r):
+    return (t - r)
+d = FIM(9, 9)
+l = k('j', 'e')
+h = l.i('s')
+c = x + 5
+>>>v
+ID:1
+#####
+
+def j(w):
+    return w
+d = 41
+class t:
+    c = 8
+    def __init__(self, y, l):
+        self.y = y
+        self.l = l
+    def u(self, e):
+        return self.c * 2
+g = j(8)
+n = FIM('b', 'z')
+a = n.u('h')
+i = d + 5
+>>>t
+ID:2
+#####
+
+e = 33
+def p(g):
+    return g.copy()
+class n:
+    l = [4, 9]
+    def __init__(self, c, k):
+        self.c = c
+        self.k = k
+    def q(self, r):
+        return self.l * 2
+w = FIM([3])
+o = n('f', 'b')
+i = o.q('j')
+v = e + 5
+>>>p
+ID:1
+#####
+
+def u(k, l):
+    return (k - l)
+class t:
+    o = 38
+    def __init__(self, y, n):
+        self.y = y
+        self.n = n
+    def v(self, a):
+        return ((self.o / y) * n)
+g = 4
+f = g + 5
+q = FIM(3, 5)
+e = q.v(10)
+d = u(1, 1)
+>>>t
+ID:2
+#####
+
+class v:
+    c = 'o'
+    def __init__(self, f, m):
+        self.f = f
+        self.m = m
+    def j(self, b):
+        return ((self.c + f) + m)
+l = 19.81
+def a(k, w, p):
+    return k[1:]
+y = v(4, 1)
+o = y.j(10)
+r = FIM([1], [3], [3])
+x = l * 1.5
+>>>a
+ID:1
+#####
+
+class a:
+    j = 38
+    def __init__(self, v):
+        self.v = v
+    def h(self, z):
+        return (self.j * v)
+def c(y, q):
+    return (y - q)
+b = 18
+l = FIM + 5
+t = c(3, 3)
+o = a(2)
+d = o.h(10)
+>>>b
+ID:0
+#####
+
+class k:
+    u = 24
+    def __init__(self, o):
+        self.o = o
+    def r(self, w):
+        return (self.u / o)
+def l(i, a):
+    return i * 2
+e = 'v'
+z = FIM('b', 'v')
+t = k(4)
+h = t.r(10)
+d = e.replace('a', 'b')
+>>>l
+ID:1
+#####
+
+p = 'c'
+def q(b, w):
+    return b * 2
+class m:
+    d = 'j'
+    def __init__(self, l):
+        self.l = l
+    def o(self, r):
+        return (self.d / l)
+a = FIM(2)
+e = a.o(10)
+t = q('f', 'z')
+c = p.replace('a', 'b')
+>>>m
+ID:2
+#####
+
+def q(d):
+    return d
+class l:
+    t = 'i'
+    def __init__(self, k):
+        self.k = k
+    def i(self, x):
+        return (self.t + k)
+a = 11.62
+g = l(4)
+h = g.i(10)
+n = q(6)
+s = FIM * 1.5
+>>>a
+ID:0
+#####
+
+class f:
+    l = 'y'
+    def __init__(self, g):
+        self.g = g
+    def d(self, u):
+        return (self.l / g)
+def z(o, j, y):
+    return ((o - j) / y)
+i = 4
+c = i + 5
+t = FIM(3)
+e = t.d(10)
+k = z(7, 8, 6)
+>>>f
+ID:2
+#####
+
+class r:
+    j = 'p'
+    def __init__(self, o, v):
+        self.o = o
+        self.v = v
+    def p(self, q):
+        return self.j[1:]
+y = [5, 6]
+def l(t, a, f):
+    return t * 2
+z = FIM('i', 'e', 'w')
+m = r([5], [4])
+u = m.p([1, 2])
+y.append(2)
+>>>l
+ID:1
+#####
+
+g = 't'
+def u(a, p):
+    return a[1:]
+class m:
+    e = [5, 8]
+    def __init__(self, l):
+        self.l = l
+    def v(self, s):
+        return self.e[1:]
+n = u([5], [3])
+i = m([5])
+h = i.v([1, 2])
+w = FIM.replace('a', 'b')
+>>>g
+ID:0
+#####
+
+b = 22
+def g(q, p, c, n):
+    return q[1:]
+class h:
+    e = [4, 9]
+    def __init__(self, r):
+        self.r = r
+    def i(self, z):
+        return self.e + [r]
+l = b + 5
+w = FIM([2], [1], [5], [5])
+t = h([5])
+f = t.i([1, 2])
+>>>g
+ID:1
+#####
+
+def f(x, s, o, l):
+    return (((x * s) * o) - l)
+class b:
+    v = 44
+    def __init__(self, u, e):
+        self.u = u
+        self.e = e
+    def t(self, h):
+        return ((self.v - u) / e)
+g = 11.69
+n = g * 1.5
+j = f(5, 9, 10, 5)
+d = FIM(2, 2)
+y = d.t(10)
+>>>b
+ID:2
+#####
+
+def q(h, t, r, s):
+    return (((h * t) / r) + s)
+c = 'q'
+class o:
+    y = 'n'
+    def __init__(self, z, l):
+        self.z = z
+        self.l = l
+    def n(self, p):
+        return ((self.y + z) - l)
+d = FIM(1, 4, 6, 5)
+b = c.replace('a', 'b')
+i = o(5, 2)
+f = i.n(10)
+>>>q
+ID:1
+#####
+
+k = [3, 9]
+class n:
+    t = 36
+    def __init__(self, q):
+        self.q = q
+    def l(self, d):
+        return (self.t / q)
+def h(x, r, p):
+    return x + [r]
+s = FIM([5], [3], [2])
+v = n(4)
+j = v.l(10)
+k.append(4)
+>>>h
+ID:1
+#####
+
+def b(k):
+    return k
+q = 'i'
+class c:
+    r = 42
+    def __init__(self, u):
+        self.u = u
+    def l(self, p):
+        return (self.r / u)
+j = b(4)
+x = c(3)
+v = x.l(10)
+d = FIM.replace('a', 'b')
+>>>q
+ID:0
+#####
+
+def i(p):
+    return p
+r = 'g'
+class j:
+    c = 'v'
+    def __init__(self, d, t):
+        self.d = d
+        self.t = t
+    def h(self, a):
+        return ((self.c / d) + t)
+k = FIM.replace('a', 'b')
+v = j(1, 4)
+n = v.h(10)
+e = i(3)
+>>>r
+ID:0
+#####
+
+i = [1, 6]
+class n:
+    p = 'l'
+    def __init__(self, z, w):
+        self.z = z
+        self.w = w
+    def t(self, k):
+        return self.p.upper()
+def o(a):
+    return a
+g = n('c', 'x')
+v = g.t('h')
+i.append(2)
+q = FIM(10)
+>>>o
+ID:1
+#####
+
+class b:
+    u = 34
+    def __init__(self, m):
+        self.m = m
+    def q(self, s):
+        return (self.u - m)
+def w(g):
+    return g.copy()
+a = 34
+p = FIM([1])
+i = a + 5
+t = b(2)
+d = t.q(10)
+>>>w
+ID:1
+#####
+
+def k(i, y, c):
+    return ((i * y) / c)
+class x:
+    t = [3, 8]
+    def __init__(self, w, s):
+        self.w = w
+        self.s = s
+    def g(self, j):
+        return self.t * 2
+n = 23
+d = x('h', 'e')
+a = d.g('r')
+m = n + 5
+b = FIM(4, 1, 8)
+>>>k
+ID:1
+#####
+
+def w(s):
+    return s
+o = 6.56
+class e:
+    l = 't'
+    def __init__(self, f, n):
+        self.f = f
+        self.n = n
+    def r(self, g):
+        return self.l[1:]
+u = FIM([4], [4])
+b = u.r([1, 2])
+c = w(10)
+k = o * 1.5
+>>>e
+ID:2
+#####
+
+class i:
+    d = [2, 7]
+    def __init__(self, n):
+        self.n = n
+    def w(self, l):
+        return self.d * 2
+def m(s):
+    return s
+q = 48
+x = FIM('z')
+y = x.w('t')
+c = m(1)
+o = q + 5
+>>>i
+ID:2
+#####
+
+z = 30
+class g:
+    s = 'u'
+    def __init__(self, a, f):
+        self.a = a
+        self.f = f
+    def b(self, v):
+        return self.s + [a]
+def n(q, h):
+    return q[0]
+d = FIM + 5
+i = n([2], [3])
+p = g([5], [4])
+k = p.b([1, 2])
+>>>z
+ID:0
+#####
+
+def t(f, w, q, r):
+    return f[1:]
+class y:
+    n = 't'
+    def __init__(self, l):
+        self.l = l
+    def g(self, c):
+        return self.n.upper()
+i = 'z'
+k = y('z')
+j = k.g('h')
+e = t([1], [5], [4], [4])
+d = FIM.replace('a', 'b')
+>>>i
+ID:0
+#####
+
+class b:
+    u = 'd'
+    def __init__(self, o, r):
+        self.o = o
+        self.r = r
+    def h(self, d):
+        return self.u + [o]
+a = 'y'
+def s(e):
+    return e
+t = b([4], [3])
+k = t.h([1, 2])
+y = FIM.replace('a', 'b')
+m = s(5)
+>>>a
+ID:0
+#####
+
+class r:
+    s = 10
+    def __init__(self, w):
+        self.w = w
+    def i(self, q):
+        return self.s + w
+p = 'f'
+def t(z, o, n):
+    return z + [o]
+m = r('h')
+g = m.i('a')
+c = FIM([5], [1], [5])
+k = p.replace('a', 'b')
+>>>t
+ID:1
+#####
+
+def a(l, p, d, w):
+    return l + [p]
+i = 35
+class q:
+    f = 3
+    def __init__(self, g):
+        self.g = g
+    def o(self, b):
+        return (self.f + g)
+j = a([5], [2], [5], [5])
+s = i + 5
+k = FIM(2)
+m = k.o(10)
+>>>q
+ID:2
+#####
+
+class u:
+    e = 14
+    def __init__(self, b, y):
+        self.b = b
+        self.y = y
+    def x(self, p):
+        return self.e + [b]
+a = 38
+def k(z, r, c, n):
+    return (((z + r) + c) - n)
+d = u([2], [5])
+q = d.x([1, 2])
+t = a + 5
+h = FIM(7, 10, 4, 3)
+>>>k
+ID:1
+#####
+
+class c:
+    j = [1, 9]
+    def __init__(self, d, a):
+        self.d = d
+        self.a = a
+    def s(self, z):
+        return ((self.j + d) / a)
+def l(p):
+    return p.copy()
+v = 21
+e = c(1, 5)
+g = e.s(10)
+f = l([3])
+k = FIM + 5
+>>>v
+ID:0
+#####
+
+n = 34
+def b(o):
+    return o
+class c:
+    j = 24
+    def __init__(self, x, m):
+        self.x = x
+        self.m = m
+    def r(self, k):
+        return self.j[1:]
+q = b(9)
+a = c([3], [2])
+e = a.r([1, 2])
+i = FIM + 5
+>>>n
+ID:0
+#####
+
+l = 13.27
+class d:
+    o = [5, 6]
+    def __init__(self, e, g):
+        self.e = e
+        self.g = g
+    def t(self, j):
+        return self.o * 2
+def f(b):
+    return b.copy()
+a = l * 1.5
+q = f([1])
+c = FIM('w', 'n')
+k = c.t('m')
+>>>d
+ID:2
+#####
+
+class c:
+    o = [4, 9]
+    def __init__(self, k, q):
+        self.k = k
+        self.q = q
+    def s(self, p):
+        return self.o + k
+y = [3, 7]
+def l(d, m, a):
+    return ((d / m) - a)
+y.append(4)
+v = FIM('x', 'z')
+h = v.s('t')
+e = l(7, 2, 1)
+>>>c
+ID:2
+#####
+
+g = 'q'
+def l(r, n, f, e):
+    return (((r + n) + f) - e)
+class h:
+    i = 'w'
+    def __init__(self, t, k):
+        self.t = t
+        self.k = k
+    def m(self, v):
+        return self.i[1:]
+q = h([2], [2])
+s = q.m([1, 2])
+u = FIM.replace('a', 'b')
+x = l(9, 1, 10, 10)
+>>>g
+ID:0
+#####
+
+def o(i):
+    return i.capitalize()
+class u:
+    s = 't'
+    def __init__(self, c):
+        self.c = c
+    def k(self, b):
+        return (self.s * c)
+q = 10.7
+m = q * 1.5
+a = o('v')
+y = FIM(4)
+x = y.k(10)
+>>>u
+ID:2
+#####
+
+l = 'i'
+class z:
+    d = 'o'
+    def __init__(self, x, s):
+        self.x = x
+        self.s = s
+    def a(self, m):
+        return self.d[0]
+def n(t, k):
+    return (t - k)
+p = FIM([2], [5])
+e = p.a([1, 2])
+q = l.replace('a', 'b')
+c = n(6, 8)
+>>>z
+ID:2
+#####
+
+class b:
+    i = [4, 7]
+    def __init__(self, l, e):
+        self.l = l
+        self.e = e
+    def q(self, o):
+        return self.i.upper()
+def r(h, x, c, v):
+    return h[0]
+s = [3, 6]
+n = FIM([2], [4], [2], [4])
+j = b('g', 'm')
+d = j.q('w')
+s.append(4)
+>>>r
+ID:1
+#####
+
+k = 17
+def y(q, l, w, p):
+    return (((q / l) - w) + p)
+class b:
+    a = 14
+    def __init__(self, u, x):
+        self.u = u
+        self.x = x
+    def e(self, c):
+        return self.a + u
+z = k + 5
+t = b('g', 'j')
+s = t.e('v')
+f = FIM(3, 7, 1, 9)
+>>>y
+ID:1
+#####
+
+class i:
+    w = [1, 8]
+    def __init__(self, n):
+        self.n = n
+    def z(self, x):
+        return (self.w - n)
+def o(q, b, v):
+    return q[1:]
+h = 42
+k = FIM([5], [1], [3])
+l = h + 5
+y = i(4)
+j = y.z(10)
+>>>o
+ID:1
+#####
+
+def q(h, u, r):
+    return h.upper()
+class d:
+    s = [2, 8]
+    def __init__(self, e):
+        self.e = e
+    def y(self, w):
+        return (self.s - e)
+f = [4, 9]
+b = q('x', 'p', 'o')
+n = d(1)
+l = n.y(10)
+FIM.append(1)
+>>>f
+ID:0
+#####
+
+i = 'm'
+def e(k):
+    return k.copy()
+class p:
+    t = [2, 6]
+    def __init__(self, o, m):
+        self.o = o
+        self.m = m
+    def d(self, b):
+        return ((self.t - o) / m)
+c = i.replace('a', 'b')
+g = e([3])
+l = FIM(2, 3)
+s = l.d(10)
+>>>p
+ID:2
+#####
+
+def z(x, y):
+    return x[0]
+h = 6
+class i:
+    u = 'q'
+    def __init__(self, e):
+        self.e = e
+    def l(self, a):
+        return self.u + e
+v = z([1], [4])
+s = h + 5
+f = FIM('g')
+t = f.l('n')
+>>>i
+ID:2
+#####
+
+l = 11.69
+def o(r, p):
+    return r[0]
+class f:
+    i = 'g'
+    def __init__(self, z, c):
+        self.z = z
+        self.c = c
+    def y(self, u):
+        return ((self.i / z) + c)
+w = FIM([5], [5])
+t = f(3, 1)
+g = t.y(10)
+b = l * 1.5
+>>>o
+ID:1
+#####
+
+f = [3, 9]
+class t:
+    z = 'n'
+    def __init__(self, s):
+        self.s = s
+    def m(self, r):
+        return (self.z * s)
+def i(h):
+    return h.copy()
+f.append(5)
+k = FIM(3)
+p = k.m(10)
+c = i([3])
+>>>t
+ID:2
+#####
+
+def q(f):
+    return f
+r = [1, 9]
+class o:
+    p = 18
+    def __init__(self, y, a):
+        self.y = y
+        self.a = a
+    def j(self, n):
+        return self.p + [y]
+s = FIM(9)
+e = o([1], [4])
+z = e.j([1, 2])
+r.append(3)
+>>>q
+ID:1
+#####
+
+n = [2, 9]
+class i:
+    a = 'h'
+    def __init__(self, x, f):
+        self.x = x
+        self.f = f
+    def g(self, e):
+        return self.a.upper()
+def m(y, o, r, b):
+    return y + o
+t = m('w', 'q', 'v', 'j')
+FIM.append(1)
+s = i('z', 'd')
+h = s.g('c')
+>>>n
+ID:0
+#####
+
+class z:
+    b = 'j'
+    def __init__(self, o, a):
+        self.o = o
+        self.a = a
+    def p(self, j):
+        return ((self.b / o) / a)
+d = [4, 6]
+def l(x, t):
+    return x + [t]
+y = FIM(2, 1)
+g = y.p(10)
+q = l([2], [3])
+d.append(5)
+>>>z
+ID:2
+#####
+
+def y(h):
+    return h.capitalize()
+class n:
+    b = [3, 8]
+    def __init__(self, c, p):
+        self.c = c
+        self.p = p
+    def l(self, t):
+        return self.b + c
+f = 28
+d = n('q', 'g')
+k = d.l('o')
+z = y('w')
+a = FIM + 5
+>>>f
+ID:0
+#####
+
+class v:
+    f = [4, 6]
+    def __init__(self, w):
+        self.w = w
+    def k(self, p):
+        return (self.f + w)
+n = 'c'
+def u(g, e):
+    return g[1:]
+d = n.replace('a', 'b')
+t = v(3)
+b = t.k(10)
+s = FIM([2], [1])
+>>>u
+ID:1
+#####
+
+class d:
+    f = 47
+    def __init__(self, t, e):
+        self.t = t
+        self.e = e
+    def n(self, o):
+        return self.f.upper()
+def r(v, j):
+    return (v * j)
+w = 39
+u = r(10, 8)
+m = FIM + 5
+s = d('x', 'i')
+q = s.n('c')
+>>>w
+ID:0
+#####
+
+class e:
+    m = 'g'
+    def __init__(self, n, y):
+        self.n = n
+        self.y = y
+    def w(self, p):
+        return self.m + [n]
+def r(v):
+    return v.capitalize()
+i = 7.75
+x = FIM('c')
+l = i * 1.5
+d = e([2], [5])
+z = d.w([1, 2])
+>>>r
+ID:1
+#####
+
+class c:
+    k = [5, 7]
+    def __init__(self, h, i):
+        self.h = h
+        self.i = i
+    def w(self, z):
+        return ((self.k * h) / i)
+def e(x, n, q):
+    return x[0]
+u = 5.8
+m = FIM * 1.5
+y = c(5, 5)
+t = y.w(10)
+l = e([4], [3], [4])
+>>>u
+ID:0
+#####
+
+class i:
+    z = 'f'
+    def __init__(self, w, k):
+        self.w = w
+        self.k = k
+    def c(self, m):
+        return ((self.z - w) / k)
+t = [3, 6]
+def n(u, x):
+    return u[1:]
+h = i(1, 3)
+j = h.c(10)
+FIM.append(2)
+l = n([3], [3])
+>>>t
+ID:0
+#####
+
+def n(q, u, x):
+    return q[1:]
+class p:
+    b = [3, 7]
+    def __init__(self, v, z):
+        self.v = v
+        self.z = z
+    def i(self, m):
+        return ((self.b * v) + z)
+f = 7.86
+h = FIM(3, 3)
+k = h.i(10)
+o = n([1], [1], [5])
+r = f * 1.5
+>>>p
+ID:2
+#####
+
+def f(p):
+    return p
+class q:
+    e = [5, 8]
+    def __init__(self, v):
+        self.v = v
+    def o(self, g):
+        return (self.e * v)
+b = [1, 7]
+m = FIM(4)
+d = q(1)
+i = d.o(10)
+b.append(3)
+>>>f
+ID:1
+#####
+
+def x(k, n, r, d):
+    return k * 2
+i = [4, 6]
+class s:
+    j = [2, 8]
+    def __init__(self, p, v):
+        self.p = p
+        self.v = v
+    def b(self, h):
+        return self.j.upper()
+FIM.append(1)
+m = x('e', 'y', 'l', 'o')
+g = s('u', 'z')
+a = g.b('f')
+>>>i
+ID:0
+#####
+
+def h(w, o, m, k):
+    return w[1:]
+l = [3, 7]
+class x:
+    r = 'u'
+    def __init__(self, j, c):
+        self.j = j
+        self.c = c
+    def v(self, f):
+        return self.r + j
+e = h([5], [2], [4], [4])
+p = FIM('g', 'q')
+s = p.v('u')
+l.append(3)
+>>>x
+ID:2
+#####
+
+def i(m, e):
+    return m[1:]
+n = [5, 9]
+class f:
+    c = 'z'
+    def __init__(self, o):
+        self.o = o
+    def a(self, y):
+        return (self.c + o)
+l = i([3], [3])
+FIM.append(5)
+s = f(3)
+b = s.a(10)
+>>>n
+ID:0
+#####
+
+def t(i, j, e, p):
+    return i + j
+o = [5, 6]
+class v:
+    w = 'j'
+    def __init__(self, g):
+        self.g = g
+    def h(self, n):
+        return self.w[1:]
+o.append(2)
+u = FIM([2])
+a = u.h([1, 2])
+c = t('r', 'l', 'd', 'k')
+>>>v
+ID:2
+#####
+
+k = 'j'
+def d(i):
+    return i.capitalize()
+class y:
+    f = [4, 8]
+    def __init__(self, j):
+        self.j = j
+    def p(self, s):
+        return (self.f / j)
+a = FIM('b')
+w = y(2)
+c = w.p(10)
+x = k.replace('a', 'b')
+>>>d
+ID:1
+#####
+
+def v(a, r):
+    return a[1:]
+class j:
+    e = [4, 7]
+    def __init__(self, b):
+        self.b = b
+    def q(self, y):
+        return self.e[0]
+t = [3, 9]
+d = j([3])
+k = d.q([1, 2])
+t.append(1)
+x = FIM([3], [3])
+>>>v
+ID:1
+#####
+
+class y:
+    t = [5, 9]
+    def __init__(self, v):
+        self.v = v
+    def g(self, l):
+        return (self.t * v)
+def m(u):
+    return u
+s = 13
+r = s + 5
+n = FIM(2)
+a = y(1)
+p = a.g(10)
+>>>m
+ID:1
+#####
+
+def h(j, v, u):
+    return j * 2
+g = 46
+class n:
+    o = 24
+    def __init__(self, l):
+        self.l = l
+    def k(self, a):
+        return self.o * 2
+f = FIM + 5
+z = h('b', 'q', 'e')
+c = n('r')
+t = c.k('y')
+>>>g
+ID:0
+#####
+
+class b:
+    t = 'l'
+    def __init__(self, v):
+        self.v = v
+    def s(self, g):
+        return (self.t - v)
+f = 'n'
+def m(u, a, i):
+    return ((u - a) - i)
+r = FIM(1)
+z = r.s(10)
+d = m(8, 9, 4)
+q = f.replace('a', 'b')
+>>>b
+ID:2
+#####
+
+def h(u, x):
+    return u[0]
+class p:
+    m = 'g'
+    def __init__(self, e):
+        self.e = e
+    def q(self, t):
+        return (self.m * e)
+d = 6.39
+i = d * 1.5
+c = FIM(5)
+r = c.q(10)
+s = h([1], [1])
+>>>p
+ID:2
+#####
+
+class n:
+    k = 50
+    def __init__(self, i):
+        self.i = i
+    def z(self, h):
+        return self.k[1:]
+def l(d, y, m, a):
+    return d[0]
+b = 1.17
+j = n([4])
+e = j.z([1, 2])
+c = b * 1.5
+s = FIM([1], [1], [1], [4])
+>>>l
+ID:1
+#####
+
+def m(j, s):
+    return (j * s)
+z = 15.25
+class p:
+    l = 'g'
+    def __init__(self, r, o):
+        self.r = r
+        self.o = o
+    def u(self, w):
+        return self.l[1:]
+g = m(5, 8)
+y = p([1], [1])
+i = y.u([1, 2])
+q = FIM * 1.5
+>>>z
+ID:0
+#####
+
+class a:
+    w = 37
+    def __init__(self, j, p):
+        self.j = j
+        self.p = p
+    def u(self, r):
+        return self.w.upper()
+f = 'n'
+def k(c, e):
+    return (c * e)
+z = a('d', 'y')
+v = z.u('s')
+b = FIM.replace('a', 'b')
+q = k(3, 2)
+>>>f
+ID:0
+#####
+
+m = 'u'
+def b(n):
+    return n.capitalize()
+class w:
+    h = [3, 9]
+    def __init__(self, d, x):
+        self.d = d
+        self.x = x
+    def j(self, a):
+        return self.h + d
+k = FIM('c')
+l = m.replace('a', 'b')
+e = w('f', 'v')
+u = e.j('q')
+>>>b
+ID:1
+#####
+
+u = [4, 8]
+def h(d, t):
+    return (d * t)
+class j:
+    e = 'l'
+    def __init__(self, x):
+        self.x = x
+    def f(self, n):
+        return self.e + [x]
+v = j([3])
+a = v.f([1, 2])
+FIM.append(3)
+q = h(10, 6)
+>>>u
+ID:0
+#####
+
+w = 28
+def e(m):
+    return m
+class o:
+    p = [5, 8]
+    def __init__(self, i):
+        self.i = i
+    def d(self, a):
+        return self.p + i
+h = FIM + 5
+b = o('u')
+s = b.d('y')
+k = e(5)
+>>>w
+ID:0
+#####
+
+class z:
+    r = [5, 9]
+    def __init__(self, u):
+        self.u = u
+    def k(self, y):
+        return self.r.upper()
+e = [1, 7]
+def i(t):
+    return t.capitalize()
+FIM.append(2)
+g = z('m')
+b = g.k('a')
+d = i('l')
+>>>e
+ID:0
+#####
+
+def f(t, c, u, m):
+    return t + [c]
+y = 28
+class l:
+    r = 'b'
+    def __init__(self, p):
+        self.p = p
+    def h(self, o):
+        return self.r * 2
+q = l('d')
+k = q.h('a')
+i = y + 5
+v = FIM([1], [5], [3], [2])
+>>>f
+ID:1
+#####
+
+class q:
+    h = [2, 8]
+    def __init__(self, a):
+        self.a = a
+    def r(self, b):
+        return (self.h - a)
+def t(o):
+    return o.copy()
+l = 15.79
+v = q(4)
+d = v.r(10)
+u = t([1])
+i = FIM * 1.5
+>>>l
+ID:0
+#####
+
+def p(m, j, e):
+    return m + j
+class k:
+    y = 'b'
+    def __init__(self, r, l):
+        self.r = r
+        self.l = l
+    def a(self, v):
+        return self.y * 2
+c = [3, 6]
+c.append(2)
+u = FIM('g', 'o')
+d = u.a('x')
+f = p('z', 'q', 't')
+>>>k
+ID:2
+#####
+
+def i(x, l, d, y):
+    return x * 2
+u = 17
+class h:
+    q = 19
+    def __init__(self, z):
+        self.z = z
+    def n(self, c):
+        return self.q.upper()
+p = FIM('m', 'j', 'g', 'r')
+a = u + 5
+t = h('b')
+s = t.n('k')
+>>>i
+ID:1
+#####
+
+i = 3.86
+class y:
+    q = 'c'
+    def __init__(self, a, f):
+        self.a = a
+        self.f = f
+    def h(self, s):
+        return self.q + [a]
+def t(u):
+    return u.copy()
+n = t([4])
+b = y([2], [5])
+z = b.h([1, 2])
+v = FIM * 1.5
+>>>i
+ID:0
+#####
+
+v = 'u'
+class c:
+    j = 'o'
+    def __init__(self, z, d):
+        self.z = z
+        self.d = d
+    def q(self, h):
+        return self.j.upper()
+def t(n, a):
+    return (n * a)
+w = v.replace('a', 'b')
+g = FIM('p', 's')
+i = g.q('b')
+y = t(9, 8)
+>>>c
+ID:2
+#####
+
+def g(h, m):
+    return h + [m]
+s = 17.86
+class p:
+    t = 'o'
+    def __init__(self, k):
+        self.k = k
+    def e(self, a):
+        return self.t.upper()
+r = FIM('d')
+l = r.e('q')
+y = g([3], [2])
+v = s * 1.5
+>>>p
+ID:2
+#####
+
+o = 7.74
+class d:
+    x = 44
+    def __init__(self, j, z):
+        self.j = j
+        self.z = z
+    def e(self, v):
+        return self.x * 2
+def w(y):
+    return y.copy()
+g = w([3])
+q = o * 1.5
+s = FIM('m', 'k')
+t = s.e('u')
+>>>d
+ID:2
+#####
+
+class y:
+    w = 20
+    def __init__(self, e):
+        self.e = e
+    def v(self, q):
+        return self.w * 2
+n = 'm'
+def l(g, k):
+    return (g - k)
+h = y('p')
+a = h.v('z')
+b = l(10, 8)
+m = FIM.replace('a', 'b')
+>>>n
+ID:0
+#####
+
+class d:
+    b = 'y'
+    def __init__(self, f, a):
+        self.f = f
+        self.a = a
+    def n(self, i):
+        return self.b + [f]
+u = [4, 7]
+def m(z, p, v):
+    return z + p
+u.append(1)
+s = d([1], [1])
+x = s.n([1, 2])
+t = FIM('h', 'q', 'y')
+>>>m
+ID:1
+#####
+
+def z(o):
+    return o.capitalize()
+class a:
+    m = 'v'
+    def __init__(self, r):
+        self.r = r
+    def i(self, g):
+        return self.m + [r]
+t = 'f'
+u = a([3])
+x = u.i([1, 2])
+w = FIM('j')
+q = t.replace('a', 'b')
+>>>z
+ID:1
+#####
+
+class j:
+    z = 29
+    def __init__(self, f):
+        self.f = f
+    def d(self, w):
+        return self.z[0]
+e = 48
+def k(u):
+    return u.copy()
+g = j([5])
+i = g.d([1, 2])
+o = e + 5
+r = FIM([2])
+>>>k
+ID:1
+#####
+
+def z(f, g, a):
+    return ((f / g) + a)
+class x:
+    i = 'h'
+    def __init__(self, o, p):
+        self.o = o
+        self.p = p
+    def v(self, t):
+        return self.i + o
+d = 13.27
+n = FIM('h', 'u')
+l = n.v('y')
+e = d * 1.5
+m = z(2, 10, 3)
+>>>x
+ID:2
+#####
+
+def h(i):
+    return i
+v = 31
+class x:
+    m = 33
+    def __init__(self, n, b):
+        self.n = n
+        self.b = b
+    def w(self, a):
+        return self.m[1:]
+s = x([4], [1])
+z = s.w([1, 2])
+d = v + 5
+q = FIM(7)
+>>>h
+ID:1
+#####
+
+class d:
+    f = 'z'
+    def __init__(self, l):
+        self.l = l
+    def r(self, e):
+        return self.f + [l]
+def a(b):
+    return b.capitalize()
+h = 'f'
+y = a('w')
+v = d([2])
+c = v.r([1, 2])
+j = FIM.replace('a', 'b')
+>>>h
+ID:0
+#####
+
+class u:
+    v = 38
+    def __init__(self, n, q):
+        self.n = n
+        self.q = q
+    def z(self, a):
+        return self.v * 2
+d = 10.03
+def w(j, l):
+    return j * 2
+h = u('p', 'c')
+x = h.z('k')
+i = FIM('t', 'y')
+f = d * 1.5
+>>>w
+ID:1
+#####
+
+class l:
+    e = [3, 6]
+    def __init__(self, u):
+        self.u = u
+    def f(self, x):
+        return self.e * 2
+d = 30
+def s(b):
+    return b
+p = l('h')
+o = p.f('n')
+v = FIM + 5
+a = s(4)
+>>>d
+ID:0
+#####
+
+def d(z, n, q, k):
+    return z.upper()
+u = 14.08
+class c:
+    l = 39
+    def __init__(self, t, x):
+        self.t = t
+        self.x = x
+    def a(self, w):
+        return self.l + [t]
+h = u * 1.5
+m = FIM([4], [5])
+i = m.a([1, 2])
+v = d('o', 'g', 'r', 'f')
+>>>c
+ID:2
+#####
+
+class q:
+    s = 34
+    def __init__(self, y, h):
+        self.y = y
+        self.h = h
+    def t(self, n):
+        return self.s * 2
+o = 18
+def g(u):
+    return u
+j = o + 5
+d = FIM(9)
+m = q('e', 'f')
+c = m.t('w')
+>>>g
+ID:1
+#####
+
+m = 'e'
+class n:
+    v = 33
+    def __init__(self, u, y):
+        self.u = u
+        self.y = y
+    def e(self, w):
+        return self.v * 2
+def p(k, b, x):
+    return k * 2
+s = FIM.replace('a', 'b')
+d = p('i', 'o', 'g')
+f = n('j', 'a')
+q = f.e('z')
+>>>m
+ID:0
+#####
+
+def i(e, l):
+    return e[0]
+class c:
+    s = 's'
+    def __init__(self, v):
+        self.v = v
+    def d(self, q):
+        return (self.s - v)
+r = 3.99
+u = FIM(2)
+x = u.d(10)
+y = r * 1.5
+n = i([5], [3])
+>>>c
+ID:2
+#####
+
+s = 'x'
+class l:
+    k = 'm'
+    def __init__(self, b):
+        self.b = b
+    def j(self, r):
+        return self.k + b
+def q(e):
+    return e
+u = FIM(10)
+v = l('o')
+g = v.j('a')
+i = s.replace('a', 'b')
+>>>q
+ID:1
+#####
+
+u = 'd'
+class r:
+    d = 'i'
+    def __init__(self, h):
+        self.h = h
+    def a(self, s):
+        return self.d[0]
+def e(t, k, w, g):
+    return t[0]
+m = e([3], [3], [4], [3])
+v = FIM([5])
+i = v.a([1, 2])
+b = u.replace('a', 'b')
+>>>r
+ID:2
+#####
+
+def n(i, w, z):
+    return ((i * w) * z)
+x = 'u'
+class b:
+    d = 'k'
+    def __init__(self, u, p):
+        self.u = u
+        self.p = p
+    def t(self, o):
+        return self.d.upper()
+l = n(9, 2, 4)
+k = FIM('r', 'q')
+v = k.t('j')
+y = x.replace('a', 'b')
+>>>b
+ID:2
+#####
+
+class i:
+    h = [1, 8]
+    def __init__(self, v):
+        self.v = v
+    def w(self, g):
+        return (self.h + v)
+a = 'z'
+def b(s, x, f, y):
+    return s * 2
+e = a.replace('a', 'b')
+c = b('o', 'k', 'l', 'j')
+t = FIM(3)
+n = t.w(10)
+>>>i
+ID:2
+#####
+
+o = [3, 7]
+def u(v, k):
+    return v * 2
+class e:
+    b = 'l'
+    def __init__(self, d):
+        self.d = d
+    def h(self, f):
+        return (self.b / d)
+n = u('j', 'q')
+o.append(4)
+t = FIM(2)
+p = t.h(10)
+>>>e
+ID:2
+#####
+
+x = 43
+class e:
+    u = 'q'
+    def __init__(self, f):
+        self.f = f
+    def p(self, d):
+        return self.u[1:]
+def w(k, q, h, a):
+    return k + [q]
+o = e([4])
+b = o.p([1, 2])
+c = FIM + 5
+n = w([3], [1], [1], [2])
+>>>x
+ID:0
+#####
+
+class e:
+    q = 33
+    def __init__(self, z, r):
+        self.z = z
+        self.r = r
+    def h(self, m):
+        return self.q.upper()
+f = 'm'
+def p(o, c, d, n):
+    return o * 2
+k = f.replace('a', 'b')
+y = FIM('u', 'j')
+a = y.h('i')
+x = p('l', 'v', 'b', 's')
+>>>e
+ID:2
+#####
+
+def u(t, d, s, o):
+    return (((t + d) * s) - o)
+class q:
+    g = 23
+    def __init__(self, w):
+        self.w = w
+    def h(self, z):
+        return self.g + [w]
+v = 46
+j = q([3])
+a = j.h([1, 2])
+e = FIM(9, 3, 1, 5)
+k = v + 5
+>>>u
+ID:1
+#####
+
+def y(l, e):
+    return (l / e)
+i = [1, 6]
+class j:
+    q = 10
+    def __init__(self, o):
+        self.o = o
+    def z(self, b):
+        return self.q.upper()
+i.append(1)
+a = y(4, 8)
+x = FIM('w')
+p = x.z('r')
+>>>j
+ID:2
+#####
+
+def c(p):
+    return p
+class k:
+    w = 'v'
+    def __init__(self, f, m):
+        self.f = f
+        self.m = m
+    def z(self, n):
+        return ((self.w / f) + m)
+d = 'q'
+i = FIM.replace('a', 'b')
+o = k(1, 2)
+l = o.z(10)
+a = c(10)
+>>>d
+ID:0
+#####
+
+class j:
+    r = 'k'
+    def __init__(self, q, w):
+        self.q = q
+        self.w = w
+    def l(self, i):
+        return ((self.r - q) / w)
+f = 'x'
+def n(o, e):
+    return o.upper()
+h = n('b', 'y')
+d = FIM(1, 1)
+s = d.l(10)
+g = f.replace('a', 'b')
+>>>j
+ID:2
+#####
+
+class g:
+    p = [3, 7]
+    def __init__(self, l):
+        self.l = l
+    def e(self, q):
+        return self.p.upper()
+def k(r, j):
+    return r[1:]
+v = 39
+n = FIM([3], [4])
+b = g('i')
+a = b.e('h')
+z = v + 5
+>>>k
+ID:1
+#####
+
+def q(l, c, d):
+    return l + c
+class r:
+    e = 3
+    def __init__(self, s):
+        self.s = s
+    def u(self, m):
+        return self.e.upper()
+h = 5.75
+y = h * 1.5
+w = FIM('t', 'o', 'j')
+i = r('v')
+n = i.u('k')
+>>>q
+ID:1
+#####
+
+def s(n, r, c):
+    return n[1:]
+b = 30
+class l:
+    q = 'u'
+    def __init__(self, v, k):
+        self.v = v
+        self.k = k
+    def f(self, t):
+        return self.q.upper()
+g = b + 5
+i = l('h', 'j')
+u = i.f('p')
+y = FIM([5], [1], [1])
+>>>s
+ID:1
+#####
+
+class v:
+    w = [4, 6]
+    def __init__(self, s, x):
+        self.s = s
+        self.x = x
+    def q(self, e):
+        return self.w[1:]
+o = 'r'
+def b(g, m):
+    return (g * m)
+y = v([3], [1])
+p = y.q([1, 2])
+z = FIM.replace('a', 'b')
+j = b(6, 3)
+>>>o
+ID:0
+#####
+
+class m:
+    l = 17
+    def __init__(self, q, w):
+        self.q = q
+        self.w = w
+    def d(self, t):
+        return self.l * 2
+h = [5, 8]
+def v(s, k, a, z):
+    return s.upper()
+b = v('u', 'y', 'j', 'p')
+FIM.append(3)
+e = m('o', 'i')
+f = e.d('n')
+>>>h
+ID:0
+#####
+
+h = 8.13
+def r(c, t):
+    return (c + t)
+class g:
+    s = [2, 9]
+    def __init__(self, x):
+        self.x = x
+    def k(self, e):
+        return self.s[1:]
+n = FIM * 1.5
+m = g([4])
+u = m.k([1, 2])
+p = r(5, 1)
+>>>h
+ID:0
+#####
+
+def x(w, k, n):
+    return w[0]
+q = 11
+class f:
+    c = [5, 8]
+    def __init__(self, v):
+        self.v = v
+    def i(self, b):
+        return self.c + [v]
+p = FIM + 5
+t = x([5], [3], [3])
+j = f([5])
+g = j.i([1, 2])
+>>>q
+ID:0
+#####
+
+def v(w, i, h, t):
+    return w + [i]
+class m:
+    l = 'i'
+    def __init__(self, j, g):
+        self.j = j
+        self.g = g
+    def p(self, a):
+        return self.l + [j]
+d = 'g'
+z = m([4], [2])
+b = z.p([1, 2])
+f = v([2], [2], [4], [1])
+o = FIM.replace('a', 'b')
+>>>d
+ID:0
+#####
+
+def v(k, n, l):
+    return ((k - n) - l)
+class w:
+    c = 'o'
+    def __init__(self, d, q):
+        self.d = d
+        self.q = q
+    def a(self, i):
+        return self.c * 2
+j = [3, 7]
+FIM.append(1)
+f = w('m', 'g')
+u = f.a('y')
+t = v(4, 1, 8)
+>>>j
+ID:0
+#####
+
+k = [3, 7]
+class u:
+    g = [5, 9]
+    def __init__(self, l, t):
+        self.l = l
+        self.t = t
+    def m(self, p):
+        return self.g + l
+def s(z, f, n):
+    return z * 2
+x = u('d', 'r')
+a = x.m('b')
+j = s('v', 'e', 'i')
+FIM.append(4)
+>>>k
+ID:0
+#####
+
+class x:
+    m = [5, 9]
+    def __init__(self, y):
+        self.y = y
+    def t(self, a):
+        return self.m[1:]
+def v(r, f, j, i):
+    return r + f
+s = 19.31
+c = FIM('d', 'u', 'k', 'n')
+l = s * 1.5
+p = x([4])
+q = p.t([1, 2])
+>>>v
+ID:1
+#####
+
+class m:
+    w = [2, 7]
+    def __init__(self, p):
+        self.p = p
+    def b(self, r):
+        return (self.w - p)
+def c(k):
+    return k
+h = [5, 9]
+e = c(1)
+h.append(4)
+u = FIM(1)
+o = u.b(10)
+>>>m
+ID:2
+#####
+
+def p(f):
+    return f.capitalize()
+v = 27
+class j:
+    o = 36
+    def __init__(self, d):
+        self.d = d
+    def r(self, z):
+        return (self.o * d)
+u = v + 5
+e = FIM('g')
+i = j(3)
+w = i.r(10)
+>>>p
+ID:1
+#####
+
+j = 'c'
+class u:
+    m = 34
+    def __init__(self, w, f):
+        self.w = w
+        self.f = f
+    def o(self, g):
+        return ((self.m + w) * f)
+def p(b, v):
+    return (b * v)
+y = p(4, 6)
+d = FIM.replace('a', 'b')
+a = u(5, 5)
+i = a.o(10)
+>>>j
+ID:0
+#####
+
+def n(k, r, v):
+    return ((k + r) + v)
+t = [4, 9]
+class u:
+    l = 'n'
+    def __init__(self, q):
+        self.q = q
+    def i(self, o):
+        return self.l[1:]
+s = FIM(4, 3, 1)
+j = u([2])
+d = j.i([1, 2])
+t.append(4)
+>>>n
+ID:1
+#####
+
+def t(l, v, f):
+    return ((l + v) + f)
+class b:
+    o = [3, 6]
+    def __init__(self, r, g):
+        self.r = r
+        self.g = g
+    def e(self, d):
+        return self.o + r
+k = 18.99
+z = b('w', 'u')
+s = z.e('i')
+a = FIM(8, 6, 8)
+j = k * 1.5
+>>>t
+ID:1
+#####
+
+def h(r, q, k):
+    return r[1:]
+x = 18
+class w:
+    g = 24
+    def __init__(self, t):
+        self.t = t
+    def i(self, e):
+        return (self.g / t)
+m = w(2)
+j = m.i(10)
+o = FIM([2], [2], [1])
+v = x + 5
+>>>h
+ID:1
+#####
+
+def l(m, o, u, g):
+    return m * 2
+a = 21
+class k:
+    r = [1, 6]
+    def __init__(self, j, c):
+        self.j = j
+        self.c = c
+    def f(self, d):
+        return self.r.upper()
+e = FIM('n', 'v')
+w = e.f('h')
+p = a + 5
+t = l('q', 'b', 'y', 's')
+>>>k
+ID:2
+#####
+
+z = 'f'
+def q(s):
+    return s
+class u:
+    i = 'c'
+    def __init__(self, j, y):
+        self.j = j
+        self.y = y
+    def v(self, p):
+        return ((self.i + j) * y)
+n = FIM(3, 2)
+e = n.v(10)
+f = z.replace('a', 'b')
+c = q(10)
+>>>u
+ID:2
+#####
+
+def n(o, d):
+    return (o / d)
+class a:
+    c = 'g'
+    def __init__(self, w):
+        self.w = w
+    def t(self, i):
+        return self.c[0]
+u = 9.39
+p = u * 1.5
+h = FIM([2])
+b = h.t([1, 2])
+s = n(5, 9)
+>>>a
+ID:2
+#####
+
+def q(e, a, c):
+    return ((e + a) / c)
+class m:
+    v = 49
+    def __init__(self, y, t):
+        self.y = y
+        self.t = t
+    def j(self, k):
+        return self.v[0]
+d = 'z'
+u = q(10, 1, 9)
+p = FIM([5], [4])
+w = p.j([1, 2])
+z = d.replace('a', 'b')
+>>>m
+ID:2
+#####
+
+def s(w):
+    return w.capitalize()
+p = [4, 9]
+class f:
+    c = 28
+    def __init__(self, x, u):
+        self.x = x
+        self.u = u
+    def t(self, e):
+        return self.c[1:]
+p.append(4)
+b = FIM('h')
+a = f([3], [1])
+j = a.t([1, 2])
+>>>s
+ID:1
+#####
+
+def f(d, v, q, j):
+    return d + v
+class c:
+    g = [1, 7]
+    def __init__(self, h, y):
+        self.h = h
+        self.y = y
+    def z(self, a):
+        return ((self.g / h) / y)
+n = [5, 6]
+n.append(3)
+i = f('u', 't', 'b', 'e')
+k = FIM(3, 4)
+o = k.z(10)
+>>>c
+ID:2
+#####
+
+def i(a, b):
+    return a + b
+l = [5, 7]
+class t:
+    y = 50
+    def __init__(self, z, d):
+        self.z = z
+        self.d = d
+    def q(self, v):
+        return self.y.upper()
+l.append(4)
+k = t('j', 'n')
+w = k.q('u')
+s = FIM('h', 'o')
+>>>i
+ID:1
+#####
+
+d = 'c'
+class w:
+    j = 'l'
+    def __init__(self, c):
+        self.c = c
+    def o(self, r):
+        return (self.j / c)
+def s(b, v, h):
+    return b.upper()
+x = d.replace('a', 'b')
+l = w(2)
+g = l.o(10)
+z = FIM('u', 'f', 'y')
+>>>s
+ID:1
+#####
+
+class u:
+    v = 'l'
+    def __init__(self, k):
+        self.k = k
+    def p(self, d):
+        return self.v[1:]
+def f(j):
+    return j
+w = [5, 9]
+y = u([5])
+c = y.p([1, 2])
+w.append(2)
+t = FIM(3)
+>>>f
+ID:1
+#####
+
+def h(c, w, p, j):
+    return c[0]
+t = 21
+class r:
+    k = [2, 7]
+    def __init__(self, i):
+        self.i = i
+    def u(self, o):
+        return self.k + [i]
+y = h([1], [3], [5], [4])
+m = FIM([4])
+s = m.u([1, 2])
+n = t + 5
+>>>r
+ID:2
+#####
+
+class i:
+    o = 32
+    def __init__(self, k):
+        self.k = k
+    def n(self, w):
+        return (self.o - k)
+b = 'a'
+def h(z):
+    return z
+x = FIM(10)
+y = b.replace('a', 'b')
+l = i(2)
+a = l.n(10)
+>>>h
+ID:1
+#####
+
+def g(x, m, v, t):
+    return (((x / m) / v) / t)
+class i:
+    q = 16
+    def __init__(self, f):
+        self.f = f
+    def e(self, s):
+        return self.q * 2
+c = 43
+l = g(7, 3, 3, 1)
+o = FIM('h')
+z = o.e('k')
+p = c + 5
+>>>i
+ID:2
+#####
+
+def x(a):
+    return a.capitalize()
+k = 19.46
+class q:
+    s = 22
+    def __init__(self, z):
+        self.z = z
+    def m(self, e):
+        return self.s * 2
+y = x('g')
+o = FIM('v')
+r = o.m('d')
+p = k * 1.5
+>>>q
+ID:2
+#####
+
+def h(t):
+    return t.copy()
+class w:
+    n = [1, 7]
+    def __init__(self, g, j):
+        self.g = g
+        self.j = j
+    def p(self, k):
+        return self.n[1:]
+s = 36
+d = FIM + 5
+o = w([2], [5])
+y = o.p([1, 2])
+i = h([2])
+>>>s
+ID:0
+#####
+
+def p(d, c, t):
+    return d[0]
+n = 16.42
+class s:
+    u = 'v'
+    def __init__(self, z):
+        self.z = z
+    def g(self, h):
+        return self.u + [z]
+b = p([4], [1], [2])
+o = n * 1.5
+x = FIM([1])
+e = x.g([1, 2])
+>>>s
+ID:2
+#####
+
+def f(x, o, g):
+    return ((x / o) * g)
+a = 2.7
+class v:
+    t = [4, 9]
+    def __init__(self, d):
+        self.d = d
+    def b(self, n):
+        return self.t[1:]
+w = f(7, 1, 3)
+r = a * 1.5
+j = FIM([2])
+h = j.b([1, 2])
+>>>v
+ID:2
+#####
+
+class o:
+    t = 'j'
+    def __init__(self, y):
+        self.y = y
+    def n(self, g):
+        return (self.t / y)
+z = 'o'
+def v(x):
+    return x.capitalize()
+u = FIM.replace('a', 'b')
+e = o(4)
+p = e.n(10)
+w = v('d')
+>>>z
+ID:0
+#####
+
+class u:
+    o = [2, 6]
+    def __init__(self, x):
+        self.x = x
+    def h(self, v):
+        return self.o + x
+l = 18
+def b(d, k, c):
+    return d + [k]
+t = FIM('i')
+f = t.h('n')
+m = l + 5
+r = b([4], [2], [5])
+>>>u
+ID:2
+#####
+
+class w:
+    k = [2, 7]
+    def __init__(self, a, g):
+        self.a = a
+        self.g = g
+    def y(self, b):
+        return ((self.k - a) + g)
+def q(j):
+    return j
+m = [3, 7]
+u = FIM(4, 5)
+e = u.y(10)
+m.append(2)
+h = q(10)
+>>>w
+ID:2
+#####
+
+def v(e, r, j):
+    return ((e + r) * j)
+class z:
+    a = 'n'
+    def __init__(self, k):
+        self.k = k
+    def i(self, d):
+        return (self.a / k)
+y = 12.16
+p = FIM(5)
+w = p.i(10)
+s = v(6, 2, 10)
+t = y * 1.5
+>>>z
+ID:2
+#####
+
+class c:
+    u = [5, 8]
+    def __init__(self, l):
+        self.l = l
+    def h(self, p):
+        return self.u.upper()
+w = 6
+def o(x, b, k, t):
+    return x + [b]
+e = FIM([5], [3], [3], [1])
+i = c('s')
+q = i.h('v')
+j = w + 5
+>>>o
+ID:1
+#####
+
+x = 3.12
+class e:
+    b = 'y'
+    def __init__(self, q, o):
+        self.q = q
+        self.o = o
+    def w(self, m):
+        return ((self.b * q) - o)
+def f(l, a, u):
+    return l * 2
+h = FIM * 1.5
+y = e(2, 1)
+s = y.w(10)
+r = f('d', 'n', 'p')
+>>>x
+ID:0
+#####
+
+class p:
+    r = 9
+    def __init__(self, f, e):
+        self.f = f
+        self.e = e
+    def i(self, h):
+        return self.r * 2
+def v(c, z, d, s):
+    return c[1:]
+w = 'g'
+m = w.replace('a', 'b')
+y = FIM([4], [1], [1], [1])
+q = p('u', 'b')
+l = q.i('j')
+>>>v
+ID:1
+#####
+
+def n(p):
+    return p.copy()
+g = 34
+class w:
+    y = [2, 9]
+    def __init__(self, u):
+        self.u = u
+    def d(self, q):
+        return self.y[1:]
+k = w([5])
+s = k.d([1, 2])
+o = g + 5
+m = FIM([5])
+>>>n
+ID:1
+#####
+
+d = 9.74
+def q(g):
+    return g.copy()
+class v:
+    i = 25
+    def __init__(self, a):
+        self.a = a
+    def u(self, e):
+        return self.i + [a]
+n = q([3])
+b = FIM * 1.5
+s = v([1])
+c = s.u([1, 2])
+>>>d
+ID:0
+#####
+
+class l:
+    i = 44
+    def __init__(self, g, f):
+        self.g = g
+        self.f = f
+    def j(self, h):
+        return self.i + [g]
+def e(c, s, a, r):
+    return (((c - s) / a) + r)
+b = 6
+d = FIM(10, 7, 10, 1)
+t = b + 5
+u = l([4], [1])
+w = u.j([1, 2])
+>>>e
+ID:1
+#####
+
+d = 42
+class j:
+    a = 's'
+    def __init__(self, x, n):
+        self.x = x
+        self.n = n
+    def r(self, y):
+        return self.a[1:]
+def t(q):
+    return q.copy()
+l = FIM([4], [1])
+c = l.r([1, 2])
+w = d + 5
+u = t([4])
+>>>j
+ID:2
+#####
+
+n = 19.91
+class i:
+    c = [4, 9]
+    def __init__(self, p):
+        self.p = p
+    def g(self, d):
+        return self.c.upper()
+def h(m, r, o, f):
+    return m.upper()
+k = FIM('z', 'e', 'v', 'y')
+j = i('t')
+b = j.g('w')
+s = n * 1.5
+>>>h
+ID:1
+#####
+
+def f(a, c, h, y):
+    return a.upper()
+class z:
+    i = [1, 8]
+    def __init__(self, u):
+        self.u = u
+    def t(self, x):
+        return self.i.upper()
+d = [5, 6]
+FIM.append(2)
+l = z('v')
+j = l.t('r')
+e = f('b', 'n', 'g', 'w')
+>>>d
+ID:0
+#####
+
+def u(f):
+    return f.capitalize()
+q = 13.95
+class m:
+    g = 48
+    def __init__(self, n, j):
+        self.n = n
+        self.j = j
+    def b(self, k):
+        return ((self.g / n) / j)
+z = u('s')
+i = q * 1.5
+v = FIM(2, 2)
+r = v.b(10)
+>>>m
+ID:2
+#####
+
+class y:
+    l = 31
+    def __init__(self, n):
+        self.n = n
+    def h(self, r):
+        return self.l[1:]
+w = 24
+def d(e, s, u, j):
+    return e * 2
+o = w + 5
+g = y([3])
+t = g.h([1, 2])
+f = FIM('x', 'c', 'a', 'z')
+>>>d
+ID:1
+#####
+
+class d:
+    b = [1, 9]
+    def __init__(self, i):
+        self.i = i
+    def k(self, w):
+        return self.b.upper()
+m = [1, 7]
+def e(f, l, u):
+    return f * 2
+FIM.append(5)
+t = e('y', 'h', 'v')
+x = d('r')
+n = x.k('c')
+>>>m
+ID:0
+#####
+
+def i(q, s, j):
+    return ((q * s) * j)
+k = [3, 8]
+class y:
+    d = 'q'
+    def __init__(self, x):
+        self.x = x
+    def r(self, n):
+        return self.d + [x]
+c = y([3])
+o = c.r([1, 2])
+m = FIM(2, 8, 5)
+k.append(1)
+>>>i
+ID:1
+#####
+
+l = 4.36
+class k:
+    y = [3, 7]
+    def __init__(self, g):
+        self.g = g
+    def i(self, x):
+        return self.y.upper()
+def w(v):
+    return v.copy()
+b = FIM([2])
+t = l * 1.5
+h = k('q')
+f = h.i('o')
+>>>w
+ID:1
+#####
+
+def k(f, v):
+    return (f - v)
+class n:
+    e = [4, 9]
+    def __init__(self, b):
+        self.b = b
+    def l(self, u):
+        return self.e[0]
+x = [5, 6]
+w = FIM([5])
+g = w.l([1, 2])
+x.append(2)
+p = k(5, 4)
+>>>n
+ID:2
+#####
+
+o = 37
+def n(k, s):
+    return (k + s)
+class q:
+    t = [3, 7]
+    def __init__(self, i, g):
+        self.i = i
+        self.g = g
+    def b(self, d):
+        return self.t[1:]
+w = o + 5
+u = FIM([4], [2])
+h = u.b([1, 2])
+f = n(2, 7)
+>>>q
+ID:2
+#####
+
+def z(n, j):
+    return n * 2
+class u:
+    t = [1, 9]
+    def __init__(self, p):
+        self.p = p
+    def l(self, g):
+        return (self.t * p)
+h = 's'
+e = u(2)
+x = e.l(10)
+a = FIM.replace('a', 'b')
+b = z('v', 'w')
+>>>h
+ID:0
+#####
+
+def c(f, u, s):
+    return f + [u]
+k = 'h'
+class d:
+    x = [2, 8]
+    def __init__(self, b):
+        self.b = b
+    def o(self, z):
+        return self.x + b
+r = d('q')
+w = r.o('n')
+v = FIM.replace('a', 'b')
+m = c([2], [1], [4])
+>>>k
+ID:0
+#####
+
+def g(e, n):
+    return e * 2
+s = 'n'
+class d:
+    u = 43
+    def __init__(self, m):
+        self.m = m
+    def a(self, i):
+        return (self.u + m)
+t = d(5)
+y = t.a(10)
+j = s.replace('a', 'b')
+q = FIM('c', 'w')
+>>>g
+ID:1
+#####
+
+y = 15.54
+class o:
+    m = [4, 8]
+    def __init__(self, v):
+        self.v = v
+    def u(self, h):
+        return self.m + v
+def g(k, z):
+    return k + [z]
+d = g([3], [4])
+w = FIM * 1.5
+p = o('q')
+n = p.u('i')
+>>>y
+ID:0
+#####
+
+def g(i, n, r):
+    return i.upper()
+class m:
+    j = 'p'
+    def __init__(self, v, f):
+        self.v = v
+        self.f = f
+    def s(self, k):
+        return ((self.j / v) - f)
+b = 35
+d = FIM(5, 2)
+a = d.s(10)
+u = b + 5
+c = g('e', 'p', 'x')
+>>>m
+ID:2
+#####
+
+def j(c):
+    return c.capitalize()
+class s:
+    a = 32
+    def __init__(self, m):
+        self.m = m
+    def k(self, q):
+        return self.a[1:]
+i = 19.57
+p = FIM('w')
+f = i * 1.5
+h = s([2])
+t = h.k([1, 2])
+>>>j
+ID:1
+#####
+
+w = 17.15
+def s(n, h, u, p):
+    return (((n - h) + u) * p)
+class b:
+    g = 45
+    def __init__(self, t, y):
+        self.t = t
+        self.y = y
+    def a(self, o):
+        return self.g + [t]
+l = s(7, 1, 3, 9)
+v = FIM([2], [2])
+k = v.a([1, 2])
+f = w * 1.5
+>>>b
+ID:2
+#####
+
+class p:
+    f = [1, 6]
+    def __init__(self, l, e):
+        self.l = l
+        self.e = e
+    def u(self, w):
+        return self.f + [l]
+b = [2, 9]
+def v(a, x):
+    return (a + x)
+k = p([2], [3])
+s = k.u([1, 2])
+o = FIM(3, 7)
+b.append(3)
+>>>v
+ID:1
+#####
+
+def z(e, c):
+    return (e - c)
+class o:
+    i = 'm'
+    def __init__(self, d, b):
+        self.d = d
+        self.b = b
+    def m(self, a):
+        return ((self.i / d) / b)
+s = 'y'
+r = s.replace('a', 'b')
+k = o(4, 1)
+n = k.m(10)
+q = FIM(2, 5)
+>>>z
+ID:1
+#####
+
+w = 6.84
+class y:
+    a = 23
+    def __init__(self, r):
+        self.r = r
+    def k(self, d):
+        return self.a + [r]
+def u(m, e, v):
+    return m.upper()
+c = w * 1.5
+z = u('t', 'h', 'f')
+p = FIM([3])
+x = p.k([1, 2])
+>>>y
+ID:2
+#####
+
+p = [2, 7]
+class a:
+    e = [5, 6]
+    def __init__(self, u, l):
+        self.u = u
+        self.l = l
+    def j(self, y):
+        return self.e + [u]
+def b(q, w, k):
+    return ((q - w) - k)
+o = FIM(6, 3, 9)
+p.append(3)
+x = a([5], [3])
+d = x.j([1, 2])
+>>>b
+ID:1
+#####
+
+class b:
+    g = 'm'
+    def __init__(self, a, j):
+        self.a = a
+        self.j = j
+    def r(self, n):
+        return self.g + [a]
+e = 20
+def v(x):
+    return x.copy()
+d = FIM + 5
+l = v([4])
+w = b([4], [2])
+t = w.r([1, 2])
+>>>e
+ID:0
+#####
+
+def n(d, y, m):
+    return d[1:]
+t = 'l'
+class s:
+    c = [2, 8]
+    def __init__(self, f, h):
+        self.f = f
+        self.h = h
+    def w(self, k):
+        return ((self.c / f) * h)
+j = t.replace('a', 'b')
+z = FIM(5, 5)
+x = z.w(10)
+p = n([3], [4], [2])
+>>>s
+ID:2
+#####
+
+class b:
+    v = 2
+    def __init__(self, c):
+        self.c = c
+    def t(self, e):
+        return self.v * 2
+def w(g, r):
+    return g.upper()
+o = 8.72
+a = b('q')
+m = a.t('s')
+d = o * 1.5
+j = FIM('n', 'y')
+>>>w
+ID:1
+#####
+
+class h:
+    z = 17
+    def __init__(self, v):
+        self.v = v
+    def f(self, p):
+        return self.z * 2
+def l(n):
+    return n.copy()
+j = 's'
+q = h('k')
+w = q.f('e')
+s = FIM.replace('a', 'b')
+a = l([5])
+>>>j
+ID:0
+#####
+
+p = [3, 9]
+def a(j, o, k, h):
+    return j * 2
+class e:
+    x = 'u'
+    def __init__(self, c, n):
+        self.c = c
+        self.n = n
+    def z(self, d):
+        return self.x + [c]
+p.append(5)
+i = e([5], [3])
+r = i.z([1, 2])
+w = FIM('s', 'v', 'y', 'u')
+>>>a
+ID:1
+#####
+
+class z:
+    n = 't'
+    def __init__(self, q):
+        self.q = q
+    def j(self, v):
+        return self.n + [q]
+def g(s):
+    return s.capitalize()
+o = [4, 8]
+o.append(2)
+e = g('w')
+d = FIM([3])
+c = d.j([1, 2])
+>>>z
+ID:2
+#####
+
+n = 'y'
+def p(o, x, a, s):
+    return o + x
+class z:
+    w = 8
+    def __init__(self, v):
+        self.v = v
+    def f(self, j):
+        return self.w[1:]
+l = n.replace('a', 'b')
+t = z([4])
+r = t.f([1, 2])
+m = FIM('b', 'c', 'i', 'k')
+>>>p
+ID:1
+#####
+
+class s:
+    y = [5, 7]
+    def __init__(self, o, r):
+        self.o = o
+        self.r = r
+    def j(self, l):
+        return self.y[1:]
+def u(b, x, f):
+    return ((b / x) + f)
+c = 'b'
+t = FIM([2], [2])
+d = t.j([1, 2])
+v = c.replace('a', 'b')
+k = u(6, 6, 1)
+>>>s
+ID:2
+#####
+
+def t(c, x):
+    return c + [x]
+m = 16.06
+class z:
+    y = 37
+    def __init__(self, n, a):
+        self.n = n
+        self.a = a
+    def j(self, k):
+        return self.y + [n]
+h = m * 1.5
+p = FIM([4], [3])
+g = z([1], [3])
+o = g.j([1, 2])
+>>>t
+ID:1
+#####
+
+def z(t):
+    return t
+class n:
+    i = 39
+    def __init__(self, s, v):
+        self.s = s
+        self.v = v
+    def j(self, m):
+        return self.i * 2
+d = [5, 7]
+c = z(2)
+FIM.append(5)
+y = n('r', 'q')
+x = y.j('k')
+>>>d
+ID:0
+#####
+
+g = 'g'
+class v:
+    t = 'h'
+    def __init__(self, e, w):
+        self.e = e
+        self.w = w
+    def p(self, n):
+        return self.t + e
+def y(k, m, u, r):
+    return k[0]
+f = FIM([4], [1], [5], [4])
+h = g.replace('a', 'b')
+d = v('j', 'o')
+a = d.p('b')
+>>>y
+ID:1
+#####
+
+o = 'j'
+def x(e, i, p, q):
+    return (((e * i) - p) / q)
+class l:
+    z = 'b'
+    def __init__(self, d):
+        self.d = d
+    def w(self, j):
+        return self.z[1:]
+b = o.replace('a', 'b')
+n = l([4])
+m = n.w([1, 2])
+v = FIM(8, 5, 10, 4)
+>>>x
+ID:1
+#####
+
+def n(m, z):
+    return (m - z)
+b = [3, 7]
+class k:
+    v = [4, 6]
+    def __init__(self, a, h):
+        self.a = a
+        self.h = h
+    def r(self, o):
+        return ((self.v + a) + h)
+y = k(2, 2)
+g = y.r(10)
+q = FIM(8, 3)
+b.append(5)
+>>>n
+ID:1
+#####
+
+def p(h):
+    return h.copy()
+class u:
+    v = 'n'
+    def __init__(self, j, d):
+        self.j = j
+        self.d = d
+    def k(self, z):
+        return self.v + j
+n = 21
+i = u('e', 'x')
+y = i.k('t')
+a = FIM + 5
+o = p([3])
+>>>n
+ID:0
+#####
+
+class u:
+    o = [4, 6]
+    def __init__(self, x, m):
+        self.x = x
+        self.m = m
+    def w(self, f):
+        return self.o[1:]
+def n(i, z, y):
+    return i[1:]
+d = 42
+q = d + 5
+c = FIM([5], [5])
+s = c.w([1, 2])
+j = n([4], [1], [1])
+>>>u
+ID:2
+#####
+
+h = 'z'
+class k:
+    g = [1, 9]
+    def __init__(self, o, x):
+        self.o = o
+        self.x = x
+    def d(self, t):
+        return ((self.g + o) + x)
+def i(y, r, c):
+    return ((y + r) + c)
+s = FIM(5, 3)
+m = s.d(10)
+z = h.replace('a', 'b')
+l = i(8, 5, 3)
+>>>k
+ID:2
+#####
+
+q = 3.54
+def k(l, g, y, d):
+    return l[1:]
+class i:
+    n = [3, 6]
+    def __init__(self, a, e):
+        self.a = a
+        self.e = e
+    def f(self, z):
+        return self.n + [a]
+t = FIM([2], [2])
+r = t.f([1, 2])
+o = k([3], [5], [3], [3])
+s = q * 1.5
+>>>i
+ID:2
+#####
+
+z = 'w'
+class x:
+    u = 30
+    def __init__(self, l):
+        self.l = l
+    def k(self, d):
+        return self.u.upper()
+def p(w, i):
+    return w + [i]
+h = x('o')
+j = h.k('r')
+f = p([2], [5])
+v = FIM.replace('a', 'b')
+>>>z
+ID:0
+#####
+
+def d(k, q, y):
+    return ((k * q) / y)
+class v:
+    h = 19
+    def __init__(self, m, g):
+        self.m = m
+        self.g = g
+    def e(self, i):
+        return self.h.upper()
+l = 7.94
+f = v('a', 'o')
+r = f.e('s')
+p = d(6, 8, 4)
+u = FIM * 1.5
+>>>l
+ID:0
+#####
+
+def k(e, h, y, s):
+    return e.upper()
+o = 44
+class p:
+    j = 'p'
+    def __init__(self, c):
+        self.c = c
+    def d(self, x):
+        return (self.j * c)
+i = p(3)
+a = i.d(10)
+m = o + 5
+t = FIM('n', 'b', 'f', 'q')
+>>>k
+ID:1
+#####
+
+c = 4
+def h(q, f, d):
+    return q[0]
+class k:
+    v = 'p'
+    def __init__(self, t):
+        self.t = t
+    def l(self, x):
+        return (self.v * t)
+a = h([1], [2], [3])
+g = FIM + 5
+w = k(1)
+e = w.l(10)
+>>>c
+ID:0
+#####
+
+c = 5.68
+class a:
+    q = 20
+    def __init__(self, l):
+        self.l = l
+    def h(self, s):
+        return self.q[1:]
+def b(t, f):
+    return (t * f)
+u = FIM([2])
+i = u.h([1, 2])
+d = c * 1.5
+g = b(1, 1)
+>>>a
+ID:2
+#####
+
+def p(e, q, o, z):
+    return (((e + q) - o) + z)
+v = 13.59
+class b:
+    j = 'a'
+    def __init__(self, g, x):
+        self.g = g
+        self.x = x
+    def h(self, y):
+        return ((self.j - g) + x)
+s = b(2, 2)
+n = s.h(10)
+u = FIM * 1.5
+t = p(10, 5, 10, 5)
+>>>v
+ID:0
+#####
+
+m = 3.33
+class b:
+    o = [1, 8]
+    def __init__(self, w, f):
+        self.w = w
+        self.f = f
+    def h(self, p):
+        return self.o[1:]
+def i(y, l, u, s):
+    return (((y + l) + u) - s)
+t = i(9, 2, 9, 1)
+k = FIM([2], [1])
+c = k.h([1, 2])
+a = m * 1.5
+>>>b
+ID:2
+#####
+
+def u(a, f):
+    return (a / f)
+m = 8.84
+class q:
+    c = 'l'
+    def __init__(self, b, n):
+        self.b = b
+        self.n = n
+    def z(self, k):
+        return ((self.c - b) + n)
+w = m * 1.5
+h = FIM(5, 4)
+t = q(2, 2)
+j = t.z(10)
+>>>u
+ID:1
+#####
+
+v = 'u'
+def y(g, a, m):
+    return g * 2
+class j:
+    p = [2, 7]
+    def __init__(self, k, x):
+        self.k = k
+        self.x = x
+    def u(self, d):
+        return ((self.p / k) / x)
+b = j(2, 3)
+t = b.u(10)
+w = v.replace('a', 'b')
+i = FIM('s', 'l', 'f')
+>>>y
+ID:1
+#####
+
+def f(r, a, p):
+    return r * 2
+class w:
+    u = 30
+    def __init__(self, h, s):
+        self.h = h
+        self.s = s
+    def j(self, v):
+        return self.u * 2
+e = 46
+k = FIM + 5
+x = f('m', 'q', 'l')
+c = w('g', 'd')
+o = c.j('y')
+>>>e
+ID:0
+#####
+
+def w(r, e, o, p):
+    return (((r + e) / o) - p)
+s = [2, 9]
+class z:
+    n = 'c'
+    def __init__(self, l, t):
+        self.l = l
+        self.t = t
+    def j(self, x):
+        return self.n + [l]
+h = w(4, 2, 7, 8)
+FIM.append(5)
+c = z([1], [2])
+d = c.j([1, 2])
+>>>s
+ID:0
+#####
+
+class w:
+    d = 'j'
+    def __init__(self, y):
+        self.y = y
+    def o(self, f):
+        return self.d + [y]
+def a(x):
+    return x
+i = 5.53
+m = FIM(7)
+j = w([3])
+s = j.o([1, 2])
+v = i * 1.5
+>>>a
+ID:1
+#####
+
+class v:
+    d = 'v'
+    def __init__(self, g, x):
+        self.g = g
+        self.x = x
+    def h(self, m):
+        return self.d[1:]
+def f(y, o):
+    return (y * o)
+c = 15.49
+j = f(7, 5)
+n = FIM * 1.5
+z = v([1], [3])
+s = z.h([1, 2])
+>>>c
+ID:0
+#####
+
+def t(r):
+    return r
+class a:
+    u = 'v'
+    def __init__(self, b):
+        self.b = b
+    def n(self, l):
+        return self.u.upper()
+e = 11.72
+y = FIM * 1.5
+k = t(1)
+o = a('v')
+i = o.n('w')
+>>>e
+ID:0
+#####
+
+w = 47
+def a(p, u, n):
+    return p.upper()
+class g:
+    q = 31
+    def __init__(self, l):
+        self.l = l
+    def f(self, j):
+        return self.q.upper()
+o = g('v')
+d = o.f('s')
+m = a('e', 'z', 'r')
+c = FIM + 5
+>>>w
+ID:0
+#####
+
+def a(i, e):
+    return i[0]
+o = 7
+class u:
+    w = 47
+    def __init__(self, c):
+        self.c = c
+    def g(self, q):
+        return (self.w / c)
+j = FIM + 5
+h = a([2], [2])
+y = u(5)
+l = y.g(10)
+>>>o
+ID:0
+#####
+
+class i:
+    s = [1, 6]
+    def __init__(self, d, g):
+        self.d = d
+        self.g = g
+    def u(self, r):
+        return self.s * 2
+c = 30
+def e(t, w, l):
+    return t + w
+f = c + 5
+p = e('y', 'x', 'j')
+z = FIM('m', 'h')
+v = z.u('b')
+>>>i
+ID:2
+#####
+
+p = 'v'
+class y:
+    h = [2, 7]
+    def __init__(self, l):
+        self.l = l
+    def k(self, s):
+        return self.h * 2
+def m(o):
+    return o
+d = y('z')
+x = d.k('e')
+g = p.replace('a', 'b')
+u = FIM(2)
+>>>m
+ID:1
+#####
+
+class h:
+    s = [1, 8]
+    def __init__(self, c, j):
+        self.c = c
+        self.j = j
+    def f(self, l):
+        return ((self.s + c) - j)
+p = [4, 8]
+def o(g, t, x, w):
+    return g * 2
+FIM.append(2)
+a = o('i', 'y', 'z', 'd')
+b = h(2, 1)
+m = b.f(10)
+>>>p
+ID:0
+#####
+
+def i(p, e, l):
+    return p.upper()
+class c:
+    n = 'q'
+    def __init__(self, h):
+        self.h = h
+    def x(self, d):
+        return (self.n - h)
+q = 't'
+z = i('f', 'v', 'a')
+o = FIM.replace('a', 'b')
+u = c(2)
+j = u.x(10)
+>>>q
+ID:0
+#####
+
+def l(i, u, q, n):
+    return (((i / u) + q) * n)
+class y:
+    k = 16
+    def __init__(self, d, b):
+        self.d = d
+        self.b = b
+    def o(self, w):
+        return self.k * 2
+x = 17.85
+f = FIM('r', 'p')
+g = f.o('v')
+j = x * 1.5
+h = l(8, 1, 4, 1)
+>>>y
+ID:2
+#####
+
+def s(e, g, k, r):
+    return e + g
+x = [1, 8]
+class y:
+    q = 18
+    def __init__(self, a, h):
+        self.a = a
+        self.h = h
+    def w(self, b):
+        return self.q * 2
+i = s('m', 'c', 'n', 'l')
+x.append(2)
+z = FIM('d', 'o')
+j = z.w('p')
+>>>y
+ID:2
+#####
+
+j = 'v'
+class h:
+    s = 'v'
+    def __init__(self, d):
+        self.d = d
+    def i(self, x):
+        return self.s[1:]
+def r(a, n):
+    return a + [n]
+g = FIM([1])
+m = g.i([1, 2])
+q = j.replace('a', 'b')
+l = r([4], [3])
+>>>h
+ID:2
+#####
+
+def e(v):
+    return v.capitalize()
+a = [4, 6]
+class r:
+    m = 37
+    def __init__(self, u):
+        self.u = u
+    def i(self, j):
+        return (self.m * u)
+s = e('z')
+y = FIM(5)
+c = y.i(10)
+a.append(5)
+>>>r
+ID:2
+#####
+
+def j(p):
+    return p.capitalize()
+q = [1, 9]
+class c:
+    b = [2, 6]
+    def __init__(self, y, g):
+        self.y = y
+        self.g = g
+    def r(self, d):
+        return self.b[1:]
+q.append(4)
+m = c([1], [3])
+i = m.r([1, 2])
+h = FIM('x')
+>>>j
+ID:1
+#####
+
+f = 't'
+def i(p, h):
+    return (p / h)
+class o:
+    v = [4, 7]
+    def __init__(self, d, s):
+        self.d = d
+        self.s = s
+    def g(self, e):
+        return self.v[0]
+x = i(4, 1)
+j = FIM([2], [2])
+b = j.g([1, 2])
+z = f.replace('a', 'b')
+>>>o
+ID:2
+#####
+
+class v:
+    k = [1, 9]
+    def __init__(self, w, t):
+        self.w = w
+        self.t = t
+    def f(self, g):
+        return self.k + w
+def p(a, j, o):
+    return ((a / j) * o)
+d = 'q'
+c = FIM('y', 'h')
+r = c.f('q')
+n = p(10, 9, 4)
+z = d.replace('a', 'b')
+>>>v
+ID:2
+#####
+
+c = 1.6
+def a(v, m):
+    return v.upper()
+class x:
+    d = 'n'
+    def __init__(self, g):
+        self.g = g
+    def t(self, n):
+        return (self.d / g)
+z = FIM(5)
+y = z.t(10)
+i = c * 1.5
+k = a('p', 'u')
+>>>x
+ID:2
+#####
+
+class x:
+    e = [2, 8]
+    def __init__(self, v, k):
+        self.v = v
+        self.k = k
+    def z(self, t):
+        return self.e * 2
+i = 47
+def w(c, n):
+    return c * 2
+l = i + 5
+p = w('g', 'h')
+a = FIM('f', 'd')
+o = a.z('b')
+>>>x
+ID:2
+#####
+
+class u:
+    t = [4, 9]
+    def __init__(self, i):
+        self.i = i
+    def y(self, o):
+        return (self.t - i)
+def h(q):
+    return q.copy()
+p = 'a'
+f = p.replace('a', 'b')
+a = FIM(3)
+g = a.y(10)
+s = h([5])
+>>>u
+ID:2
+#####
+
+class p:
+    c = [3, 8]
+    def __init__(self, w):
+        self.w = w
+    def g(self, q):
+        return (self.c - w)
+j = 'f'
+def v(b, h):
+    return b + h
+u = FIM('l', 'y')
+o = p(3)
+m = o.g(10)
+t = j.replace('a', 'b')
+>>>v
+ID:1
+#####
+
+class g:
+    a = [2, 8]
+    def __init__(self, q, c):
+        self.q = q
+        self.c = c
+    def f(self, o):
+        return self.a + [q]
+def p(t, v, x):
+    return ((t - v) + x)
+w = 'x'
+j = g([3], [3])
+n = j.f([1, 2])
+d = w.replace('a', 'b')
+e = FIM(3, 9, 8)
+>>>p
+ID:1
+#####
+
+class c:
+    w = 5
+    def __init__(self, g, q):
+        self.g = g
+        self.q = q
+    def x(self, f):
+        return self.w[0]
+b = 'f'
+def t(k):
+    return k
+n = c([3], [3])
+l = n.x([1, 2])
+m = b.replace('a', 'b')
+s = FIM(1)
+>>>t
+ID:1
+#####
+
+class o:
+    f = 'i'
+    def __init__(self, v, u):
+        self.v = v
+        self.u = u
+    def z(self, g):
+        return self.f.upper()
+n = 47
+def q(w):
+    return w.capitalize()
+x = FIM('j', 'e')
+d = x.z('r')
+s = n + 5
+a = q('h')
+>>>o
+ID:2
+#####
+
+def y(s, b, v, a):
+    return (((s * b) + v) - a)
+t = 'b'
+class r:
+    j = 'z'
+    def __init__(self, l):
+        self.l = l
+    def m(self, w):
+        return self.j + [l]
+q = t.replace('a', 'b')
+x = y(4, 8, 3, 4)
+u = FIM([3])
+p = u.m([1, 2])
+>>>r
+ID:2
+#####
+
+i = 'x'
+class n:
+    m = [5, 7]
+    def __init__(self, j):
+        self.j = j
+    def s(self, q):
+        return self.m + j
+def b(p, v, d, c):
+    return p[0]
+y = n('x')
+z = y.s('o')
+h = i.replace('a', 'b')
+a = FIM([4], [2], [5], [5])
+>>>b
+ID:1
+#####
+
+b = [4, 7]
+def p(r, d, e, u):
+    return r + [d]
+class g:
+    f = 4
+    def __init__(self, y, k):
+        self.y = y
+        self.k = k
+    def l(self, t):
+        return ((self.f + y) * k)
+b.append(2)
+j = FIM([2], [5], [3], [1])
+o = g(2, 1)
+c = o.l(10)
+>>>p
+ID:1
+#####
+
+def h(g):
+    return g
+class a:
+    v = 'd'
+    def __init__(self, u, l):
+        self.u = u
+        self.l = l
+    def w(self, s):
+        return ((self.v + u) / l)
+t = 37
+p = t + 5
+z = FIM(6)
+n = a(4, 2)
+f = n.w(10)
+>>>h
+ID:1
+#####
+
+j = [1, 9]
+class s:
+    a = 35
+    def __init__(self, l):
+        self.l = l
+    def o(self, d):
+        return self.a + l
+def y(f, r, x):
+    return ((f * r) + x)
+v = s('z')
+i = v.o('u')
+FIM.append(3)
+n = y(1, 5, 6)
+>>>j
+ID:0
+#####
+
+n = [5, 7]
+class p:
+    r = 17
+    def __init__(self, s, f):
+        self.s = s
+        self.f = f
+    def h(self, y):
+        return self.r[1:]
+def j(q, e, t):
+    return q + e
+k = j('a', 'g', 'z')
+n.append(3)
+v = FIM([3], [1])
+o = v.h([1, 2])
+>>>p
+ID:2
+#####
+
+def o(d, p):
+    return (d * p)
+j = [3, 7]
+class e:
+    c = [1, 8]
+    def __init__(self, m, s):
+        self.m = m
+        self.s = s
+    def l(self, x):
+        return self.c + m
+j.append(3)
+t = e('i', 'b')
+k = t.l('z')
+w = FIM(2, 7)
+>>>o
+ID:1
+#####
+
+def u(a, z, l, v):
+    return a + [z]
+class m:
+    w = [3, 6]
+    def __init__(self, b):
+        self.b = b
+    def t(self, y):
+        return self.w + b
+s = [2, 8]
+o = m('q')
+h = o.t('n')
+FIM.append(4)
+j = u([5], [3], [3], [2])
+>>>s
+ID:0
+#####
+
+class i:
+    r = 'b'
+    def __init__(self, y):
+        self.y = y
+    def j(self, v):
+        return self.r[0]
+def s(z, e):
+    return z + e
+f = 'f'
+p = s('l', 'a')
+q = FIM([1])
+h = q.j([1, 2])
+w = f.replace('a', 'b')
+>>>i
+ID:2
+#####
+
+i = 12.92
+def x(k, y):
+    return k[0]
+class r:
+    d = 't'
+    def __init__(self, m, b):
+        self.m = m
+        self.b = b
+    def j(self, n):
+        return self.d * 2
+l = FIM([5], [3])
+u = r('s', 'g')
+f = u.j('p')
+o = i * 1.5
+>>>x
+ID:1
+#####
+
+n = 15.16
+def j(l, x):
+    return l[1:]
+class r:
+    u = 11
+    def __init__(self, i):
+        self.i = i
+    def o(self, k):
+        return self.u.upper()
+s = n * 1.5
+b = j([2], [4])
+a = FIM('t')
+g = a.o('z')
+>>>r
+ID:2
+#####
+
+def n(q):
+    return q
+class p:
+    i = 17
+    def __init__(self, j):
+        self.j = j
+    def c(self, w):
+        return self.i.upper()
+u = [2, 9]
+k = n(6)
+FIM.append(2)
+x = p('a')
+v = x.c('z')
+>>>u
+ID:0
+#####
+
+def u(t, y):
+    return (t / y)
+class j:
+    l = 'v'
+    def __init__(self, z, s):
+        self.z = z
+        self.s = s
+    def i(self, m):
+        return ((self.l + z) * s)
+f = 'c'
+b = f.replace('a', 'b')
+q = FIM(5, 6)
+g = j(5, 2)
+r = g.i(10)
+>>>u
+ID:1
+#####
+
+def h(y, c, v):
+    return ((y * c) - v)
+k = 'r'
+class b:
+    t = 't'
+    def __init__(self, o, l):
+        self.o = o
+        self.l = l
+    def r(self, m):
+        return self.t[0]
+e = FIM.replace('a', 'b')
+u = h(5, 10, 8)
+w = b([1], [5])
+p = w.r([1, 2])
+>>>k
+ID:0
+#####
+
+class u:
+    g = [4, 9]
+    def __init__(self, a, k):
+        self.a = a
+        self.k = k
+    def v(self, y):
+        return ((self.g + a) - k)
+def e(b, p):
+    return (b - p)
+x = [5, 6]
+FIM.append(5)
+h = u(1, 1)
+d = h.v(10)
+w = e(8, 4)
+>>>x
+ID:0
+#####
+
+class f:
+    w = [1, 9]
+    def __init__(self, j):
+        self.j = j
+    def v(self, d):
+        return self.w[1:]
+def h(k, g, b):
+    return ((k + g) - b)
+t = 41
+q = h(4, 1, 1)
+u = f([4])
+n = u.v([1, 2])
+m = FIM + 5
+>>>t
+ID:0
+#####
+
+def u(s):
+    return s
+class a:
+    v = 36
+    def __init__(self, z):
+        self.z = z
+    def r(self, e):
+        return self.v * 2
+m = [3, 7]
+o = u(9)
+m.append(1)
+b = FIM('n')
+d = b.r('i')
+>>>a
+ID:2
+#####
+
+def q(z, v):
+    return z + [v]
+class t:
+    l = [4, 8]
+    def __init__(self, s, y):
+        self.s = s
+        self.y = y
+    def x(self, c):
+        return self.l * 2
+b = 19.23
+o = q([2], [4])
+m = t('w', 'k')
+j = m.x('h')
+n = FIM * 1.5
+>>>b
+ID:0
+#####
+
+def a(k, n, l):
+    return ((k / n) - l)
+g = 45
+class r:
+    j = [4, 8]
+    def __init__(self, z, p):
+        self.z = z
+        self.p = p
+    def y(self, i):
+        return ((self.j + z) - p)
+c = FIM + 5
+t = r(2, 3)
+q = t.y(10)
+e = a(7, 1, 8)
+>>>g
+ID:0
+#####
+
+def z(u):
+    return u.capitalize()
+e = 28
+class k:
+    n = 'f'
+    def __init__(self, j):
+        self.j = j
+    def h(self, s):
+        return self.n[0]
+a = e + 5
+x = FIM([1])
+r = x.h([1, 2])
+v = z('g')
+>>>k
+ID:2
+#####
+
+class t:
+    u = [4, 9]
+    def __init__(self, x, w):
+        self.x = x
+        self.w = w
+    def h(self, p):
+        return self.u[1:]
+j = 'h'
+def g(k):
+    return k.capitalize()
+m = FIM.replace('a', 'b')
+v = g('c')
+f = t([5], [4])
+d = f.h([1, 2])
+>>>j
+ID:0
+#####
+
+class y:
+    q = 8
+    def __init__(self, g):
+        self.g = g
+    def m(self, v):
+        return self.q * 2
+def j(b, i, h):
+    return b * 2
+r = [4, 9]
+FIM.append(3)
+n = j('a', 't', 'p')
+f = y('d')
+u = f.m('w')
+>>>r
+ID:0
+#####
+
+class r:
+    i = 8
+    def __init__(self, k):
+        self.k = k
+    def u(self, x):
+        return self.i[0]
+v = [3, 6]
+def m(z, n, c, g):
+    return z[1:]
+j = FIM([3], [2], [4], [1])
+b = r([2])
+q = b.u([1, 2])
+v.append(4)
+>>>m
+ID:1
+#####
+
+def f(d, e, n):
+    return ((d - e) * n)
+p = 32
+class c:
+    b = 'c'
+    def __init__(self, g, w):
+        self.g = g
+        self.w = w
+    def t(self, s):
+        return self.b * 2
+l = c('j', 'a')
+h = l.t('m')
+k = FIM(10, 10, 2)
+u = p + 5
+>>>f
+ID:1
+#####
+
+def w(u, q, h, k):
+    return u + [q]
+class j:
+    t = 40
+    def __init__(self, d, r):
+        self.d = d
+        self.r = r
+    def g(self, e):
+        return self.t[0]
+o = 4.74
+m = o * 1.5
+b = FIM([1], [4])
+a = b.g([1, 2])
+i = w([5], [3], [3], [3])
+>>>j
+ID:2
+#####
+
+k = [1, 8]
+class c:
+    n = 'p'
+    def __init__(self, m, l):
+        self.m = m
+        self.l = l
+    def x(self, h):
+        return self.n + m
+def d(s, o):
+    return s[0]
+FIM.append(4)
+f = c('q', 'y')
+r = f.x('p')
+u = d([3], [3])
+>>>k
+ID:0
+#####
+
+def w(c):
+    return c
+class i:
+    o = 11
+    def __init__(self, j):
+        self.j = j
+    def d(self, n):
+        return (self.o / j)
+m = 'u'
+t = i(4)
+q = t.d(10)
+l = FIM.replace('a', 'b')
+k = w(9)
+>>>m
+ID:0
+#####
+
+class x:
+    z = [1, 8]
+    def __init__(self, p, m):
+        self.p = p
+        self.m = m
+    def r(self, s):
+        return self.z + [p]
+def l(q):
+    return q
+j = [4, 9]
+j.append(1)
+f = l(8)
+a = FIM([4], [4])
+d = a.r([1, 2])
+>>>x
+ID:2
+#####
+
+def h(z, p, c, b):
+    return z[1:]
+class f:
+    d = 19
+    def __init__(self, g):
+        self.g = g
+    def i(self, m):
+        return self.d + g
+n = [2, 8]
+e = FIM([5], [4], [4], [4])
+y = f('x')
+q = y.i('v')
+n.append(4)
+>>>h
+ID:1
+#####
+
+def i(b):
+    return b.copy()
+class o:
+    p = 46
+    def __init__(self, l):
+        self.l = l
+    def n(self, x):
+        return self.p[0]
+w = 's'
+h = w.replace('a', 'b')
+e = o([5])
+j = e.n([1, 2])
+f = FIM([1])
+>>>i
+ID:1
+#####
+
+w = [4, 7]
+def o(z, y, g):
+    return z + [y]
+class p:
+    x = 'z'
+    def __init__(self, d, c):
+        self.d = d
+        self.c = c
+    def a(self, i):
+        return self.x * 2
+r = FIM([1], [2], [3])
+l = p('q', 'j')
+v = l.a('h')
+w.append(5)
+>>>o
+ID:1
+#####
+
+class x:
+    t = 26
+    def __init__(self, z, y):
+        self.z = z
+        self.y = y
+    def n(self, j):
+        return self.t[0]
+def i(g):
+    return g
+u = 16.42
+w = FIM * 1.5
+a = x([1], [2])
+m = a.n([1, 2])
+v = i(10)
+>>>u
+ID:0
+#####
+
+def e(j, n, a, h):
+    return j[0]
+class v:
+    q = 37
+    def __init__(self, f, b):
+        self.f = f
+        self.b = b
+    def z(self, g):
+        return ((self.q * f) / b)
+u = 35
+d = v(2, 1)
+p = d.z(10)
+r = FIM([2], [4], [3], [4])
+k = u + 5
+>>>e
+ID:1
+#####
+
+class j:
+    w = 28
+    def __init__(self, p, i):
+        self.p = p
+        self.i = i
+    def f(self, y):
+        return self.w.upper()
+def v(l, m):
+    return l[0]
+e = 17.88
+x = v([5], [4])
+n = e * 1.5
+k = FIM('r', 'q')
+s = k.f('g')
+>>>j
+ID:2
+#####
+
+t = 7.19
+class f:
+    v = 16
+    def __init__(self, g, j):
+        self.g = g
+        self.j = j
+    def h(self, u):
+        return self.v[1:]
+def m(s, l, c, z):
+    return (((s - l) - c) + z)
+b = t * 1.5
+y = FIM([1], [5])
+p = y.h([1, 2])
+k = m(10, 1, 1, 4)
+>>>f
+ID:2
+#####
+
+class j:
+    w = [5, 7]
+    def __init__(self, l, t):
+        self.l = l
+        self.t = t
+    def g(self, d):
+        return ((self.w / l) * t)
+o = 'i'
+def z(y, k, u, b):
+    return y * 2
+s = FIM.replace('a', 'b')
+m = z('n', 'a', 'p', 'f')
+v = j(1, 1)
+h = v.g(10)
+>>>o
+ID:0
+#####
+
+class v:
+    c = 't'
+    def __init__(self, x, o):
+        self.x = x
+        self.o = o
+    def q(self, b):
+        return self.c[0]
+l = 'r'
+def j(m, y, p, u):
+    return (((m * y) - p) / u)
+a = j(5, 6, 4, 4)
+r = l.replace('a', 'b')
+z = FIM([5], [3])
+w = z.q([1, 2])
+>>>v
+ID:2
+#####
+
+f = 38
+def o(p):
+    return p.copy()
+class k:
+    j = 20
+    def __init__(self, w):
+        self.w = w
+    def i(self, z):
+        return (self.j / w)
+t = f + 5
+s = FIM([5])
+e = k(1)
+h = e.i(10)
+>>>o
+ID:1
+#####
+
+class h:
+    m = 'v'
+    def __init__(self, e):
+        self.e = e
+    def a(self, f):
+        return self.m + [e]
+def v(k, w, o, q):
+    return k + w
+b = 5
+c = h([1])
+x = c.a([1, 2])
+z = b + 5
+g = FIM('u', 'd', 'y', 't')
+>>>v
+ID:1
+#####
+
+def f(b, d, a):
+    return ((b - d) / a)
+class j:
+    x = [3, 6]
+    def __init__(self, u, m):
+        self.u = u
+        self.m = m
+    def z(self, p):
+        return ((self.x - u) - m)
+n = 8.81
+h = n * 1.5
+e = j(5, 4)
+w = e.z(10)
+o = FIM(4, 2, 7)
+>>>f
+ID:1
+#####
+
+t = 'e'
+class a:
+    c = 'b'
+    def __init__(self, y):
+        self.y = y
+    def m(self, v):
+        return (self.c / y)
+def s(r, n):
+    return r + n
+u = s('e', 'g')
+w = t.replace('a', 'b')
+k = FIM(2)
+l = k.m(10)
+>>>a
+ID:2
+#####
+
+b = 'y'
+class e:
+    j = [4, 9]
+    def __init__(self, d):
+        self.d = d
+    def f(self, x):
+        return (self.j / d)
+def k(l, v):
+    return (l + v)
+w = FIM.replace('a', 'b')
+g = k(10, 1)
+h = e(4)
+n = h.f(10)
+>>>b
+ID:0
+#####
+
+class w:
+    g = [3, 6]
+    def __init__(self, e, v):
+        self.e = e
+        self.v = v
+    def n(self, h):
+        return ((self.g + e) / v)
+def j(u, r, m):
+    return u + [r]
+c = 13
+i = FIM + 5
+x = j([4], [1], [5])
+p = w(5, 3)
+o = p.n(10)
+>>>c
+ID:0
+#####
+
+class f:
+    w = 35
+    def __init__(self, m, j):
+        self.m = m
+        self.j = j
+    def r(self, q):
+        return self.w[0]
+def e(d, y, u):
+    return d.upper()
+b = 10.42
+l = e('v', 't', 'g')
+i = f([2], [1])
+x = i.r([1, 2])
+p = FIM * 1.5
+>>>b
+ID:0
+#####
+
+def t(u, v, y):
+    return u.upper()
+class e:
+    i = [2, 7]
+    def __init__(self, z, n):
+        self.z = z
+        self.n = n
+    def s(self, m):
+        return ((self.i / z) + n)
+b = [1, 9]
+b.append(5)
+w = t('f', 'c', 'r')
+p = FIM(4, 1)
+a = p.s(10)
+>>>e
+ID:2
+#####
+
+c = 18.82
+class l:
+    f = 24
+    def __init__(self, w):
+        self.w = w
+    def y(self, o):
+        return self.f * 2
+def t(r):
+    return r.capitalize()
+g = c * 1.5
+d = l('s')
+u = d.y('z')
+j = FIM('q')
+>>>t
+ID:1
+#####
+
+class t:
+    h = 16
+    def __init__(self, k):
+        self.k = k
+    def y(self, n):
+        return (self.h / k)
+def x(e, l, g, q):
+    return (((e / l) * g) - q)
+b = 'p'
+f = FIM(1, 7, 7, 3)
+d = t(3)
+u = d.y(10)
+o = b.replace('a', 'b')
+>>>x
+ID:1
+#####
+
+e = [1, 7]
+def f(z, t):
+    return z + [t]
+class g:
+    i = 18
+    def __init__(self, p, a):
+        self.p = p
+        self.a = a
+    def m(self, y):
+        return self.i[0]
+h = g([3], [2])
+v = h.m([1, 2])
+e.append(2)
+l = FIM([2], [4])
+>>>f
+ID:1
+#####
+
+class y:
+    l = 38
+    def __init__(self, b, p):
+        self.b = b
+        self.p = p
+    def n(self, h):
+        return self.l[1:]
+o = [3, 6]
+def w(c, m):
+    return (c / m)
+d = y([3], [4])
+q = d.n([1, 2])
+FIM.append(5)
+r = w(4, 1)
+>>>o
+ID:0
+#####
+
+class a:
+    r = 48
+    def __init__(self, z):
+        self.z = z
+    def t(self, d):
+        return (self.r + z)
+h = 10.47
+def m(e, n, j, v):
+    return e * 2
+p = FIM('s', 'i', 'k', 'x')
+c = h * 1.5
+o = a(5)
+f = o.t(10)
+>>>m
+ID:1
+#####
+
+def c(f, w):
+    return (f * w)
+j = 'z'
+class t:
+    n = [1, 9]
+    def __init__(self, b, u):
+        self.b = b
+        self.u = u
+    def m(self, y):
+        return self.n + [b]
+k = t([3], [5])
+q = k.m([1, 2])
+z = FIM.replace('a', 'b')
+s = c(8, 7)
+>>>j
+ID:0
+#####
+
+def w(y, e, v, m):
+    return (((y + e) * v) / m)
+n = 'r'
+class o:
+    s = 12
+    def __init__(self, i, a):
+        self.i = i
+        self.a = a
+    def q(self, d):
+        return self.s[0]
+c = FIM([5], [1])
+f = c.q([1, 2])
+h = w(4, 1, 10, 8)
+z = n.replace('a', 'b')
+>>>o
+ID:2
+#####
+
+class a:
+    b = [1, 7]
+    def __init__(self, w, g):
+        self.w = w
+        self.g = g
+    def l(self, h):
+        return self.b[0]
+d = [2, 7]
+def t(e, r, n):
+    return ((e * r) + n)
+z = a([3], [3])
+q = z.l([1, 2])
+m = FIM(9, 9, 5)
+d.append(3)
+>>>t
+ID:1
+#####
+
+class g:
+    c = 44
+    def __init__(self, r, x):
+        self.r = r
+        self.x = x
+    def e(self, i):
+        return self.c.upper()
+k = 2.71
+def h(n, v, z, u):
+    return n[0]
+w = k * 1.5
+t = FIM([5], [2], [1], [2])
+a = g('f', 'p')
+b = a.e('j')
+>>>h
+ID:1
+#####
+
+class r:
+    q = 27
+    def __init__(self, i, p):
+        self.i = i
+        self.p = p
+    def k(self, u):
+        return self.q + [i]
+def c(h):
+    return h.capitalize()
+a = 18.97
+y = r([1], [1])
+z = y.k([1, 2])
+o = c('s')
+v = FIM * 1.5
+>>>a
+ID:0
+#####
+
+d = 48
+class g:
+    i = 20
+    def __init__(self, b, z):
+        self.b = b
+        self.z = z
+    def o(self, s):
+        return ((self.i / b) * z)
+def m(f, a, l, v):
+    return f + a
+h = FIM + 5
+c = g(4, 3)
+e = c.o(10)
+j = m('u', 'n', 'k', 'r')
+>>>d
+ID:0
+#####
+
+def x(e, q, f):
+    return e[1:]
+class t:
+    s = [1, 7]
+    def __init__(self, c, v):
+        self.c = c
+        self.v = v
+    def a(self, m):
+        return self.s[0]
+l = 15
+j = FIM([4], [3])
+o = j.a([1, 2])
+d = x([2], [4], [5])
+w = l + 5
+>>>t
+ID:2
+#####
+
+v = 'k'
+class t:
+    q = 28
+    def __init__(self, c):
+        self.c = c
+    def o(self, d):
+        return self.q.upper()
+def l(m, s, p, y):
+    return m + [s]
+e = t('a')
+w = e.o('z')
+f = FIM.replace('a', 'b')
+u = l([3], [4], [2], [4])
+>>>v
+ID:0
+#####
+
+class t:
+    i = 'a'
+    def __init__(self, y):
+        self.y = y
+    def b(self, n):
+        return self.i * 2
+r = 'd'
+def k(x, e, l, u):
+    return x * 2
+c = k('z', 's', 'o', 'h')
+j = FIM.replace('a', 'b')
+d = t('m')
+q = d.b('a')
+>>>r
+ID:0
+#####
+
+class v:
+    m = 'd'
+    def __init__(self, o, g):
+        self.o = o
+        self.g = g
+    def d(self, b):
+        return self.m[1:]
+def p(i):
+    return i.copy()
+u = 16.68
+l = u * 1.5
+q = FIM([5])
+x = v([2], [4])
+r = x.d([1, 2])
+>>>p
+ID:1
+#####
+
+s = [1, 7]
+class k:
+    q = 26
+    def __init__(self, v):
+        self.v = v
+    def c(self, r):
+        return self.q.upper()
+def w(b, z):
+    return (b + z)
+d = k('u')
+o = d.c('p')
+n = FIM(1, 10)
+s.append(3)
+>>>w
+ID:1
+#####
+
+class q:
+    a = 7
+    def __init__(self, s, l):
+        self.s = s
+        self.l = l
+    def o(self, e):
+        return self.a.upper()
+def x(k, g, m, d):
+    return k[0]
+n = 1.11
+t = n * 1.5
+j = x([4], [1], [5], [1])
+w = FIM('h', 'p')
+y = w.o('u')
+>>>q
+ID:2
+#####
+
+class q:
+    n = [1, 7]
+    def __init__(self, h, s):
+        self.h = h
+        self.s = s
+    def l(self, z):
+        return ((self.n * h) - s)
+def c(j, w, g):
+    return ((j - w) / g)
+o = 's'
+x = q(4, 1)
+b = x.l(10)
+p = FIM.replace('a', 'b')
+k = c(6, 6, 1)
+>>>o
+ID:0
+#####
+
+def m(l, d):
+    return l[0]
+e = 'j'
+class c:
+    x = 16
+    def __init__(self, b):
+        self.b = b
+    def v(self, r):
+        return self.x[0]
+p = m([1], [5])
+h = FIM([2])
+j = h.v([1, 2])
+w = e.replace('a', 'b')
+>>>c
+ID:2
+#####
+
+m = 10.83
+def t(l, n, j, i):
+    return (((l + n) - j) - i)
+class p:
+    z = 'i'
+    def __init__(self, d, h):
+        self.d = d
+        self.h = h
+    def k(self, v):
+        return self.z * 2
+y = FIM('g', 'o')
+x = y.k('a')
+r = m * 1.5
+e = t(3, 7, 10, 2)
+>>>p
+ID:2
+#####
+
+def m(v, z, d, f):
+    return (((v + z) - d) + f)
+s = 35
+class p:
+    l = [4, 6]
+    def __init__(self, h):
+        self.h = h
+    def y(self, x):
+        return self.l[1:]
+i = FIM(9, 5, 6, 3)
+r = s + 5
+j = p([5])
+k = j.y([1, 2])
+>>>m
+ID:1
+#####
+
+t = 4.93
+class j:
+    k = 13
+    def __init__(self, p):
+        self.p = p
+    def s(self, r):
+        return (self.k * p)
+def h(i, q, d, l):
+    return i[0]
+e = t * 1.5
+x = FIM([5], [5], [1], [3])
+g = j(1)
+w = g.s(10)
+>>>h
+ID:1
+#####
+
+def a(w, e, o, g):
+    return w + e
+class q:
+    t = 'v'
+    def __init__(self, h):
+        self.h = h
+    def x(self, m):
+        return (self.t + h)
+p = [4, 6]
+z = q(5)
+y = z.x(10)
+n = a('v', 's', 'f', 'b')
+FIM.append(1)
+>>>p
+ID:0
+#####
+
+c = 15.62
+def j(y, l, i, q):
+    return y + l
+class k:
+    x = 'w'
+    def __init__(self, g):
+        self.g = g
+    def f(self, r):
+        return (self.x * g)
+e = j('v', 'z', 'a', 'w')
+t = k(2)
+o = t.f(10)
+u = FIM * 1.5
+>>>c
+ID:0
+#####
+
+v = 'r'
+class u:
+    w = 's'
+    def __init__(self, z):
+        self.z = z
+    def c(self, t):
+        return (self.w * z)
+def x(q, n, l, a):
+    return q[0]
+i = v.replace('a', 'b')
+g = FIM([4], [1], [5], [2])
+p = u(3)
+e = p.c(10)
+>>>x
+ID:1
+#####
+
+p = 4.8
+class y:
+    i = 3
+    def __init__(self, o):
+        self.o = o
+    def q(self, c):
+        return self.i + o
+def a(x, n):
+    return x + n
+f = a('b', 's')
+u = y('h')
+k = u.q('z')
+g = FIM * 1.5
+>>>p
+ID:0
+#####
+
+class a:
+    n = 'j'
+    def __init__(self, o, e):
+        self.o = o
+        self.e = e
+    def c(self, v):
+        return ((self.n + o) / e)
+def b(h, d, u, g):
+    return (((h + d) + u) * g)
+j = [3, 8]
+s = b(5, 1, 9, 9)
+FIM.append(2)
+m = a(5, 3)
+p = m.c(10)
+>>>j
+ID:0
+#####
+
+class d:
+    m = 42
+    def __init__(self, u):
+        self.u = u
+    def t(self, l):
+        return self.m.upper()
+def p(i, f):
+    return i + [f]
+a = 47
+e = a + 5
+n = d('r')
+s = n.t('x')
+q = FIM([5], [2])
+>>>p
+ID:1
+#####
+
+class q:
+    m = 10
+    def __init__(self, l):
+        self.l = l
+    def v(self, x):
+        return self.m + [l]
+r = 46
+def c(w, n):
+    return w + [n]
+h = c([4], [5])
+z = q([2])
+t = z.v([1, 2])
+i = FIM + 5
+>>>r
+ID:0
+#####
+
+class k:
+    y = 'z'
+    def __init__(self, e):
+        self.e = e
+    def x(self, q):
+        return self.y[0]
+def z(s, h, f):
+    return s + h
+b = 17.83
+p = FIM([2])
+r = p.x([1, 2])
+g = b * 1.5
+j = z('d', 'u', 'c')
+>>>k
+ID:2
+#####
+
+def c(x, z):
+    return x + [z]
+class u:
+    p = [5, 8]
+    def __init__(self, s, d):
+        self.s = s
+        self.d = d
+    def j(self, v):
+        return ((self.p * s) + d)
+l = 'm'
+a = FIM.replace('a', 'b')
+w = c([1], [2])
+b = u(1, 3)
+r = b.j(10)
+>>>l
+ID:0
+#####
+
+class s:
+    i = 27
+    def __init__(self, l, c):
+        self.l = l
+        self.c = c
+    def h(self, p):
+        return ((self.i + l) - c)
+def d(o, u):
+    return o[1:]
+g = 3
+f = g + 5
+y = s(1, 1)
+m = y.h(10)
+x = FIM([2], [2])
+>>>d
+ID:1
+#####
+
+def v(t, s, b):
+    return ((t / s) - b)
+g = [5, 8]
+class l:
+    a = 47
+    def __init__(self, r):
+        self.r = r
+    def h(self, x):
+        return self.a + [r]
+e = v(2, 4, 3)
+o = l([1])
+z = o.h([1, 2])
+FIM.append(1)
+>>>g
+ID:0
+#####
+
+def v(i):
+    return i.copy()
+w = 'i'
+class f:
+    y = 's'
+    def __init__(self, s, d):
+        self.s = s
+        self.d = d
+    def c(self, t):
+        return self.y.upper()
+q = w.replace('a', 'b')
+x = FIM([4])
+o = f('j', 'n')
+b = o.c('k')
+>>>v
+ID:1
+#####
+
+def l(q, s):
+    return (q + s)
+i = [2, 8]
+class c:
+    z = 34
+    def __init__(self, g):
+        self.g = g
+    def y(self, m):
+        return (self.z / g)
+a = FIM(2)
+u = a.y(10)
+e = l(5, 3)
+i.append(4)
+>>>c
+ID:2
+#####
+
+def p(e, u):
+    return e + [u]
+class b:
+    h = 'v'
+    def __init__(self, a):
+        self.a = a
+    def t(self, f):
+        return self.h + a
+s = 'v'
+n = p([2], [2])
+q = FIM.replace('a', 'b')
+c = b('m')
+y = c.t('k')
+>>>s
+ID:0
+#####
+
+y = 2.7
+def g(k, a, c, d):
+    return (((k / a) / c) / d)
+class p:
+    q = 'l'
+    def __init__(self, t):
+        self.t = t
+    def h(self, f):
+        return (self.q / t)
+i = y * 1.5
+r = g(7, 4, 4, 1)
+o = FIM(5)
+x = o.h(10)
+>>>p
+ID:2
+#####
+
+def c(w, n):
+    return w + [n]
+class x:
+    l = 34
+    def __init__(self, b, z):
+        self.b = b
+        self.z = z
+    def j(self, h):
+        return self.l + [b]
+m = [1, 7]
+g = c([1], [1])
+m.append(4)
+i = FIM([1], [3])
+e = i.j([1, 2])
+>>>x
+ID:2
+#####
+
+class n:
+    u = 's'
+    def __init__(self, m):
+        self.m = m
+    def q(self, f):
+        return self.u + [m]
+j = 12.73
+def a(g):
+    return g
+k = FIM * 1.5
+h = n([2])
+d = h.q([1, 2])
+v = a(2)
+>>>j
+ID:0
+#####
+
+class h:
+    f = [3, 7]
+    def __init__(self, p, k):
+        self.p = p
+        self.k = k
+    def w(self, v):
+        return ((self.f / p) + k)
+def x(u, r):
+    return u * 2
+c = 18.21
+l = x('i', 'y')
+n = FIM(4, 2)
+s = n.w(10)
+j = c * 1.5
+>>>h
+ID:2
+#####
+
+def b(k):
+    return k.copy()
+class c:
+    l = [5, 9]
+    def __init__(self, v):
+        self.v = v
+    def h(self, q):
+        return self.l[0]
+s = [5, 9]
+f = c([2])
+d = f.h([1, 2])
+n = FIM([1])
+s.append(3)
+>>>b
+ID:1
+#####
+
+def k(n, d, v):
+    return ((n * d) * v)
+class l:
+    b = 19
+    def __init__(self, r, w):
+        self.r = r
+        self.w = w
+    def j(self, c):
+        return self.b * 2
+u = [3, 7]
+e = l('m', 'g')
+h = e.j('s')
+z = FIM(5, 8, 9)
+u.append(2)
+>>>k
+ID:1
+#####
+
+class g:
+    c = 38
+    def __init__(self, i, a):
+        self.i = i
+        self.a = a
+    def p(self, x):
+        return self.c[0]
+def y(q, t, h):
+    return q.upper()
+z = 11.44
+l = y('s', 'd', 'e')
+f = FIM([3], [5])
+v = f.p([1, 2])
+n = z * 1.5
+>>>g
+ID:2
+#####
+
+def d(q, i):
+    return (q - i)
+class f:
+    y = [3, 9]
+    def __init__(self, r):
+        self.r = r
+    def g(self, s):
+        return (self.y - r)
+e = 13
+k = e + 5
+b = FIM(5)
+n = b.g(10)
+c = d(7, 4)
+>>>f
+ID:2
+#####
+
+v = 24
+class t:
+    o = [5, 7]
+    def __init__(self, n, p):
+        self.n = n
+        self.p = p
+    def y(self, w):
+        return self.o + [n]
+def k(u, r):
+    return u + [r]
+b = FIM + 5
+l = t([3], [5])
+s = l.y([1, 2])
+d = k([3], [2])
+>>>v
+ID:0
+#####
+
+class n:
+    g = [1, 8]
+    def __init__(self, k, y):
+        self.k = k
+        self.y = y
+    def f(self, x):
+        return self.g.upper()
+d = [4, 7]
+def u(o, a):
+    return o[0]
+v = FIM('m', 'l')
+q = v.f('s')
+d.append(1)
+t = u([3], [4])
+>>>n
+ID:2
+#####
+
+class p:
+    g = [2, 9]
+    def __init__(self, u, m):
+        self.u = u
+        self.m = m
+    def y(self, v):
+        return ((self.g - u) - m)
+def c(o, j, w):
+    return ((o * j) - w)
+z = [1, 9]
+b = p(5, 5)
+d = b.y(10)
+FIM.append(2)
+f = c(5, 2, 10)
+>>>z
+ID:0
+#####
+
+w = 14.47
+def b(u, s, e, g):
+    return u[1:]
+class c:
+    m = [3, 9]
+    def __init__(self, x):
+        self.x = x
+    def z(self, f):
+        return self.m[1:]
+p = b([5], [2], [5], [3])
+j = FIM([4])
+o = j.z([1, 2])
+v = w * 1.5
+>>>c
+ID:2
+#####
+
+u = 33
+def b(x):
+    return x.copy()
+class e:
+    y = 39
+    def __init__(self, d, g):
+        self.d = d
+        self.g = g
+    def i(self, l):
+        return self.y.upper()
+h = b([2])
+c = e('r', 'p')
+n = c.i('a')
+t = FIM + 5
+>>>u
+ID:0
+#####
+
+x = 'w'
+def j(n):
+    return n
+class u:
+    k = 13
+    def __init__(self, a):
+        self.a = a
+    def v(self, e):
+        return self.k[1:]
+b = FIM.replace('a', 'b')
+l = j(8)
+h = u([1])
+d = h.v([1, 2])
+>>>x
+ID:0
+#####
+
+class q:
+    h = 'o'
+    def __init__(self, k, x):
+        self.k = k
+        self.x = x
+    def t(self, p):
+        return ((self.h + k) / x)
+def w(e, f, d):
+    return e * 2
+m = 34
+s = w('l', 'c', 'u')
+v = FIM(1, 5)
+z = v.t(10)
+b = m + 5
+>>>q
+ID:2
+#####
+
+w = 18
+class q:
+    r = [3, 9]
+    def __init__(self, a):
+        self.a = a
+    def e(self, j):
+        return self.r[1:]
+def t(u, b, i, s):
+    return u * 2
+z = FIM([5])
+d = z.e([1, 2])
+k = w + 5
+h = t('n', 'y', 'o', 'm')
+>>>q
+ID:2
+#####
+
+def k(v, e, l, x):
+    return v.upper()
+q = 'n'
+class u:
+    j = 'z'
+    def __init__(self, g):
+        self.g = g
+    def m(self, a):
+        return self.j[0]
+d = FIM.replace('a', 'b')
+s = u([4])
+w = s.m([1, 2])
+f = k('i', 'z', 'h', 't')
+>>>q
+ID:0
+#####
+
+p = 19.43
+def a(j, o):
+    return j * 2
+class x:
+    f = [2, 8]
+    def __init__(self, h):
+        self.h = h
+    def d(self, i):
+        return self.f.upper()
+z = p * 1.5
+k = FIM('m', 'v')
+e = x('q')
+b = e.d('t')
+>>>a
+ID:1
+#####
+
+class t:
+    b = [1, 6]
+    def __init__(self, l, d):
+        self.l = l
+        self.d = d
+    def p(self, r):
+        return self.b + [l]
+n = [2, 9]
+def v(q):
+    return q.copy()
+FIM.append(2)
+z = v([5])
+u = t([4], [1])
+c = u.p([1, 2])
+>>>n
+ID:0
+#####
+
+class j:
+    l = 'k'
+    def __init__(self, q, d):
+        self.q = q
+        self.d = d
+    def z(self, a):
+        return self.l + q
+def k(w, f, s, b):
+    return w * 2
+c = 'o'
+h = k('o', 'v', 'e', 'n')
+p = FIM.replace('a', 'b')
+x = j('r', 'm')
+y = x.z('g')
+>>>c
+ID:0
+#####
+
+q = 'e'
+class o:
+    l = [1, 9]
+    def __init__(self, z, s):
+        self.z = z
+        self.s = s
+    def y(self, g):
+        return self.l[0]
+def f(t, p, j):
+    return t.upper()
+k = f('i', 'n', 'b')
+e = o([1], [5])
+m = e.y([1, 2])
+w = FIM.replace('a', 'b')
+>>>q
+ID:0
+#####
+
+def p(a, c, g, v):
+    return a.upper()
+class x:
+    e = 15
+    def __init__(self, n, s):
+        self.n = n
+        self.s = s
+    def r(self, h):
+        return self.e[1:]
+w = 'p'
+q = FIM([4], [3])
+i = q.r([1, 2])
+f = p('y', 'z', 'o', 'b')
+u = w.replace('a', 'b')
+>>>x
+ID:2
+#####
+
+def y(o, s, v):
+    return ((o - s) + v)
+class l:
+    z = [4, 7]
+    def __init__(self, e):
+        self.e = e
+    def i(self, c):
+        return self.z[1:]
+h = 13
+a = FIM([4])
+g = a.i([1, 2])
+q = h + 5
+t = y(9, 5, 1)
+>>>l
+ID:2
+#####
+
+def g(d, i, h, p):
+    return d + i
+j = 'q'
+class t:
+    u = 49
+    def __init__(self, x, e):
+        self.x = x
+        self.e = e
+    def c(self, a):
+        return self.u + [x]
+o = t([2], [1])
+k = o.c([1, 2])
+n = FIM('r', 'l', 'b', 'v')
+s = j.replace('a', 'b')
+>>>g
+ID:1
+#####
+
+l = [3, 6]
+class a:
+    z = 29
+    def __init__(self, o, f):
+        self.o = o
+        self.f = f
+    def b(self, s):
+        return ((self.z * o) * f)
+def u(q, e, i, m):
+    return q + e
+p = FIM(4, 4)
+j = p.b(10)
+d = u('w', 'r', 'h', 'k')
+l.append(3)
+>>>a
+ID:2
+#####
+
+t = 17.42
+class u:
+    w = 39
+    def __init__(self, j):
+        self.j = j
+    def z(self, v):
+        return self.w[1:]
+def r(q):
+    return q.capitalize()
+g = t * 1.5
+k = FIM('x')
+b = u([3])
+d = b.z([1, 2])
+>>>r
+ID:1
+#####
+
+def u(h, i):
+    return h[1:]
+y = 'd'
+class z:
+    e = 29
+    def __init__(self, k, d):
+        self.k = k
+        self.d = d
+    def x(self, c):
+        return self.e.upper()
+j = y.replace('a', 'b')
+n = FIM([3], [2])
+o = z('r', 'g')
+w = o.x('f')
+>>>u
+ID:1
+#####
+
+v = [2, 9]
+class y:
+    i = [3, 6]
+    def __init__(self, g):
+        self.g = g
+    def c(self, b):
+        return self.i.upper()
+def f(j, o):
+    return (j / o)
+m = FIM('r')
+s = m.c('h')
+v.append(1)
+a = f(6, 6)
+>>>y
+ID:2
+#####
+
+class y:
+    v = 23
+    def __init__(self, z):
+        self.z = z
+    def h(self, m):
+        return self.v + z
+q = 'm'
+def a(d, u):
+    return d[0]
+o = FIM('i')
+x = o.h('l')
+w = q.replace('a', 'b')
+t = a([4], [3])
+>>>y
+ID:2
+#####
+
+class q:
+    c = 2
+    def __init__(self, a, p):
+        self.a = a
+        self.p = p
+    def z(self, v):
+        return self.c + [a]
+s = 'v'
+def e(u):
+    return u.capitalize()
+y = q([4], [1])
+b = y.z([1, 2])
+k = FIM.replace('a', 'b')
+w = e('n')
+>>>s
+ID:0
+#####
+
+class b:
+    t = 18
+    def __init__(self, v):
+        self.v = v
+    def x(self, r):
+        return (self.t + v)
+c = 'w'
+def l(j, p, u):
+    return ((j + p) / u)
+h = l(6, 6, 3)
+w = c.replace('a', 'b')
+n = FIM(3)
+i = n.x(10)
+>>>b
+ID:2
+#####
+
+def l(g):
+    return g.capitalize()
+s = 12.23
+class q:
+    r = [2, 6]
+    def __init__(self, d):
+        self.d = d
+    def c(self, y):
+        return (self.r + d)
+m = s * 1.5
+k = FIM('a')
+w = q(4)
+f = w.c(10)
+>>>l
+ID:1
+#####
+
+def o(m, l, k, j):
+    return (((m / l) / k) * j)
+d = 29
+class a:
+    g = 'j'
+    def __init__(self, h):
+        self.h = h
+    def p(self, z):
+        return self.g[1:]
+u = FIM([3])
+s = u.p([1, 2])
+x = d + 5
+f = o(10, 2, 5, 9)
+>>>a
+ID:2
+#####
+
