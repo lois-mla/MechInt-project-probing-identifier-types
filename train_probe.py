@@ -157,26 +157,45 @@ def main():
 
     # put new prompt here
     # answer should be m
-    prompt_prefix = """class x:
-    y = 'base'
-    def __init__(self, z):
-        self.z = z
-    def a(self, b):
-        return self.y + self.z + b
+#     prompt_prefix = """class x:
+#     y = 'base'
+#     def __init__(self, z):
+#         self.z = z
+#     def a(self, b):
+#         return self.y + self.z + b
 
-def c(d, e):
-    return d - e
+# def c(d, e):
+#     return d - e
 
-f = 100
+# f = 100
 
-g = c(f, 10)
-h = 
+# g = c(f, 10)
+# h = 
+
+# """
+    
+#     prompt_suffix = """('mid')
+# i = h.a('end')
+# j = f // 2
+#     """
+
+    prompt_prefix = """class n:
+    o = 3.14
+    def p(self):
+        return self.o
+
 
 """
     
-    prompt_suffix = """('mid')
-i = h.a('end')
-j = f // 2
+    prompt_suffix = """ = {'z': 99}
+
+def q(r):
+    return r.capitalize()
+
+s = q('word')
+t = n()
+u = t.p()
+v = w['z']
     """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
@@ -293,9 +312,9 @@ j = f // 2
         compare_steering(
             model=model,
             tokenizer=tokenizer,
-            probe=probe,        # trained on layer 25
+            probe=probe,        #
             prompt=prompt,
-            id=2,                    # positive class
+            id=0,                    # positive class
             contrastive_id=1,        # negative class
             alpha=50.0,
             layer=layer,                
