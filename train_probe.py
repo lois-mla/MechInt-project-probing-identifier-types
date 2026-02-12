@@ -99,9 +99,9 @@ def main():
     v = t
     """
 
-    prompt = get_prompt(prompt_prefix, prompt_suffix)
+#     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
-    print(prompt)
+#     print(prompt)
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset()
@@ -115,33 +115,33 @@ def main():
     )
     
 
-    # probe all layers
-    for layer in range (32):
-        results_full = probe_layer(
-            extractor=extractor,
-            prompts=prompts,
-            labels=labels,
-            layer=layer,
-        )
-        probe_full = results_full["probe"]
-        # print the train and test accuracy of this layer
-        print(f"Layer {layer} | Train acc: {results_full['train_acc']:.4f} | Test acc: {results_full['test_acc']:.4f}")
+#     # probe all layers
+#     for layer in range (32):
+#         results_full = probe_layer(
+#             extractor=extractor,
+#             prompts=prompts,
+#             labels=labels,
+#             layer=layer,
+#         )
+#         probe_full = results_full["probe"]
+#         # print the train and test accuracy of this layer
+#         print(f"Layer {layer} | Train acc: {results_full['train_acc']:.4f} | Test acc: {results_full['test_acc']:.4f}")
 
-        compare_steering(
-            model=model,
-            tokenizer=tokenizer,
-            probe=probe_full,        # trained on layer 25
-            prompt=prompt,
-            id=1,                    # positive class
-            contrastive_id=2,        # negative class
-            alpha=50.0,            # 'how much' you steer
-            layer=layer,
-            resid_type="mlp_out",    # must match extractor
-        )
+#         compare_steering(
+#             model=model,
+#             tokenizer=tokenizer,
+#             probe=probe_full,        # trained on layer 25
+#             prompt=prompt,
+#             id=1,                    # positive class
+#             contrastive_id=2,        # negative class
+#             alpha=50.0,            # 'how much' you steer
+#             layer=layer,
+#             resid_type="mlp_out",    # must match extractor
+#         )
 
-            # clean probe tensors
-        del probe_full
-        torch.cuda.empty_cache()
+#             # clean probe tensors
+#         del probe_full
+#         torch.cuda.empty_cache()
 
 
 
@@ -188,12 +188,44 @@ def main():
 
 
     # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    # )
+    results = probe_all_layers(
+        extractor=extractor,
+        prompts=prompts,
+        labels=labels,
+        n_layers=n_layers,
+    )
+
+    # print best layer
+    best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    print("Best layer:", best_layer)
+    print("Test accuracy:", results[best_layer]["test_acc"])
+
+    print("All results:", results)
+
+    # steering:
+
+    prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+    layer=0
+    for result in results:
+        probe = result["probe"]
+
+        compare_steering(
+            model=model,
+            tokenizer=tokenizer,
+            probe=probe,        # trained on layer 25
+            prompt=prompt,
+            id=0,                    # positive class
+            contrastive_id=2,        # negative class
+            alpha=50.0,
+            layer=layer,                
+            resid_type="mlp_out",    # must match extractor
+        )
+
+        layer += 1
+        del probe
+        torch.cuda.empty_cache()
+
 
     # # print best layer
     # best_layer = max(results, key=lambda k: results[k]["test_acc"])
