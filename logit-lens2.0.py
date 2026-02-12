@@ -31,8 +31,17 @@ example_prompt = "class ing:\n    def __init__(self, name):\n        self.name =
 correct_answer = "ing"
 incorrect_answer = "n"
 '''
-'''
-example_prompt = "<PRE>def ing(j,c):\n    return j+c\nclass rat:\n    a=5\nk=3\nh=<SUF>()\no=h.a\nat=ing(o,k)\nd=k+3<MID>"
+
+example_prompt = """
+<PRE>def ing(j,c):
+    return j+c
+class rat:
+    a=5
+k=3
+h = <SUF>()
+o=h.a
+at=ing(o,k)
+d=k+3<MID>"""
 correct_answer = "rat"
 incorrect_answer = "rat" 
 '''
@@ -47,7 +56,7 @@ at=▁<SUF>(o,k)
 """
 correct_answer = "foo"
 incorrect_answer = "at"
-
+'''
 
 # answer_tokens should be a tensor of shape [batch, 2]
 correct_token = model.to_single_token(correct_answer)
