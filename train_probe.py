@@ -282,8 +282,8 @@ u = v + 1
     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
     layer=0
-    for result in results:
-        probe = result[layer]["probe"]
+    for layer, result in results:
+        probe = result["probe"]
 
         compare_steering(
             model=model,
