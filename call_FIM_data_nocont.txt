@@ -1,0 +1,3810 @@
+class v:
+    t = 87
+
+a = FIM()
+>>> v
+ID:2
+#####
+
+def o(g):
+    return g[1:]
+
+x = FIM([4])
+>>> o
+ID:1
+#####
+
+class c:
+    p = 40
+
+v = FIM()
+>>> c
+ID:2
+#####
+
+class e:
+    g = 'u'
+
+d = FIM()
+>>> e
+ID:2
+#####
+
+class f:
+    o = 24
+
+n = FIM()
+>>> f
+ID:2
+#####
+
+t = 62
+
+r = FIM + 3
+>>> t
+ID:0
+#####
+
+def r(c, q, u):
+    return ((c + q) * u)
+
+y = FIM(3, 2, 7)
+>>> r
+ID:1
+#####
+
+class b:
+    s = [1, 2]
+
+a = FIM()
+>>> b
+ID:2
+#####
+
+q = 55
+
+h = FIM + 10
+>>> q
+ID:0
+#####
+
+p = 29.64
+
+a = FIM * 1.5
+>>> p
+ID:0
+#####
+
+class p:
+    r = 95
+
+f = FIM()
+>>> p
+ID:2
+#####
+
+q = 26
+
+l = FIM + 4
+>>> q
+ID:0
+#####
+
+class f:
+    v = 91
+
+e = FIM()
+>>> f
+ID:2
+#####
+
+h = 47.75
+
+j = FIM * 1.5
+>>> h
+ID:0
+#####
+
+def q(e, p):
+    return (e - p)
+
+v = FIM(6, 4)
+>>> q
+ID:1
+#####
+
+u = 'qqq'
+
+i = FIM.upper()
+>>> u
+ID:0
+#####
+
+n = 77
+
+c = FIM + 10
+>>> n
+ID:0
+#####
+
+def a(p, y, v):
+    return p + y
+
+q = FIM('i', 's', 'w')
+>>> a
+ID:1
+#####
+
+def l(j, p):
+    return (j * p)
+
+i = FIM(3, 8)
+>>> l
+ID:1
+#####
+
+class t:
+    n = 30
+
+r = FIM()
+>>> t
+ID:2
+#####
+
+class y:
+    n = [1, 2]
+
+g = FIM()
+>>> y
+ID:2
+#####
+
+class b:
+    g = [1, 2]
+
+q = FIM()
+>>> b
+ID:2
+#####
+
+def m(c, h, o):
+    return c + h
+
+g = FIM('p', 'l', 'x')
+>>> m
+ID:1
+#####
+
+def v(m):
+    return m.capitalize()
+
+z = FIM('n')
+>>> v
+ID:1
+#####
+
+class x:
+    y = [1, 2]
+
+c = FIM()
+>>> x
+ID:2
+#####
+
+def x(b, v, f, c):
+    return b + v
+
+n = FIM([3], [4], [3], [3])
+>>> x
+ID:1
+#####
+
+def c(w, h):
+    return w + h
+
+s = FIM([4], [4])
+>>> c
+ID:1
+#####
+
+a = 'uuu'
+
+r = FIM.upper()
+>>> a
+ID:0
+#####
+
+y = 'fff'
+
+z = FIM.upper()
+>>> y
+ID:0
+#####
+
+def b(g, d):
+    return g + d
+
+r = FIM([2], [4])
+>>> b
+ID:1
+#####
+
+class d:
+    a = [1, 2]
+
+z = FIM()
+>>> d
+ID:2
+#####
+
+f = 'ccc'
+
+d = FIM.upper()
+>>> f
+ID:0
+#####
+
+w = 3
+
+s = FIM + 7
+>>> w
+ID:0
+#####
+
+def e(u):
+    return u
+
+w = FIM(5)
+>>> e
+ID:1
+#####
+
+def d(b, q, w):
+    return ((b + q) * w)
+
+p = FIM(4, 8, 6)
+>>> d
+ID:1
+#####
+
+class o:
+    a = 'q'
+
+t = FIM()
+>>> o
+ID:2
+#####
+
+def z(m, e, x):
+    return m + e
+
+g = FIM('q', 'u', 'd')
+>>> z
+ID:1
+#####
+
+class i:
+    t = 52
+
+n = FIM()
+>>> i
+ID:2
+#####
+
+def g(t, k):
+    return (t * k)
+
+r = FIM(2, 10)
+>>> g
+ID:1
+#####
+
+r = 'ttt'
+
+o = FIM.upper()
+>>> r
+ID:0
+#####
+
+def s(w):
+    return w
+
+r = FIM(7)
+>>> s
+ID:1
+#####
+
+g = [4, 9]
+
+FIM.append(16)
+>>> g
+ID:0
+#####
+
+class n:
+    f = [1, 2]
+
+o = FIM()
+>>> n
+ID:2
+#####
+
+class x:
+    w = 75
+
+e = FIM()
+>>> x
+ID:2
+#####
+
+class z:
+    t = [1, 2]
+
+p = FIM()
+>>> z
+ID:2
+#####
+
+b = 18
+
+w = FIM + 7
+>>> b
+ID:0
+#####
+
+t = 99
+
+u = FIM + 5
+>>> t
+ID:0
+#####
+
+o = 18
+
+j = FIM + 3
+>>> o
+ID:0
+#####
+
+l = 'bbb'
+
+s = FIM.upper()
+>>> l
+ID:0
+#####
+
+def x(j, b, w, i):
+    return j + b
+
+e = FIM([1], [4], [2], [3])
+>>> x
+ID:1
+#####
+
+def n(y, u, q):
+    return y + u
+
+o = FIM('w', 'k', 'r')
+>>> n
+ID:1
+#####
+
+class d:
+    j = 21
+
+x = FIM()
+>>> d
+ID:2
+#####
+
+w = 22.69
+
+i = FIM * 1.5
+>>> w
+ID:0
+#####
+
+def f(r, g, b, z):
+    return r + g
+
+y = FIM('p', 'j', 'i', 'x')
+>>> f
+ID:1
+#####
+
+x = 'qqq'
+
+n = FIM.upper()
+>>> x
+ID:0
+#####
+
+class d:
+    y = [1, 2]
+
+m = FIM()
+>>> d
+ID:2
+#####
+
+def w(u, v, k):
+    return ((u + v) + k)
+
+x = FIM(5, 2, 5)
+>>> w
+ID:1
+#####
+
+class w:
+    m = [1, 2]
+
+x = FIM()
+>>> w
+ID:2
+#####
+
+class r:
+    z = 'b'
+
+m = FIM()
+>>> r
+ID:2
+#####
+
+b = [3, 6]
+
+FIM.append(13)
+>>> b
+ID:0
+#####
+
+def p(i, g, j, x):
+    return i + g
+
+w = FIM([3], [5], [3], [2])
+>>> p
+ID:1
+#####
+
+def n(q, c):
+    return q + c
+
+f = FIM([4], [5])
+>>> n
+ID:1
+#####
+
+def o(t, a, d, j):
+    return (((t - a) - d) * j)
+
+w = FIM(10, 6, 2, 9)
+>>> o
+ID:1
+#####
+
+def e(p, b, h):
+    return p + b
+
+i = FIM('n', 'j', 'q')
+>>> e
+ID:1
+#####
+
+def t(z, y):
+    return z + y
+
+a = FIM([3], [2])
+>>> t
+ID:1
+#####
+
+i = 40.84
+
+l = FIM * 1.5
+>>> i
+ID:0
+#####
+
+def t(w, z, a, c):
+    return w + z
+
+k = FIM([4], [4], [1], [4])
+>>> t
+ID:1
+#####
+
+class t:
+    z = 'o'
+
+v = FIM()
+>>> t
+ID:2
+#####
+
+v = 4.79
+
+w = FIM * 1.5
+>>> v
+ID:0
+#####
+
+o = [2, 8]
+
+FIM.append(18)
+>>> o
+ID:0
+#####
+
+c = 'ddd'
+
+k = FIM.upper()
+>>> c
+ID:0
+#####
+
+e = 'qqq'
+
+y = FIM.upper()
+>>> e
+ID:0
+#####
+
+d = [4, 8]
+
+FIM.append(12)
+>>> d
+ID:0
+#####
+
+k = [5, 6]
+
+FIM.append(14)
+>>> k
+ID:0
+#####
+
+g = 'ccc'
+
+n = FIM.upper()
+>>> g
+ID:0
+#####
+
+class d:
+    x = 'r'
+
+p = FIM()
+>>> d
+ID:2
+#####
+
+x = [4, 6]
+
+FIM.append(10)
+>>> x
+ID:0
+#####
+
+l = 'zzz'
+
+f = FIM.upper()
+>>> l
+ID:0
+#####
+
+def f(t, z, m, o):
+    return (((t + z) - m) - o)
+
+w = FIM(10, 9, 3, 6)
+>>> f
+ID:1
+#####
+
+s = [5, 9]
+
+FIM.append(20)
+>>> s
+ID:0
+#####
+
+def e(y, a, h):
+    return y + a
+
+w = FIM([4], [3], [5])
+>>> e
+ID:1
+#####
+
+y = 86
+
+g = FIM + 3
+>>> y
+ID:0
+#####
+
+def c(a, m, k, r):
+    return (((a - m) + k) - r)
+
+s = FIM(1, 10, 4, 1)
+>>> c
+ID:1
+#####
+
+class g:
+    s = [1, 2]
+
+t = FIM()
+>>> g
+ID:2
+#####
+
+class w:
+    j = [1, 2]
+
+y = FIM()
+>>> w
+ID:2
+#####
+
+def h(n):
+    return n[1:]
+
+r = FIM([4])
+>>> h
+ID:1
+#####
+
+d = 73
+
+s = FIM + 1
+>>> d
+ID:0
+#####
+
+class k:
+    x = [1, 2]
+
+y = FIM()
+>>> k
+ID:2
+#####
+
+class r:
+    j = 20
+
+v = FIM()
+>>> r
+ID:2
+#####
+
+l = [1, 6]
+
+FIM.append(10)
+>>> l
+ID:0
+#####
+
+class o:
+    m = 7
+
+g = FIM()
+>>> o
+ID:2
+#####
+
+h = 26.07
+
+s = FIM * 1.5
+>>> h
+ID:0
+#####
+
+h = 37
+
+q = FIM + 2
+>>> h
+ID:0
+#####
+
+def b(y, m):
+    return y + m
+
+i = FIM([5], [2])
+>>> b
+ID:1
+#####
+
+v = 49.82
+
+z = FIM * 1.5
+>>> v
+ID:0
+#####
+
+u = 'mmm'
+
+j = FIM.upper()
+>>> u
+ID:0
+#####
+
+class w:
+    e = 'm'
+
+z = FIM()
+>>> w
+ID:2
+#####
+
+o = 90
+
+x = FIM + 6
+>>> o
+ID:0
+#####
+
+def e(q, s, u, r):
+    return q + s
+
+k = FIM('m', 'i', 'x', 'c')
+>>> e
+ID:1
+#####
+
+def d(i):
+    return i.capitalize()
+
+r = FIM('k')
+>>> d
+ID:1
+#####
+
+u = [3, 6]
+
+FIM.append(15)
+>>> u
+ID:0
+#####
+
+class t:
+    e = 'g'
+
+w = FIM()
+>>> t
+ID:2
+#####
+
+class c:
+    e = 70
+
+z = FIM()
+>>> c
+ID:2
+#####
+
+class h:
+    y = 98
+
+w = FIM()
+>>> h
+ID:2
+#####
+
+n = 54
+
+z = FIM + 7
+>>> n
+ID:0
+#####
+
+e = [2, 6]
+
+FIM.append(17)
+>>> e
+ID:0
+#####
+
+def z(j, k):
+    return j + k
+
+g = FIM([5], [4])
+>>> z
+ID:1
+#####
+
+def j(b, p, n, s):
+    return (((b - p) - n) - s)
+
+q = FIM(6, 3, 2, 3)
+>>> j
+ID:1
+#####
+
+f = 'kkk'
+
+g = FIM.upper()
+>>> f
+ID:0
+#####
+
+def o(c):
+    return c
+
+b = FIM(6)
+>>> o
+ID:1
+#####
+
+f = 'nnn'
+
+e = FIM.upper()
+>>> f
+ID:0
+#####
+
+y = 67
+
+g = FIM + 10
+>>> y
+ID:0
+#####
+
+def t(e, q):
+    return e + q
+
+h = FIM('i', 'a')
+>>> t
+ID:1
+#####
+
+i = 'vvv'
+
+a = FIM.upper()
+>>> i
+ID:0
+#####
+
+u = [2, 6]
+
+FIM.append(11)
+>>> u
+ID:0
+#####
+
+class h:
+    j = [1, 2]
+
+x = FIM()
+>>> h
+ID:2
+#####
+
+v = [5, 8]
+
+FIM.append(18)
+>>> v
+ID:0
+#####
+
+m = 2.63
+
+k = FIM * 1.5
+>>> m
+ID:0
+#####
+
+y = 47
+
+b = FIM + 7
+>>> y
+ID:0
+#####
+
+def p(h):
+    return h[1:]
+
+f = FIM([5])
+>>> p
+ID:1
+#####
+
+def l(t, k, g, w):
+    return (((t * k) * g) * w)
+
+c = FIM(8, 1, 2, 9)
+>>> l
+ID:1
+#####
+
+class x:
+    w = [1, 2]
+
+q = FIM()
+>>> x
+ID:2
+#####
+
+def d(p, y, z):
+    return p + y
+
+g = FIM([5], [2], [1])
+>>> d
+ID:1
+#####
+
+def y(z, s, o):
+    return z + s
+
+m = FIM([5], [1], [1])
+>>> y
+ID:1
+#####
+
+class a:
+    p = 'w'
+
+h = FIM()
+>>> a
+ID:2
+#####
+
+u = 81
+
+i = FIM + 6
+>>> u
+ID:0
+#####
+
+v = 'ooo'
+
+c = FIM.upper()
+>>> v
+ID:0
+#####
+
+def m(b, n, e):
+    return ((b * n) + e)
+
+g = FIM(5, 7, 7)
+>>> m
+ID:1
+#####
+
+n = 'uuu'
+
+m = FIM.upper()
+>>> n
+ID:0
+#####
+
+f = [2, 9]
+
+FIM.append(10)
+>>> f
+ID:0
+#####
+
+def l(m, i, p, t):
+    return (((m + i) + p) + t)
+
+a = FIM(6, 2, 1, 3)
+>>> l
+ID:1
+#####
+
+def y(z):
+    return z.capitalize()
+
+f = FIM('j')
+>>> y
+ID:1
+#####
+
+class m:
+    c = [1, 2]
+
+e = FIM()
+>>> m
+ID:2
+#####
+
+class h:
+    a = 'n'
+
+s = FIM()
+>>> h
+ID:2
+#####
+
+t = 'rrr'
+
+i = FIM.upper()
+>>> t
+ID:0
+#####
+
+c = 35.78
+
+u = FIM * 1.5
+>>> c
+ID:0
+#####
+
+x = [3, 7]
+
+FIM.append(13)
+>>> x
+ID:0
+#####
+
+e = 1
+
+t = FIM + 9
+>>> e
+ID:0
+#####
+
+class y:
+    r = [1, 2]
+
+e = FIM()
+>>> y
+ID:2
+#####
+
+class v:
+    e = 32
+
+j = FIM()
+>>> v
+ID:2
+#####
+
+t = 'qqq'
+
+z = FIM.upper()
+>>> t
+ID:0
+#####
+
+class r:
+    m = 81
+
+i = FIM()
+>>> r
+ID:2
+#####
+
+h = [4, 6]
+
+FIM.append(17)
+>>> h
+ID:0
+#####
+
+k = [4, 7]
+
+FIM.append(14)
+>>> k
+ID:0
+#####
+
+e = 13.47
+
+v = FIM * 1.5
+>>> e
+ID:0
+#####
+
+def u(v):
+    return v[1:]
+
+o = FIM([4])
+>>> u
+ID:1
+#####
+
+def p(q, w, u):
+    return q + w
+
+n = FIM([4], [4], [2])
+>>> p
+ID:1
+#####
+
+class z:
+    i = 'b'
+
+c = FIM()
+>>> z
+ID:2
+#####
+
+b = 'lll'
+
+p = FIM.upper()
+>>> b
+ID:0
+#####
+
+class r:
+    e = [1, 2]
+
+p = FIM()
+>>> r
+ID:2
+#####
+
+class b:
+    g = 'x'
+
+v = FIM()
+>>> b
+ID:2
+#####
+
+h = 23.45
+
+w = FIM * 1.5
+>>> h
+ID:0
+#####
+
+def l(x):
+    return x[1:]
+
+t = FIM([4])
+>>> l
+ID:1
+#####
+
+f = 33.42
+
+l = FIM * 1.5
+>>> f
+ID:0
+#####
+
+def g(d, l, c):
+    return d + l
+
+v = FIM('y', 'p', 'k')
+>>> g
+ID:1
+#####
+
+def k(g, b, l):
+    return g + b
+
+u = FIM([1], [1], [3])
+>>> k
+ID:1
+#####
+
+class f:
+    b = 11
+
+h = FIM()
+>>> f
+ID:2
+#####
+
+def h(z, x):
+    return (z * x)
+
+t = FIM(1, 7)
+>>> h
+ID:1
+#####
+
+class q:
+    g = [1, 2]
+
+n = FIM()
+>>> q
+ID:2
+#####
+
+z = [5, 9]
+
+FIM.append(10)
+>>> z
+ID:0
+#####
+
+def m(x, b, i, r):
+    return x + b
+
+j = FIM('u', 't', 'e', 'h')
+>>> m
+ID:1
+#####
+
+c = 'mmm'
+
+w = FIM.upper()
+>>> c
+ID:0
+#####
+
+m = 2.99
+
+y = FIM * 1.5
+>>> m
+ID:0
+#####
+
+m = 86
+
+v = FIM + 8
+>>> m
+ID:0
+#####
+
+h = 'bbb'
+
+y = FIM.upper()
+>>> h
+ID:0
+#####
+
+def q(h):
+    return h.capitalize()
+
+t = FIM('c')
+>>> q
+ID:1
+#####
+
+s = 5.28
+
+a = FIM * 1.5
+>>> s
+ID:0
+#####
+
+class f:
+    m = 'g'
+
+s = FIM()
+>>> f
+ID:2
+#####
+
+class a:
+    t = [1, 2]
+
+b = FIM()
+>>> a
+ID:2
+#####
+
+z = 'eee'
+
+t = FIM.upper()
+>>> z
+ID:0
+#####
+
+def e(s, c):
+    return s + c
+
+j = FIM('t', 'f')
+>>> e
+ID:1
+#####
+
+def j(z, m):
+    return z + m
+
+r = FIM([1], [4])
+>>> j
+ID:1
+#####
+
+class g:
+    a = 41
+
+o = FIM()
+>>> g
+ID:2
+#####
+
+def f(g, l, w, a):
+    return g + l
+
+r = FIM([5], [5], [2], [2])
+>>> f
+ID:1
+#####
+
+def i(n, r, j):
+    return ((n + r) * j)
+
+h = FIM(2, 6, 2)
+>>> i
+ID:1
+#####
+
+class a:
+    r = [1, 2]
+
+k = FIM()
+>>> a
+ID:2
+#####
+
+class v:
+    k = 'r'
+
+l = FIM()
+>>> v
+ID:2
+#####
+
+u = 'xxx'
+
+z = FIM.upper()
+>>> u
+ID:0
+#####
+
+class p:
+    k = [1, 2]
+
+z = FIM()
+>>> p
+ID:2
+#####
+
+def r(g):
+    return g
+
+u = FIM(6)
+>>> r
+ID:1
+#####
+
+b = 'ttt'
+
+k = FIM.upper()
+>>> b
+ID:0
+#####
+
+class u:
+    p = 100
+
+f = FIM()
+>>> u
+ID:2
+#####
+
+class y:
+    m = 15
+
+v = FIM()
+>>> y
+ID:2
+#####
+
+def a(x):
+    return x
+
+z = FIM(1)
+>>> a
+ID:1
+#####
+
+class p:
+    x = [1, 2]
+
+e = FIM()
+>>> p
+ID:2
+#####
+
+x = 12.38
+
+k = FIM * 1.5
+>>> x
+ID:0
+#####
+
+x = 63
+
+w = FIM + 1
+>>> x
+ID:0
+#####
+
+class b:
+    z = [1, 2]
+
+m = FIM()
+>>> b
+ID:2
+#####
+
+class h:
+    g = 2
+
+p = FIM()
+>>> h
+ID:2
+#####
+
+class m:
+    f = 74
+
+l = FIM()
+>>> m
+ID:2
+#####
+
+def z(c, k):
+    return c + k
+
+e = FIM([1], [4])
+>>> z
+ID:1
+#####
+
+n = [5, 6]
+
+FIM.append(16)
+>>> n
+ID:0
+#####
+
+def m(f, j, s, c):
+    return f + j
+
+l = FIM([4], [5], [3], [1])
+>>> m
+ID:1
+#####
+
+class x:
+    o = 12
+
+n = FIM()
+>>> x
+ID:2
+#####
+
+class r:
+    p = 39
+
+d = FIM()
+>>> r
+ID:2
+#####
+
+def x(i, h, v, t):
+    return i + h
+
+g = FIM('j', 'b', 'f', 'k')
+>>> x
+ID:1
+#####
+
+def r(i):
+    return i.capitalize()
+
+u = FIM('z')
+>>> r
+ID:1
+#####
+
+class n:
+    c = 'x'
+
+s = FIM()
+>>> n
+ID:2
+#####
+
+class l:
+    d = [1, 2]
+
+s = FIM()
+>>> l
+ID:2
+#####
+
+def c(l, f):
+    return (l * f)
+
+y = FIM(5, 5)
+>>> c
+ID:1
+#####
+
+q = 'sss'
+
+r = FIM.upper()
+>>> q
+ID:0
+#####
+
+v = [2, 6]
+
+FIM.append(13)
+>>> v
+ID:0
+#####
+
+def m(x, s):
+    return x + s
+
+f = FIM([4], [5])
+>>> m
+ID:1
+#####
+
+def u(f):
+    return f
+
+m = FIM(7)
+>>> u
+ID:1
+#####
+
+h = 29.7
+
+e = FIM * 1.5
+>>> h
+ID:0
+#####
+
+o = 19
+
+u = FIM + 3
+>>> o
+ID:0
+#####
+
+def t(x, l, f):
+    return x + l
+
+j = FIM([5], [5], [5])
+>>> t
+ID:1
+#####
+
+def x(k, v, s):
+    return ((k - v) + s)
+
+j = FIM(4, 9, 8)
+>>> x
+ID:1
+#####
+
+w = 'xxx'
+
+g = FIM.upper()
+>>> w
+ID:0
+#####
+
+class g:
+    h = [1, 2]
+
+e = FIM()
+>>> g
+ID:2
+#####
+
+x = 38.91
+
+z = FIM * 1.5
+>>> x
+ID:0
+#####
+
+def n(r):
+    return r[1:]
+
+c = FIM([4])
+>>> n
+ID:1
+#####
+
+def l(m, s, d, e):
+    return m + s
+
+y = FIM('x', 'z', 'a', 'f')
+>>> l
+ID:1
+#####
+
+p = 5.22
+
+t = FIM * 1.5
+>>> p
+ID:0
+#####
+
+def z(v, a, y, i):
+    return v + a
+
+u = FIM('o', 'f', 'p', 'r')
+>>> z
+ID:1
+#####
+
+def i(l, w, m, x):
+    return (((l - w) - m) - x)
+
+q = FIM(5, 3, 4, 7)
+>>> i
+ID:1
+#####
+
+q = 30.5
+
+f = FIM * 1.5
+>>> q
+ID:0
+#####
+
+def a(h, z):
+    return (h * z)
+
+j = FIM(10, 6)
+>>> a
+ID:1
+#####
+
+class u:
+    h = 'e'
+
+p = FIM()
+>>> u
+ID:2
+#####
+
+class a:
+    e = 'x'
+
+q = FIM()
+>>> a
+ID:2
+#####
+
+class x:
+    m = 'n'
+
+y = FIM()
+>>> x
+ID:2
+#####
+
+def t(g):
+    return g
+
+h = FIM(6)
+>>> t
+ID:1
+#####
+
+def s(f, i, b):
+    return ((f + i) * b)
+
+c = FIM(2, 4, 5)
+>>> s
+ID:1
+#####
+
+def n(f, u):
+    return f + u
+
+b = FIM([5], [4])
+>>> n
+ID:1
+#####
+
+def z(a, b, w):
+    return ((a - b) * w)
+
+g = FIM(3, 6, 6)
+>>> z
+ID:1
+#####
+
+def k(c, w, j, e):
+    return (((c * w) - j) * e)
+
+q = FIM(10, 7, 3, 1)
+>>> k
+ID:1
+#####
+
+y = [1, 7]
+
+FIM.append(13)
+>>> y
+ID:0
+#####
+
+a = [2, 7]
+
+FIM.append(12)
+>>> a
+ID:0
+#####
+
+x = 27.7
+
+h = FIM * 1.5
+>>> x
+ID:0
+#####
+
+def v(s, f, e, z):
+    return s + f
+
+k = FIM('h', 'u', 'o', 'y')
+>>> v
+ID:1
+#####
+
+o = 'xxx'
+
+r = FIM.upper()
+>>> o
+ID:0
+#####
+
+o = 'uuu'
+
+w = FIM.upper()
+>>> o
+ID:0
+#####
+
+def h(l):
+    return l
+
+d = FIM(8)
+>>> h
+ID:1
+#####
+
+u = 'jjj'
+
+l = FIM.upper()
+>>> u
+ID:0
+#####
+
+def d(q, g, t):
+    return ((q + g) + t)
+
+m = FIM(6, 2, 3)
+>>> d
+ID:1
+#####
+
+p = 'qqq'
+
+m = FIM.upper()
+>>> p
+ID:0
+#####
+
+class j:
+    b = 'w'
+
+r = FIM()
+>>> j
+ID:2
+#####
+
+r = 40.62
+
+u = FIM * 1.5
+>>> r
+ID:0
+#####
+
+def u(k):
+    return k.capitalize()
+
+r = FIM('q')
+>>> u
+ID:1
+#####
+
+class b:
+    t = [1, 2]
+
+x = FIM()
+>>> b
+ID:2
+#####
+
+n = 49.33
+
+k = FIM * 1.5
+>>> n
+ID:0
+#####
+
+l = 35.26
+
+i = FIM * 1.5
+>>> l
+ID:0
+#####
+
+class a:
+    w = 'r'
+
+b = FIM()
+>>> a
+ID:2
+#####
+
+class w:
+    b = 89
+
+e = FIM()
+>>> w
+ID:2
+#####
+
+r = 11.58
+
+v = FIM * 1.5
+>>> r
+ID:0
+#####
+
+e = 37.84
+
+a = FIM * 1.5
+>>> e
+ID:0
+#####
+
+def x(v, m, j, e):
+    return v + m
+
+c = FIM('t', 'g', 'h', 'k')
+>>> x
+ID:1
+#####
+
+class a:
+    y = [1, 2]
+
+d = FIM()
+>>> a
+ID:2
+#####
+
+def a(n, c):
+    return (n * c)
+
+w = FIM(10, 3)
+>>> a
+ID:1
+#####
+
+class o:
+    j = 64
+
+m = FIM()
+>>> o
+ID:2
+#####
+
+def g(c, z):
+    return c + z
+
+y = FIM('u', 'i')
+>>> g
+ID:1
+#####
+
+def x(z, d):
+    return (z + d)
+
+n = FIM(2, 1)
+>>> x
+ID:1
+#####
+
+a = 'zzz'
+
+h = FIM.upper()
+>>> a
+ID:0
+#####
+
+p = 36.5
+
+d = FIM * 1.5
+>>> p
+ID:0
+#####
+
+class q:
+    j = [1, 2]
+
+p = FIM()
+>>> q
+ID:2
+#####
+
+u = [4, 8]
+
+FIM.append(15)
+>>> u
+ID:0
+#####
+
+j = [1, 8]
+
+FIM.append(12)
+>>> j
+ID:0
+#####
+
+o = 1.43
+
+l = FIM * 1.5
+>>> o
+ID:0
+#####
+
+class u:
+    z = [1, 2]
+
+r = FIM()
+>>> u
+ID:2
+#####
+
+class l:
+    m = [1, 2]
+
+c = FIM()
+>>> l
+ID:2
+#####
+
+class c:
+    w = [1, 2]
+
+o = FIM()
+>>> c
+ID:2
+#####
+
+def w(j):
+    return j[1:]
+
+f = FIM([3])
+>>> w
+ID:1
+#####
+
+q = 'lll'
+
+v = FIM.upper()
+>>> q
+ID:0
+#####
+
+class o:
+    b = 'y'
+
+u = FIM()
+>>> o
+ID:2
+#####
+
+def f(e, n):
+    return (e - n)
+
+o = FIM(8, 2)
+>>> f
+ID:1
+#####
+
+class u:
+    m = 'a'
+
+f = FIM()
+>>> u
+ID:2
+#####
+
+def a(b):
+    return b.capitalize()
+
+h = FIM('p')
+>>> a
+ID:1
+#####
+
+def i(k, q, f):
+    return k + q
+
+r = FIM('n', 'u', 'j')
+>>> i
+ID:1
+#####
+
+class e:
+    q = [1, 2]
+
+n = FIM()
+>>> e
+ID:2
+#####
+
+u = 'jjj'
+
+n = FIM.upper()
+>>> u
+ID:0
+#####
+
+def m(o, r):
+    return o + r
+
+k = FIM([5], [3])
+>>> m
+ID:1
+#####
+
+class u:
+    i = 6
+
+n = FIM()
+>>> u
+ID:2
+#####
+
+w = 8.88
+
+r = FIM * 1.5
+>>> w
+ID:0
+#####
+
+t = 28
+
+j = FIM + 5
+>>> t
+ID:0
+#####
+
+class e:
+    z = [1, 2]
+
+t = FIM()
+>>> e
+ID:2
+#####
+
+class u:
+    n = 89
+
+w = FIM()
+>>> u
+ID:2
+#####
+
+h = 'ggg'
+
+k = FIM.upper()
+>>> h
+ID:0
+#####
+
+class p:
+    m = 'k'
+
+e = FIM()
+>>> p
+ID:2
+#####
+
+class y:
+    z = [1, 2]
+
+o = FIM()
+>>> y
+ID:2
+#####
+
+a = 'ttt'
+
+i = FIM.upper()
+>>> a
+ID:0
+#####
+
+class z:
+    j = [1, 2]
+
+i = FIM()
+>>> z
+ID:2
+#####
+
+def j(c):
+    return c.capitalize()
+
+w = FIM('e')
+>>> j
+ID:1
+#####
+
+def u(m, x, q):
+    return ((m - x) - q)
+
+d = FIM(7, 2, 7)
+>>> u
+ID:1
+#####
+
+def r(x):
+    return x[1:]
+
+q = FIM([5])
+>>> r
+ID:1
+#####
+
+def z(x, r, b):
+    return x + r
+
+m = FIM([2], [1], [4])
+>>> z
+ID:1
+#####
+
+def z(j, q, g, h):
+    return (((j * q) + g) + h)
+
+e = FIM(8, 1, 9, 3)
+>>> z
+ID:1
+#####
+
+p = 40.56
+
+w = FIM * 1.5
+>>> p
+ID:0
+#####
+
+class j:
+    u = [1, 2]
+
+n = FIM()
+>>> j
+ID:2
+#####
+
+f = [3, 6]
+
+FIM.append(14)
+>>> f
+ID:0
+#####
+
+class c:
+    a = 24
+
+h = FIM()
+>>> c
+ID:2
+#####
+
+def i(t):
+    return t.capitalize()
+
+a = FIM('j')
+>>> i
+ID:1
+#####
+
+def x(s, y):
+    return (s * y)
+
+b = FIM(2, 5)
+>>> x
+ID:1
+#####
+
+class e:
+    n = 47
+
+g = FIM()
+>>> e
+ID:2
+#####
+
+class t:
+    g = [1, 2]
+
+a = FIM()
+>>> t
+ID:2
+#####
+
+e = 7.54
+
+i = FIM * 1.5
+>>> e
+ID:0
+#####
+
+a = 7.93
+
+y = FIM * 1.5
+>>> a
+ID:0
+#####
+
+def w(v, e):
+    return (v - e)
+
+z = FIM(7, 6)
+>>> w
+ID:1
+#####
+
+k = 'sss'
+
+d = FIM.upper()
+>>> k
+ID:0
+#####
+
+class t:
+    b = [1, 2]
+
+m = FIM()
+>>> t
+ID:2
+#####
+
+def i(j, m, k):
+    return j + m
+
+b = FIM([2], [2], [1])
+>>> i
+ID:1
+#####
+
+def y(x, w):
+    return x + w
+
+l = FIM('r', 'e')
+>>> y
+ID:1
+#####
+
+class n:
+    x = 13
+
+m = FIM()
+>>> n
+ID:2
+#####
+
+class h:
+    z = 59
+
+p = FIM()
+>>> h
+ID:2
+#####
+
+h = 73
+
+x = FIM + 7
+>>> h
+ID:0
+#####
+
+n = 33.38
+
+j = FIM * 1.5
+>>> n
+ID:0
+#####
+
+class h:
+    o = 'b'
+
+d = FIM()
+>>> h
+ID:2
+#####
+
+def q(m, a, t, i):
+    return (((m * a) * t) + i)
+
+k = FIM(5, 7, 7, 10)
+>>> q
+ID:1
+#####
+
+class k:
+    j = 66
+
+t = FIM()
+>>> k
+ID:2
+#####
+
+def r(g, s, t, c):
+    return g + s
+
+f = FIM('o', 'p', 'u', 'z')
+>>> r
+ID:1
+#####
+
+o = [2, 7]
+
+FIM.append(18)
+>>> o
+ID:0
+#####
+
+def u(g, v, r):
+    return ((g + v) - r)
+
+b = FIM(7, 9, 1)
+>>> u
+ID:1
+#####
+
+def x(i, p, d):
+    return i + p
+
+o = FIM('v', 'b', 's')
+>>> x
+ID:1
+#####
+
+class q:
+    s = [1, 2]
+
+o = FIM()
+>>> q
+ID:2
+#####
+
+class c:
+    u = [1, 2]
+
+r = FIM()
+>>> c
+ID:2
+#####
+
+class g:
+    t = 'o'
+
+w = FIM()
+>>> g
+ID:2
+#####
+
+def m(b, c):
+    return (b - c)
+
+q = FIM(3, 2)
+>>> m
+ID:1
+#####
+
+class x:
+    v = 'r'
+
+p = FIM()
+>>> x
+ID:2
+#####
+
+class d:
+    m = 'f'
+
+r = FIM()
+>>> d
+ID:2
+#####
+
+j = 34.78
+
+a = FIM * 1.5
+>>> j
+ID:0
+#####
+
+def y(f, p):
+    return f + p
+
+n = FIM('h', 'x')
+>>> y
+ID:1
+#####
+
+class x:
+    i = [1, 2]
+
+y = FIM()
+>>> x
+ID:2
+#####
+
+t = 7.43
+
+v = FIM * 1.5
+>>> t
+ID:0
+#####
+
+class i:
+    u = 30
+
+p = FIM()
+>>> i
+ID:2
+#####
+
+def m(v, f, z):
+    return v + f
+
+u = FIM([4], [3], [2])
+>>> m
+ID:1
+#####
+
+def l(g, c, m, k):
+    return g + c
+
+p = FIM('h', 'x', 'n', 'y')
+>>> l
+ID:1
+#####
+
+def l(c, d, f):
+    return c + d
+
+p = FIM([4], [1], [3])
+>>> l
+ID:1
+#####
+
+j = 6.38
+
+m = FIM * 1.5
+>>> j
+ID:0
+#####
+
+class a:
+    s = 89
+
+b = FIM()
+>>> a
+ID:2
+#####
+
+class x:
+    r = 64
+
+k = FIM()
+>>> x
+ID:2
+#####
+
+a = [2, 7]
+
+FIM.append(13)
+>>> a
+ID:0
+#####
+
+def f(i):
+    return i[1:]
+
+o = FIM([4])
+>>> f
+ID:1
+#####
+
+e = 22
+
+i = FIM + 3
+>>> e
+ID:0
+#####
+
+def v(n, m, c, e):
+    return n + m
+
+l = FIM('g', 'w', 'k', 'h')
+>>> v
+ID:1
+#####
+
+l = [4, 6]
+
+FIM.append(16)
+>>> l
+ID:0
+#####
+
+def e(s, w, a):
+    return s + w
+
+d = FIM([5], [3], [4])
+>>> e
+ID:1
+#####
+
+class i:
+    p = [1, 2]
+
+v = FIM()
+>>> i
+ID:2
+#####
+
+x = 33
+
+d = FIM + 8
+>>> x
+ID:0
+#####
+
+class b:
+    z = [1, 2]
+
+i = FIM()
+>>> b
+ID:2
+#####
+
+j = 7.53
+
+u = FIM * 1.5
+>>> j
+ID:0
+#####
+
+u = [2, 8]
+
+FIM.append(19)
+>>> u
+ID:0
+#####
+
+a = 'sss'
+
+m = FIM.upper()
+>>> a
+ID:0
+#####
+
+e = [1, 9]
+
+FIM.append(19)
+>>> e
+ID:0
+#####
+
+m = 47.86
+
+y = FIM * 1.5
+>>> m
+ID:0
+#####
+
+def s(j):
+    return j.capitalize()
+
+x = FIM('t')
+>>> s
+ID:1
+#####
+
+def a(f, o):
+    return f + o
+
+q = FIM('v', 'p')
+>>> a
+ID:1
+#####
+
+v = 85
+
+c = FIM + 8
+>>> v
+ID:0
+#####
+
+class g:
+    o = 77
+
+w = FIM()
+>>> g
+ID:2
+#####
+
+q = 18.37
+
+o = FIM * 1.5
+>>> q
+ID:0
+#####
+
+l = [4, 8]
+
+FIM.append(15)
+>>> l
+ID:0
+#####
+
+r = 63
+
+m = FIM + 7
+>>> r
+ID:0
+#####
+
+class v:
+    w = [1, 2]
+
+e = FIM()
+>>> v
+ID:2
+#####
+
+def j(a, s):
+    return a + s
+
+v = FIM([4], [1])
+>>> j
+ID:1
+#####
+
+def j(n):
+    return n.capitalize()
+
+a = FIM('i')
+>>> j
+ID:1
+#####
+
+r = 'ooo'
+
+a = FIM.upper()
+>>> r
+ID:0
+#####
+
+m = 94
+
+z = FIM + 8
+>>> m
+ID:0
+#####
+
+class j:
+    m = 'p'
+
+n = FIM()
+>>> j
+ID:2
+#####
+
+t = 'eee'
+
+p = FIM.upper()
+>>> t
+ID:0
+#####
+
+class k:
+    r = 'u'
+
+x = FIM()
+>>> k
+ID:2
+#####
+
+c = 4
+
+r = FIM + 7
+>>> c
+ID:0
+#####
+
+class x:
+    p = 'y'
+
+i = FIM()
+>>> x
+ID:2
+#####
+
+class t:
+    k = 'z'
+
+h = FIM()
+>>> t
+ID:2
+#####
+
+class w:
+    k = 85
+
+a = FIM()
+>>> w
+ID:2
+#####
+
+r = 44.87
+
+o = FIM * 1.5
+>>> r
+ID:0
+#####
+
+def y(v, l, q):
+    return v + l
+
+o = FIM('m', 's', 't')
+>>> y
+ID:1
+#####
+
+m = 15
+
+u = FIM + 8
+>>> m
+ID:0
+#####
+
+u = 35.75
+
+p = FIM * 1.5
+>>> u
+ID:0
+#####
+
+y = 33
+
+u = FIM + 3
+>>> y
+ID:0
+#####
+
+k = 58
+
+o = FIM + 6
+>>> k
+ID:0
+#####
+
+def b(v):
+    return v.capitalize()
+
+s = FIM('l')
+>>> b
+ID:1
+#####
+
+def i(d):
+    return d.capitalize()
+
+a = FIM('t')
+>>> i
+ID:1
+#####
+
+class d:
+    n = 'v'
+
+l = FIM()
+>>> d
+ID:2
+#####
+
+k = 45
+
+n = FIM + 9
+>>> k
+ID:0
+#####
+
+def c(r, a, e):
+    return ((r + a) + e)
+
+p = FIM(10, 4, 2)
+>>> c
+ID:1
+#####
+
+g = 'lll'
+
+z = FIM.upper()
+>>> g
+ID:0
+#####
+
+def l(f, w, i, c):
+    return f + w
+
+e = FIM([4], [4], [3], [2])
+>>> l
+ID:1
+#####
+
+def q(j, u, c):
+    return j + u
+
+w = FIM([4], [3], [4])
+>>> q
+ID:1
+#####
+
+class c:
+    h = [1, 2]
+
+p = FIM()
+>>> c
+ID:2
+#####
+
+class r:
+    s = 81
+
+h = FIM()
+>>> r
+ID:2
+#####
+
+class h:
+    e = [1, 2]
+
+o = FIM()
+>>> h
+ID:2
+#####
+
+n = [5, 6]
+
+FIM.append(17)
+>>> n
+ID:0
+#####
+
+j = [2, 7]
+
+FIM.append(15)
+>>> j
+ID:0
+#####
+
+class y:
+    i = [1, 2]
+
+s = FIM()
+>>> y
+ID:2
+#####
+
+def e(z, l, x):
+    return z + l
+
+j = FIM('n', 'k', 'o')
+>>> e
+ID:1
+#####
+
+class z:
+    v = 4
+
+g = FIM()
+>>> z
+ID:2
+#####
+
+class b:
+    i = [1, 2]
+
+n = FIM()
+>>> b
+ID:2
+#####
+
+def t(w, a, v, m):
+    return (((w * a) - v) + m)
+
+b = FIM(3, 2, 2, 6)
+>>> t
+ID:1
+#####
+
+class q:
+    r = 96
+
+g = FIM()
+>>> q
+ID:2
+#####
+
+def g(m):
+    return m
+
+j = FIM(9)
+>>> g
+ID:1
+#####
+
+class k:
+    u = 95
+
+b = FIM()
+>>> k
+ID:2
+#####
+
+z = 80
+
+q = FIM + 2
+>>> z
+ID:0
+#####
+
+def d(q):
+    return q[1:]
+
+o = FIM([3])
+>>> d
+ID:1
+#####
+
+def n(t):
+    return t[1:]
+
+f = FIM([5])
+>>> n
+ID:1
+#####
+
+class f:
+    r = [1, 2]
+
+c = FIM()
+>>> f
+ID:2
+#####
+
+def b(a):
+    return a.capitalize()
+
+e = FIM('y')
+>>> b
+ID:1
+#####
+
+k = 13
+
+o = FIM + 2
+>>> k
+ID:0
+#####
+
+o = [3, 7]
+
+FIM.append(16)
+>>> o
+ID:0
+#####
+
+class t:
+    d = 79
+
+e = FIM()
+>>> t
+ID:2
+#####
+
+y = [3, 9]
+
+FIM.append(12)
+>>> y
+ID:0
+#####
+
+def m(n, s, o, u):
+    return (((n - s) * o) - u)
+
+z = FIM(4, 5, 4, 5)
+>>> m
+ID:1
+#####
+
+class g:
+    s = 11
+
+b = FIM()
+>>> g
+ID:2
+#####
+
+s = 'ppp'
+
+v = FIM.upper()
+>>> s
+ID:0
+#####
+
+n = [1, 7]
+
+FIM.append(18)
+>>> n
+ID:0
+#####
+
+a = [3, 7]
+
+FIM.append(13)
+>>> a
+ID:0
+#####
+
+def d(y, w):
+    return (y - w)
+
+q = FIM(10, 3)
+>>> d
+ID:1
+#####
+
+class o:
+    r = 73
+
+d = FIM()
+>>> o
+ID:2
+#####
+
+class b:
+    y = [1, 2]
+
+d = FIM()
+>>> b
+ID:2
+#####
+
+c = 'jjj'
+
+y = FIM.upper()
+>>> c
+ID:0
+#####
+
+class b:
+    t = 'i'
+
+q = FIM()
+>>> b
+ID:2
+#####
+
+i = 95
+
+d = FIM + 7
+>>> i
+ID:0
+#####
+
+class o:
+    v = 'f'
+
+s = FIM()
+>>> o
+ID:2
+#####
+
+class k:
+    d = 'l'
+
+q = FIM()
+>>> k
+ID:2
+#####
+
+t = 'ddd'
+
+u = FIM.upper()
+>>> t
+ID:0
+#####
+
+class p:
+    f = 21
+
+k = FIM()
+>>> p
+ID:2
+#####
+
+def k(t, c, d):
+    return ((t * c) * d)
+
+v = FIM(2, 10, 1)
+>>> k
+ID:1
+#####
+
+s = 28.65
+
+b = FIM * 1.5
+>>> s
+ID:0
+#####
+
+j = [5, 9]
+
+FIM.append(15)
+>>> j
+ID:0
+#####
+
+def a(k, r, e):
+    return k + r
+
+d = FIM([1], [3], [5])
+>>> a
+ID:1
+#####
+
+class b:
+    u = 54
+
+n = FIM()
+>>> b
+ID:2
+#####
+
+class c:
+    r = 'a'
+
+t = FIM()
+>>> c
+ID:2
+#####
+
+i = 35.77
+
+a = FIM * 1.5
+>>> i
+ID:0
+#####
+
+def m(n, j, y, x):
+    return n + j
+
+u = FIM('a', 'w', 'h', 'p')
+>>> m
+ID:1
+#####
+
+a = 32
+
+d = FIM + 6
+>>> a
+ID:0
+#####
+
+m = 'sss'
+
+i = FIM.upper()
+>>> m
+ID:0
+#####
+
+v = 85
+
+m = FIM + 5
+>>> v
+ID:0
+#####
+
+class c:
+    r = 'q'
+
+a = FIM()
+>>> c
+ID:2
+#####
+
+d = 48.85
+
+b = FIM * 1.5
+>>> d
+ID:0
+#####
+
+class c:
+    q = [1, 2]
+
+i = FIM()
+>>> c
+ID:2
+#####
+
+def z(e, n, g):
+    return e + n
+
+i = FIM([5], [3], [1])
+>>> z
+ID:1
+#####
+
+def o(s, h):
+    return s + h
+
+e = FIM('a', 'z')
+>>> o
+ID:1
+#####
+
+j = 'www'
+
+y = FIM.upper()
+>>> j
+ID:0
+#####
+
+class v:
+    w = 't'
+
+d = FIM()
+>>> v
+ID:2
+#####
+
+class u:
+    p = 46
+
+j = FIM()
+>>> u
+ID:2
+#####
+
+class q:
+    e = 'v'
+
+u = FIM()
+>>> q
+ID:2
+#####
+
+def g(y, i, w, e):
+    return (((y - i) - w) + e)
+
+r = FIM(1, 5, 2, 8)
+>>> g
+ID:1
+#####
+
+n = 'kkk'
+
+f = FIM.upper()
+>>> n
+ID:0
+#####
+
+class c:
+    e = 48
+
+x = FIM()
+>>> c
+ID:2
+#####
+
+class a:
+    n = [1, 2]
+
+j = FIM()
+>>> a
+ID:2
+#####
+
+r = [1, 9]
+
+FIM.append(11)
+>>> r
+ID:0
+#####
+
+v = 91
+
+f = FIM + 8
+>>> v
+ID:0
+#####
+
+u = 100
+
+c = FIM + 2
+>>> u
+ID:0
+#####
+
+def h(m, c):
+    return m + c
+
+b = FIM('a', 'i')
+>>> h
+ID:1
+#####
+
+i = 41
+
+r = FIM + 1
+>>> i
+ID:0
+#####
+
+class i:
+    s = 16
+
+m = FIM()
+>>> i
+ID:2
+#####
+
+class o:
+    x = 'q'
+
+w = FIM()
+>>> o
+ID:2
+#####
+
+def y(q):
+    return q.capitalize()
+
+x = FIM('p')
+>>> y
+ID:1
+#####
+
+x = 11.31
+
+m = FIM * 1.5
+>>> x
+ID:0
+#####
+
+class r:
+    t = 'm'
+
+e = FIM()
+>>> r
+ID:2
+#####
+
+def l(k, v, a):
+    return ((k + v) - a)
+
+m = FIM(6, 2, 8)
+>>> l
+ID:1
+#####
+
+class s:
+    m = [1, 2]
+
+h = FIM()
+>>> s
+ID:2
+#####
+
+class t:
+    z = 87
+
+b = FIM()
+>>> t
+ID:2
+#####
+
+r = [1, 7]
+
+FIM.append(16)
+>>> r
+ID:0
+#####
+
+def d(z, k, j, y):
+    return (((z + k) - j) + y)
+
+g = FIM(1, 5, 9, 8)
+>>> d
+ID:1
+#####
+
+class i:
+    w = 29
+
+e = FIM()
+>>> i
+ID:2
+#####
+
+def r(i, k, m):
+    return ((i - k) + m)
+
+n = FIM(6, 4, 1)
+>>> r
+ID:1
+#####
+
+class v:
+    a = 41
+
+z = FIM()
+>>> v
+ID:2
+#####
+
+y = 82
+
+k = FIM + 3
+>>> y
+ID:0
+#####
+
+def i(j):
+    return j
+
+c = FIM(1)
+>>> i
+ID:1
+#####
+
+def m(d, n):
+    return (d + n)
+
+w = FIM(1, 1)
+>>> m
+ID:1
+#####
+
+r = [5, 6]
+
+FIM.append(20)
+>>> r
+ID:0
+#####
+
+class g:
+    s = 76
+
+b = FIM()
+>>> g
+ID:2
+#####
+
+class k:
+    n = 'v'
+
+e = FIM()
+>>> k
+ID:2
+#####
+
+class w:
+    t = 39
+
+h = FIM()
+>>> w
+ID:2
+#####
+
+r = [4, 6]
+
+FIM.append(17)
+>>> r
+ID:0
+#####
+
+z = 'sss'
+
+g = FIM.upper()
+>>> z
+ID:0
+#####
+
+o = 48.7
+
+g = FIM * 1.5
+>>> o
+ID:0
+#####
+
+class e:
+    y = [1, 2]
+
+s = FIM()
+>>> e
+ID:2
+#####
+
+class c:
+    n = 21
+
+d = FIM()
+>>> c
+ID:2
+#####
+
+def i(c, s):
+    return c + s
+
+b = FIM([3], [4])
+>>> i
+ID:1
+#####
+
+def c(g):
+    return g[1:]
+
+f = FIM([1])
+>>> c
+ID:1
+#####
+
+u = 91
+
+n = FIM + 4
+>>> u
+ID:0
+#####
+
+def d(v, j, q):
+    return v + j
+
+l = FIM('o', 's', 'p')
+>>> d
+ID:1
+#####
+
+r = [1, 7]
+
+FIM.append(19)
+>>> r
+ID:0
+#####
+
+h = [4, 7]
+
+FIM.append(16)
+>>> h
+ID:0
+#####
+
+b = [5, 8]
+
+FIM.append(13)
+>>> b
+ID:0
+#####
+
+def h(l):
+    return l.capitalize()
+
+b = FIM('x')
+>>> h
+ID:1
+#####
+
+e = [3, 8]
+
+FIM.append(17)
+>>> e
+ID:0
+#####
+
+a = 12
+
+w = FIM + 10
+>>> a
+ID:0
+#####
+
+m = 97
+
+o = FIM + 6
+>>> m
+ID:0
+#####
+
+q = 46
+
+x = FIM + 6
+>>> q
+ID:0
+#####
+
+r = 'vvv'
+
+d = FIM.upper()
+>>> r
+ID:0
+#####
+
+class u:
+    m = 'q'
+
+w = FIM()
+>>> u
+ID:2
+#####
+
+n = [1, 7]
+
+FIM.append(16)
+>>> n
+ID:0
+#####
+
+class e:
+    q = 'u'
+
+w = FIM()
+>>> e
+ID:2
+#####
+
+def m(x, d, k, o):
+    return (((x + d) + k) * o)
+
+r = FIM(7, 5, 9, 7)
+>>> m
+ID:1
+#####
+
+v = 46
+
+n = FIM + 10
+>>> v
+ID:0
+#####
+
+def q(n, k):
+    return (n + k)
+
+p = FIM(7, 1)
+>>> q
+ID:1
+#####
+
+class g:
+    a = 'd'
+
+k = FIM()
+>>> g
+ID:2
+#####
+
+def x(f):
+    return f.capitalize()
+
+m = FIM('s')
+>>> x
+ID:1
+#####
+
+class r:
+    j = [1, 2]
+
+b = FIM()
+>>> r
+ID:2
+#####
+
+f = [2, 8]
+
+FIM.append(16)
+>>> f
+ID:0
+#####
+
+def d(v, n, x, q):
+    return v + n
+
+t = FIM([2], [2], [4], [2])
+>>> d
+ID:1
+#####
+
+def y(e, f, w, l):
+    return (((e + f) + w) + l)
+
+s = FIM(1, 5, 9, 5)
+>>> y
+ID:1
+#####
+
+def k(p, e):
+    return p + e
+
+a = FIM([1], [3])
+>>> k
+ID:1
+#####
+
+class u:
+    o = 'j'
+
+s = FIM()
+>>> u
+ID:2
+#####
+
+f = 41
+
+t = FIM + 9
+>>> f
+ID:0
+#####
+
+def r(x, v):
+    return x + v
+
+q = FIM([1], [2])
+>>> r
+ID:1
+#####
+
+class z:
+    h = 'e'
+
+d = FIM()
+>>> z
+ID:2
+#####
+
+class n:
+    y = 41
+
+e = FIM()
+>>> n
+ID:2
+#####
+
+b = 30.52
+
+f = FIM * 1.5
+>>> b
+ID:0
+#####
+
+def j(h):
+    return h.capitalize()
+
+b = FIM('r')
+>>> j
+ID:1
+#####
