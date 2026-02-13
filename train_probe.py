@@ -280,6 +280,7 @@ u = v + 1
     # steering:
 
     prompt = get_prompt(prompt_prefix, prompt_suffix)
+    print(prompt)
 
     layer=0
     for result in results:

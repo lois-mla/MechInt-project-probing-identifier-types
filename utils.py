@@ -110,8 +110,8 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
 
 
 def load_dataset(part="FULL"):
-    def_fim_dict = read_fim_dataset("def_FIM_data_final.txt")
-    call_fim_dict = read_fim_dataset("call_FIM_data_final.txt")
+    def_fim_dict = read_fim_dataset("def_FIM_data_nocont.txt")
+    call_fim_dict = read_fim_dataset("call_FIM_data_nocont.txt")
 
     def_prompts, def_ids = get_prompts_and_IDS(def_fim_dict)
     call_prompts, call_ids = get_prompts_and_IDS(call_fim_dict)
