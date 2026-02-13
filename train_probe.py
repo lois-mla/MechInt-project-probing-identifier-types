@@ -342,7 +342,7 @@ v = w['z']
 
     print(prompt)
     print("alpha: ", alpha)
-    print(df.to_markdown()) 
+    print(df) 
 
 
     # # print best layer
