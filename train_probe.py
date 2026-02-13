@@ -271,9 +271,28 @@ def main():
     # j = f // 2
     #     """
 
-    prompt_prefix = """class n:
+#     prompt_prefix = """class n:
+#     o = 3.14
+#     def p(self):
+#         return self.o
+
+
+# """
+    
+#     prompt_suffix = """ = {'z': 99}
+
+# def q(r):
+#     return r.capitalize()
+
+# s = q('word')
+# t = n()
+# u = t.p()
+# v = w['z']
+#     """
+
+    prompt_prefix = """class cat:
     o = 3.14
-    def p(self):
+    def pet(self):
         return self.o
 
 
@@ -281,13 +300,13 @@ def main():
     
     prompt_suffix = """ = {'z': 99}
 
-def q(r):
+def dog(r):
     return r.capitalize()
 
-s = q('word')
-t = n()
-u = t.p()
-v = w['z']
+s = dog('word')
+t = cat()
+u = t.pet()
+v = pot['z']
     """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
