@@ -10,6 +10,8 @@ import torch
 import transformer_lens
 from pathlib import Path
 from typing import List, Dict
+from linearprobe_new import LinearProbe
+import os
 
 model_id = "codellama/CodeLlama-7b-hf"
 
@@ -109,9 +111,9 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     return model, tokenizer
 
 
-def load_dataset(part="FULL"):
-    def_fim_dict = read_fim_dataset("def_FIM_data_nocont.txt")
-    call_fim_dict = read_fim_dataset("call_FIM_data_nocont.txt")
+def load_dataset(data_def, data_call, part="FULL"):
+    def_fim_dict = read_fim_dataset(data_def)
+    call_fim_dict = read_fim_dataset(data_call)
 
     def_prompts, def_ids = get_prompts_and_IDS(def_fim_dict)
     call_prompts, call_ids = get_prompts_and_IDS(call_fim_dict)
@@ -179,5 +181,33 @@ def fill_in_middle(file):
         # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
         print(tokenizer.decode(outputs[0]))
         print("end")
+
+
+def save_probe(probe, path, d_model, num_classes):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    torch.save({
+        "state_dict": probe.state_dict(),
+        "d_model": d_model,
+        "num_classes": num_classes,
+    }, path)
+
+
+def load_probe(path, device="cuda"):
+    checkpoint = torch.load(path, map_location=device)
+
+    probe = LinearProbe(
+        d_model=checkpoint["d_model"],
+        num_classes=checkpoint["num_classes"],
+    )
+
+    probe.load_state_dict(checkpoint["state_dict"])
+    probe.to(device)
+    probe.eval()
+
+    return probe
+
+
+
 
 # fill_in_middle("training_data/template.txt")

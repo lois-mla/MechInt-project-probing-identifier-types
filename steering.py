@@ -1,5 +1,6 @@
 import torch
 import transformer_lens
+import pandas as pd
 
 
 def get_class_steering_vector(
@@ -101,63 +102,134 @@ def run_with_last_token_steering(
 
 
 
-@torch.inference_mode()
+# @torch.inference_mode()
+# def compare_steering(
+#     model: transformer_lens.HookedTransformer,
+#     tokenizer,
+#     probe,
+#     prompt: str,
+#     id: int,
+#     contrastive_id: int,
+#     alpha: float = 5.0,
+#     layer: int = 24,
+#     resid_type: str = "mlp_out",
+# ):
+#     model = model.to("cuda")
+
+#     # tokens
+#     tokens = model.to_tokens(prompt).to("cuda")
+
+#     steering_vec = get_contrastive_steering_vector(
+#         probe,
+#         pos_class=id,
+#         neg_class=contrastive_id,
+#     )
+
+#     logits_base = model(tokens)
+#     logits_steered = run_with_last_token_steering(
+#         model=model,
+#         tokenizer=tokenizer,
+#         prompt=prompt,
+#         steering_vector=steering_vec,
+#         alpha=alpha,
+#         layer=layer,
+#         resid_type="mlp_out",
+
+#     )
+
+#     token_id = logits_base[0, -1].argmax().item()
+
+#     print("=== BASELINE ===")
+#     show_topk(logits_base, tokenizer, k=50)
+
+#     print("\n=== STEERED ===")
+#     show_topk(logits_steered, tokenizer, k=50)
+#     # print("Token id:     ", token_id)
+#     # print("Token string: ", tokenizer.convert_ids_to_tokens(token_id))
+#     # print("Decoded repr: ", repr(tokenizer.decode([token_id], skip_special_tokens=False)))
+
+
+#     # print("Baseline next token:", tokenizer.decode(logits_base[0, -1].argmax()))
+#     # print("Steered  next token:", tokenizer.decode(logits_steered[0, -1].argmax()))
+
+# def show_topk(logits, tokenizer, k=10):
+#     vals, ids = torch.topk(logits[0, -1], k)
+#     for v, i in zip(vals, ids):
+#         tok_id = i.item()
+#         tok = tokenizer.convert_ids_to_tokens(tok_id)
+#         dec = tokenizer.decode([tok_id], skip_special_tokens=False)
+#         print(f"{tok!r:12s} | {dec!r:12s} | logit={v.item():.2f}")
+
+
+
+
+def get_topk_dict(logits, tokenizer, k=10):
+    vals, ids = torch.topk(logits[0, -1], k)
+    row = {}
+    for rank, (v, i) in enumerate(zip(vals, ids), start=1):
+        tok_id = i.item()
+        dec = tokenizer.decode([tok_id], skip_special_tokens=False)
+        row[f"top_{rank}"] = f"{dec} ({v.item():.2f})"
+    return row
+
+
 def compare_steering(
-    model: transformer_lens.HookedTransformer,
+    model,
     tokenizer,
-    probe,
+    results,          # dictionary from probe_all_layers
     prompt: str,
     id: int,
     contrastive_id: int,
-    alpha: float = 5.0,
-    layer: int = 24,
+    alpha: float = 10.0,
     resid_type: str = "mlp_out",
+    k: int = 10,
 ):
-    model = model.to("cuda")
+    """"
+    Returns df with baseline & each layer steered
+    """
+    device = "cuda"
+    model = model.to(device)
+    tokens = model.to_tokens(prompt).to(device)
 
-    # tokens
-    tokens = model.to_tokens(prompt).to("cuda")
+    table = {}
 
-    steering_vec = get_contrastive_steering_vector(
-        probe,
-        pos_class=id,
-        neg_class=contrastive_id,
-    )
+    # baseline logits
+    with torch.no_grad():
+        logits_base = model(tokens)
 
-    logits_base = model(tokens)
-    logits_steered = run_with_last_token_steering(
-        model=model,
-        tokenizer=tokenizer,
-        prompt=prompt,
-        steering_vector=steering_vec,
-        alpha=alpha,
-        layer=layer,
-        resid_type="mlp_out",
+    table["baseline"] = get_topk_dict(logits_base, tokenizer, k)
 
-    )
+    # steer layers & get logits
+    for layer, result in results.items():
 
-    token_id = logits_base[0, -1].argmax().item()
+        probe = result["probe"]
 
-    print("=== BASELINE ===")
-    show_topk(logits_base, tokenizer, k=50)
+        # get contr steering vector for each layer
+        steering_vec = get_contrastive_steering_vector(
+            probe,
+            pos_class=id,
+            neg_class=contrastive_id,
+        )
 
-    print("\n=== STEERED ===")
-    show_topk(logits_steered, tokenizer, k=50)
-    # print("Token id:     ", token_id)
-    # print("Token string: ", tokenizer.convert_ids_to_tokens(token_id))
-    # print("Decoded repr: ", repr(tokenizer.decode([token_id], skip_special_tokens=False)))
+        with torch.no_grad():
+            logits_steered = run_with_last_token_steering(
+                model=model,
+                tokenizer=tokenizer,
+                prompt=prompt,
+                steering_vector=steering_vec,
+                alpha=alpha,
+                layer=layer,
+                resid_type=resid_type,
+            )
 
+        table[f"layer_{layer}"] = get_topk_dict(logits_steered, tokenizer, k)
 
-    # print("Baseline next token:", tokenizer.decode(logits_base[0, -1].argmax()))
-    # print("Steered  next token:", tokenizer.decode(logits_steered[0, -1].argmax()))
+        del steering_vec
+        torch.cuda.empty_cache()
 
-def show_topk(logits, tokenizer, k=10):
-    vals, ids = torch.topk(logits[0, -1], k)
-    for v, i in zip(vals, ids):
-        tok_id = i.item()
-        tok = tokenizer.convert_ids_to_tokens(tok_id)
-        dec = tokenizer.decode([tok_id], skip_special_tokens=False)
-        print(f"{tok!r:12s} | {dec!r:12s} | logit={v.item():.2f}")
+    df = pd.DataFrame.from_dict(table, orient="index")
+    return df
+
 
 # @torch.inference_mode()
 # def run_with_steering(
