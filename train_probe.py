@@ -60,7 +60,7 @@ def probe_layer(
     layer: int,
     num_classes: int = 3,
     device: str = "cuda",
-    save_dir: str = "probes",
+    save_dir: str = "probes_stored/probes_no_cont",
 ):
     print(f"\nProbing layer {layer}")
 
@@ -294,6 +294,7 @@ v = w['z']
 #     print(prompt)
     data_def = "training_data/def_FIM_data_final.txt"
     data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = "probes_stored/probes_no_cont"
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset(data_def, data_call)
@@ -313,6 +314,7 @@ v = w['z']
         prompts=prompts,
         labels=labels,
         n_layers=n_layers,
+        save_dir=probe_save_dir
     )
 
     # print best layer
