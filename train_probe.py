@@ -2,6 +2,7 @@ import torch
 import os
 import transformer_lens
 from transformers import AutoTokenizer
+from tabulate import tabulate
 # import matplotlib.pyplot as plt
 
 from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
@@ -156,115 +157,111 @@ def probe_all_layers(
     return results
 
 
-def steer_all_layers():
-
-
-
 def main():
 
-#     ["""def a(x, y):
-#     return x * y
+    #     ["""def a(x, y):
+    #     return x * y
 
-# class q:
-#     b = 4
-#     def m(self, z):
-#         return z + 1
+    # class q:
+    #     b = 4
+    #     def m(self, z):
+    #         return z + 1
 
-# c = [1, 2]
+    # c = [1, 2]
 
-# o = q()
-# p = o.b
-# r = a(p, p)
-# s = FIM    
-#     """, """class FIM:
-#     k = 7
+    # o = q()
+    # p = o.b
+    # r = a(p, p)
+    # s = FIM    
+    #     """, """class FIM:
+    #     k = 7
 
-# d = 3.5
+    # d = 3.5
 
-# def n(u, v):
-#     return u - v
+    # def n(u, v):
+    #     return u - v
 
-# o = FIM()
-# p = o.k
-# r = n(p, d)
-# s = d * 2
-#     """, """x = {1, 2, 3}
+    # o = FIM()
+    # p = o.k
+    # r = n(p, d)
+    # s = d * 2
+    #     """, """x = {1, 2, 3}
 
-# def FIM(a, b, c):
-#     a = a + b
-#     return a
+    # def FIM(a, b, c):
+    #     a = a + b
+    #     return a
 
-# class l:
-#     y = 5
+    # class l:
+    #     y = 5
 
-# o = l()
-# p = o.y
-# r = FIM(p, p, p)
-# s = x
-# """, """class t:
-#     a = 2
-#     def f(self, q):
-#         return q * 3
+    # o = l()
+    # p = o.y
+    # r = FIM(p, p, p)
+    # s = x
+    # """, """class t:
+    #     a = 2
+    #     def f(self, q):
+    #         return q * 3
 
-# def w(e):
-#     return e + 1
+    # def w(e):
+    #     return e + 1
 
-# FIM = {"x": 9}
+    # FIM = {"x": 9}
 
-# o = t()
-# p = o.a
-# r = w(p)
-# s = FIM
-# """, """def k(a, b):
-#     return a + b
+    # o = t()
+    # p = o.a
+    # r = w(p)
+    # s = FIM
+    # """, """def k(a, b):
+    #     return a + b
 
-# class s:
-#     m = 8
+    # class s:
+    #     m = 8
 
-# v = 10
+    # v = 10
 
-# o = FIM()
-# p = o.m
-# r = k(p, v)
-# u = v + 1
-# ""","""class j:
-#     r = 6
+    # o = FIM()
+    # p = o.m
+    # r = k(p, v)
+    # u = v + 1
+    # ""","""class j:
+    #     r = 6
 
-# def c(x):
-#     return x * 2
+    # def c(x):
+    #     return x * 2
 
-# FIM = [4, 5]
+    # FIM = [4, 5]
 
-# o = j()
-# p = o.r
-# q = c(p)
-# z = FIM
-# """]    
+    # o = j()
+    # p = o.r
+    # q = c(p)
+    # z = FIM
+    # """]    
 
 
-    # put new prompt here
-    # answer should be m
-#     prompt_prefix = """class x:
-#     y = 'base'
-#     def __init__(self, z):
-#         self.z = z
-#     def a(self, b):
-#         return self.y + self.z + b
+        # put new prompt here
+        # answer should be m
+    #     prompt_prefix = """class x:
+    #     y = 'base'
+    #     def __init__(self, z):
+    #         self.z = z
+    #     def a(self, b):
+    #         return self.y + self.z + b
 
-# def c(d, e):
-#     return d - e
+    # def c(d, e):
+    #     return d - e
 
-# f = 100
+    # f = 100
 
-# g = c(f, 10)
-# h = 
+    # g = c(f, 10)
+    # h = 
 
-# """
-    
-#     prompt_suffix = """('mid')
-# i = h.a('end')
-# j = f // 2
-#     """
+    # """
+        
+    #     prompt_suffix = """('mid')
+    # i = h.a('end')
+    # j = f // 2
+    #     """
 
     prompt_prefix = """class n:
     o = 3.14
@@ -322,6 +319,8 @@ v = w['z']
 
     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
+    alpha = 10.0
+
     df = compare_steering(
     model=model,
     tokenizer=tokenizer,
@@ -329,12 +328,14 @@ v = w['z']
     prompt=prompt,
     id=0,
     contrastive_id=1,
-    alpha=10.0,
+    alpha=alpha,
     resid_type="mlp_out",
     k=20,
 )
 
-    print(df)
+    print(prompt)
+    print("alpha: ", alpha)
+    print(tabulate(df, headers='keys', tablefmt='psql'))
 
 
 
