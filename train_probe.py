@@ -345,6 +345,7 @@ v = w['z']
 
     print(prompt)
     print("alpha: ", alpha)
+    pd.set_option('display.max_columns', None)
     print(df) 
 
 
