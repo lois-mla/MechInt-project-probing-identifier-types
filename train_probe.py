@@ -327,6 +327,7 @@ v = w['z']
     # steering:
 
     prompt = get_prompt(prompt_prefix, prompt_suffix)
+    print(prompt)
 
     alpha = 10.0
 
