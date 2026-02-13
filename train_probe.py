@@ -1,6 +1,7 @@
 import torch
 import os
 import transformer_lens
+import pandas as pd
 from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
@@ -270,9 +271,28 @@ def main():
     # j = f // 2
     #     """
 
-    prompt_prefix = """class n:
+#     prompt_prefix = """class n:
+#     o = 3.14
+#     def p(self):
+#         return self.o
+
+
+# """
+    
+#     prompt_suffix = """ = {'z': 99}
+
+# def q(r):
+#     return r.capitalize()
+
+# s = q('word')
+# t = n()
+# u = t.p()
+# v = w['z']
+#     """
+
+    prompt_prefix = """class cat:
     o = 3.14
-    def p(self):
+    def pet(self):
         return self.o
 
 
@@ -280,20 +300,20 @@ def main():
     
     prompt_suffix = """ = {'z': 99}
 
-def q(r):
+def dog(r):
     return r.capitalize()
 
-s = q('word')
-t = n()
-u = t.p()
-v = w['z']
+s = dog('word')
+t = cat()
+u = t.pet()
+v = pot['z']
     """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
-    data_def = "training_data/def_FIM_data_final.txt"
-    data_call = "training_data/call_FIM_data_final.txt"
+    data_def = "training_data/def_FIM_data_nocont.txt"
+    data_call = "training_data/call_FIM_data_nocont.txt"
     probe_save_dir = "probes_stored/probes_no_cont"
 
     model, tokenizer = load_model()
@@ -329,7 +349,7 @@ v = w['z']
     prompt = get_prompt(prompt_prefix, prompt_suffix)
     print(prompt)
 
-    alpha = 10.0
+    alpha = 50.0
 
     df = compare_steering(
     model=model,
@@ -345,6 +365,7 @@ v = w['z']
 
     print(prompt)
     print("alpha: ", alpha)
+    pd.set_option('display.max_columns', None)
     print(df) 
 
 
