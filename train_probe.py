@@ -1,9 +1,10 @@
 import torch
+import os
 import transformer_lens
 from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
-from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model
+from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
 from steering import compare_steering, get_class_steering_vector
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -11,7 +12,46 @@ from linearprobe_new import (
     train_probe,
     evaluate_probe,
 )
-# from steering import 
+
+# def probe_layer(
+#     extractor,
+#     prompts,
+#     labels,
+#     layer: int,
+#     num_classes: int = 3,
+#     device: str = "cuda",
+# ):
+#     print(f"Probing layer {layer}")
+
+#     # extract features
+#     X = extractor.extract(prompts, layer=layer)
+#     X = X.float().to(device)
+#     y = labels.to(device)
+
+#     # split data
+#     X_train, y_train, X_test, y_test = train_test_split(
+#         X, y, test_frac=0.2, seed=42
+#     )
+
+#     print(f"Train size: {len(X_train)} | Test size: {len(X_test)}")
+
+#     # train
+#     D = X.shape[1]
+#     probe = LinearProbe(d_model=D, num_classes=num_classes).to(device)
+#     train_probe(probe, X_train, y_train, num_epochs=30, lr=1e-3)
+
+#     # evaluate
+#     train_acc = evaluate_probe(probe, X_train, y_train)
+#     test_acc = evaluate_probe(probe, X_test, y_test)
+
+#     print(f"Train acc: {train_acc:.4f}")
+#     print(f"Test  acc: {test_acc:.4f}")
+
+#     return {
+#         "probe": probe,
+#         "train_acc": train_acc,
+#         "test_acc": test_acc,
+#     }
 
 def probe_layer(
     extractor,
@@ -20,27 +60,47 @@ def probe_layer(
     layer: int,
     num_classes: int = 3,
     device: str = "cuda",
+    save_dir: str = "probes",
 ):
-    print(f"Probing layer {layer}")
+    print(f"\nProbing layer {layer}")
 
-    # extract features
+    save_path = os.path.join(save_dir, f"probe_layer_{layer}.pt")
+
+    # Extract features (needed either way for eval)
     X = extractor.extract(prompts, layer=layer)
     X = X.float().to(device)
     y = labels.to(device)
 
-    # split data
     X_train, y_train, X_test, y_test = train_test_split(
         X, y, test_frac=0.2, seed=42
     )
 
-    print(f"Train size: {len(X_train)} | Test size: {len(X_test)}")
-
-    # train
     D = X.shape[1]
-    probe = LinearProbe(d_model=D, num_classes=num_classes).to(device)
-    train_probe(probe, X_train, y_train, num_epochs=30, lr=1e-3)
 
-    # evaluate
+    if os.path.exists(save_path):
+        print("Loading existing probe...")
+        probe = load_probe(save_path, device=device)
+
+    else:
+        print("Training new probe...")
+        probe = LinearProbe(d_model=D, num_classes=num_classes).to(device)
+
+        train_probe(
+            probe,
+            X_train,
+            y_train,
+            num_epochs=30,
+            lr=1e-3,
+        )
+
+        save_probe(
+            probe,
+            save_path,
+            d_model=D,
+            num_classes=num_classes,
+        )
+
+    # Evaluate (always useful)
     train_acc = evaluate_probe(probe, X_train, y_train)
     test_acc = evaluate_probe(probe, X_test, y_test)
 
@@ -54,11 +114,31 @@ def probe_layer(
     }
 
 
+# def probe_all_layers(
+#     extractor,
+#     prompts,
+#     labels,
+#     n_layers: int,
+# ):
+#     results = {}
+
+#     for layer in range(n_layers):
+#         result = probe_layer(
+#             extractor=extractor,
+#             prompts=prompts,
+#             labels=labels,
+#             layer=layer,
+#         )
+#         results[layer] = result
+
+#     return results
+
 def probe_all_layers(
     extractor,
     prompts,
     labels,
     n_layers: int,
+    save_dir: str = "probes",
 ):
     results = {}
 
@@ -68,10 +148,17 @@ def probe_all_layers(
             prompts=prompts,
             labels=labels,
             layer=layer,
+            save_dir=save_dir,
         )
+
         results[layer] = result
 
     return results
+
+
+def steer_all_layers():
+
+
 
 def main():
 
@@ -201,9 +288,11 @@ v = w['z']
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
 
     model, tokenizer = load_model()
-    prompts, labels = load_dataset()
+    prompts, labels = load_dataset(data_def, data_call)
     device = "cuda"
 
     extractor = ResidualActivationExtractor(
@@ -212,81 +301,9 @@ v = w['z']
         device=device,
         batch_size=8,
     )
-    
-
-#     # probe all layers
-#     for layer in range (32):
-#         results_full = probe_layer(
-#             extractor=extractor,
-#             prompts=prompts,
-#             labels=labels,
-#             layer=layer,
-#         )
-#         probe_full = results_full["probe"]
-#         # print the train and test accuracy of this layer
-#         print(f"Layer {layer} | Train acc: {results_full['train_acc']:.4f} | Test acc: {results_full['test_acc']:.4f}")
-
-#         compare_steering(
-#             model=model,
-#             tokenizer=tokenizer,
-#             probe=probe_full,        # trained on layer 25
-#             prompt=prompt,
-#             id=1,                    # positive class
-#             contrastive_id=2,        # negative class
-#             alpha=50.0,            # 'how much' you steer
-#             layer=layer,
-#             resid_type="mlp_out",    # must match extractor
-#         )
-
-#             # clean probe tensors
-#         del probe_full
-#         torch.cuda.empty_cache()
-
-
-
-
-
-    # device = "cuda"
-
-    # model, tokenizer = load_model()
-    # prompts, labels = load_dataset()
-
-    # extractor = ResidualActivationExtractor(
-    #     model=model,
-    #     tokenizer=tokenizer,
-    #     device=device,
-    #     batch_size=8,
-    # )
 
     n_layers = model.cfg.n_layers
 
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    # )
-    # probe_full = results_full["probe"]
-
-    # for i in range(3):
-    #     full_feature_direction_i = get_class_steering_vector(probe_full, i)
-    #     call_feature_direction_i = get_class_steering_vector(probe_call, i)
-    #     def_feature_direction_i = get_class_steering_vector(probe_def, i)
-    #     print(f"feature direction {i} norm full:", full_feature_direction_i)
-    #     print(f"feature direction {i} norm call:", call_feature_direction_i)
-    #     print(f"feature direction {i} norm def:", def_feature_direction_i)
-
-    #     # similarity between the feature directions
-    #     similarity_full_call = torch.cosine_similarity(full_feature_direction_i, call_feature_direction_i, dim=0)
-    #     similarity_full_def = torch.cosine_similarity(full_feature_direction_i, def_feature_direction_i, dim=0)
-    #     similarity_def_call = torch.cosine_similarity(def_feature_direction_i, call_feature_direction_i, dim=0)
-
-    #     print(f"Similarity between feature direction {i} for full and call:", similarity_full_call.item())
-    #     print(f"Similarity between feature direction {i} for full and def:", similarity_full_def.item())
-    #     print(f"Similarity between feature direction {i} for def and call:", similarity_def_call.item())
-
-
-    # COMMENTED THIS OUT FOR NOW JUST UNCOMMENT IF U WANT TO RUN IT AGAIN
     results = probe_all_layers(
         extractor=extractor,
         prompts=prompts,
@@ -305,25 +322,20 @@ v = w['z']
 
     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
-    layer=0
-    for layer, result in results.items():
-        probe = result["probe"]
+    df = compare_steering(
+    model=model,
+    tokenizer=tokenizer,
+    results=results,
+    prompt=prompt,
+    id=0,
+    contrastive_id=1,
+    alpha=10.0,
+    resid_type="mlp_out",
+    k=20,
+)
 
-        compare_steering(
-            model=model,
-            tokenizer=tokenizer,
-            probe=probe,        #
-            prompt=prompt,
-            id=0,                    # positive class
-            contrastive_id=1,        # negative class
-            alpha=10.0,
-            layer=layer,                
-            resid_type="mlp_out",    # must match extractor
-        )
+    print(df)
 
-        layer += 1
-        del probe
-        torch.cuda.empty_cache()
 
 
     # # print best layer
