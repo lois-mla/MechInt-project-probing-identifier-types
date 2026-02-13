@@ -156,6 +156,14 @@ def probe_all_layers(
     return results
 
 
+# def steer_prompts_from_file(path: str, ):
+#     data = read_fim_dataset(path)
+
+#     for id, prefix, suffix, _ in data:
+
+
+
+
 def main():
 
     #     ["""def a(x, y):
