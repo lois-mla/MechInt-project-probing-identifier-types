@@ -2,7 +2,6 @@ import torch
 import os
 import transformer_lens
 from transformers import AutoTokenizer
-from tabulate import tabulate
 # import matplotlib.pyplot as plt
 
 from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
@@ -335,8 +334,7 @@ v = w['z']
 
     print(prompt)
     print("alpha: ", alpha)
-    print(tabulate(df, headers='keys', tablefmt='psql'))
-
+    print(df.to_markdown()) 
 
 
     # # print best layer
