@@ -349,6 +349,9 @@ v = w['z']
     print("Test accuracy:", results[best_layer]["test_acc"])
 
     print("All results:", results)
+    steering_path = "training_data/steering_data_new.txt"
+    steer_prompts_from_file(steering_path, model, tokenizer, results)
+
 
     # steering:
 
@@ -371,8 +374,6 @@ v = w['z']
 #     print(prompt)
 #     print("alpha: ", alpha)
 #     print(df) 
-    steering_path = "training_data/steering_data_new.txt"
-    steer_prompts_from_file(steering_path, model, tokenizer, results)
 
     # # print best layer
     # best_layer = max(results, key=lambda k: results[k]["test_acc"])
