@@ -1,6 +1,7 @@
 import torch
 import os
 import transformer_lens
+import pandas as pd
 from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
@@ -185,6 +186,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
             print("alpha: ", alpha)
             print("id: ", id)
             print("contrastive id: ", contrastive_id)
+            pd.set_option('display.max_columns', None)
             print(df) 
 
 
@@ -373,6 +375,7 @@ v = w['z']
 
 #     print(prompt)
 #     print("alpha: ", alpha)
+    # pd.set_option('display.max_columns', None)
 #     print(df) 
 
     # # print best layer
