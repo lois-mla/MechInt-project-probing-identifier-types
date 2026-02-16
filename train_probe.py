@@ -171,7 +171,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
             prompt = get_prompt(prompt_prefix, prompt_suffix)
             print(prompt)
 
-            alpha = 30.0
+            alpha = 50.0
 
             df = compare_steering(
             model=model,
