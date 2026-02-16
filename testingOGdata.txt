@@ -1,0 +1,172 @@
+class FIM:
+    def __init__(self):
+        self.data = []
+
+    def add(self, x):
+        self.data.append(x)
+
+bag = e()
+
+>>>e
+ID:2
+#####
+
+def p(a,b):
+    return(a+b)
+class c:
+    x=5
+x=3
+y=5
+
+z = FIM(x,y)
+
+>>>p
+ID:1
+#####
+
+def s(x):
+    return x * x
+class c:
+    def _init_(self, start=0):  
+        self.value = start
+    def inc(self):
+        self.value += 1
+        return self.value
+FIM = True
+sq = s(2)
+ctr = c(0)
+after = ctr.inc()
+total = ctr.value
+neg = not f
+both = f and False
+
+>>> f
+ID:0
+#####
+
+
+class i:
+    def _init_(self, name):
+        self.name = name
+        def greet(self):
+            return f'Hi {self.name}'
+def a(a, b):
+    return a + b
+n = 10
+res = a(1, 7)
+g = FIM('name3')
+msg = g.greet()
+n = g.name
+m = n + 3
+check = n > 5
+
+>>>i
+ID:2
+#####
+
+
+def i(j,c):
+    return j+c
+class r:
+    a=5
+k=3
+h = FIM()
+o=h.a
+at=i(o,k)
+d=k+3
+
+>>>r
+ID:2
+#####
+
+def apply_discount(current_price, discount_percent):
+    reduction = current_price * (discount_percent / 100)
+    final_amount = current_price - reduction
+    return final_amount
+
+class ShoppingCart:
+    def __init__(self, user_id):
+        self.user_id = user_id
+    def format_total(self, amount):
+        return f"User {self.user_id} Total: ${amount:.2f}"
+
+<FIM> = 150.0
+
+cart_session = ShoppingCart(8821)
+total_with_tax = apply_discount(base_price, 15)
+log_entry = cart_session.format_total(total_with_tax)
+final_price_str = str(base_price) + "_usd"
+
+>>>base_price
+ID:0
+#####
+
+reading_data = [22.5, 23.1, 21.9]
+
+class <FIM>:
+    def __init__(self, station_name, region):
+        self.station_name = station_name
+        self.region = region
+    def get_summary(self, val):
+        return f"Station {self.station_name} in {self.region} recorded {val}"
+
+def calculate_average(observations):
+    total = sum(observations)
+    avg = total / len(observations)
+    return avg
+
+mean_temp = calculate_average(reading_data)
+sensor_node = WeatherStation("North_Vent", "Arctic")
+output_report = sensor_node.get_summary(mean_temp)
+data_status = str(reading_data) + "_processed"
+
+>>>WeatherStation
+ID:2
+#####
+
+
+def verify_credentials(username, auth_token):
+    header = username + "_secure"
+    access_key = header + auth_token
+    return access_key
+
+class UserSession:
+    def __init__(self, session_id):
+        self.session_id = session_id
+    def get_token(self, salt):
+        return self.session_id + salt
+
+raw_secret = "Xy772"
+
+active_session = UserSession("ID_550")
+salt_value = str(raw_secret) + "_salted"
+temp_token = active_session.get_token("001")
+final_auth = <FIM>("admin_user", temp_token)
+
+>>>verify_credentials
+ID:1
+#####
+
+
+class DatabaseLogger:
+    def __init__(self, db_host, port):
+        self.db_host = db_host
+        self.port = port
+    def write_log(self, msg):
+        return f"LOG to {self.db_host}:{self.port} -> {msg}"
+
+error_payload = "Connection Timeout"
+
+def format_error(status_code, description):
+    tag = "CODE_" + str(status_code)
+    full_msg = tag + ": " + description
+    return full_msg
+
+system_log = <FIM>("192.168.1.1", 5432)
+message_string = format_error(500, error_payload)
+db_status = system_log.write_log(message_string)
+raw_debug = str(error_payload) + "_trace"
+
+>>>DatabaseLogger
+ID:2
+#####
