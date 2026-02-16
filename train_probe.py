@@ -315,6 +315,14 @@ def main():
 # u = t.p()
 # v = w['z']
 #     """
+def dog(r):
+    return r.capitalize()
+
+s = dog('word')
+t = cat()
+u = t.pet()
+v = pot['z']
+    """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
@@ -322,6 +330,9 @@ def main():
     data_def = "training_data/def_FIM_data_final.txt"
     data_call = "training_data/call_FIM_data_final.txt"
     probe_save_dir = "probes_stored/probes_final"
+    data_def = "training_data/def_FIM_data_nocont.txt"
+    data_call = "training_data/call_FIM_data_nocont.txt"
+    probe_save_dir = "probes_stored/probes_no_cont"
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset(data_def, data_call)
