@@ -297,24 +297,24 @@ def main():
     # j = f // 2
     #     """
 
-    prompt_prefix = """class n:
-    o = 3.14
-    def p(self):
-        return self.o
+#     prompt_prefix = """class n:
+#     o = 3.14
+#     def p(self):
+#         return self.o
 
 
-"""
+# """
     
-    prompt_suffix = """ = {'z': 99}
+#     prompt_suffix = """ = {'z': 99}
 
-def q(r):
-    return r.capitalize()
+# def q(r):
+#     return r.capitalize()
 
-s = q('word')
-t = n()
-u = t.p()
-v = w['z']
-    """
+# s = q('word')
+# t = n()
+# u = t.p()
+# v = w['z']
+#     """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
@@ -350,7 +350,7 @@ v = w['z']
     print("Best layer:", best_layer)
     print("Test accuracy:", results[best_layer]["test_acc"])
 
-    print("All results:", results)
+    # print("All results:", results)
     steering_path = "training_data/steering_data_new.txt"
     steer_prompts_from_file(steering_path, model, tokenizer, results)
 
