@@ -157,11 +157,37 @@ def probe_all_layers(
     return results
 
 
-# def steer_prompts_from_file(path: str, ):
-#     data = read_fim_dataset(path)
+def steer_prompts_from_file(path: str, model, tokenizer, results):
+    data = read_fim_dataset(path)
+    ids = [0, 1, 2]
 
-#     for id, prefix, suffix, _ in data:
+    for id, prompt_prefix, prompt_suffix, _ in data:
+        for contrastive_id in ids:
+            if contrastive_id == id:
+                continue
+            prompt = get_prompt(prompt_prefix, prompt_suffix)
+            print(prompt)
 
+            alpha = 10.0
+
+            df = compare_steering(
+            model=model,
+            tokenizer=tokenizer,
+            results=results,
+            prompt=prompt,
+            id=0,
+            contrastive_id=1,
+            alpha=alpha,
+            resid_type="mlp_out",
+            k=20,
+        )
+
+            print(prompt)
+            print("alpha: ", alpha)
+            print("id: ", id)
+            print("contrastive id: ", contrastive_id)
+            pd.set_option('display.max_columns', None)
+            print(df) 
 
 
 
@@ -289,17 +315,6 @@ def main():
 # u = t.p()
 # v = w['z']
 #     """
-
-    prompt_prefix = """class cat:
-    o = 3.14
-    def pet(self):
-        return self.o
-
-
-"""
-    
-    prompt_suffix = """ = {'z': 99}
-
 def dog(r):
     return r.capitalize()
 
@@ -312,6 +327,9 @@ v = pot['z']
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = "probes_stored/probes_final"
     data_def = "training_data/def_FIM_data_nocont.txt"
     data_call = "training_data/call_FIM_data_nocont.txt"
     probe_save_dir = "probes_stored/probes_no_cont"
@@ -335,6 +353,7 @@ v = pot['z']
         labels=labels,
         n_layers=n_layers,
         save_dir=probe_save_dir
+        
     )
 
     # print best layer
@@ -342,32 +361,33 @@ v = pot['z']
     print("Best layer:", best_layer)
     print("Test accuracy:", results[best_layer]["test_acc"])
 
-    print("All results:", results)
+    # print("All results:", results)
+    steering_path = "training_data/steering_data_new.txt"
+    steer_prompts_from_file(steering_path, model, tokenizer, results)
+
 
     # steering:
 
-    prompt = get_prompt(prompt_prefix, prompt_suffix)
-    print(prompt)
+#     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
-    alpha = 50.0
+#     alpha = 10.0
 
-    df = compare_steering(
-    model=model,
-    tokenizer=tokenizer,
-    results=results,
-    prompt=prompt,
-    id=0,
-    contrastive_id=1,
-    alpha=alpha,
-    resid_type="mlp_out",
-    k=20,
-)
+#     df = compare_steering(
+#     model=model,
+#     tokenizer=tokenizer,
+#     results=results,
+#     prompt=prompt,
+#     id=0,
+#     contrastive_id=1,
+#     alpha=alpha,
+#     resid_type="mlp_out",
+#     k=20,
+# )
 
-    print(prompt)
-    print("alpha: ", alpha)
-    pd.set_option('display.max_columns', None)
-    print(df) 
-
+#     print(prompt)
+#     print("alpha: ", alpha)
+    # pd.set_option('display.max_columns', None)
+#     print(df) 
 
     # # print best layer
     # best_layer = max(results, key=lambda k: results[k]["test_acc"])
