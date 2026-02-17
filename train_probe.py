@@ -161,22 +161,25 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
     data = read_fim_dataset(path)
     ids = [0, 1, 2]
 
-    for id, prompt_prefix, prompt_suffix, _ in data:
+    for example in data:
+        id = example["identifier_type"]
+        prompt_prefix = example["prefix"]
+        prompt_suffix = example["suffix"]
         for contrastive_id in ids:
             if contrastive_id == id:
                 continue
             prompt = get_prompt(prompt_prefix, prompt_suffix)
             print(prompt)
 
-            alpha = 10.0
+            alpha = 50.0
 
             df = compare_steering(
             model=model,
             tokenizer=tokenizer,
             results=results,
             prompt=prompt,
-            id=0,
-            contrastive_id=1,
+            id=id,
+            contrastive_id=contrastive_id,
             alpha=alpha,
             resid_type="mlp_out",
             k=20,
