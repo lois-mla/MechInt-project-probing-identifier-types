@@ -79,6 +79,69 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 
     return examples
 
+def strip_string(s, to_strip):
+    if s.startswith(to_strip):
+        s = s.removeprefix(to_strip)    
+
+def read_steering_dataset(path: str) -> List[Dict[str, str]]:
+    """
+    Reads a file where:
+      - datapoints are separated by '#####'
+      - each datapoint contains one 'FIM' and one '>>>'
+
+    Returns a list of dicts:
+        {   "identifier_type": int
+            "prefix":  '',
+            "suffix":  '',
+            "correct": ''
+        }
+    """
+    text = Path(path).read_text(encoding="utf-8")
+    blocks = text.split("#####")
+
+    examples = []
+
+    for block in blocks:
+        block = block.strip()
+        if not block:
+            continue
+
+        if block.count("FIM") != 1:
+            raise ValueError("Block must contain exactly one 'FIM':\n" + block)
+
+        # if block.count(">>>") != 1:
+        #     raise ValueError("Block must contain exactly one '>>>' :\n" + block)
+
+        # Split at FIM
+        before_fim, rest = block.split("FIM", 1)
+
+        # Split rest at >>>
+        after_fim, after_arrow = rest.split("\n>>>", 1)
+
+
+        after_arrow_list = after_arrow.split("\n")
+
+        correct = after_arrow_list[0]
+
+        prefix = before_fim
+        suffix = after_fim
+        correct = after_arrow
+        dict = {
+            "prefix": prefix,
+            "suffix": suffix,
+            "correct": correct}
+
+        keys = ["ID:", "0:", "1:", "2:"]
+        i=0 
+        for item in after_arrow_list[1:]:
+            key = keys[i]
+            dict[key] = strip_string(item, key)
+            i+=1
+
+        examples.append(dict)
+
+    return examples
+
 
 def get_prompt(prefix: str, suffix: str):
     """
