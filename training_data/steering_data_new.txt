@@ -17,6 +17,9 @@ h.append(4)
 
 >>>k
 ID:2
+0:h
+1:a
+2:k
 #####
 m = 12.5
 class n:
@@ -34,6 +37,9 @@ x = FIM(2, 3, 4)
 
 >>>q
 ID:1
+0:m
+1:q
+2:n
 #####
 def y(z):
     return z[0]
@@ -52,6 +58,9 @@ h.extend([40])
 
 >>>h
 ID:0
+0:h
+1:y
+2:a
 #####
 i = 'token'
 def j(k):
@@ -69,6 +78,9 @@ s = i + 'ize'
 
 >>>l
 ID:2
+0:i
+1:j
+2:l
 #####
 t = {'a': 1}
 class u:
@@ -86,6 +98,9 @@ t.update({'b': 2})
 
 >>>b
 ID:1
+0:t
+1:b
+2:u
 #####
 e = 9.0
 def f(g, h):
@@ -103,6 +118,9 @@ p = FIM ** 0.5
 
 >>>e
 ID:0
+0:e
+1:f
+2:i
 #####
 class FIM:
     q = 50
@@ -123,6 +141,9 @@ b = w * 2
 
 >>>y
 ID:2
+0:w
+1:t
+2:y
 #####
 c = 'python'
 def d(e):
@@ -141,6 +162,9 @@ m = c.replace('p', 'j')
 
 >>>d
 ID:1
+0:c
+1:d
+2:f
 #####
 class n:
     o = 3.14
@@ -159,6 +183,9 @@ v = w['z']
 
 >>>w
 ID:0
+0:w
+1:q
+2:n
 #####
 class x:
     y = 'base'
@@ -179,4 +206,7 @@ j = f // 2
 
 >>>x
 ID:2
+0:f
+1:c
+2:x
 #####
