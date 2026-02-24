@@ -5,14 +5,15 @@ import pandas as pd
 from transformers import AutoTokenizer
 # import matplotlib.pyplot as plt
 
-from utils import read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
-from steering import compare_steering, get_class_steering_vector
+from utils import read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
+from steering import compare_steering, compare_steering_research, get_class_steering_vector
 from linearprobe_new import (
     ResidualActivationExtractor,
     LinearProbe,
     train_probe,
     evaluate_probe,
 )
+from plotting import plot_delta_logprob, plot_rank
 
 # def probe_layer(
 #     extractor,
@@ -158,13 +159,17 @@ def probe_all_layers(
 
 
 def steer_prompts_from_file(path: str, model, tokenizer, results):
-    data = read_fim_dataset(path)
+    data = read_steering_dataset(path)
     ids = [0, 1, 2]
 
-    for example in data:
-        id = example["identifier_type"]
-        prompt_prefix = example["prefix"]
-        prompt_suffix = example["suffix"]
+    for prompt_dic in data:
+        id = int(prompt_dic["ID"])
+        # t0 = prompt["0"]
+        # t1 = prompt["1"]
+        # t2 = prompt["2"]
+        prompt_prefix = prompt_dic["prefix"]
+        prompt_suffix = prompt_dic["suffix"]
+
         for contrastive_id in ids:
             if contrastive_id == id:
                 continue
@@ -173,25 +178,33 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
 
             alpha = 50.0
 
-            df = compare_steering(
+            # find target token we want to plot 
+            # (in this case the token we're steering towards)
+            target = prompt_dic[str(contrastive_id)]
+
+            df, metrics_df = compare_steering_research(
             model=model,
             tokenizer=tokenizer,
             results=results,
             prompt=prompt,
             id=id,
             contrastive_id=contrastive_id,
+            target_token=target,
             alpha=alpha,
             resid_type="mlp_out",
             k=20,
         )
-
+            
             print(prompt)
             print("alpha: ", alpha)
             print("id: ", id)
             print("contrastive id: ", contrastive_id)
             pd.set_option('display.max_columns', None)
-            print(df) 
+            print(df)
+            print(metrics_df)
 
+            plot_delta_logprob(metrics_df, title="Steering effect")
+            plot_rank(metrics_df, title="Rank trajectory")
 
 
 def main():
@@ -398,6 +411,7 @@ v = pot['z']
     # print("Test accuracy:", results[best_layer]["test_acc"])
 
     # print("All results:", results)
+
 
 if __name__ == "__main__":
     main()

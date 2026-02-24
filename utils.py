@@ -80,6 +80,74 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
     return examples
 
 
+def strip_string(s: str, to_strip: str) -> str:
+    s = s.strip()
+    if s.startswith(to_strip):
+        return s.removeprefix(to_strip).strip()
+    return s
+
+
+def read_steering_dataset(path: str) -> List[Dict[str, str]]:
+    """
+    Reads a file where:
+      - datapoints are separated by '#####'
+      - each datapoint contains one 'FIM' and one '>>>'
+
+    Returns a list of dicts:
+        {
+            "identifier_type": int,
+            "prefix": '',
+            "suffix": '',
+            "correct": ''
+        }
+    """
+    text = Path(path).read_text(encoding="utf-8")
+    blocks = text.split("#####")
+
+    examples = []
+
+    for block in blocks:
+        block = block.strip()
+        if not block:
+            continue
+
+        if block.count("FIM") != 1:
+            raise ValueError("Block must contain exactly one 'FIM':\n" + block)
+
+        if ">>>" not in block:
+            raise ValueError("Block missing '>>>' marker:\n" + block)
+
+        # --- split core parts ---
+        before_fim, rest = block.split("FIM", 1)
+        after_fim, after_arrow = rest.split("\n>>>", 1)
+
+        after_arrow_lines = [
+            line.strip()
+            for line in after_arrow.strip().splitlines()
+            if line.strip()
+        ]
+
+        if len(after_arrow_lines) < 2:
+            raise ValueError("Malformed >>> section:\n" + block)
+
+        correct = after_arrow_lines[0]
+
+        example = {
+            "prefix": before_fim.rstrip(),
+            "suffix": after_fim.lstrip(),
+            "correct": correct,
+        }
+
+        # --- parse ID lines ---
+        keys = ["ID:", "0:", "1:", "2:"]
+        for key, line in zip(keys, after_arrow_lines[1:]):
+            example[key[:-1]] = strip_string(line, key)
+
+        examples.append(example)
+
+    return examples
+
+
 def get_prompt(prefix: str, suffix: str):
     """
     returns prompt
