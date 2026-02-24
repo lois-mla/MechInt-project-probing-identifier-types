@@ -197,6 +197,9 @@ def plot_delta_logprob(metrics_df, title=None):
     base = f"figures/{title.replace(' ', '_')}"
     n = 0
 
+    if not os.path.exists("figures"):
+        os.makedirs("figures")
+
     while True:
         save_path = f"{base}-{n}.png"
         if not os.path.exists(save_path):
@@ -223,7 +226,8 @@ def plot_rank(metrics_df, title=None):
 
     base = f"figures/{title.replace(' ', '_')}"
     n = 0
-
+    if not os.path.exists("figures"):
+        os.makedirs("figures")
     while True:
         save_path = f"{base}-{n}.png"
         if not os.path.exists(save_path):
