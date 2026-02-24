@@ -79,9 +79,13 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 
     return examples
 
-def strip_string(s, to_strip):
+
+def strip_string(s: str, to_strip: str) -> str:
+    s = s.strip()
     if s.startswith(to_strip):
-        s = s.removeprefix(to_strip)    
+        return s.removeprefix(to_strip).strip()
+    return s
+
 
 def read_steering_dataset(path: str) -> List[Dict[str, str]]:
     """
@@ -90,9 +94,10 @@ def read_steering_dataset(path: str) -> List[Dict[str, str]]:
       - each datapoint contains one 'FIM' and one '>>>'
 
     Returns a list of dicts:
-        {   "identifier_type": int
-            "prefix":  '',
-            "suffix":  '',
+        {
+            "identifier_type": int,
+            "prefix": '',
+            "suffix": '',
             "correct": ''
         }
     """
@@ -109,36 +114,36 @@ def read_steering_dataset(path: str) -> List[Dict[str, str]]:
         if block.count("FIM") != 1:
             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
 
-        # if block.count(">>>") != 1:
-        #     raise ValueError("Block must contain exactly one '>>>' :\n" + block)
+        if ">>>" not in block:
+            raise ValueError("Block missing '>>>' marker:\n" + block)
 
-        # Split at FIM
+        # --- split core parts ---
         before_fim, rest = block.split("FIM", 1)
-
-        # Split rest at >>>
         after_fim, after_arrow = rest.split("\n>>>", 1)
 
+        after_arrow_lines = [
+            line.strip()
+            for line in after_arrow.strip().splitlines()
+            if line.strip()
+        ]
 
-        after_arrow_list = after_arrow.split("\n")
+        if len(after_arrow_lines) < 2:
+            raise ValueError("Malformed >>> section:\n" + block)
 
-        correct = after_arrow_list[0]
+        correct = after_arrow_lines[0]
 
-        prefix = before_fim
-        suffix = after_fim
-        correct = after_arrow
-        dict = {
-            "prefix": prefix,
-            "suffix": suffix,
-            "correct": correct}
+        example = {
+            "prefix": before_fim.rstrip(),
+            "suffix": after_fim.lstrip(),
+            "correct": correct,
+        }
 
+        # --- parse ID lines ---
         keys = ["ID:", "0:", "1:", "2:"]
-        i=0 
-        for item in after_arrow_list[1:]:
-            key = keys[i]
-            dict[key] = strip_string(item, key)
-            i+=1
+        for key, line in zip(keys, after_arrow_lines[1:]):
+            example[key[:-1]] = strip_string(line, key)
 
-        examples.append(dict)
+        examples.append(example)
 
     return examples
 

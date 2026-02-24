@@ -176,3 +176,39 @@ plt.grid(True)
 plt.show()
 
 
+def plot_delta_logprob(metrics_df, title=None):
+    layer_rows = metrics_df.drop(index="baseline")
+
+    layers = [int(i.split("_")[1]) for i in layer_rows.index]
+    values = layer_rows["delta_log_prob"].values
+
+    layers, values = zip(*sorted(zip(layers, values)))
+
+    plt.figure(figsize=(6,4))
+    plt.plot(layers, values, marker="o")
+    plt.axhline(0, linestyle="--")
+    plt.xlabel("Layer")
+    plt.ylabel("Δ log P(target)")
+    if title:
+        plt.title(title)
+    plt.grid(True)
+    plt.savefig("figures/" + title)
+
+
+def plot_rank(metrics_df, title=None):
+    layer_rows = metrics_df.drop(index="baseline")
+
+    layers = [int(i.split("_")[1]) for i in layer_rows.index]
+    ranks = layer_rows["rank"].values
+
+    layers, ranks = zip(*sorted(zip(layers, ranks)))
+
+    plt.figure(figsize=(6,4))
+    plt.plot(layers, ranks, marker="o")
+    plt.gca().invert_yaxis()
+    plt.xlabel("Layer")
+    plt.ylabel("Rank of target (lower is better)")
+    if title:
+        plt.title(title)
+    plt.grid(True)
+    plt.savefig("figures/" + title)
