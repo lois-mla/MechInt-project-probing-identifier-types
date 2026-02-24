@@ -1,6 +1,7 @@
 import torch
 import transformer_lens
 import pandas as pd
+import torch.nn.functional as F
 
 
 def get_class_steering_vector(
@@ -162,6 +163,37 @@ def run_with_last_token_steering(
 
 
 
+def get_token_id(tokenizer, target_token: str):
+    ids = tokenizer.encode(target_token, add_special_tokens=False)
+    if len(ids) != 1:
+        raise ValueError(
+            f"Target '{target_token}' is {len(ids)} tokens. "
+            "This function expects a single token."
+        )
+    return ids[0]
+
+
+def get_token_metrics(logits, target_id: int):
+    """
+    Returns research-grade metrics for the last-token distribution.
+    """
+    last_logits = logits[0, -1]
+    probs = F.softmax(last_logits, dim=-1)
+    log_probs = F.log_softmax(last_logits, dim=-1)
+
+    prob = probs[target_id].item()
+    log_prob = log_probs[target_id].item()
+
+    # rank (1 = best)
+    rank = (last_logits > last_logits[target_id]).sum().item() + 1
+
+    return {
+        "prob": prob,
+        "log_prob": log_prob,
+        "rank": rank,
+    }
+
+
 
 def get_topk_dict(logits, tokenizer, k=10):
     vals, ids = torch.topk(logits[0, -1], k)
@@ -229,6 +261,77 @@ def compare_steering(
 
     df = pd.DataFrame.from_dict(table, orient="index")
     return df
+
+
+def compare_steering_research(
+    model,
+    tokenizer,
+    results,
+    prompt: str,
+    id: int,
+    contrastive_id: int,
+    target_token: str,
+    alpha: float = 10.0,
+    resid_type: str = "mlp_out",
+    k: int = 10,
+):
+    device = "cuda"
+    model = model.to(device)
+    tokens = model.to_tokens(prompt).to(device)
+
+    target_id = get_token_id(tokenizer, target_token)
+
+    table = {}
+    metrics = {}
+
+    # ===== baseline =====
+    with torch.no_grad():
+        logits_base = model(tokens)
+
+    table["baseline"] = get_topk_dict(logits_base, tokenizer, k)
+    base_metrics = get_token_metrics(logits_base, target_id)
+    metrics["baseline"] = base_metrics
+
+    # ===== steered layers =====
+    for layer, result in results.items():
+        probe = result["probe"]
+
+        steering_vec = get_contrastive_steering_vector(
+            probe,
+            pos_class=id,
+            neg_class=contrastive_id,
+        )
+
+        with torch.no_grad():
+            logits_steered = run_with_last_token_steering(
+                model=model,
+                tokenizer=tokenizer,
+                prompt=prompt,
+                steering_vector=steering_vec,
+                alpha=alpha,
+                layer=layer,
+                resid_type=resid_type,
+            )
+
+        table[f"layer_{layer}"] = get_topk_dict(logits_steered, tokenizer, k)
+        metrics[f"layer_{layer}"] = get_token_metrics(
+            logits_steered, target_id
+        )
+
+        del steering_vec
+        torch.cuda.empty_cache()
+
+    df = pd.DataFrame.from_dict(table, orient="index")
+    metrics_df = pd.DataFrame.from_dict(metrics, orient="index")
+
+    # ===== derived research metrics =====
+    base_log_prob = metrics_df.loc["baseline", "log_prob"]
+    base_prob = metrics_df.loc["baseline", "prob"]
+
+    metrics_df["delta_log_prob"] = metrics_df["log_prob"] - base_log_prob
+    metrics_df["prob_ratio"] = metrics_df["prob"] / base_prob
+
+    return df, metrics_df
 
 
 # @torch.inference_mode()
