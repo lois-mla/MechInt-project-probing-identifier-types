@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 
 layers = list(range(32))
 
@@ -192,8 +193,16 @@ def plot_delta_logprob(metrics_df, title=None):
     if title:
         plt.title(title)
     plt.grid(True)
-    plt.savefig("figures/" + title)
 
+    base = f"figures/{title.replace(' ', '_')}"
+    n = 0
+
+    while True:
+        save_path = f"{base}-{n}.png"
+        if not os.path.exists(save_path):
+            break
+        n += 1
+    plt.savefig(save_path)
 
 def plot_rank(metrics_df, title=None):
     layer_rows = metrics_df.drop(index="baseline")
@@ -211,4 +220,13 @@ def plot_rank(metrics_df, title=None):
     if title:
         plt.title(title)
     plt.grid(True)
-    plt.savefig("figures/" + title)
+
+    base = f"figures/{title.replace(' ', '_')}"
+    n = 0
+
+    while True:
+        save_path = f"{base}-{n}.png"
+        if not os.path.exists(save_path):
+            break
+        n += 1
+    plt.savefig(save_path)
