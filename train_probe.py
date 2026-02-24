@@ -162,13 +162,13 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
     data = read_steering_dataset(path)
     ids = [0, 1, 2]
 
-    for prompt in data:
+    for prompt_dic in data:
         id = prompt["ID"]
         # t0 = prompt["0"]
         # t1 = prompt["1"]
         # t2 = prompt["2"]
-        prompt_prefix = prompt["prefix"]
-        prompt_suffix = prompt["suffix"]
+        prompt_prefix = prompt_dic["prefix"]
+        prompt_suffix = prompt_dic["suffix"]
 
         for contrastive_id in ids:
             if contrastive_id == id:
@@ -177,7 +177,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
             print(prompt)
 
             alpha = 50.0
-            target = prompt[str(contrastive_id)]
+            target = prompt_dic[str(contrastive_id)]
 
             df, metrics_df = compare_steering_research(
             model=model,
