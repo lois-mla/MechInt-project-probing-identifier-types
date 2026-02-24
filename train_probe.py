@@ -163,7 +163,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
     ids = [0, 1, 2]
 
     for prompt_dic in data:
-        id = prompt["ID"]
+        id = prompt_dic["ID"]
         # t0 = prompt["0"]
         # t1 = prompt["1"]
         # t2 = prompt["2"]
