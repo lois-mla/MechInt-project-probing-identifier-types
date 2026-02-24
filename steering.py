@@ -35,7 +35,9 @@ def get_contrastive_steering_vector(
     """
     neg - pos steering direction.
     """
+    print(neg_class, pos_class, type(neg_class), type(pos_class))
     W = probe.linear.weight.detach()
+    print(W, type(W))
     s = W[neg_class] - W[pos_class]
 
     if normalize:
@@ -284,7 +286,7 @@ def compare_steering_research(
     table = {}
     metrics = {}
 
-    # ===== baseline =====
+    # baseline 
     with torch.no_grad():
         logits_base = model(tokens)
 
@@ -292,7 +294,7 @@ def compare_steering_research(
     base_metrics = get_token_metrics(logits_base, target_id)
     metrics["baseline"] = base_metrics
 
-    # ===== steered layers =====
+    # steered layers
     for layer, result in results.items():
         probe = result["probe"]
 
@@ -324,7 +326,6 @@ def compare_steering_research(
     df = pd.DataFrame.from_dict(table, orient="index")
     metrics_df = pd.DataFrame.from_dict(metrics, orient="index")
 
-    # ===== derived research metrics =====
     base_log_prob = metrics_df.loc["baseline", "log_prob"]
     base_prob = metrics_df.loc["baseline", "prob"]
 

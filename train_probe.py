@@ -163,7 +163,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
     ids = [0, 1, 2]
 
     for prompt_dic in data:
-        id = prompt_dic["ID"]
+        id = int(prompt_dic["ID"])
         # t0 = prompt["0"]
         # t1 = prompt["1"]
         # t2 = prompt["2"]
@@ -177,6 +177,9 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
             print(prompt)
 
             alpha = 50.0
+
+            # find target token we want to plot 
+            # (in this case the token we're steering towards)
             target = prompt_dic[str(contrastive_id)]
 
             df, metrics_df = compare_steering_research(
@@ -186,7 +189,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results):
             prompt=prompt,
             id=id,
             contrastive_id=contrastive_id,
-            target_token=target,  # ← IMPORTANT
+            target_token=target,
             alpha=alpha,
             resid_type="mlp_out",
             k=20,
