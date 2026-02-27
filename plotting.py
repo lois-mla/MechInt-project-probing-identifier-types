@@ -189,7 +189,7 @@ def plot_delta_logprob(metrics_df, title=None):
     plt.plot(layers, values, marker="o")
     plt.axhline(0, linestyle="--")
     plt.xlabel("Layer")
-    plt.ylabel("Δ log P(target)")
+    plt.ylabel("Δ log P(true)")
     if title:
         plt.title(title)
     plt.grid(True)
@@ -219,7 +219,7 @@ def plot_rank(metrics_df, title=None):
     plt.plot(layers, ranks, marker="o")
     plt.gca().invert_yaxis()
     plt.xlabel("Layer")
-    plt.ylabel("Rank of target (lower is better)")
+    plt.ylabel("Rank of true (lower is better)")
     if title:
         plt.title(title)
     plt.grid(True)
@@ -258,12 +258,12 @@ def plot_average_gap(
 
     gap_vals = []
     contr_vals = []
-    target_vals = []
+    true_vals = []
 
     for layer in layers:
         gap_vals.append(averaged_results[key][layer][f"{prefix}_gap"])
         contr_vals.append(averaged_results[key][layer][f"{prefix}_contr"])
-        target_vals.append(averaged_results[key][layer][f"{prefix}_target"])
+        true_vals.append(averaged_results[key][layer][f"{prefix}_true"])
 
     save_dir = os.path.join(
         base_path,
@@ -274,7 +274,7 @@ def plot_average_gap(
     plt.figure()
     plt.plot(gap_vals, label="Gap shift")
     plt.plot(contr_vals, label="Contrastive shift")
-    plt.plot(target_vals, label="Target shift")
+    plt.plot(true_vals, label="true shift")
     plt.axhline(0)
     plt.legend()
     plt.xlabel("Layer")

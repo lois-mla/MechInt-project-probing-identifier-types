@@ -324,21 +324,21 @@ def compare_steering_with_gap(
 
         # ----- PROB TERMS -----
         prob_contr_shift = steered_contr["prob"] - base_contr["prob"]
-        prob_target_shift = -steered_token["prob"] + base_token["prob"]
-        prob_gap_shift = prob_contr_shift + prob_target_shift
+        prob_true_shift = -steered_token["prob"] + base_token["prob"]
+        prob_gap_shift = prob_contr_shift + prob_true_shift
 
         # ----- LOGPROB TERMS -----
         log_contr_shift = steered_contr["log_prob"] - base_contr["log_prob"]
-        log_target_shift = -steered_token["log_prob"] + base_token["log_prob"]
-        log_gap_shift = log_contr_shift + log_target_shift
+        log_true_shift = -steered_token["log_prob"] + base_token["log_prob"]
+        log_gap_shift = log_contr_shift + log_true_shift
 
         gap_differences[layer_name] = {
             "prob_gap": prob_gap_shift,
             "prob_contr": prob_contr_shift,
-            "prob_target": prob_target_shift,
+            "prob_true": prob_true_shift,
             "log_gap": log_gap_shift,
             "log_contr": log_contr_shift,
-            "log_target": log_target_shift,
+            "log_true": log_true_shift,
         }
 
         del steering_vec

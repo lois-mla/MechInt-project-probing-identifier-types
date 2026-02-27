@@ -161,46 +161,34 @@ def probe_all_layers(
     return results
 
 
-def save_average_to_csv(
-    averaged_results,
-    id,
-    contrastive_id,
-    alpha,
-    base_path="figures",
-):
+def save_average_to_csv(averaged_results, id, contrastive_id, alpha, base_path="figures"):
     key = (id, contrastive_id)
-
     if key not in averaged_results:
         return
 
-    # Sort layers numerically
     layers = sorted(
         averaged_results[key].keys(),
-        key=lambda x: int(x.split("_")[1])
+        key=lambda x: int("".join(filter(str.isdigit, x)))
     )
 
     rows = []
     for layer in layers:
+        vals = averaged_results[key][layer]
         rows.append({
             "layer": layer,
-            "prob_avg": averaged_results[key][layer]["prob_avg"],
-            "logprob_avg": averaged_results[key][layer]["logprob_avg"],
+            "prob_gap": vals["prob_gap"],
+            "prob_contr": vals["prob_contr"],
+            "prob_true": vals["prob_true"],
+            "log_gap": vals["log_gap"],
+            "log_contr": vals["log_contr"],
+            "log_true": vals["log_true"],
         })
 
-    df = pd.DataFrame(rows)
-
-    save_dir = os.path.join(
-        base_path,
-        f"id_{id}_contr_id_{contrastive_id}"
-    )
+    save_dir = os.path.join(base_path, f"id_{id}_contr_id_{contrastive_id}")
     os.makedirs(save_dir, exist_ok=True)
 
-    save_path = os.path.join(
-        save_dir,
-        f"avg_gap_alpha_{alpha}.csv"
-    )
-
-    df.to_csv(save_path, index=False)
+    save_path = os.path.join(save_dir, f"avg_gap_alpha_{alpha}.csv")
+    pd.DataFrame(rows).to_csv(save_path, index=False)
     print(f"Saved CSV: {save_path}")
 
 
@@ -211,10 +199,10 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
     averages = defaultdict(lambda: defaultdict(lambda: {
         "prob_gap": [],
         "prob_contr": [],
-        "prob_target": [],
+        "prob_true": [],
         "log_gap": [],
         "log_contr": [],
-        "log_target": [],
+        "log_true": [],
     }))
 
     for id in ids:
