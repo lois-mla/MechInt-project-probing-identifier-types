@@ -234,3 +234,59 @@ def plot_rank(metrics_df, title=None):
             break
         n += 1
     plt.savefig(save_path)
+
+def plot_average_gap(
+    averaged_results,
+    id,
+    contrastive_id,
+    alpha,
+    use_logprob=True,
+    base_path="figures",
+):
+    key = (id, contrastive_id)
+
+    if key not in averaged_results:
+        print(f"No data for id={id}, contr_id={contrastive_id}")
+        return
+
+    # Sort layers numerically
+    layers = sorted(
+        averaged_results[key].keys(),
+        key=lambda x: int(x.split("_")[1])
+    )
+
+    metric_key = "logprob_avg" if use_logprob else "prob_avg"
+    metric_label = "log" if use_logprob else "nolog"
+
+    values = [
+        averaged_results[key][layer][metric_key]
+        for layer in layers
+    ]
+
+    # Create directory
+    save_dir = os.path.join(
+        base_path,
+        f"id_{id}_contr_id_{contrastive_id}"
+    )
+    os.makedirs(save_dir, exist_ok=True)
+
+    # Plot
+    plt.figure()
+    plt.plot(range(len(layers)), values)
+    plt.axhline(0)
+    plt.xlabel("Layer")
+    plt.ylabel("Average Gap Difference")
+    plt.title(
+        f"Average Steering Effect (id={id} vs {contrastive_id}) "
+        f"[{metric_label}] alpha={alpha}"
+    )
+
+    save_path = os.path.join(
+        save_dir,
+        f"avg_gap_alpha_{alpha}_{metric_label}.png"
+    )
+
+    plt.savefig(save_path)
+    plt.close()
+
+    print(f"Saved: {save_path}")

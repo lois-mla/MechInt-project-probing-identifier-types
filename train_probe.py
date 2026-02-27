@@ -16,7 +16,7 @@ from linearprobe_new import (
     train_probe,
     evaluate_probe,
 )
-from plotting import plot_delta_logprob, plot_rank, plot_average_gap
+from plotting import plot_average_gap
 
 # def probe_layer(
 #     extractor,

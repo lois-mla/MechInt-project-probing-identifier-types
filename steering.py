@@ -276,6 +276,23 @@ def compare_steering_with_gap(
     resid_type: str = "mlp_out",
     k: int = 10,
 ):
+    """
+    Returns
+    df = top-k dataframe
+
+    gap_differences = {
+    "layer_0": {
+        "prob_gap_diff": float,
+        "logprob_gap_diff": float,
+    },
+    "layer_1": {
+        "prob_gap_diff": float,
+        "logprob_gap_diff": float,
+    },
+    ...
+}
+    """
+
     device = "cuda"
     model = model.to(device)
     tokens = model.to_tokens(prompt).to(device)
