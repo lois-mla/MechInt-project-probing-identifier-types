@@ -276,23 +276,6 @@ def compare_steering_with_gap(
     resid_type: str = "mlp_out",
     k: int = 10,
 ):
-    """
-    Returns
-    df = top-k dataframe
-
-    gap_differences = {
-    "layer_0": {
-        "prob_gap_diff": float,
-        "logprob_gap_diff": float,
-    },
-    "layer_1": {
-        "prob_gap_diff": float,
-        "logprob_gap_diff": float,
-    },
-    ...
-}
-    """
-
     device = "cuda"
     model = model.to(device)
     tokens = model.to_tokens(prompt).to(device)
@@ -303,23 +286,16 @@ def compare_steering_with_gap(
     table = {}
     gap_differences = {}
 
-    # Baseline
+    # ----- Baseline -----
     with torch.no_grad():
         logits_base = model(tokens)
 
     table["baseline"] = get_topk_dict(logits_base, tokenizer, k)
 
-    base_token_metrics = get_token_metrics(logits_base, token_id)
-    base_contrastive_metrics = get_token_metrics(logits_base, contrastive_token_id)
+    base_token = get_token_metrics(logits_base, token_id)
+    base_contr = get_token_metrics(logits_base, contrastive_token_id)
 
-    baseline_prob_gap = (
-        base_contrastive_metrics["prob"] - base_token_metrics["prob"]
-    )
-    baseline_logprob_gap = (
-        base_contrastive_metrics["log_prob"] - base_token_metrics["log_prob"]
-    )
-
-    # Steered layers
+    # ----- Steered layers -----
     for layer, result in results.items():
         probe = result["probe"]
 
@@ -343,23 +319,26 @@ def compare_steering_with_gap(
         layer_name = f"layer_{layer}"
         table[layer_name] = get_topk_dict(logits_steered, tokenizer, k)
 
-        steered_token_metrics = get_token_metrics(logits_steered, token_id)
-        steered_contrastive_metrics = get_token_metrics(
-            logits_steered, contrastive_token_id
-        )
+        steered_token = get_token_metrics(logits_steered, token_id)
+        steered_contr = get_token_metrics(logits_steered, contrastive_token_id)
 
-        steered_prob_gap = (
-            steered_contrastive_metrics["prob"]
-            - steered_token_metrics["prob"]
-        )
-        steered_logprob_gap = (
-            steered_contrastive_metrics["log_prob"]
-            - steered_token_metrics["log_prob"]
-        )
+        # ----- PROB TERMS -----
+        prob_contr_shift = steered_contr["prob"] - base_contr["prob"]
+        prob_target_shift = -steered_token["prob"] + base_token["prob"]
+        prob_gap_shift = prob_contr_shift + prob_target_shift
+
+        # ----- LOGPROB TERMS -----
+        log_contr_shift = steered_contr["log_prob"] - base_contr["log_prob"]
+        log_target_shift = -steered_token["log_prob"] + base_token["log_prob"]
+        log_gap_shift = log_contr_shift + log_target_shift
 
         gap_differences[layer_name] = {
-            "prob_gap_diff": steered_prob_gap - baseline_prob_gap,
-            "logprob_gap_diff": steered_logprob_gap - baseline_logprob_gap,
+            "prob_gap": prob_gap_shift,
+            "prob_contr": prob_contr_shift,
+            "prob_target": prob_target_shift,
+            "log_gap": log_gap_shift,
+            "log_contr": log_contr_shift,
+            "log_target": log_target_shift,
         }
 
         del steering_vec
