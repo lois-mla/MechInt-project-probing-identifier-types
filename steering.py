@@ -280,8 +280,11 @@ def compare_steering_with_gap(
     model = model.to(device)
     tokens = model.to_tokens(prompt).to(device)
 
-    token_id = get_token_id(tokenizer, token)
-    contrastive_token_id = get_token_id(tokenizer, contrastive_token)
+    token_str = token.split()[0] if len(token.split()) > 1 else token
+    contrastive_str = contrastive_token.split()[0] if len(contrastive_token.split()) > 1 else contrastive_token
+
+    token_id = get_token_id(tokenizer, token_str)
+    contrastive_token_id = get_token_id(tokenizer, contrastive_str)
 
     table = {}
     gap_differences = {}
