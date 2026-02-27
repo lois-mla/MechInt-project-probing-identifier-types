@@ -462,7 +462,7 @@ v = pot['z']
     print("Test accuracy:", results[best_layer]["test_acc"])
 
     # print("All results:", results)
-    steering_path = "training_data/steering_data_new.txt"
+    steering_path = "training_data_300_2.txt"
     steer_prompts_from_file(steering_path, model, tokenizer, results)
 
 
