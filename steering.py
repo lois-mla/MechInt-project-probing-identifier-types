@@ -177,7 +177,7 @@ def get_token_id(tokenizer, target_token: str):
 
 def get_token_metrics(logits, target_id: int):
     """
-    Returns research-grade metrics for the last-token distribution.
+    Metrics for the last-token distribution.
     """
     last_logits = logits[0, -1]
     probs = F.softmax(last_logits, dim=-1)
@@ -194,7 +194,6 @@ def get_token_metrics(logits, target_id: int):
         "log_prob": log_prob,
         "rank": rank,
     }
-
 
 
 def get_topk_dict(logits, tokenizer, k=10):
@@ -264,37 +263,63 @@ def compare_steering(
     df = pd.DataFrame.from_dict(table, orient="index")
     return df
 
-
-def compare_steering_research(
+def compare_steering_with_gap(
     model,
     tokenizer,
     results,
     prompt: str,
     id: int,
     contrastive_id: int,
-    target_token: str,
+    token: str,
+    contrastive_token: str,
     alpha: float = 10.0,
     resid_type: str = "mlp_out",
     k: int = 10,
 ):
+    """
+    Returns
+    df = top-k dataframe
+
+    gap_differences = {
+    "layer_0": {
+        "prob_gap_diff": float,
+        "logprob_gap_diff": float,
+    },
+    "layer_1": {
+        "prob_gap_diff": float,
+        "logprob_gap_diff": float,
+    },
+    ...
+}
+    """
+
     device = "cuda"
     model = model.to(device)
     tokens = model.to_tokens(prompt).to(device)
 
-    target_id = get_token_id(tokenizer, target_token)
+    token_id = get_token_id(tokenizer, token)
+    contrastive_token_id = get_token_id(tokenizer, contrastive_token)
 
     table = {}
-    metrics = {}
+    gap_differences = {}
 
-    # baseline 
+    # Baseline
     with torch.no_grad():
         logits_base = model(tokens)
 
     table["baseline"] = get_topk_dict(logits_base, tokenizer, k)
-    base_metrics = get_token_metrics(logits_base, target_id)
-    metrics["baseline"] = base_metrics
 
-    # steered layers
+    base_token_metrics = get_token_metrics(logits_base, token_id)
+    base_contrastive_metrics = get_token_metrics(logits_base, contrastive_token_id)
+
+    baseline_prob_gap = (
+        base_contrastive_metrics["prob"] - base_token_metrics["prob"]
+    )
+    baseline_logprob_gap = (
+        base_contrastive_metrics["log_prob"] - base_token_metrics["log_prob"]
+    )
+
+    # Steered layers
     for layer, result in results.items():
         probe = result["probe"]
 
@@ -315,24 +340,210 @@ def compare_steering_research(
                 resid_type=resid_type,
             )
 
-        table[f"layer_{layer}"] = get_topk_dict(logits_steered, tokenizer, k)
-        metrics[f"layer_{layer}"] = get_token_metrics(
-            logits_steered, target_id
+        layer_name = f"layer_{layer}"
+        table[layer_name] = get_topk_dict(logits_steered, tokenizer, k)
+
+        steered_token_metrics = get_token_metrics(logits_steered, token_id)
+        steered_contrastive_metrics = get_token_metrics(
+            logits_steered, contrastive_token_id
         )
+
+        steered_prob_gap = (
+            steered_contrastive_metrics["prob"]
+            - steered_token_metrics["prob"]
+        )
+        steered_logprob_gap = (
+            steered_contrastive_metrics["log_prob"]
+            - steered_token_metrics["log_prob"]
+        )
+
+        gap_differences[layer_name] = {
+            "prob_gap_diff": steered_prob_gap - baseline_prob_gap,
+            "logprob_gap_diff": steered_logprob_gap - baseline_logprob_gap,
+        }
 
         del steering_vec
         torch.cuda.empty_cache()
 
     df = pd.DataFrame.from_dict(table, orient="index")
-    metrics_df = pd.DataFrame.from_dict(metrics, orient="index")
 
-    base_log_prob = metrics_df.loc["baseline", "log_prob"]
-    base_prob = metrics_df.loc["baseline", "prob"]
+    return df, gap_differences
 
-    metrics_df["delta_log_prob"] = metrics_df["log_prob"] - base_log_prob
-    metrics_df["prob_ratio"] = metrics_df["prob"] / base_prob
+# def compare_steering_research(
+#     model,
+#     tokenizer,
+#     results,
+#     prompt: str,
+#     id: int,
+#     contrastive_id: int,
+#     token: str,
+#     contrastive_token: str,
+#     alpha: float = 10.0,
+#     resid_type: str = "mlp_out",
+#     k: int = 10,
+# ):
+#     device = "cuda"
+#     model = model.to(device)
+#     tokens = model.to_tokens(prompt).to(device)
 
-    return df, metrics_df
+#     token_id = get_token_id(tokenizer, token)
+#     contrastive_token_id = get_token_id(tokenizer, contrastive_token)
+
+#     table = {}
+#     metrics = {
+#         "target": {},
+#         "contrastive": {},
+#     }
+
+#     # Helper functions
+
+#     def store_results(name, logits):
+#         table[name] = get_topk_dict(logits, tokenizer, k)
+#         metrics["target"][name] = get_token_metrics(logits, token_id)
+#         metrics["contrastive"][name] = get_token_metrics(logits, contrastive_token_id)
+
+#     def add_relative_metrics(df):
+#         base_log_prob = df.loc["baseline", "log_prob"]
+#         base_prob = df.loc["baseline", "prob"]
+
+#         df["delta_log_prob"] = df["log_prob"] - base_log_prob
+#         df["prob_ratio"] = df["prob"] / base_prob
+#         return df
+
+#     # Baseline
+
+#     with torch.no_grad():
+#         logits_base = model(tokens)
+
+#     store_results("baseline", logits_base)
+
+#     # Steered layers 
+
+#     for layer, result in results.items():
+#         probe = result["probe"]
+
+#         steering_vec = get_contrastive_steering_vector(
+#             probe,
+#             pos_class=id,
+#             neg_class=contrastive_id,
+#         )
+
+#         with torch.no_grad():
+#             logits_steered = run_with_last_token_steering(
+#                 model=model,
+#                 tokenizer=tokenizer,
+#                 prompt=prompt,
+#                 steering_vector=steering_vec,
+#                 alpha=alpha,
+#                 layer=layer,
+#                 resid_type=resid_type,
+#             )
+
+#         store_results(f"layer_{layer}", logits_steered)
+
+#         del steering_vec
+#         torch.cuda.empty_cache()
+
+#     # build DataFrames 
+
+#     df = pd.DataFrame.from_dict(table, orient="index")
+
+#     metrics_df = pd.DataFrame.from_dict(metrics["target"], orient="index")
+#     contrastive_metrics_df = pd.DataFrame.from_dict(
+#         metrics["contrastive"], orient="index"
+#     )
+
+#     metrics_df = add_relative_metrics(metrics_df)
+#     contrastive_metrics_df = add_relative_metrics(contrastive_metrics_df)
+
+#     return df, metrics_df, contrastive_metrics_df
+# def compare_steering_research(
+#     model,
+#     tokenizer,
+#     results,
+#     prompt: str,
+#     id: int,
+#     contrastive_id: int,
+#     token: str,
+#     contrastive_token: str,
+#     alpha: float = 10.0,
+#     resid_type: str = "mlp_out",
+#     k: int = 10,
+# ):
+#     device = "cuda"
+#     model = model.to(device)
+#     tokens = model.to_tokens(prompt).to(device)
+
+#     token_id = get_token_id(tokenizer, token)
+#     contrastive_token_id = get_token_id(tokenizer, contrastive_token)
+
+#     table = {}
+#     metrics_id = {}
+#     metrics_contrastive_id = {}
+
+#     # baseline 
+#     with torch.no_grad():
+#         logits_base = model(tokens)
+
+#     table["baseline"] = get_topk_dict(logits_base, tokenizer, k)
+
+#     base_metrics = get_token_metrics(logits_base, token_id)
+#     base_metrics_contr = get_token_metrics(logits_base, contrastive_token_id)
+    
+#     metrics_id["baseline"] = base_metrics
+#     metrics_contrastive_id["baseline"] = base_metrics_contr
+
+#     # steered layers
+#     for layer, result in results.items():
+#         probe = result["probe"]
+
+#         steering_vec = get_contrastive_steering_vector(
+#             probe,
+#             pos_class=id,
+#             neg_class=contrastive_id,
+#         )
+
+#         with torch.no_grad():
+#             logits_steered = run_with_last_token_steering(
+#                 model=model,
+#                 tokenizer=tokenizer,
+#                 prompt=prompt,
+#                 steering_vector=steering_vec,
+#                 alpha=alpha,
+#                 layer=layer,
+#                 resid_type=resid_type,
+#             )
+
+#         table[f"layer_{layer}"] = get_topk_dict(logits_steered, tokenizer, k)
+        
+#         metrics_id[f"layer_{layer}"] = get_token_metrics(
+#             logits_steered, token_id
+#         )
+#         metrics_contrastive_id[f"layer_{layer}"] = get_token_metrics(
+#             logits_steered, contrastive_token_id
+#         )
+
+#         del steering_vec
+#         torch.cuda.empty_cache()
+
+#     df = pd.DataFrame.from_dict(table, orient="index")
+
+#     contrastive_metrics_df = pd.DataFrame.from_dict(metrics_contrastive_id, orient="index")
+#     metrics_df = pd.DataFrame.from_dict(metrics_id, orient="index")
+
+#     base_log_prob = metrics_df.loc["baseline", "log_prob"]
+#     base_prob = metrics_df.loc["baseline", "prob"]
+
+#     metrics_df["delta_log_prob"] = metrics_df["log_prob"] - base_log_prob
+#     metrics_df["prob_ratio"] = metrics_df["prob"] / base_prob
+
+#     base_log_prob = contrastive_metrics_df.loc["baseline", "log_prob"]
+#     base_prob = contrastive_metrics_df.loc["baseline", "prob"]
+
+#     contrastive_metrics_df["delta_log_prob"] = contrastive_metrics_df["log_prob"] - base_log_prob
+#     contrastive_metrics_df["prob_ratio"] = contrastive_metrics_df["prob"] / base_prob
+
+#     return df, metrics_df, contrastive_metrics_df
 
 
 # @torch.inference_mode()

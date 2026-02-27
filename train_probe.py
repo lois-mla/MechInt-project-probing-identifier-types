@@ -3,17 +3,20 @@ import os
 import transformer_lens
 import pandas as pd
 from transformers import AutoTokenizer
-# import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
+from collections import defaultdict
+
 
 from utils import read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
-from steering import compare_steering, compare_steering_research, get_class_steering_vector
+from steering import compare_steering_with_gap
 from linearprobe_new import (
     ResidualActivationExtractor,
     LinearProbe,
     train_probe,
     evaluate_probe,
 )
-from plotting import plot_delta_logprob, plot_rank
+from plotting import plot_average_gap
 
 # def probe_layer(
 #     extractor,
@@ -158,53 +161,134 @@ def probe_all_layers(
     return results
 
 
-def steer_prompts_from_file(path: str, model, tokenizer, results):
+def save_average_to_csv(
+    averaged_results,
+    id,
+    contrastive_id,
+    alpha,
+    base_path="figures",
+):
+    key = (id, contrastive_id)
+
+    if key not in averaged_results:
+        return
+
+    # Sort layers numerically
+    layers = sorted(
+        averaged_results[key].keys(),
+        key=lambda x: int(x.split("_")[1])
+    )
+
+    rows = []
+    for layer in layers:
+        rows.append({
+            "layer": layer,
+            "prob_avg": averaged_results[key][layer]["prob_avg"],
+            "logprob_avg": averaged_results[key][layer]["logprob_avg"],
+        })
+
+    df = pd.DataFrame(rows)
+
+    save_dir = os.path.join(
+        base_path,
+        f"id_{id}_contr_id_{contrastive_id}"
+    )
+    os.makedirs(save_dir, exist_ok=True)
+
+    save_path = os.path.join(
+        save_dir,
+        f"avg_gap_alpha_{alpha}.csv"
+    )
+
+    df.to_csv(save_path, index=False)
+    print(f"Saved CSV: {save_path}")
+
+
+def steer_prompts_from_file(path: str, model, tokenizer, results, alpha=50.0):
     data = read_steering_dataset(path)
     ids = [0, 1, 2]
 
-    for prompt_dic in data:
-        id = int(prompt_dic["ID"])
-        # t0 = prompt["0"]
-        # t1 = prompt["1"]
-        # t2 = prompt["2"]
-        prompt_prefix = prompt_dic["prefix"]
-        prompt_suffix = prompt_dic["suffix"]
+    averages = defaultdict(lambda: defaultdict(lambda: {
+        "prob": [],
+        "logprob": []
+    }))
 
-        for contrastive_id in ids:
-            if contrastive_id == id:
-                continue
+    for id in ids:
+        data_per_id = [d for d in data if int(d["ID"]) == id]
+
+        for prompt_dic in data_per_id:
+            prompt_prefix = prompt_dic["prefix"]
+            prompt_suffix = prompt_dic["suffix"]
             prompt = get_prompt(prompt_prefix, prompt_suffix)
-            print(prompt)
 
-            alpha = 50.0
+            for contrastive_id in ids:
+                if contrastive_id == id:
+                    continue
 
-            # find target token we want to plot 
-            # (in this case the token we're steering towards)
-            target = prompt_dic[str(contrastive_id)]
+                token = prompt_dic[str(id)]
+                contrastive_token = prompt_dic[str(contrastive_id)]
 
-            df, metrics_df = compare_steering_research(
-            model=model,
-            tokenizer=tokenizer,
-            results=results,
-            prompt=prompt,
-            id=id,
-            contrastive_id=contrastive_id,
-            target_token=target,
+                _, gap_differences = compare_steering_with_gap(
+                    model=model,
+                    tokenizer=tokenizer,
+                    results=results,
+                    prompt=prompt,
+                    id=id,
+                    contrastive_id=contrastive_id,
+                    token=token,
+                    contrastive_token=contrastive_token,
+                    alpha=alpha,
+                    resid_type="mlp_out",
+                    k=20,
+                )
+
+                key = (id, contrastive_id)
+
+                for layer, vals in gap_differences.items():
+                    averages[key][layer]["prob"].append(
+                        vals["prob_gap_diff"]
+                    )
+                    averages[key][layer]["logprob"].append(
+                        vals["logprob_gap_diff"]
+                    )
+
+
+    # Compute final averages 
+    final_averages = {}
+
+    for key, layer_dict in averages.items():
+        final_averages[key] = {}
+
+        for layer, vals in layer_dict.items():
+            final_averages[key][layer] = {
+                "prob_avg": np.mean(vals["prob"]),
+                "logprob_avg": np.mean(vals["logprob"]),
+            }
+
+    # Save plots + CSV
+    for (id, contrastive_id) in final_averages.keys():
+        plot_average_gap(
+            final_averages,
+            id,
+            contrastive_id,
             alpha=alpha,
-            resid_type="mlp_out",
-            k=20,
+            use_logprob=True,
         )
-            
-            print(prompt)
-            print("alpha: ", alpha)
-            print("id: ", id)
-            print("contrastive id: ", contrastive_id)
-            pd.set_option('display.max_columns', None)
-            print(df)
-            print(metrics_df)
+        plot_average_gap(
+            final_averages,
+            id,
+            contrastive_id,
+            alpha=alpha,
+            use_logprob=False,
+        )
+        save_average_to_csv(
+            final_averages,
+            id,
+            contrastive_id,
+            alpha=alpha,
+        )
 
-            plot_delta_logprob(metrics_df, title="Steering effect")
-            plot_rank(metrics_df, title="Rank trajectory")
+    return final_averages
 
 
 def main():
@@ -378,7 +462,7 @@ v = pot['z']
     print("Test accuracy:", results[best_layer]["test_acc"])
 
     # print("All results:", results)
-    steering_path = "training_data/steering_data_new.txt"
+    steering_path = "training_data/steering_data_300_2.txt"
     steer_prompts_from_file(steering_path, model, tokenizer, results)
 
 
