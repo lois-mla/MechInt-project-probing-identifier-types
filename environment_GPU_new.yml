@@ -601,6 +601,7 @@ channels:
 dependencies:
   - python=3.9.21
   - pip
+  - matplotlib    # <-- ADD THIS LINE
 
   - pip:
       # =========================
