@@ -175,6 +175,10 @@ def get_token_id(tokenizer, target_token: str):
     return ids[0]
 
 
+def get_first_token_id(tokenizer, text):
+    return tokenizer.encode(text, add_special_tokens=False)[0]
+
+
 def get_token_metrics(logits, target_id: int):
     """
     Metrics for the last-token distribution.
@@ -263,6 +267,9 @@ def compare_steering(
     df = pd.DataFrame.from_dict(table, orient="index")
     return df
 
+def get_first_token_id(tokenizer, text):
+    return tokenizer.encode(text, add_special_tokens=False)[0]
+
 def compare_steering_with_gap(
     model,
     tokenizer,
@@ -280,12 +287,9 @@ def compare_steering_with_gap(
     model = model.to(device)
     tokens = model.to_tokens(prompt).to(device)
 
-    token_str = token.split()[0] if len(token.split()) > 1 else token
-    contrastive_str = contrastive_token.split()[0] if len(contrastive_token.split()) > 1 else contrastive_token
-
-    token_id = get_token_id(tokenizer, token_str)
-    contrastive_token_id = get_token_id(tokenizer, contrastive_str)
-
+    token_id = get_first_token_id(tokenizer, token)
+    contrastive_token_id = get_first_token_id(tokenizer, contrastive_token)
+    
     table = {}
     gap_differences = {}
 
