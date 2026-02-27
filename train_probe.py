@@ -9,7 +9,7 @@ from collections import defaultdict
 
 
 from utils import read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
-from steering import compare_steering, compare_steering_research, get_class_steering_vector, compare_steering_with_gap
+from steering import compare_steering_with_gap
 from linearprobe_new import (
     ResidualActivationExtractor,
     LinearProbe,
