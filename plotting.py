@@ -235,6 +235,7 @@ def plot_rank(metrics_df, title=None):
         n += 1
     plt.savefig(save_path)
 
+
 def plot_average_gap(
     averaged_results,
     id,
@@ -246,47 +247,47 @@ def plot_average_gap(
     key = (id, contrastive_id)
 
     if key not in averaged_results:
-        print(f"No data for id={id}, contr_id={contrastive_id}")
         return
 
-    # Sort layers numerically
     layers = sorted(
         averaged_results[key].keys(),
         key=lambda x: int(x.split("_")[1])
     )
 
-    metric_key = "logprob_avg" if use_logprob else "prob_avg"
-    metric_label = "log" if use_logprob else "nolog"
+    prefix = "log" if use_logprob else "prob"
 
-    values = [
-        averaged_results[key][layer][metric_key]
-        for layer in layers
-    ]
+    gap_vals = []
+    contr_vals = []
+    target_vals = []
 
-    # Create directory
+    for layer in layers:
+        gap_vals.append(averaged_results[key][layer][f"{prefix}_gap"])
+        contr_vals.append(averaged_results[key][layer][f"{prefix}_contr"])
+        target_vals.append(averaged_results[key][layer][f"{prefix}_target"])
+
     save_dir = os.path.join(
         base_path,
         f"id_{id}_contr_id_{contrastive_id}"
     )
     os.makedirs(save_dir, exist_ok=True)
 
-    # Plot
     plt.figure()
-    plt.plot(range(len(layers)), values)
+    plt.plot(gap_vals, label="Gap shift")
+    plt.plot(contr_vals, label="Contrastive shift")
+    plt.plot(target_vals, label="Target shift")
     plt.axhline(0)
+    plt.legend()
     plt.xlabel("Layer")
-    plt.ylabel("Average Gap Difference")
+    plt.ylabel("Average shift")
     plt.title(
-        f"Average Steering Effect (id={id} vs {contrastive_id}) "
-        f"[{metric_label}] alpha={alpha}"
+        f"Steering decomposition (id={id} vs {contrastive_id}) "
+        f"[{prefix}] alpha={alpha}"
     )
 
     save_path = os.path.join(
         save_dir,
-        f"avg_gap_alpha_{alpha}_{metric_label}.png"
+        f"avg_decomposition_alpha_{alpha}_{prefix}.png"
     )
 
     plt.savefig(save_path)
     plt.close()
-
-    print(f"Saved: {save_path}")

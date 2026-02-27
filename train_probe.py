@@ -280,7 +280,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
             id,
             contrastive_id,
             alpha=alpha,
-            use_logprob=False
+            use_logprob=False,
             base_path=f"figures/{dataset_specifier}"
         )
         save_average_to_csv(
