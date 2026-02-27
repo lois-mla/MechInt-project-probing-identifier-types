@@ -593,7 +593,7 @@
 #       - yarl==1.22.0
 #       - zipp==3.23.0
 
-name: mechint-gpu4
+name: mechint-gpu5
 channels:
   - conda-forge
   - defaults
