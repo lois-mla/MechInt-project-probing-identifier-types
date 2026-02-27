@@ -458,8 +458,9 @@ v = pot['z']
 
     # print("All results:", results)
     # steering_path = "training_data/steering_data_300_final.txt"
-    steering_path = "training_data/steering_data_300_final.txt"
-    steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier)
+    steering_path = "training_data/steering_data_300_realistic.txt"
+    alpha = 10.0
+    steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, alpha)
 
 
     # steering:
