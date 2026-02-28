@@ -421,12 +421,12 @@ v = pot['z']
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final"
-    data_def = "training_data/def_FIM_data_nocont.txt"
-    data_call = "training_data/call_FIM_data_nocont.txt"
-    probe_save_dir = "probes_stored/probes_no_cont"
-    # data_def = "training_data/def_FIM_data.txt"
-    # data_call = "training_data/call_FIM_data.txt"
-    # probe_save_dir = "probes_stored/probes_realistic"
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
+    # probe_save_dir = "probes_stored/probes_no_cont"
+    data_def = "training_data/def_FIM_data.txt"
+    data_call = "training_data/call_FIM_data.txt"
+    probe_save_dir = "probes_stored/probes_realistic"
     dataset_specifier = "no_cont"
 
     model, tokenizer = load_model()
@@ -457,7 +457,7 @@ v = pot['z']
     print("Test accuracy:", results[best_layer]["test_acc"])
 
     # print("All results:", results)
-    steering_path = "training_data/steering_data_300_final.txt"
+    steering_path = "training_data/steering_data_300_realistic.txt"
     # steering_path = "training_data/steering_data_300_final.txt"
     for alpha in [10, 30, 100]:
         steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, alpha=alpha)
