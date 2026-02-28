@@ -230,7 +230,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
                     token=token,
                     contrastive_token=contrastive_token,
                     alpha=alpha,
-                    resid_type="resid_post", # HERE YOU CHOOSE THE LOCATION TO PROBE IN 
+                    resid_type="mlp_out", # HERE YOU CHOOSE THE LOCATION TO PROBE IN 
                     k=20,
                 )
 
@@ -261,7 +261,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
             contrastive_id,
             alpha=alpha,
             use_logprob=True,
-            base_path=f"figures/{dataset_specifier}_{alpha}_resid_post"
+            base_path=f"figures/{dataset_specifier}_{alpha}"
         )
         plot_average_gap(
             final_averages,
@@ -269,14 +269,14 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
             contrastive_id,
             alpha=alpha,
             use_logprob=False,
-            base_path=f"figures/{dataset_specifier}_{alpha}_resid_post"
+            base_path=f"figures/{dataset_specifier}_{alpha}"
         )
         save_average_to_csv(
             final_averages,
             id,
             contrastive_id,
             alpha=alpha,
-            base_path=f"figures/{dataset_specifier}_{alpha}_resid_post"
+            base_path=f"figures/{dataset_specifier}_{alpha}"
         )
 
     return final_averages
@@ -418,16 +418,16 @@ v = pot['z']
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
-    data_def = "training_data/def_FIM_data_final.txt"
-    data_call = "training_data/call_FIM_data_final.txt"
-    probe_save_dir = "probes_stored/probes_final"
-    # data_def = "training_data/def_FIM_data_nocont.txt"
-    # data_call = "training_data/call_FIM_data_nocont.txt"
-    # probe_save_dir = "probes_stored/probes_no_cont"
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    # probe_save_dir = "probes_stored/probes_final"
+    data_def = "training_data/def_FIM_data_nocont.txt"
+    data_call = "training_data/call_FIM_data_nocont.txt"
+    probe_save_dir = "probes_stored/probes_no_cont"
     # data_def = "training_data/def_FIM_data.txt"
     # data_call = "training_data/call_FIM_data.txt"
     # probe_save_dir = "probes_stored/probes_realistic"
-    dataset_specifier = "cont"
+    dataset_specifier = "nocont"
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset(data_def, data_call)
@@ -459,7 +459,7 @@ v = pot['z']
     # print("All results:", results)
     steering_path = "training_data/steering_data_300_final.txt"
     # steering_path = "training_data/steering_data_300_realistic.txt"
-    alpha = 30.0
+    alpha = 50.0
     steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, alpha)
 
 
