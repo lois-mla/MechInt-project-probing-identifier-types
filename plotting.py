@@ -243,6 +243,7 @@ def plot_average_gap(
     alpha,
     use_logprob=True,
     base_path="figures",
+    dataset_specifier_fullname="realistic"
 ):
     key = (id, contrastive_id)
 
@@ -272,22 +273,57 @@ def plot_average_gap(
     os.makedirs(save_dir, exist_ok=True)
 
     plt.figure()
-    plt.plot(gap_vals, label="Gap shift")
+    plt.plot(gap_vals, label="Full shift")
     plt.plot(contr_vals, label="Contrastive shift")
-    plt.plot(true_vals, label="true shift")
+    plt.plot(true_vals, label="True shift")
     plt.axhline(0)
     plt.legend()
     plt.xlabel("Layer")
     plt.ylabel("Average shift")
-    plt.title(
-        f"Steering decomposition (id={id} vs {contrastive_id}) "
-        f"[{prefix}] alpha={alpha}"
-    )
+    # plt.title(
+    #     f"Steering probabilities shift (id={id} to id={contrastive_id}) on {dataset_specifier_fullname}"
+    # )
 
     save_path = os.path.join(
         save_dir,
-        f"avg_decomposition_alpha_{alpha}_{prefix}.png"
+        f"avg_decomposition_alpha_{alpha}_{prefix}_newplot.png"
     )
 
     plt.savefig(save_path)
     plt.close()
+
+
+def plot_probe_accuracies(
+    results,
+    save_dir="figures/probe_accuracy",
+    filename="linear_probe_accuracy_per_layer.png",
+    dataset_specifier="realistic"
+):
+    """
+    Plot train and test accuracy per layer from probe_all_layers results.
+    """
+
+    os.makedirs(save_dir, exist_ok=True)
+
+    # Sort layers numerically
+    layers = sorted(results.keys())
+
+    train_accs = [results[layer]["train_acc"] for layer in layers]
+    test_accs = [results[layer]["test_acc"] for layer in layers]
+
+    plt.figure()
+
+    plt.plot(layers, train_accs, label="Train accuracy")
+    plt.plot(layers, test_accs, label="Test accuracy")
+
+    plt.xlabel("Layer")
+    plt.ylabel("Accuracy")
+    # plt.title(f"Linear probe accuracy per layer ({dataset_specifier})")
+    plt.legend()
+
+    save_path = os.path.join(save_dir, filename)
+
+    plt.savefig(save_path)
+    plt.close()
+
+    print(f"Saved plot to {save_path}")
