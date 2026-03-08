@@ -16,47 +16,7 @@ from linearprobe_new import (
     train_probe,
     evaluate_probe,
 )
-from plotting import plot_average_gap
-
-# def probe_layer(
-#     extractor,
-#     prompts,
-#     labels,
-#     layer: int,
-#     num_classes: int = 3,
-#     device: str = "cuda",
-# ):
-#     print(f"Probing layer {layer}")
-
-#     # extract features
-#     X = extractor.extract(prompts, layer=layer)
-#     X = X.float().to(device)
-#     y = labels.to(device)
-
-#     # split data
-#     X_train, y_train, X_test, y_test = train_test_split(
-#         X, y, test_frac=0.2, seed=42
-#     )
-
-#     print(f"Train size: {len(X_train)} | Test size: {len(X_test)}")
-
-#     # train
-#     D = X.shape[1]
-#     probe = LinearProbe(d_model=D, num_classes=num_classes).to(device)
-#     train_probe(probe, X_train, y_train, num_epochs=30, lr=1e-3)
-
-#     # evaluate
-#     train_acc = evaluate_probe(probe, X_train, y_train)
-#     test_acc = evaluate_probe(probe, X_test, y_test)
-
-#     print(f"Train acc: {train_acc:.4f}")
-#     print(f"Test  acc: {test_acc:.4f}")
-
-#     return {
-#         "probe": probe,
-#         "train_acc": train_acc,
-#         "test_acc": test_acc,
-#     }
+from plotting import plot_average_gap, plot_probe_accuracies
 
 def probe_layer(
     extractor,
@@ -118,26 +78,6 @@ def probe_layer(
         "test_acc": test_acc,
     }
 
-
-# def probe_all_layers(
-#     extractor,
-#     prompts,
-#     labels,
-#     n_layers: int,
-# ):
-#     results = {}
-
-#     for layer in range(n_layers):
-#         result = probe_layer(
-#             extractor=extractor,
-#             prompts=prompts,
-#             labels=labels,
-#             layer=layer,
-#         )
-#         results[layer] = result
-
-#     return results
-
 def probe_all_layers(
     extractor,
     prompts,
@@ -192,7 +132,7 @@ def save_average_to_csv(averaged_results, id, contrastive_id, alpha, base_path="
     print(f"Saved CSV: {save_path}")
 
 
-def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specifier, alpha=50.0):
+def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=50.0):
     data = read_steering_dataset(path)
     ids = [0, 1, 2]
     
@@ -230,7 +170,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
                     token=token,
                     contrastive_token=contrastive_token,
                     alpha=alpha,
-                    resid_type="resid_post", # HERE YOU CHOOSE THE LOCATION TO PROBE IN 
+                    resid_type="mlp_out", # HERE YOU CHOOSE THE LOCATION TO STEER IN
                     k=20,
                 )
 
@@ -261,7 +201,8 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
             contrastive_id,
             alpha=alpha,
             use_logprob=True,
-            base_path=f"figures/{dataset_specifier}_{alpha}_resid_post"
+            base_path=f"figures/{dataset_specifier}_{alpha}",
+            dataset_specifier_fullname=dataset_specifier_fullname
         )
         plot_average_gap(
             final_averages,
@@ -269,14 +210,15 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
             contrastive_id,
             alpha=alpha,
             use_logprob=False,
-            base_path=f"figures/{dataset_specifier}_{alpha}_resid_post"
+            base_path=f"figures/{dataset_specifier}_{alpha}",
+            dataset_specifier_fullname=dataset_specifier_fullname
         )
         save_average_to_csv(
             final_averages,
             id,
             contrastive_id,
             alpha=alpha,
-            base_path=f"figures/{dataset_specifier}_{alpha}_resid_post"
+            base_path=f"figures/{dataset_specifier}_{alpha}"
         )
 
     return final_averages
@@ -284,150 +226,22 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
 
 def main():
 
-    #     ["""def a(x, y):
-    #     return x * y
 
-    # class q:
-    #     b = 4
-    #     def m(self, z):
-    #         return z + 1
-
-    # c = [1, 2]
-
-    # o = q()
-    # p = o.b
-    # r = a(p, p)
-    # s = FIM    
-    #     """, """class FIM:
-    #     k = 7
-
-    # d = 3.5
-
-    # def n(u, v):
-    #     return u - v
-
-    # o = FIM()
-    # p = o.k
-    # r = n(p, d)
-    # s = d * 2
-    #     """, """x = {1, 2, 3}
-
-    # def FIM(a, b, c):
-    #     a = a + b
-    #     return a
-
-    # class l:
-    #     y = 5
-
-    # o = l()
-    # p = o.y
-    # r = FIM(p, p, p)
-    # s = x
-    # """, """class t:
-    #     a = 2
-    #     def f(self, q):
-    #         return q * 3
-
-    # def w(e):
-    #     return e + 1
-
-    # FIM = {"x": 9}
-
-    # o = t()
-    # p = o.a
-    # r = w(p)
-    # s = FIM
-    # """, """def k(a, b):
-    #     return a + b
-
-    # class s:
-    #     m = 8
-
-    # v = 10
-
-    # o = FIM()
-    # p = o.m
-    # r = k(p, v)
-    # u = v + 1
-    # ""","""class j:
-    #     r = 6
-
-    # def c(x):
-    #     return x * 2
-
-    # FIM = [4, 5]
-
-    # o = j()
-    # p = o.r
-    # q = c(p)
-    # z = FIM
-    # """]    
-
-
-        # put new prompt here
-        # answer should be m
-    #     prompt_prefix = """class x:
-    #     y = 'base'
-    #     def __init__(self, z):
-    #         self.z = z
-    #     def a(self, b):
-    #         return self.y + self.z + b
-
-    # def c(d, e):
-    #     return d - e
-
-    # f = 100
-
-    # g = c(f, 10)
-    # h = 
-
-    # """
-        
-    #     prompt_suffix = """('mid')
-    # i = h.a('end')
-    # j = f // 2
-    #     """
-
-#     prompt_prefix = """class n:
-#     o = 3.14
-#     def p(self):
-#         return self.o
-
-
-# """
-    
-#     prompt_suffix = """ = {'z': 99}
-
-# def q(r):
-#     return r.capitalize()
-
-# s = q('word')
-# t = n()
-# u = t.p()
-# v = w['z']
-    """
-def dog(r):
-    return r.capitalize()
-
-s = dog('word')
-t = cat()
-u = t.pet()
-v = pot['z']
-    """
 
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
-    # data_def = "training_data/def_FIM_data_final.txt"
-    # data_call = "training_data/call_FIM_data_final.txt"
-    # probe_save_dir = "probes_stored/probes_final"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = "probes_stored/probes_final"
     # data_def = "training_data/def_FIM_data_nocont.txt"
     # data_call = "training_data/call_FIM_data_nocont.txt"
     # probe_save_dir = "probes_stored/probes_no_cont"
-    data_def = "training_data/def_FIM_data.txt"
-    data_call = "training_data/call_FIM_data.txt"
-    probe_save_dir = "probes_stored/probes_realistic"
-    dataset_specifier = "realistic"
+    # data_def = "training_data/def_FIM_data.txt"
+    # data_call = "training_data/call_FIM_data.txt"
+    # probe_save_dir = "probes_stored/probes_realistic"
+    dataset_specifier = "cont"
+    dataset_specifier_fullname = "contrastive dataset"
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset(data_def, data_call)
@@ -456,11 +270,16 @@ v = pot['z']
     print("Best layer:", best_layer)
     print("Test accuracy:", results[best_layer]["test_acc"])
 
+    # plot the probe accuracies
+    save_dir = "figures/probe_accuracy"
+    filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
+    plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+
     # print("All results:", results)
     # steering_path = "training_data/steering_data_300_realistic.txt"
-    steering_path = "training_data/steering_data_300_realistic.txt"
-    for alpha in [10, 50, 30, 100]:
-        steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, alpha=alpha)
+    steering_path = "training_data/steering_data_300_final.txt"
+    alpha = 50.0
+    steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 
     # steering:
