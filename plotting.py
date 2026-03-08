@@ -286,7 +286,7 @@ def plot_average_gap(
 
     save_path = os.path.join(
         save_dir,
-        f"avg_decomposition_alpha_{alpha}_{prefix}_newplot.png"
+        f"avg_decomposition_alpha_{alpha}_{prefix}_newplot2.png"
     )
 
     plt.savefig(save_path)
