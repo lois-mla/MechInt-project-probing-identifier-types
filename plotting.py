@@ -280,9 +280,9 @@ def plot_average_gap(
     plt.legend()
     plt.xlabel("Layer")
     plt.ylabel("Average shift")
-    plt.title(
-        f"Steering probabilities shift (id={id} to id={contrastive_id}) on {dataset_specifier_fullname}"
-    )
+    # plt.title(
+    #     f"Steering probabilities shift (id={id} to id={contrastive_id}) on {dataset_specifier_fullname}"
+    # )
 
     save_path = os.path.join(
         save_dir,
@@ -318,7 +318,7 @@ def plot_probe_accuracies(
 
     plt.xlabel("Layer")
     plt.ylabel("Accuracy")
-    plt.title(f"Linear probe accuracy per layer ({dataset_specifier})")
+    # plt.title(f"Linear probe accuracy per layer ({dataset_specifier})")
     plt.legend()
 
     save_path = os.path.join(save_dir, filename)
