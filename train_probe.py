@@ -231,17 +231,17 @@ def main():
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
-    # data_def = "training_data/def_FIM_data_final.txt"
-    # data_call = "training_data/call_FIM_data_final.txt"
-    # probe_save_dir = "probes_stored/probes_final"
-    data_def = "training_data/def_FIM_data_nocont.txt"
-    data_call = "training_data/call_FIM_data_nocont.txt"
-    probe_save_dir = "probes_stored/probes_no_cont"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = "probes_stored/probes_final"
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
+    # probe_save_dir = "probes_stored/probes_no_cont"
     # data_def = "training_data/def_FIM_data.txt"
     # data_call = "training_data/call_FIM_data.txt"
     # probe_save_dir = "probes_stored/probes_realistic"
-    dataset_specifier = "no_cont"
-    dataset_specifier_fullname = "non-contrastive dataset"
+    dataset_specifier = "cont"
+    dataset_specifier_fullname = "contrastive dataset"
 
     model, tokenizer = load_model()
     prompts, labels = load_dataset(data_def, data_call)
@@ -278,7 +278,7 @@ def main():
     # print("All results:", results)
     # steering_path = "training_data/steering_data_300_realistic.txt"
     steering_path = "training_data/steering_data_300_final.txt"
-    alphas = [100.0]
+    alphas = [200.0, 1000.00]
     for alpha in alphas:
         steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
