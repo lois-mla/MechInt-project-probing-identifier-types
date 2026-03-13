@@ -278,7 +278,7 @@ def main():
     # print("All results:", results)
     # steering_path = "training_data/steering_data_300_realistic.txt"
     steering_path = "training_data/steering_data_300_final.txt"
-    alphas = [100.0]
+    alphas = [200.0, 1000.00]
     for alpha in alphas:
         steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
