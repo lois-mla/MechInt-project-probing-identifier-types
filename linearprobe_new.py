@@ -1,3 +1,5 @@
+"""
+This file contains a class for caching the hidden activations in the model and a linear probe class"""
 import torch
 import torch.nn as nn
 import transformer_lens
