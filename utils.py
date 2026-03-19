@@ -1,3 +1,5 @@
+"""
+This file contains functions for loading the model and dataset"""
 # https://huggingface.co/codellama/CodeLlama-7b-Python-hf?library=transformers
 
 # # Load model directly

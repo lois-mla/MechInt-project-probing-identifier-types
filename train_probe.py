@@ -1,3 +1,16 @@
+"""
+This file is used for training the linear probe and running the steering experiments.
+It contains the following functions: 
+for probing: 
+probe_layer: Probes a single layer of the model.
+probe_all_layers: Probes all layers of the model.
+
+for steering: 
+save_average_to_csv: Saves the average results for the steering experiments to a CSV file.
+steer_prompts_from_file: Runs the steering experiment for prompts from a file and plots the results.
+It also contains the code to run the probing and steering experiments at the bottom of the file.
+For the different dataset, different paths should be specified (this is explained in the comments)
+"""
 import torch
 import os
 import transformer_lens
@@ -231,6 +244,10 @@ def main():
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
+
+    # first three lines; contrastive letter-name dataset
+    # next three lines; non-contrastive letter-name dataset
+    # last three lines; contrastive realistic-name dataset
     data_def = "training_data/def_FIM_data_final.txt"
     data_call = "training_data/call_FIM_data_final.txt"
     probe_save_dir = "probes_stored/probes_final"
@@ -240,6 +257,8 @@ def main():
     # data_def = "training_data/def_FIM_data.txt"
     # data_call = "training_data/call_FIM_data.txt"
     # probe_save_dir = "probes_stored/probes_realistic"
+
+    # specify the name of the chosen dataset for saving the file and plot titles
     dataset_specifier = "cont"
     dataset_specifier_fullname = "contrastive dataset"
 
@@ -276,42 +295,14 @@ def main():
     plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
     # print("All results:", results)
+
+    # use the first path for the realistic name dataset and the second path for both letter-name datasets
     # steering_path = "training_data/steering_data_300_realistic.txt"
     steering_path = "training_data/steering_data_300_final.txt"
     alphas = [200.0, 1000.00]
     for alpha in alphas:
         steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
-
-    # steering:
-
-#     prompt = get_prompt(prompt_prefix, prompt_suffix)
-
-#     alpha = 10.0
-
-#     df = compare_steering(
-#     model=model,
-#     tokenizer=tokenizer,
-#     results=results,
-#     prompt=prompt,
-#     id=0,
-#     contrastive_id=1,
-#     alpha=alpha,
-#     resid_type="mlp_out",
-#     k=20,
-# )
-
-#     print(prompt)
-#     print("alpha: ", alpha)
-    # pd.set_option('display.max_columns', None)
-#     print(df) 
-
-    # # print best layer
-    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    # print("Best layer:", best_layer)
-    # print("Test accuracy:", results[best_layer]["test_acc"])
-
-    # print("All results:", results)
 
 
 if __name__ == "__main__":
