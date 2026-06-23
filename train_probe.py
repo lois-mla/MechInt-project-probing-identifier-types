@@ -248,9 +248,9 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-    data_def = "training_data/def_FIM_data_final.txt"
-    data_call = "training_data/call_FIM_data_final.txt"
-    probe_save_dir = "probes_stored/probes_final"
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    # probe_save_dir = "probes_stored/probes_final"
     # data_def = "training_data/def_FIM_data_nocont.txt"
     # data_call = "training_data/call_FIM_data_nocont.txt"
     # probe_save_dir = "probes_stored/probes_no_cont"
@@ -258,9 +258,15 @@ def main():
     # data_call = "training_data/call_FIM_data.txt"
     # probe_save_dir = "probes_stored/probes_realistic"
 
+    data_def = "datasets/letters/mixed_definition.jsonl"
+    data_call = "datasets/letters/mixed_usage.jsonl"
+    probe_save_dir = "probes_stored/probes_new_data_set"
+
     # specify the name of the chosen dataset for saving the file and plot titles
-    dataset_specifier = "cont_baseline"
-    dataset_specifier_fullname = "contrastive dataset baseline"
+    # dataset_specifier = "cont_baseline"
+    # dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = "letters mixed"
+    dataset_specifier_fullname = "letters mixed"
 
     model, tokenizer = load_model()
     model = randomize_model_weights(model) # use this line for the baseline!!
