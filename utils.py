@@ -240,12 +240,26 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
 def randomize_model_weights(model):
     """Iterates through all model parameters and randomizes them."""
     with torch.no_grad():
+        count = 0
         for name, param in model.named_parameters():
-            if "weight" in name:
-                # Normal distribution is standard for transformers (adjust std if needed)
+            # Catch standard TransformerLens weight matrices (W_E, W_Q, W_in, etc.) 
+            # and any lingering standard 'weight' matrices
+            if "W_" in name or "weight" in name:
                 torch.nn.init.normal_(param, mean=0.0, std=0.02)
-            elif "bias" in name:
+                count += 1 
+                
+            # Catch biases (b_Q, b_in, etc.)
+            elif "b_" in name or "bias" in name:
                 torch.nn.init.zeros_(param)
+                count += 1
+                
+            # Catch LayerNorm/RMSNorm scale parameters (usually named 'w' or 'scale')
+            # Initialize them to 1.0 (standard for normal scale)
+            elif name.endswith(".w") or "scale" in name:
+                torch.nn.init.ones_(param)
+            
+        # print the amount of weights changed
+        print(f"Randomized {count} weights")
     return model
 
 def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
