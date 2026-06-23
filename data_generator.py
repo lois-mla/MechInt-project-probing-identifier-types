@@ -230,41 +230,43 @@ def generate_example(label, source, mask_mode, mixed=False):
 # ============================================================
 # WRITERS
 # ============================================================
-
-def write_mixed_dataset(path, source, mask_mode):
-
-    out = []
-
-    for _ in range(EXAMPLES_PER_CLASS * 3):
-
-        ctx = IdentifierContext(source)
-
-        ex = generate_mixed_example(ctx, mask_mode)
-
-        out.append(ex)
-
-    random.shuffle(out)
-
-    Path(path).parent.mkdir(parents=True, exist_ok=True)
-
-    with open(path, "w") as f:
-        for ex in out:
-            f.write(json.dumps(ex) + "\n")
-
-    print("wrote", path, len(out))
+def is_valid_fim_example(ex: dict) -> bool:
+    return ex["text"].count("<FIM>") == 1
 
 
 def write_dataset(path, source, mask_mode, mixed=False):
 
     out = []
 
-    for label in [VARIABLE, FUNCTION, CLASS]:
+    target_size = EXAMPLES_PER_CLASS * 3  # keep your original scale
 
-        for _ in range(EXAMPLES_PER_CLASS):
+    ctx = IdentifierContext(source)
 
-            ex = generate_example(label, source, mask_mode, mixed)
+    attempts = 0
+    max_attempts = target_size * 50  # safety bound
 
-            out.append(ex)
+    while len(out) < target_size and attempts < max_attempts:
+
+        attempts += 1
+
+        label = random.choice([VARIABLE, FUNCTION, CLASS])
+
+        ex = generate_example(
+            label=label,
+            source=source,
+            mask_mode=mask_mode,
+            mixed=mixed
+        )
+
+        if not is_valid_fim_example(ex):
+            continue  # ❌ discard bad sample
+
+        out.append(ex)
+
+    if len(out) < target_size:
+        raise RuntimeError(
+            f"Only generated {len(out)}/{target_size} valid samples for {path}"
+        )
 
     random.shuffle(out)
 
@@ -274,7 +276,91 @@ def write_dataset(path, source, mask_mode, mixed=False):
         for ex in out:
             f.write(json.dumps(ex) + "\n")
 
-    print("wrote", path, len(out))
+    print("wrote", path, len(out), "attempts:", attempts)
+
+def write_mixed_dataset(path, source, mask_mode):
+
+    out = []
+
+    target_size = EXAMPLES_PER_CLASS * 3
+    attempts = 0
+    max_attempts = target_size * 50  # safety bound
+
+    while len(out) < target_size and attempts < max_attempts:
+
+        attempts += 1
+
+        ctx = IdentifierContext(source)
+
+        ex = generate_mixed_example(ctx, mask_mode)
+
+        # -------------------------
+        # VALIDATION: EXACTLY ONE FIM
+        # -------------------------
+        if ex["text"].count("<FIM>") != 1:
+            continue  # discard bad sample
+
+        out.append(ex)
+
+    if len(out) < target_size:
+        raise RuntimeError(
+            f"Only generated {len(out)}/{target_size} valid mixed samples for {path}"
+        )
+
+    random.shuffle(out)
+
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+
+    with open(path, "w") as f:
+        for ex in out:
+            f.write(json.dumps(ex) + "\n")
+
+    print("wrote", path, len(out), "attempts:", attempts)
+
+# def write_mixed_dataset(path, source, mask_mode):
+
+#     out = []
+
+#     for _ in range(EXAMPLES_PER_CLASS * 3):
+
+#         ctx = IdentifierContext(source)
+
+#         ex = generate_mixed_example(ctx, mask_mode)
+
+#         out.append(ex)
+
+#     random.shuffle(out)
+
+#     Path(path).parent.mkdir(parents=True, exist_ok=True)
+
+#     with open(path, "w") as f:
+#         for ex in out:
+#             f.write(json.dumps(ex) + "\n")
+
+#     print("wrote", path, len(out))
+
+
+# def write_dataset(path, source, mask_mode, mixed=False):
+
+#     out = []
+
+#     for label in [VARIABLE, FUNCTION, CLASS]:
+
+#         for _ in range(EXAMPLES_PER_CLASS):
+
+#             ex = generate_example(label, source, mask_mode, mixed)
+
+#             out.append(ex)
+
+#     random.shuffle(out)
+
+#     Path(path).parent.mkdir(parents=True, exist_ok=True)
+
+#     with open(path, "w") as f:
+#         for ex in out:
+#             f.write(json.dumps(ex) + "\n")
+
+#     print("wrote", path, len(out))
 
 
 # ============================================================
