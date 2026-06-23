@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 
-from utils import read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
+from utils import load_random_model, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
 from steering import compare_steering_with_gap
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -259,10 +259,11 @@ def main():
     # probe_save_dir = "probes_stored/probes_realistic"
 
     # specify the name of the chosen dataset for saving the file and plot titles
-    dataset_specifier = "cont"
-    dataset_specifier_fullname = "contrastive dataset"
+    dataset_specifier = "cont_baseline"
+    dataset_specifier_fullname = "contrastive dataset baseline"
 
     model, tokenizer = load_model()
+    model = randomize_model_weights(model) # use this line for the baseline!!
     prompts, labels = load_dataset(data_def, data_call)
     device = "cuda"
 
@@ -299,7 +300,7 @@ def main():
     # use the first path for the realistic name dataset and the second path for both letter-name datasets
     # steering_path = "training_data/steering_data_300_realistic.txt"
     steering_path = "training_data/steering_data_300_final.txt"
-    alphas = [200.0, 1000.00]
+    alphas = [100.0]
     for alpha in alphas:
         steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 

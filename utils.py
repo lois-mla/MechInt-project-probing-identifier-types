@@ -180,6 +180,34 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
 
     return model, tokenizer
 
+def randomize_model_weights(model):
+    """Iterates through all model parameters and randomizes them."""
+    with torch.no_grad():
+        for name, param in model.named_parameters():
+            if "weight" in name:
+                # Normal distribution is standard for transformers (adjust std if needed)
+                torch.nn.init.normal_(param, mean=0.0, std=0.02)
+            elif "bias" in name:
+                torch.nn.init.zeros_(param)
+    return model
+
+def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    tokenizer.pad_token = tokenizer.eos_token
+
+    # 1. Get the configuration for the model architecture
+    cfg = transformer_lens.loading_from_pretrained.get_pretrained_model_config(
+        model_id,
+        torch_dtype=torch.float16,
+    )
+    
+    # 2. Force the device in the config
+    cfg.device = device
+
+    # 3. Initialize a blank model with randomized weights based on that config
+    model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
+
+    return model, tokenizer
 
 def load_dataset(data_def, data_call, part="FULL"):
     def_fim_dict = read_fim_dataset(data_def)
