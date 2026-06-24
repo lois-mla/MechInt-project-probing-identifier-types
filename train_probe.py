@@ -319,6 +319,9 @@ def main():
     print("Best layer:", best_layer)
     print("Test accuracy:", results[best_layer]["test_acc"])
 
+    # save accuracies
+    save_accuracies_to_csv(results, dataset_specifier)
+    
     # plot the probe accuracies
     save_dir = "figures/probe_accuracy"
     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
