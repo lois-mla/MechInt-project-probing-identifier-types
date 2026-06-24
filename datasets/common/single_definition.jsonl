@@ -1,0 +1,1500 @@
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -43.17\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -83.967\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -66.821\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 50.309\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -21.449\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 9.313\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 59.52\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -9.821\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 59.178\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 82.553\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -20.556\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 68.961\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -66.64\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -63.207\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -45.452\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -63.808\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -27.041\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 89.017\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -17.403\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -61.858\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -18.41\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -60.492\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 84.092\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -98.227\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -17.458\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 33.136\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 9.901\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 91.255\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -36.702\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -31.242\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -52.639\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -59.904\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 81.682\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 74.189\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -25.18\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -65.349\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -56.179\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -81.718\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 11.794\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 82.421\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 39.574\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -78.752\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 49.629\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 14.421\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -98.347\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -8.701\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 25.144\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 88.205\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 64.372\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -97.425\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 84.867\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 59.974\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -5.933\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -68.229\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -61.667\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 39.592\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 52.089\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 54.685\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -19.536\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 41.483\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -69.443\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -65.401\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 27.346\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -89.813\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 78.077\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 81.645\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 17.71\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 1.293\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 63.153\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 66.391\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 45.718\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -3.103\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -83.806\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 72.061\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -93.237\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 69.657\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 37.667\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 2.298\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 41.863\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -25.09\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -9.946\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 24.618\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -93.349\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 92.552\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -8.819\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -5.868\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -12.087\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -78.697\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -80.998\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -54.083\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -65.823\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -26.397\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 52.154\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 29.739\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -89.859\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -61.56\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -60.765\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -13.819\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 40.764\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -29.838\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 37.026\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 82.49\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 3.102\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 90.129\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -31.269\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -24.644\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 98.0\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 21.331\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 98.5\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 65.742\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 81.127\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 65.18\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 13.829\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -33.37\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -64.162\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -1.715\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 83.524\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -81.601\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -74.178\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 61.092\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 13.536\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -84.675\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 88.057\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -98.411\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 40.254\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -34.893\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -68.643\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 34.809\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -26.368\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 30.214\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -62.796\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 73.128\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 39.615\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 4.06\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -3.571\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -59.849\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -15.287\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -97.683\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -22.661\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 25.667\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 28.634\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 5.404\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 61.125\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 0.556\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -65.137\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -10.107\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -50.167\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -4.144\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 59.18\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -88.693\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 19.42\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 29.248\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -69.143\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 69.055\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 85.621\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 49.262\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 76.396\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -97.887\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -52.606\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -90.093\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -23.406\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -79.447\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 32.837\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 33.162\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 48.666\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 25.98\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 94.411\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -30.064\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 35.817\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 77.995\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 2.763\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 85.471\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -88.104\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 88.366\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 47.784\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -57.034\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -82.333\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 21.804\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -94.191\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 47.333\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 2.721\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -92.508\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 61.894\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 65.025\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -36.535\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 46.141\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 47.071\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 67.169\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -13.443\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -1.254\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -60.396\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 88.125\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 86.419\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -3.839\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 28.769\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -45.717\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -44.676\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 36.933\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 34.001\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 20.18\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 69.843\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -21.715\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -13.298\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 7.438\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -98.503\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -93.361\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -88.676\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -12.079\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -25.241\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 15.416\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -5.257\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -21.27\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -77.225\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -61.624\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -29.678\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -19.156\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 17.382\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -8.45\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -21.095\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -82.853\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -51.81\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 4.134\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -42.976\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -17.399\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -64.671\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -49.678\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 0.463\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -58.806\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 67.089\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 32.475\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 0.882\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 18.158\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -49.067\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 52.656\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 62.812\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 98.351\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -35.269\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 19.648\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -71.091\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -77.648\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 45.411\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -62.279\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -76.613\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 29.62\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -32.151\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 14.668\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 31.186\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -75.476\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 78.708\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -30.367\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 80.538\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 65.755\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 45.968\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -67.689\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -70.569\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 60.667\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 99.989\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 56.558\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -77.046\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 34.756\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 79.082\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 20.752\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -83.057\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -42.93\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 79.843\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -97.695\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 57.505\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 98.884\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -67.427\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 47.769\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 83.531\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -79.918\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -78.633\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -86.189\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -8.905\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -32.003\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -63.693\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -80.291\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -22.948\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 60.521\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 22.63\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 12.528\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 18.523\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 91.768\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -58.653\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 64.732\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 62.659\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 55.109\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 93.878\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -7.056\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -60.707\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -46.184\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 18.393\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -63.358\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -76.36\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 99.541\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -83.6\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -78.459\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 48.686\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -51.152\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 92.724\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -2.203\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -66.833\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 73.191\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 89.595\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 72.016\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -67.009\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -24.021\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 41.342\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 12.19\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 60.2\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 22.152\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 3.397\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -70.929\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 84.833\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 31.244\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -36.642\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -26.075\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -61.571\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 61.701\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -52.833\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -83.63\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -13.389\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -14.905\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 28.784\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -88.75\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 55.275\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 25.434\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -11.918\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 88.435\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 54.859\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 77.952\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -59.714\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 29.465\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -6.727\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 14.769\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 3.63\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -71.907\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 44.913\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -83.573\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -85.872\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -91.781\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -20.727\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -96.575\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 50.827\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -54.229\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 10.398\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 91.802\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -34.95\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 38.302\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 23.441\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 35.149\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 26.28\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 17.693\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 10.089\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -41.237\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -17.857\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 48.188\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -74.171\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 22.229\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -40.74\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -76.567\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 67.812\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -80.104\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -72.731\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -8.832\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 27.618\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 78.318\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -59.715\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -43.138\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 91.703\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 59.757\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 79.13\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 42.605\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 31.014\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -13.547\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -95.347\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 79.318\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 65.439\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -33.547\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 55.764\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -56.874\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -79.089\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 59.889\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 22.063\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -16.495\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -58.223\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -77.407\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -29.208\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -62.773\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -39.757\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -31.311\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -78.086\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 5.172\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 23.792\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -5.209\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -76.249\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 49.191\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -23.063\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -25.489\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -21.891\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 40.906\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -5.581\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -3.541\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -57.0\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -98.69\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 70.15\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -66.257\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 34.989\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 27.721\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 9.062\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 46.392\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -65.388\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 51.933\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 39.175\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -94.972\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 25.854\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -36.653\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -95.71\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -77.348\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 43.831\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 4.765\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 14.684\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -18.285\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -50.473\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -23.59\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 81.448\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 31.293\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 56.009\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -23.916\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 49.836\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -12.098\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 93.165\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -97.989\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -57.37\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 18.461\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -31.375\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -44.87\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 10.432\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 34.031\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -35.973\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 46.455\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 83.549\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 88.882\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 95.01\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 15.786\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -84.017\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 42.998\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -6.583\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 49.332\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -98.984\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 15.164\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 45.517\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 26.872\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 10.139\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -39.747\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 61.955\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -53.672\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 99.099\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 34.567\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -51.632\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -39.538\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 51.558\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -88.749\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -84.249\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -84.463\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -66.442\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -76.606\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -82.24\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 59.474\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 8.911\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 5.457\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -88.347\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 43.864\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -89.964\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 84.204\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 81.765\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 84.397\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 86.869\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 61.347\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 95.471\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 81.667\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = parse(9)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -44.513\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 40.384\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 61.448\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -41.447\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 10.742\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 28.35\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 96.777\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = load(9)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 4.974\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = compute(9)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 0.934\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -37.712\n\nq = data + 10", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 65.184\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 99.475\n\nq = result + 10", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 79.199\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 2.017\n\nq = x + 10", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = process(9)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 93.665\n\nq = state + 10", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 54.595\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -75.521\n\nq = value + 10", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x): return x * 2\n\ni = run(9)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>: pass\n\nj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 8.424\n\nq = y + 10", "label": 0, "target": "y", "mask_mode": "definition"}

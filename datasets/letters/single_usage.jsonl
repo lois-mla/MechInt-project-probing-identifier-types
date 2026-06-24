@@ -1,0 +1,1500 @@
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "c = 46.186\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "y = -10.192\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "n = -65.439\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "g = -82.662\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "r = 52.584\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "z = 71.463\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "u = 36.211\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "x = 39.888\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "m = -79.714\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "y = 39.294\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "a = 89.758\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "j = 36.883\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "s = -94.21\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "x = -34.75\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "m = -5.811\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "m = -56.434\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "p = -8.96\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "x = -99.744\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "j = -72.574\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "b = -64.131\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "i = 68.569\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "s = 55.909\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "c = 14.307\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "z = 90.934\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "v = 25.018\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "c = -37.966\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "l = 64.203\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "b = -15.325\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "d = -58.961\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "b = -20.841\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "s = 80.091\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "n = 48.189\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "w = 81.881\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "h = -14.154\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "s = -15.827\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "h = 94.796\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "i = -23.397\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "e = -64.208\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "i = -56.851\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "g = 81.661\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "t = -20.569\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "m = -29.693\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "y = 88.256\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "a = -58.609\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "u = -11.314\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "b = 49.15\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "w = -93.801\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "q = -8.369\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "w = -28.355\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "j = 42.548\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "b = 61.731\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "c = -82.595\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "z = -79.515\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "x = 8.025\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "n = -95.218\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "q = 84.185\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "h = -46.695\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "b = -63.584\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "n = 58.369\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "m = -45.913\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "d = 7.185\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "w = 28.548\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "v = -23.666\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "t = -85.757\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "g = 25.616\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "a = -57.316\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "u = -66.895\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "z = 5.163\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "u = -65.36\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "t = 37.313\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "r = 52.096\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "p = -87.804\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "b = 52.81\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "g = 61.289\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "s = 17.587\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "f = 46.47\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "j = 54.705\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "w = -63.929\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "b = 94.512\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "h = -81.055\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "m = -40.892\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "p = 29.836\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "s = -41.19\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "l = -88.912\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "z = -22.315\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "z = -42.781\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "c = -5.286\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "i = -44.029\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "t = -69.464\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "w = -29.664\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "k = 83.579\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "d = -98.53\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "e = 54.873\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "f = 27.237\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "e = -50.443\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "u = -0.525\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "v = 75.299\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "f = 77.586\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "v = 75.165\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "v = 27.821\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "g = 82.687\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "v = -28.301\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "f = 70.764\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "x = 77.283\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "h = -0.083\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "k = 84.208\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "p = 5.886\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "c = 88.711\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "m = 1.322\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "v = 44.556\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "r = 44.408\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "l = -31.15\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "h = -69.887\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "c = 64.332\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "z = -61.455\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "p = -27.205\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "c = -41.09\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "z = -33.69\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "q = -4.402\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "y = 55.95\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "i = -81.332\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "n = 79.097\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "z = 83.452\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "t = -88.994\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "a = -91.192\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "d = -82.859\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "c = -60.45\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "c = 59.136\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "r = -30.715\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "h = 3.889\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "r = 27.663\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "n = 94.141\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "v = 93.297\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "n = -47.173\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "f = -1.913\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "p = -71.871\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "r = 38.712\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "s = -79.178\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "k = 61.422\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "e = 55.987\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "y = 16.798\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "f = -41.243\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "k = -99.708\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "s = -86.493\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "f = -2.085\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "c = 40.74\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "v = 38.732\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "l = 12.291\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "x = -48.151\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "a = -51.09\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "h = 29.476\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "y = -85.402\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "b = -56.996\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "s = -87.672\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "f = 46.397\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "d = -81.916\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "w = 39.376\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "r = 49.616\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "n = -60.108\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "t = 23.395\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "m = -29.754\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "d = -5.893\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "z = -21.409\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "m = 56.383\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "l = -59.866\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "m = -82.134\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "x = -36.013\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "i = -58.063\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "p = 90.603\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "t = -56.238\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "k = -10.674\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "a = 97.377\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "k = -21.854\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "c = -38.019\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "p = 14.543\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "r = -8.651\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "h = -16.037\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "h = -93.386\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "w = 90.438\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "w = -55.527\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "g = 67.395\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "d = 17.915\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "q = -17.389\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "e = 42.33\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "d = -38.329\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "v = -71.429\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "g = -18.144\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "u = -83.15\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "c = -62.413\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "w = 48.133\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "i = 21.669\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "n = 93.066\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "h = -25.507\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "d = -9.326\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "x = 37.7\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "y = -60.916\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "z = 55.708\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "t = 78.645\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "n = 64.97\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "u = -67.001\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "a = 98.368\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "l = 64.701\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "p = 81.305\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "v = -20.881\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "z = -39.389\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "r = 58.969\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "r = -20.529\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "h = -4.748\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "p = 17.376\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "t = 21.81\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "i = 4.771\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "b = 35.437\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "l = -74.614\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "w = -97.73\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "l = -4.063\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "d = -33.781\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "e = 28.315\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "a = 69.578\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "e = 23.649\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "z = -98.307\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "q = -62.271\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "r = 36.588\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "h = -94.139\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "c = -37.775\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "q = 3.445\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "l = 90.014\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "l = -20.751\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "c = 75.398\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "t = 30.004\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "a = 41.58\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "v = -58.654\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "i = 57.404\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "q = 58.298\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "b = 56.76\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "s = 89.674\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "d = 60.779\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "x = -11.378\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "i = 45.037\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "t = -5.391\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "d = -85.16\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "j = 69.084\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "i = 70.183\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "x = -84.439\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "e = -72.527\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "u = -70.424\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "b = 66.074\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "u = 87.515\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "k = -47.774\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "r = -60.117\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "s = 56.901\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "w = 36.97\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "u = -41.638\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "i = 42.465\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "l = -8.308\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "t = 17.515\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "g = 3.55\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "c = -21.039\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "c = 84.926\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "c = 18.379\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "x = -83.02\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "k = 26.9\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "w = -60.178\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "o = -91.077\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "e = 3.459\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "d = 78.854\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "s = 0.479\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "d = 84.986\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "r = 88.367\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "e = 22.896\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "c = -25.282\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "h = -16.749\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "q = 12.658\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "c = -2.484\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "n = 76.556\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "v = 48.339\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "b = -66.402\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "n = 38.806\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "k = 43.388\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "x = -92.936\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "y = 3.3\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "z = 68.857\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "n = -55.097\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "b = -80.085\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "n = 20.996\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "i = 83.486\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "f = -93.784\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "s = 78.569\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "e = -64.458\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "x = 21.519\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "x = 45.443\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "u = 7.313\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "l = 61.636\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "w = -31.285\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "k = 38.103\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "l = -8.2\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "t = -70.51\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "f = -11.743\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "c = -91.22\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "h = -88.419\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "v = -36.083\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "d = 0.408\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "w = -86.441\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "y = 74.692\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "l = 32.902\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "d = -71.997\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "v = -46.999\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "f = 89.385\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "s = -66.624\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "k = -73.603\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "h = -73.857\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "m = -12.356\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "v = 4.128\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "w = -19.545\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "h = 33.106\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "a = -36.224\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "y = 70.259\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "o = -45.609\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "k = -88.089\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "b = 83.606\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "a = 72.926\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "m = -25.552\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "i = 79.406\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "p = -46.293\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "h = 15.138\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "o = -85.258\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "i = 28.119\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "g = 52.239\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "j = -32.449\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "n = -1.384\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "f = 94.433\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "o = -26.345\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "n = -68.579\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "d = 1.086\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "y = 36.44\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "v = -43.695\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "n = -19.08\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "n = 45.992\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "u = -14.118\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "v = -12.921\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "m = 14.354\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "h = 79.937\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "w = -50.356\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "g = -31.367\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "t = -55.821\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "j = -17.379\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "a = -9.589\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "o = -6.988\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "p = -85.834\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "c = -73.46\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "y = -58.473\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "j = -34.54\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "q = 72.134\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "o = -37.193\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "p = -69.282\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "u = -40.979\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "s = -78.205\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "n = -37.099\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "z = 3.155\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "c = 16.465\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "e = -93.07\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "b = 68.159\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "e = 17.322\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "e = 83.979\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "q = -16.274\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "k = 30.887\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "b = -13.003\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "w = 75.44\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "p = 57.746\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "q = -20.612\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "c = -88.766\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "y = 62.674\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "i = -47.771\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "b = 10.573\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "h = 67.416\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "b = 88.456\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "x = -64.871\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "k = 71.325\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "v = -54.883\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "g = 75.036\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "o = -71.355\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "s = -13.369\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "h = -28.943\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "t = 57.398\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "f = -44.917\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "u = 97.328\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "a = -32.427\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "a = -23.454\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "m = 25.121\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "n = -59.536\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "p = 8.425\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "t = -48.423\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "p = -22.823\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "def y(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "y", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "s = 25.507\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "k = -72.71\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "z = -68.925\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "z = 67.34\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "u = 63.993\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "z = 76.325\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "l = -99.237\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "a = -22.687\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "p = 82.303\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "m = -99.066\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "g = -31.466\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "d = 36.235\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "k = -46.116\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "u = -2.883\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "z = 20.007\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "z = -16.081\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "h = 79.457\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def s(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "s", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "u = -39.627\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "j = -48.115\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "x = 24.544\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "f = -64.78\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "r = 20.2\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "k = 51.37\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "s = -36.399\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "v = -24.745\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "s = -73.881\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "p = -74.411\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "def t(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "t", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "i = 64.018\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "o = -98.143\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "t = -10.779\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "def i(x): return x * 2\n\n<FIM> = <FIM>(9)", "label": 1, "target": "i", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "z = 37.211\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "p = -60.065\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "y = 69.433\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "f = 15.256\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "y = -5.797\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "w = -93.054\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "u = 16.715\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "t = -85.798\n\nq = <FIM> + 10", "label": 0, "target": "t", "mask_mode": "usage"}
+{"text": "q = -19.323\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "def n(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "n", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "i = 49.792\n\nq = <FIM> + 10", "label": 0, "target": "i", "mask_mode": "usage"}
+{"text": "l = -49.922\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "x = 82.835\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "h = 48.156\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "b = 89.736\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "e = -52.646\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "w = 98.951\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "b = 90.816\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "k = -70.335\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "def q(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "q", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "s = 30.194\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "m = 70.92\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "p = 57.661\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "def m(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "m", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "y = 79.979\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "p = -87.233\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "x = -21.0\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "m = -26.12\n\nq = <FIM> + 10", "label": 0, "target": "m", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "s = 12.721\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "l = 96.476\n\nq = <FIM> + 10", "label": 0, "target": "l", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "n = -70.072\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "y = 92.984\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "def o(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "o", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class Z: pass\n\nj = <FIM>()", "label": 2, "target": "Z", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "h = -80.817\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "u = 98.817\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "u = -18.099\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "s = -94.359\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "class B: pass\n\nj = <FIM>()", "label": 2, "target": "B", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "a = -75.153\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "v = 52.451\n\nq = <FIM> + 10", "label": 0, "target": "v", "mask_mode": "usage"}
+{"text": "h = -73.123\n\nq = <FIM> + 10", "label": 0, "target": "h", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "class T: pass\n\nj = <FIM>()", "label": 2, "target": "T", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "d = -67.125\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "g = 0.095\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "def x(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "x", "mask_mode": "usage"}
+{"text": "s = -21.68\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "def u(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "u", "mask_mode": "usage"}
+{"text": "e = -81.604\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "class A: pass\n\nj = <FIM>()", "label": 2, "target": "A", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "def c(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "c", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "x = 74.286\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "def v(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "v", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "def g(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "g", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "def a(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "a", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "class P: pass\n\nj = <FIM>()", "label": 2, "target": "P", "mask_mode": "usage"}
+{"text": "o = 26.968\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "class M: pass\n\nj = <FIM>()", "label": 2, "target": "M", "mask_mode": "usage"}
+{"text": "f = 41.437\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "e = -75.709\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "x = 39.525\n\nq = <FIM> + 10", "label": 0, "target": "x", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "u = 42.526\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "a = 57.31\n\nq = <FIM> + 10", "label": 0, "target": "a", "mask_mode": "usage"}
+{"text": "c = -95.64\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "class R: pass\n\nj = <FIM>()", "label": 2, "target": "R", "mask_mode": "usage"}
+{"text": "c = -32.41\n\nq = <FIM> + 10", "label": 0, "target": "c", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class O: pass\n\nj = <FIM>()", "label": 2, "target": "O", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "w = -81.922\n\nq = <FIM> + 10", "label": 0, "target": "w", "mask_mode": "usage"}
+{"text": "d = 97.631\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "z = -3.064\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "f = -24.323\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def h(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "h", "mask_mode": "usage"}
+{"text": "n = 57.618\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "p = 99.557\n\nq = <FIM> + 10", "label": 0, "target": "p", "mask_mode": "usage"}
+{"text": "class U: pass\n\nj = <FIM>()", "label": 2, "target": "U", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "def k(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "k", "mask_mode": "usage"}
+{"text": "def p(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "p", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "r = 37.414\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "class K: pass\n\nj = <FIM>()", "label": 2, "target": "K", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "r = 76.027\n\nq = <FIM> + 10", "label": 0, "target": "r", "mask_mode": "usage"}
+{"text": "class I: pass\n\nj = <FIM>()", "label": 2, "target": "I", "mask_mode": "usage"}
+{"text": "n = 93.82\n\nq = <FIM> + 10", "label": 0, "target": "n", "mask_mode": "usage"}
+{"text": "class C: pass\n\nj = <FIM>()", "label": 2, "target": "C", "mask_mode": "usage"}
+{"text": "class H: pass\n\nj = <FIM>()", "label": 2, "target": "H", "mask_mode": "usage"}
+{"text": "e = 44.257\n\nq = <FIM> + 10", "label": 0, "target": "e", "mask_mode": "usage"}
+{"text": "z = 14.297\n\nq = <FIM> + 10", "label": 0, "target": "z", "mask_mode": "usage"}
+{"text": "class F: pass\n\nj = <FIM>()", "label": 2, "target": "F", "mask_mode": "usage"}
+{"text": "def j(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "j", "mask_mode": "usage"}
+{"text": "class E: pass\n\nj = <FIM>()", "label": 2, "target": "E", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "u = -40.242\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "j = -7.331\n\nq = <FIM> + 10", "label": 0, "target": "j", "mask_mode": "usage"}
+{"text": "def w(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "w", "mask_mode": "usage"}
+{"text": "class Y: pass\n\nj = <FIM>()", "label": 2, "target": "Y", "mask_mode": "usage"}
+{"text": "k = -26.488\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class Q: pass\n\nj = <FIM>()", "label": 2, "target": "Q", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "def d(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "d", "mask_mode": "usage"}
+{"text": "class N: pass\n\nj = <FIM>()", "label": 2, "target": "N", "mask_mode": "usage"}
+{"text": "y = 92.966\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "s = -54.497\n\nq = <FIM> + 10", "label": 0, "target": "s", "mask_mode": "usage"}
+{"text": "f = -48.977\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "b = -41.018\n\nq = <FIM> + 10", "label": 0, "target": "b", "mask_mode": "usage"}
+{"text": "class G: pass\n\nj = <FIM>()", "label": 2, "target": "G", "mask_mode": "usage"}
+{"text": "y = -16.914\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "class V: pass\n\nj = <FIM>()", "label": 2, "target": "V", "mask_mode": "usage"}
+{"text": "y = 93.037\n\nq = <FIM> + 10", "label": 0, "target": "y", "mask_mode": "usage"}
+{"text": "u = 8.825\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "class X: pass\n\nj = <FIM>()", "label": 2, "target": "X", "mask_mode": "usage"}
+{"text": "class W: pass\n\nj = <FIM>()", "label": 2, "target": "W", "mask_mode": "usage"}
+{"text": "d = -32.688\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "u = 52.645\n\nq = <FIM> + 10", "label": 0, "target": "u", "mask_mode": "usage"}
+{"text": "q = -61.885\n\n<FIM> = <FIM> + 10", "label": 0, "target": "q", "mask_mode": "usage"}
+{"text": "o = -29.762\n\nq = <FIM> + 10", "label": 0, "target": "o", "mask_mode": "usage"}
+{"text": "def r(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "r", "mask_mode": "usage"}
+{"text": "class J: pass\n\nj = <FIM>()", "label": 2, "target": "J", "mask_mode": "usage"}
+{"text": "f = -25.796\n\nq = <FIM> + 10", "label": 0, "target": "f", "mask_mode": "usage"}
+{"text": "class D: pass\n\nj = <FIM>()", "label": 2, "target": "D", "mask_mode": "usage"}
+{"text": "g = -6.66\n\nq = <FIM> + 10", "label": 0, "target": "g", "mask_mode": "usage"}
+{"text": "def f(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "f", "mask_mode": "usage"}
+{"text": "def z(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "z", "mask_mode": "usage"}
+{"text": "class S: pass\n\nj = <FIM>()", "label": 2, "target": "S", "mask_mode": "usage"}
+{"text": "def b(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "b", "mask_mode": "usage"}
+{"text": "d = -50.429\n\nq = <FIM> + 10", "label": 0, "target": "d", "mask_mode": "usage"}
+{"text": "class L: pass\n\nj = <FIM>()", "label": 2, "target": "L", "mask_mode": "usage"}
+{"text": "def l(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "l", "mask_mode": "usage"}
+{"text": "def e(x): return x * 2\n\ni = <FIM>(9)", "label": 1, "target": "e", "mask_mode": "usage"}
+{"text": "k = -25.664\n\nq = <FIM> + 10", "label": 0, "target": "k", "mask_mode": "usage"}

@@ -1,0 +1,212 @@
+def a(b, c):
+    return b + c
+
+class FIM:
+    d = 'high'
+    def __init__(self, e):
+        self.e = e
+    def f(self, g):
+        return self.d + g
+
+h = [1, 2, 3]
+
+i = a('x', 'y')
+j = k('z')
+l = j.f('w')
+h.append(4)
+
+>>>k
+ID:2
+0:h
+1:a
+2:k
+#####
+m = 12.5
+class n:
+    o = 2
+    def p(self):
+        return self.o ** 2
+
+def q(r, s, t):
+    return (r * s) + t
+
+u = m * 2.0
+v = n()
+w = v.p()
+x = FIM(2, 3, 4)
+
+>>>q
+ID:1
+0:m
+1:q
+2:n
+#####
+def y(z):
+    return z[0]
+
+FIM = [10, 20, 30]
+
+class a:
+    b = 5
+    def c(self, d):
+        return self.b - d
+
+e = a()
+f = e.c(2)
+g = y(h)
+h.extend([40])
+
+>>>h
+ID:0
+0:h
+1:y
+2:a
+#####
+i = 'token'
+def j(k):
+    return k.upper()
+
+class l:
+    m = [7, 8]
+    def n(self, o):
+        return self.m + [o]
+
+p = j(i)
+q = FIM()
+r = q.n(9)
+s = i + 'ize'
+
+>>>l
+ID:2
+0:i
+1:j
+2:l
+#####
+t = {'a': 1}
+class u:
+    v = '!'
+    def w(self, x):
+        return x + self.v
+
+def FIM(y, z):
+    return y * z
+
+a = b('s', 3)
+c = u()
+d = c.w('hi')
+t.update({'b': 2})
+
+>>>b
+ID:1
+0:t
+1:b
+2:u
+#####
+e = 9.0
+def f(g, h):
+    return g / h
+
+class i:
+    j = 100
+    def k(self, l):
+        return self.j // l
+
+m = i()
+n = m.k(5)
+o = f(20, 4)
+p = FIM ** 0.5
+
+>>>e
+ID:0
+0:e
+1:f
+2:i
+#####
+class FIM:
+    q = 50
+    def __init__(self, r):
+        self.r = r
+    def s(self):
+        return self.q - self.r
+
+def t(u, v):
+    return u + v
+
+w = 7
+
+x = y(10)
+z = x.s()
+a = t(5, 5)
+b = w * 2
+
+>>>y
+ID:2
+0:w
+1:t
+2:y
+#####
+c = 'python'
+def d(e):
+    return e[2:]
+
+class f:
+    g = [1]
+    def h(self, i):
+        self.g[0] = i
+        return self.g
+
+j = f()
+k = j.h(9)
+l = FIM(c)
+m = c.replace('p', 'j')
+
+>>>d
+ID:1
+0:c
+1:d
+2:f
+#####
+class n:
+    o = 3.14
+    def p(self):
+        return self.o
+
+FIM = {'z': 99}
+
+def q(r):
+    return r.capitalize()
+
+s = q('word')
+t = n()
+u = t.p()
+v = w['z']
+
+>>>w
+ID:0
+0:w
+1:q
+2:n
+#####
+class x:
+    y = 'base'
+    def __init__(self, z):
+        self.z = z
+    def a(self, b):
+        return self.y + self.z + b
+
+def c(d, e):
+    return d - e
+
+f = 100
+
+g = c(f, 10)
+h = FIM('mid')
+i = h.a('end')
+j = f // 2
+
+>>>x
+ID:2
+0:f
+1:c
+2:x
+#####
