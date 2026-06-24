@@ -199,9 +199,11 @@ class IdentifierContext:
 # ============================================================
 # VARIABLE DEFINITIONS
 # ============================================================
+# ============================================================
+# VARIABLE DEFINITIONS
+# ============================================================
 VAR_DEFINITION_TEMPLATES = [
 
-    # scalars
     {"tpl": """<FIM> = {int1}""", "type": "int"},
     {"tpl": """<FIM> = {float1}""", "type": "float"},
     {"tpl": """<FIM> = {str1}""", "type": "str"},
@@ -209,17 +211,14 @@ VAR_DEFINITION_TEMPLATES = [
     {"tpl": """<FIM> = False""", "type": "bool"},
     {"tpl": """<FIM> = None""", "type": "none"},
 
-    # arithmetic variants
     {"tpl": """<FIM> = {int1} + {int2}""", "type": "int"},
     {"tpl": """<FIM> = {int1} * {int2}""", "type": "int"},
     {"tpl": """<FIM> = ({int1} - {int2}) / {int3}""", "type": "float"},
     {"tpl": """<FIM> = -{int1}""", "type": "int"},
     {"tpl": """<FIM> = {int1} ** 2""", "type": "int"},
 
-    # conditional
     {"tpl": """<FIM> = {int1} if {int2} > 0 else {int3}""", "type": "int"},
 
-    # containers
     {"tpl": """<FIM> = [{int1}, {int2}]""", "type": "list_int"},
     {"tpl": """<FIM> = []""", "type": "list_int"},
 
@@ -229,18 +228,15 @@ VAR_DEFINITION_TEMPLATES = [
     {"tpl": """<FIM> = {{'{str1}': {int1}}}""", "type": "dict"},
     {"tpl": """<FIM> = {{}}""", "type": "dict"},
 
-    # mixed
     {"tpl": """<FIM> = [{float1}, {int1}]""", "type": "list_int"},
-    {"tpl": """<FIM> = {{'{str1}': {float1}}}""", "type": "dict"},
 ]
 
 
 # ============================================================
-# FUNCTION DEFINITIONS
+# FUNCTION DEFINITIONS (UNAMBIGUOUS)
 # ============================================================
 FUNC_DEFINITION_TEMPLATES = [
 
-    # unary
     {"tpl": """def <FIM>(x):
     return x * {int1}""", "args": 1},
 
@@ -253,32 +249,28 @@ FUNC_DEFINITION_TEMPLATES = [
     {"tpl": """def <FIM>(x):
     return x ** {int1}""", "args": 1},
 
-    # binary
     {"tpl": """def <FIM>(x, y):
     return x + y""", "args": 2},
 
     {"tpl": """def <FIM>(x, y):
     return x * y""", "args": 2},
 
-    # zero-arg
     {"tpl": """def <FIM>():
     return {int1}""", "args": 0},
 
     {"tpl": """def <FIM>():
     return True""", "args": 0},
 
-    # conditional
     {"tpl": """def <FIM>(x):
     return x if x > {int1} else {int2}""", "args": 1},
 
-    # structured return
     {"tpl": """def <FIM>(x):
     return [x, {int1}]""", "args": 1},
 ]
 
 
 # ============================================================
-# CLASS DEFINITIONS
+# CLASS DEFINITIONS (UNAMBIGUOUS)
 # ============================================================
 CLASS_DEFINITION_TEMPLATES = [
 
@@ -320,7 +312,7 @@ CLASS_DEFINITION_TEMPLATES = [
 
 
 # ============================================================
-# VARIABLE USAGE TEMPLATES
+# VARIABLE USAGE TEMPLATES (NO CALL AMBIGUITY)
 # ============================================================
 VAR_TEMPLATES = [
 
@@ -381,7 +373,7 @@ VAR_TEMPLATES = [
 
 
 # ============================================================
-# FUNCTION USAGE TEMPLATES
+# FUNCTION USAGE TEMPLATES (UNAMBIGUOUS CALLABLES ONLY)
 # ============================================================
 FUNC_TEMPLATES = [
 
@@ -389,7 +381,6 @@ FUNC_TEMPLATES = [
     {"tpl": """{var1} = <FIM>({var2}, {var3})""", "args": 2},
     {"tpl": """{var1} = <FIM>()""", "args": 0},
 
-    {"tpl": """return <FIM>()""", "args": 0},
     {"tpl": """return <FIM>({var1})""", "args": 1},
 
     {"tpl": """map(<FIM>, {var1})""", "args": 1},
@@ -413,7 +404,7 @@ def {func1}():
 
 
 # ============================================================
-# CLASS USAGE TEMPLATES
+# CLASS USAGE TEMPLATES (UNAMBIGUOUS TYPES ONLY)
 # ============================================================
 CLASS_TEMPLATES = [
 
@@ -427,7 +418,7 @@ CLASS_TEMPLATES = [
     {"tpl": """issubclass({cls1}, <FIM>)""", "ctor_args": None},
     {"tpl": """isinstance({var1}, <FIM>)""", "ctor_args": None},
 
-    {"tpl": """raise <FIM>()""", "ctor_args": 0},
+    {"tpl": """raise <FIM>""", "ctor_args": 0},
 
     {"tpl": """<FIM>.VERSION""", "ctor_args": None},
     {"tpl": """<FIM>.config""", "ctor_args": None},
