@@ -259,7 +259,7 @@ def main():
     # probe_save_dir = "probes_stored/probes_realistic"
 
     # for the baseline we need a separate save directory
-    probe_save_dir = "probes_stored/probes_final_baseline"
+    probe_save_dir = "probes_stored/probes_final_baseline_fixed"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     dataset_specifier = "cont_baseline"
