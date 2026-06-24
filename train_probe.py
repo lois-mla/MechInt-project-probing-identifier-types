@@ -273,8 +273,8 @@ def main():
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
     # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = "letters mixed new"
-    dataset_specifier_fullname = "letters mixed new"
+    dataset_specifier = "letters mixed bit simpler"
+    dataset_specifier_fullname = "letters bit simpler"
 
     model, tokenizer = load_model()
     model = randomize_model_weights(model) # use this line for the baseline!!
