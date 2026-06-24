@@ -193,43 +193,45 @@ class IdentifierContext:
 #         "str2": rand_string(),
 #     }
 
-
+# ============================================================
+# VARIABLE DEFINITIONS
+# ============================================================
 # ============================================================
 # VARIABLE DEFINITIONS
 # ============================================================
 VAR_DEFINITION_TEMPLATES = [
 
     # scalars
-    {"tpl": "<FIM> = {int1}", "type": "int"},
-    {"tpl": "<FIM> = {float1}", "type": "float"},
-    {"tpl": "<FIM> = {str1}", "type": "str"},
-    {"tpl": "<FIM> = True", "type": "bool"},
-    {"tpl": "<FIM> = False", "type": "bool"},
-    {"tpl": "<FIM> = None", "type": "none"},
+    {"tpl": """<FIM> = {int1}""", "type": "int"},
+    {"tpl": """<FIM> = {float1}""", "type": "float"},
+    {"tpl": """<FIM> = {str1}""", "type": "str"},
+    {"tpl": """<FIM> = True""", "type": "bool"},
+    {"tpl": """<FIM> = False""", "type": "bool"},
+    {"tpl": """<FIM> = None""", "type": "none"},
 
     # arithmetic variants
-    {"tpl": "<FIM> = {int1} + {int2}", "type": "int"},
-    {"tpl": "<FIM> = {int1} * {int2}", "type": "int"},
-    {"tpl": "<FIM> = ({int1} - {int2}) / {int3}", "type": "float"},
-    {"tpl": "<FIM> = -{int1}", "type": "int"},
-    {"tpl": "<FIM> = {int1} ** 2", "type": "int"},
+    {"tpl": """<FIM> = {int1} + {int2}""", "type": "int"},
+    {"tpl": """<FIM> = {int1} * {int2}""", "type": "int"},
+    {"tpl": """<FIM> = ({int1} - {int2}) / {int3}""", "type": "float"},
+    {"tpl": """<FIM> = -{int1}""", "type": "int"},
+    {"tpl": """<FIM> = {int1} ** 2""", "type": "int"},
 
     # conditional
-    {"tpl": "<FIM> = {int1} if {int2} > 0 else {int3}", "type": "int"},
+    {"tpl": """<FIM> = {int1} if {int2} > 0 else {int3}""", "type": "int"},
 
     # containers
-    {"tpl": "<FIM> = [{int1}, {int2}]", "type": "list_int"},
-    {"tpl": "<FIM> = []", "type": "list_int"},
+    {"tpl": """<FIM> = [{int1}, {int2}]""", "type": "list_int"},
+    {"tpl": """<FIM> = []""", "type": "list_int"},
 
-    {"tpl": "<FIM> = ({int1}, {int2})", "type": "tuple_int"},
-    {"tpl": "<FIM> = ()", "type": "tuple_int"},
+    {"tpl": """<FIM> = ({int1}, {int2})""", "type": "tuple_int"},
+    {"tpl": """<FIM> = ()""", "type": "tuple_int"},
 
-    {"tpl": "<FIM> = {{'{str1}': {int1}}}", "type": "dict"},
-    {"tpl": "<FIM> = {{}}", "type": "dict"},
+    {"tpl": """<FIM> = {{'{str1}': {int1}}}""", "type": "dict"},
+    {"tpl": """<FIM> = {{}}""", "type": "dict"},
 
-    # mixed literals
-    {"tpl": "<FIM> = [{float1}, {int1}]", "type": "list_int"},
-    {"tpl": "<FIM> = {{'{str1}': {float1}}}", "type": "dict"},
+    # mixed
+    {"tpl": """<FIM> = [{float1}, {int1}]""", "type": "list_int"},
+    {"tpl": """<FIM> = {{'{str1}': {float1}}}""", "type": "dict"},
 ]
 
 
@@ -239,159 +241,199 @@ VAR_DEFINITION_TEMPLATES = [
 FUNC_DEFINITION_TEMPLATES = [
 
     # unary
-    {"tpl": "def <FIM>(x): return x * {int1}", "args": 1},
-    {"tpl": "def <FIM>(x): return x / {int1}", "args": 1},
-    {"tpl": "def <FIM>(x): return x - {int1}", "args": 1},
-    {"tpl": "def <FIM>(x): return x ** {int1}", "args": 1},
+    {"tpl": """def <FIM>(x):
+    return x * {int1}""", "args": 1},
+
+    {"tpl": """def <FIM>(x):
+    return x / {int1}""", "args": 1},
+
+    {"tpl": """def <FIM>(x):
+    return x - {int1}""", "args": 1},
+
+    {"tpl": """def <FIM>(x):
+    return x ** {int1}""", "args": 1},
 
     # binary
-    {"tpl": "def <FIM>(x, y): return x + y", "args": 2},
-    {"tpl": "def <FIM>(x, y): return x * y", "args": 2},
+    {"tpl": """def <FIM>(x, y):
+    return x + y""", "args": 2},
+
+    {"tpl": """def <FIM>(x, y):
+    return x * y""", "args": 2},
 
     # zero-arg
-    {"tpl": "def <FIM>(): return {int1}", "args": 0},
-    {"tpl": "def <FIM>(): return True", "args": 0},
+    {"tpl": """def <FIM>():
+    return {int1}""", "args": 0},
 
-    # # ternary
-    # {"tpl": "def <FIM>(x, y, z): return x + y - z", "args": 3},
+    {"tpl": """def <FIM>():
+    return True""", "args": 0},
 
-    # branching
-    {"tpl": "def <FIM>(x): return x if x > {int1} else {int2}", "args": 1},
+    # conditional
+    {"tpl": """def <FIM>(x):
+    return x if x > {int1} else {int2}""", "args": 1},
 
     # structured return
-    {"tpl": "def <FIM>(x): return [x, {int1}]", "args": 1},
+    {"tpl": """def <FIM>(x):
+    return [x, {int1}]""", "args": 1},
 ]
+
 
 # ============================================================
 # CLASS DEFINITIONS
 # ============================================================
 CLASS_DEFINITION_TEMPLATES = [
 
-    {"tpl": "class <FIM>: pass", "args": 0},
+    {"tpl": """class <FIM>:
+    pass""", "args": 0},
 
-    {"tpl": "class <FIM>:\n    VERSION = {int1}", "args": 0},
+    {"tpl": """class <FIM>:
+    VERSION = {int1}""", "args": 0},
 
-    {"tpl": "class <FIM>:\n    value = {float1}", "args": 0},
+    {"tpl": """class <FIM>:
+    value = {float1}""", "args": 0},
 
-    {"tpl": "class <FIM>:\n    config = {{'a': {int1}}}", "args": 0},
+    {"tpl": """class <FIM>:
+    config = {{'a': {int1}}}""", "args": 0},
 
-    {"tpl": "class <FIM>:\n    def run(self): return {int1}", "args": 0},
+    {"tpl": """class <FIM>:
+    def run(self):
+        return {int1}""", "args": 0},
 
-    {"tpl": "class <FIM>(object): pass", "args": 0},
-    {"tpl": "class <FIM>(Exception): pass", "args": 0},
+    {"tpl": """class <FIM>(object):
+    pass""", "args": 0},
 
-    # constructors
-    {"tpl": "class <FIM>:\n    def __init__(self, x): self.x = x", "args": 1},
-    {"tpl": "class <FIM>:\n    def __init__(self, x, y): self.x = x; self.y = y", "args": 2},
+    {"tpl": """class <FIM>(Exception):
+    pass""", "args": 0},
 
-    # slightly richer structure
-    {"tpl": "class <FIM>:\n    def __init__(self): self.data = []", "args": 0},
+    {"tpl": """class <FIM>:
+    def __init__(self, x):
+        self.x = x""", "args": 1},
+
+    {"tpl": """class <FIM>:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y""", "args": 2},
+
+    {"tpl": """class <FIM>:
+    def __init__(self):
+        self.data = []""", "args": 0},
 ]
+
 
 # ============================================================
 # VARIABLE USAGE TEMPLATES
 # ============================================================
 VAR_TEMPLATES = [
 
-    # arithmetic
-    {"tpl": "{var1} = <FIM> + {int1}", "types": ["int", "float"]},
-    {"tpl": "{var1} = <FIM> * {int1}", "types": ["int", "float"]},
-    {"tpl": "{var1} = (<FIM> + {int1}) / {int2}", "types": ["int", "float"]},
+    {"tpl": """{var1} = <FIM> + {int1}""", "types": ["int", "float"]},
+    {"tpl": """{var1} = <FIM> * {int1}""", "types": ["int", "float"]},
+    {"tpl": """{var1} = (<FIM> + {int1}) / {int2}""", "types": ["int", "float"]},
 
-    # comparisons
-    {"tpl": "if <FIM> > {int1}: pass", "types": ["int", "float"]},
-    {"tpl": "if <FIM> == {int1}: pass", "types": ["int", "float", "str", "bool"]},
+    {"tpl": """if <FIM> > {int1}:
+    pass""", "types": ["int", "float"]},
 
-    # truthiness
-    {"tpl": "if <FIM>: {var1} = {int1}",
+    {"tpl": """if <FIM> == {int1}:
+    pass""", "types": ["int", "float", "str", "bool"]},
+
+    {"tpl": """if <FIM>:
+    {var1} = {int1}""",
      "types": ["int", "float", "str", "list_int", "tuple_int", "dict", "bool", "none"]},
 
-    {"tpl": "while <FIM> is not None: break",
+    {"tpl": """while <FIM> is not None:
+    break""",
      "types": ["int", "float", "str", "list_int", "tuple_int", "dict", "bool"]},
 
-    # containers
-    {"tpl": "{var1} = [<FIM>, {int1}, {int2}]", "types": ["int", "float"]},
-    {"tpl": "{var1} = [[<FIM>]]", "types": ["int", "float"]},
+    {"tpl": """{var1} = [{int1}, {int2}, <FIM>]""",
+     "types": ["int", "float"]},
 
-    {"tpl": "{var1} = {{'{str1}': <FIM>}}",
+    {"tpl": """{var1} = [[<FIM>]]""",
+     "types": ["int", "float"]},
+
+    {"tpl": """{var1} = {{'{str1}': <FIM>}}""",
      "types": ["int", "float", "str", "bool"]},
 
-    # unpacking
-    {"tpl": "{var1}, {var2} = <FIM>", "types": ["tuple_int"]},
+    {"tpl": """{var1}, {var2} = <FIM>""",
+     "types": ["tuple_int"]},
 
-    # mutation
-    {"tpl": "<FIM>.append({int1})", "types": ["list_int"]},
-    {"tpl": "<FIM>.extend([{int1}, {int2}])", "types": ["list_int"]},
+    {"tpl": """<FIM>.append({int1})""",
+     "types": ["list_int"]},
 
-    {"tpl": "<FIM>[0]", "types": ["list_int", "tuple_int", "str"]},
-    {"tpl": "<FIM>[-1]", "types": ["list_int", "tuple_int", "str"]},
-    {"tpl": "<FIM>[:2]", "types": ["list_int", "tuple_int", "str"]},
+    {"tpl": """<FIM>.extend([{int1}, {int2}])""",
+     "types": ["list_int"]},
 
-    {"tpl": "<FIM>['{str1}'] = {int1}", "types": ["dict"]},
-    {"tpl": "<FIM>.update({{'{str1}': {int1}}})", "types": ["dict"]},
+    {"tpl": """<FIM>[0]""",
+     "types": ["list_int", "tuple_int", "str"]},
 
-    # assertions
-    {"tpl": "assert <FIM> is not None",
+    {"tpl": """<FIM>[-1]""",
+     "types": ["list_int", "tuple_int", "str"]},
+
+    {"tpl": """<FIM>[:2]""",
+     "types": ["list_int", "tuple_int", "str"]},
+
+    {"tpl": """<FIM>['{str1}'] = {int1}""",
+     "types": ["dict"]},
+
+    {"tpl": """<FIM>.update({{'{str1}': {int1}}})""",
+     "types": ["dict"]},
+
+    {"tpl": """assert <FIM> is not None""",
      "types": ["int", "float", "str", "list_int", "tuple_int", "dict", "bool"]},
 ]
+
+
 # ============================================================
 # FUNCTION USAGE TEMPLATES
 # ============================================================
 FUNC_TEMPLATES = [
 
-    # calls
-    {"tpl": "{var1} = <FIM>({int1})", "args": 1},
-    {"tpl": "{var1} = <FIM>({var2}, {var3})", "args": 2},
-    {"tpl": "{var1} = <FIM>()", "args": 0},
+    {"tpl": """{var1} = <FIM>({int1})""", "args": 1},
+    {"tpl": """{var1} = <FIM>({var2}, {var3})""", "args": 2},
+    {"tpl": """{var1} = <FIM>()""", "args": 0},
 
-    # returns
-    {"tpl": "return <FIM>()", "args": 0},
-    {"tpl": "return <FIM>({var1})", "args": 1},
+    {"tpl": """return <FIM>()""", "args": 0},
+    {"tpl": """return <FIM>({var1})""", "args": 1},
 
-    # higher-order
-    {"tpl": "map(<FIM>, {var1})", "args": 1},
-    {"tpl": "filter(<FIM>, {var1})", "args": 1},
-    {"tpl": "sorted({var1}, key=<FIM>)", "args": 1},
+    {"tpl": """map(<FIM>, {var1})""", "args": 1},
+    {"tpl": """filter(<FIM>, {var1})""", "args": 1},
+    {"tpl": """sorted({var1}, key=<FIM>)""", "args": 1},
 
-    # callbacks
-    {"tpl": "{var1}.append(<FIM>)", "args": 1},
-    {"tpl": "{var1}.submit(<FIM>)", "args": 1},
-    {"tpl": "{var1}.add(<FIM>)", "args": 1},
+    {"tpl": """{var1}.append(<FIM>)""", "args": 1},
+    {"tpl": """{var1}.submit(<FIM>)""", "args": 1},
+    {"tpl": """{var1}.add(<FIM>)""", "args": 1},
 
-    # decorators
-    {"tpl": "@<FIM>\ndef {func1}(): pass", "args": 1},
+    {"tpl": """@<FIM>
+def {func1}():
+    pass""", "args": 1},
 
-    # lambdas
-    {"tpl": "lambda {var1}: <FIM>({var1})", "args": 1},
+    {"tpl": """lambda {var1}: <FIM>({var1})""", "args": 1},
 
-    # async / threading
-    {"tpl": "Thread(target=<FIM>)", "args": 1},
-    {"tpl": "asyncio.create_task(<FIM>())", "args": 0},
+    {"tpl": """Thread(target=<FIM>)""", "args": 1},
+
+    {"tpl": """asyncio.create_task(<FIM>())""", "args": 0},
 ]
+
+
 # ============================================================
 # CLASS USAGE TEMPLATES
 # ============================================================
 CLASS_TEMPLATES = [
 
-    {"tpl": "{var1} = <FIM>()", "ctor_args": 0},
-    {"tpl": "{var1} = <FIM>({int1})", "ctor_args": 1},
-    {"tpl": "{var1} = <FIM>({int1}, {int2})", "ctor_args": 2},
+    {"tpl": """{var1} = <FIM>()""", "ctor_args": 0},
+    {"tpl": """{var1} = <FIM>({int1})""", "ctor_args": 1},
+    {"tpl": """{var1} = <FIM>({int1}, {int2})""", "ctor_args": 2},
 
-    {"tpl": "class {cls1}(<FIM>): pass", "ctor_args": None},
-    {"tpl": "class {cls1}({cls2}, <FIM>): pass", "ctor_args": None},
+    {"tpl": """class {cls1}(<FIM>):
+    pass""", "ctor_args": None},
 
-    {"tpl": "issubclass({cls1}, <FIM>)", "ctor_args": None},
-    {"tpl": "isinstance({var1}, <FIM>)", "ctor_args": None},
+    {"tpl": """issubclass({cls1}, <FIM>)""", "ctor_args": None},
+    {"tpl": """isinstance({var1}, <FIM>)""", "ctor_args": None},
 
-    {"tpl": "raise <FIM>()", "ctor_args": 0},
+    {"tpl": """raise <FIM>()""", "ctor_args": 0},
 
-    {"tpl": "<FIM>.VERSION", "ctor_args": None},
-    {"tpl": "<FIM>.config", "ctor_args": None},
+    {"tpl": """<FIM>.VERSION""", "ctor_args": None},
+    {"tpl": """<FIM>.config""", "ctor_args": None},
 
-    {"tpl": "<FIM>.__name__", "ctor_args": None},
+    {"tpl": """<FIM>.__name__""", "ctor_args": None},
 ]
-
-
 # def build_binding_example(label, ctx):
 
 #     name = (
@@ -453,6 +495,7 @@ def compatible_class(def_t, use_t):
 
 def sample_pair(def_template, usage_template, identifier_type):
     def_t = random.choice(def_template)
+    print(def_t)
 
     if identifier_type == 0:
         compatible = compatible_var 
