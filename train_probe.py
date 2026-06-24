@@ -92,30 +92,6 @@ def probe_layer(
     }
 
 
-def save_accuracies_to_csv(
-    results,
-    probe_name,
-    base_path = "accuracies"
-):
-    accuracies = {"train": [],
-    		  "test": []}
-    for layer in results:
-        train = results[layer]["train_acc"]
-        test = results[layer]["test_acc"]
-	accuracies["train"].append(train)
-	accuracies["test"].append(test)
-   
-    save_dir = os.path.join(base_path, f"accuracies_{probe_name}")
-    os.makedirs(save_dir, exist_ok=True)
-
-    save_path = os.path.join(save_dir, f"accuracies_{probe_name}.csv")
-    pd.DataFrame(accuracies).to_csv(save_path, index=False)
-    print(f"Saved CSV: {save_path}")
-
-
-
-
-
 def probe_all_layers(
     extractor,
     prompts,
@@ -135,8 +111,8 @@ def probe_all_layers(
         )
 
         results[layer] = result
-	result["train_acc"]
-	result["test_acc"]
+        # result["train_acc"]
+        # result["test_acc"]
     return results
 
 
@@ -274,9 +250,9 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-    data_def = "training_data/def_FIM_data_final.txt"
-    data_call = "training_data/call_FIM_data_final.txt"
-    probe_save_dir = "probes_stored/probes_final" 
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    # probe_save_dir = "probes_stored/probes_final" 
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final"
@@ -292,13 +268,13 @@ def main():
     probe_save_dir = "probes_stored/probes_new_data_set"
 
     # for the baseline we need a separate save directory
-    probe_save_dir = "probes_stored/probes_final_baseline_fixed"
+    probe_save_dir = "probes_stored/probes_new_data_set"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
     # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = "letters mixed"
-    dataset_specifier_fullname = "letters mixed"
+    dataset_specifier = "letters mixed new"
+    dataset_specifier_fullname = "letters mixed new"
 
     model, tokenizer = load_model()
     model = randomize_model_weights(model) # use this line for the baseline!!
