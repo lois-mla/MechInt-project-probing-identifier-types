@@ -91,6 +91,31 @@ def probe_layer(
         "test_acc": test_acc,
     }
 
+
+def save_accuracies_to_csv(
+    results,
+    probe_name,
+    base_path = "accuracies"
+):
+    accuracies = {"train": [],
+    		  "test": []}
+    for layer in results:
+        train = results[layer]["train_acc"]
+        test = results[layer]["test_acc"]
+	accuracies["train"].append(train)
+	accuracies["test"].append(test)
+   
+    save_dir = os.path.join(base_path, f"accuracies_{probe_name}")
+    os.makedirs(save_dir, exist_ok=True)
+
+    save_path = os.path.join(save_dir, f"accuracies_{probe_name}.csv")
+    pd.DataFrame(accuracies).to_csv(save_path, index=False)
+    print(f"Saved CSV: {save_path}")
+
+
+
+
+
 def probe_all_layers(
     extractor,
     prompts,
@@ -110,7 +135,8 @@ def probe_all_layers(
         )
 
         results[layer] = result
-
+	result["train_acc"]
+	result["test_acc"]
     return results
 
 
