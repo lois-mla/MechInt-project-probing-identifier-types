@@ -380,15 +380,22 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
     """
     Evaluates how often the decoded top-1 next token prediction matches 
     the decoded first token of the correct target string.
+    Prints execution logs for the first 10 and last 10 examples.
     """
     print(f"\nEvaluating first-token accuracy on: {data_path}")
     
     data = read_fim_dataset(data_path)
+    total_examples = len(data)
+    
+    # Identify which indices to inspect (prevents overlapping prints if total < 20)
+    indices_to_print = set(range(min(10, total_examples))).union(
+        set(range(max(0, total_examples - 10), total_examples))
+    )
     
     correct_predictions = 0
-    total_predictions = len(data)
+    total_predictions = total_examples
 
-    for item in data:
+    for i, item in enumerate(data):
         # 1. Construct the prompt
         prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
         
@@ -415,6 +422,16 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
         # 5. Decode BOTH tokens to strings and strip whitespace/SentencePiece artifacts
         predicted_str = tokenizer.decode([predicted_token_id]).strip()
         target_str = tokenizer.decode([target_token_id]).strip()
+
+        # --- DEBUG PRINT FOR FIRST 10 & LAST 10 ---
+        if i in indices_to_print:
+            # We show the last 100 characters of the input so you can see the immediate context
+            prompt_tail = prompt[-100:].replace('\n', '\\n')
+            print(f"--- Example {i+1} / {total_examples} ---")
+            print(f"Input (tail): '{prompt_tail}'")
+            print(f"Ground Truth: '{target_str}'")
+            print(f"Prediction:   '{predicted_str}'")
+            print("-" * 40)
 
         # 6. Compare the decoded strings instead of the raw IDs
         if predicted_str == target_str:
