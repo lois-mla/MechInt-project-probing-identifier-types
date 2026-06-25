@@ -138,9 +138,9 @@ def read_fim_dataset(path: str) -> List[Dict]:
                 "suffix": suffix,
                 "correct": target,
                 "mask_mode": mask_mode,
-                "var": variable,
-                "fun": function,
-                "cls": class_,
+                "0": variable,
+                "1": function,
+                "2": class_,
             })
 
             # print(examples[0])
