@@ -297,7 +297,7 @@ def main():
     
     identifier_mode = "letters"
     # identifier_mode = "common"
-    identifier_mode = "tokenizer"
+    # identifier_mode = "tokenizer"
     part = "FULL"
 
     data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
