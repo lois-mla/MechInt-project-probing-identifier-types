@@ -137,7 +137,7 @@ def read_fim_dataset(path: str) -> List[Dict]:
                 "mask_mode": mask_mode
             })
 
-            print(examples[0])
+            # print(examples[0])
 
     return examples
 
@@ -241,6 +241,7 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     )
 
     return model, tokenizer
+
 
 def randomize_model_weights(model):
     """Iterates through all model parameters and randomizes them."""

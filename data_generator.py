@@ -3,12 +3,16 @@ import random
 import string
 from enum import Enum
 from pathlib import Path
+from transformers import AutoTokenizer
+import keyword
+import builtins
 
 # ============================================================
 # CONFIG
 # ============================================================
 
 EXAMPLES_PER_CLASS = 500
+STEERING_EXAMPLES_PER_CLASS = 50
 random.seed(42)
 
 VARIABLE = 0
@@ -27,34 +31,219 @@ class IdentifierSource(Enum):
 
 
 LETTER_POOL = list(string.ascii_lowercase)
+COMMON_VARIABLES = [
+    # core primitives
+    "data", "x", "y", "z", "i", "j", "k",
+    "a", "b", "c", "n", "m",
+    "value", "values", "result", "results",
+    "res", "out", "output", "input",
 
-COMMON_VARIABLES = ["data", "x", "y", "value", "result", "state"]
-COMMON_FUNCTIONS = ["process", "compute", "load", "parse", "run"]
-COMMON_CLASSES = ["User", "Model", "Dataset", "Config", "Manager"]
+    # state / flags
+    "state", "status", "flag", "flags",
+    "done", "ready", "valid", "invalid",
+    "enabled", "disabled",
+
+    # indexing / iteration
+    "index", "idx", "i_idx", "j_idx", "k_idx",
+    "count", "cnt", "num", "total", "size", "length",
+
+    # structures
+    "item", "items", "element", "elements",
+    "node", "nodes", "edge", "edges",
+    "entry", "entries",
+
+    # key-value
+    "key", "keys", "val", "value_map",
+    "mapping", "map_data", "dict_data",
+
+    # ML / data
+    "model", "models", "dataset", "data_batch",
+    "batch", "batches", "epoch", "step",
+    "loss", "score", "scores", "accuracy",
+    "prediction", "predictions",
+    "label", "labels", "target", "targets",
+    "feature", "features", "embedding", "embeddings",
+
+    # training
+    "train_data", "test_data", "val_data",
+    "train_set", "test_set", "val_set",
+    "optimizer_state", "grad", "grads",
+
+    # IO / systems
+    "request", "response", "req", "res",
+    "client", "server", "connection", "conn",
+    "socket", "stream", "buffer", "cache",
+
+    # config / misc
+    "config", "cfg", "settings", "options",
+    "params", "hyperparams",
+
+    # temporal
+    "time", "timestamp", "start_time", "end_time",
+    "duration", "elapsed",
+
+    # temp / misc
+    "tmp", "temp", "scratch", "workspace"
+]
+
+COMMON_FUNCTIONS = [
+    # core operations
+    "process", "compute", "calculate", "evaluate",
+    "run", "execute", "apply", "perform",
+
+    # lifecycle
+    "init", "initialize", "setup", "reset", "cleanup",
+    "destroy", "shutdown",
+
+    # creation
+    "create", "build", "make", "construct",
+    "generate", "produce",
+
+    # accessors
+    "get", "set", "fetch", "retrieve",
+    "load", "save", "store",
+
+    # IO
+    "read", "write", "open", "close",
+    "send", "receive",
+
+    # parsing / transformation
+    "parse", "serialize", "deserialize",
+    "transform", "convert", "encode", "decode",
+
+    # ML
+    "train", "test", "predict", "infer",
+    "fit", "score", "evaluate_model",
+
+    # data manipulation
+    "filter", "sort", "merge", "split",
+    "join", "group", "aggregate",
+
+    # validation
+    "validate", "check", "verify",
+    "assert_valid", "ensure",
+
+    # utilities
+    "update", "modify", "patch",
+    "remove", "delete", "clear",
+
+    # math / logic
+    "add", "subtract", "multiply", "divide",
+    "normalize", "clip", "clamp",
+
+    # iteration helpers
+    "iterate", "loop", "traverse",
+
+    # networking
+    "connect", "disconnect", "request", "response",
+    "send_request", "fetch_data"
+]
+
+
+COMMON_CLASSES = [
+    # core app
+    "User", "Account", "Session", "Profile",
+    "Request", "Response", "Error", "ExceptionBase",
+
+    # networking
+    "Client", "Server", "Connection", "Socket",
+    "Endpoint", "Router", "Handler",
+
+    # ML / AI
+    "Model", "Dataset", "DataLoader", "Trainer",
+    "Evaluator", "Pipeline", "Transform",
+    "Encoder", "Decoder", "Tokenizer",
+    "EmbeddingModel", "Classifier", "Regressor",
+
+    # config / infra
+    "Config", "Settings", "Options", "Params",
+    "Manager", "Controller", "Coordinator",
+    "Factory", "Builder", "Registry",
+
+    # data structures
+    "Node", "Graph", "Tree", "Edge",
+    "Queue", "Stack", "Heap", "Cache",
+    "LinkedList", "BinaryTree",
+
+    # storage
+    "Database", "Table", "Record",
+    "Repository", "Storage", "Index",
+
+    # pipelines
+    "Processor", "HandlerBase", "Service",
+    "Worker", "Task", "Job",
+
+    # misc architecture
+    "Engine", "System", "Module",
+    "Component", "Interface", "Adapter"
+]
 
 TOKENIZER_POOL = None
 
 
-def build_tokenizer_pool():
-    global TOKENIZER_POOL
-    if TOKENIZER_POOL is not None:
-        return TOKENIZER_POOL
+tok = AutoTokenizer.from_pretrained("codellama/CodeLlama-7b-hf")
 
-    try:
-        from transformers import AutoTokenizer
-        tok = AutoTokenizer.from_pretrained("codellama/CodeLlama-7b-hf")
+HARD_BLOCK = set(keyword.kwlist) | {
+    "True", "False", "None",
+    "match", "case",
+    "__name__", "__file__", "__doc__", "__package__",
+}
 
-        vocab = [
-            v for v in tok.get_vocab().keys()
-            if v.isidentifier() and len(v) > 1
-        ]
+BAD_IDENTIFIERS = (
+    set(keyword.kwlist)
+    | set(dir(builtins))
+    | HARD_BLOCK
+    | {
+        "self", "cls",
+        "__init__", "__call__", "__len__",
+        "Exception", "BaseException",
+        "PRE", "MID", "SUF", "FIM",
+        "EOT", "FILL_ME",
+    }
+)
 
-        TOKENIZER_POOL = vocab if len(vocab) > 100 else COMMON_FUNCTIONS
+vocab = []
 
-    except:
-        TOKENIZER_POOL = COMMON_FUNCTIONS
+for s in tok.get_vocab():
 
-    return TOKENIZER_POOL
+    if not s.isidentifier():
+        continue
+
+    if len(s) < 2:
+        continue
+
+    if s in BAD_IDENTIFIERS:
+        continue
+
+    # must tokenize to exactly one token
+    ids = tok.encode(s, add_special_tokens=False)
+
+    if len(ids) != 1:
+        continue
+
+    vocab.append(s)
+
+
+# def build_tokenizer_pool():
+#     global TOKENIZER_POOL
+#     if TOKENIZER_POOL is not None:
+#         return TOKENIZER_POOL
+
+#     try:
+#         from transformers import AutoTokenizer
+#         tok = AutoTokenizer.from_pretrained("codellama/CodeLlama-7b-hf")
+
+#         vocab = [
+#             v for v in tok.get_vocab().keys()
+#             if v.isidentifier() and len(v) > 1
+#         ]
+
+#         TOKENIZER_POOL = vocab if len(vocab) > 100 else COMMON_FUNCTIONS
+        
+#     except:
+#         TOKENIZER_POOL = COMMON_FUNCTIONS
+
+#     return TOKENIZER_POOL
 
 
 # ============================================================
@@ -135,7 +324,7 @@ class IdentifierContext:
         elif self.source == IdentifierSource.LETTERS:
             pool = LETTER_POOL
         else:
-            pool = build_tokenizer_pool()
+            pool = vocab
 
         # sample 3 so that we don't get the same tokens!
         names = random.sample(pool, 3)
@@ -1378,18 +1567,18 @@ def generate_single_example(ctx, identifier_type, mask_mode="usage"):
 
 
 
-def write_dataset(path, source, mask_mode, mixed=True):
+def write_dataset(path, source, mask_mode, examples_per_class, mixed=True):
 
     out = []
 
-    target_size = EXAMPLES_PER_CLASS * 3
+    target_size = examples_per_class * 3
     attempts = 0
     max_attempts = target_size * 50
 
     for identifier_type in [0, 1, 2]:
         generated = 0
     
-        while generated < EXAMPLES_PER_CLASS and attempts < max_attempts:
+        while generated < examples_per_class and attempts < max_attempts:
 
             attempts += 1
 
@@ -1424,207 +1613,7 @@ def write_dataset(path, source, mask_mode, mixed=True):
 
 
 
-# # ============================================================
-# # MASKING (CORRECT + CONSISTENT)
-# # ============================================================
-
-# def apply_mask(example, mask_mode):
-
-#     if mask_mode == "definition":
-#         definition = example["definition"].replace(example["name"], "<FIM>")
-#         usage = example["usage"]
-
-#     else:
-#         definition = example["definition"]
-#         usage = example["usage"].replace(example["name"], "<FIM>")
-
-#     return {
-#         "text": definition + "\n\n" + usage,
-#         "label": example["label"],
-#         "target": example["name"],
-#         "mask_mode": mask_mode
-#     }
-
-
-# # ============================================================
-# # MIXED (FIXED: SINGLE SOURCE OF TRUTH)
-# # ============================================================
-
-# def generate_mixed_example(ctx, mask_mode):
-
-#     base = build_binding_example(
-#         label=random.choice([VARIABLE, FUNCTION, CLASS]),
-#         ctx=ctx
-#     )
-
-#     ex = apply_mask(base, mask_mode)
-
-#     # optional noise (does NOT affect target binding)
-#     ex["text"] += "\n\n" + add_mixed_distractors(ctx)
-
-#     ex["mixed"] = True
-
-#     return ex
-
-
-# # ============================================================
-# # CLEAN (SINGLE CONTEXT VERSION)
-# # ============================================================
-
-# def generate_example(label, source, mask_mode, mixed=False):
-
-#     ctx = IdentifierContext(source)
-
-#     base = build_binding_example(label, ctx)
-
-#     ex = apply_mask(base, mask_mode)
-
-#     if mixed:
-#         ex["text"] += "\n\n" + add_mixed_distractors(ctx)
-
-#     return ex
-
-
-# # ============================================================
-# # WRITERS
-# # ============================================================
-# def is_valid_fim_example(ex: dict) -> bool:
-#     return ex["text"].count("<FIM>") == 1
-
-
-# def write_dataset(path, source, mask_mode, mixed=False):
-
-#     out = []
-
-#     target_size = EXAMPLES_PER_CLASS * 3  # keep your original scale
-
-#     ctx = IdentifierContext(source)
-
-#     attempts = 0
-#     max_attempts = target_size * 50  # safety bound
-
-#     while len(out) < target_size and attempts < max_attempts:
-
-#         attempts += 1
-
-#         label = random.choice([VARIABLE, FUNCTION, CLASS])
-
-#         ex = generate_example(
-#             label=label,
-#             source=source,
-#             mask_mode=mask_mode,
-#             mixed=mixed
-#         )
-
-#         if not is_valid_fim_example(ex):
-#             continue  # ❌ discard bad sample
-
-#         out.append(ex)
-
-#     if len(out) < target_size:
-#         raise RuntimeError(
-#             f"Only generated {len(out)}/{target_size} valid samples for {path}"
-#         )
-
-#     random.shuffle(out)
-
-#     Path(path).parent.mkdir(parents=True, exist_ok=True)
-
-#     with open(path, "w") as f:
-#         for ex in out:
-#             f.write(json.dumps(ex) + "\n")
-
-#     print("wrote", path, len(out), "attempts:", attempts)
-
-# def write_mixed_dataset(path, source, mask_mode):
-
-#     out = []
-
-#     target_size = EXAMPLES_PER_CLASS * 3
-#     attempts = 0
-#     max_attempts = target_size * 50  # safety bound
-
-#     while len(out) < target_size and attempts < max_attempts:
-
-#         attempts += 1
-
-#         ctx = IdentifierContext(source)
-
-#         ex = generate_mixed_example(ctx, mask_mode)
-
-#         # -------------------------
-#         # VALIDATION: EXACTLY ONE FIM
-#         # -------------------------
-#         if ex["text"].count("<FIM>") != 1:
-#             continue  # discard bad sample
-
-#         out.append(ex)
-
-#     if len(out) < target_size:
-#         raise RuntimeError(
-#             f"Only generated {len(out)}/{target_size} valid mixed samples for {path}"
-#         )
-
-#     random.shuffle(out)
-
-#     Path(path).parent.mkdir(parents=True, exist_ok=True)
-
-#     with open(path, "w") as f:
-#         for ex in out:
-#             f.write(json.dumps(ex) + "\n")
-
-#     print("wrote", path, len(out), "attempts:", attempts)
-
-# def write_mixed_dataset(path, source, mask_mode):
-
-#     out = []
-
-#     for _ in range(EXAMPLES_PER_CLASS * 3):
-
-#         ctx = IdentifierContext(source)
-
-#         ex = generate_mixed_example(ctx, mask_mode)
-
-#         out.append(ex)
-
-#     random.shuffle(out)
-
-#     Path(path).parent.mkdir(parents=True, exist_ok=True)
-
-#     with open(path, "w") as f:
-#         for ex in out:
-#             f.write(json.dumps(ex) + "\n")
-
-#     print("wrote", path, len(out))
-
-
-# def write_dataset(path, source, mask_mode, mixed=False):
-
-#     out = []
-
-#     for label in [VARIABLE, FUNCTION, CLASS]:
-
-#         for _ in range(EXAMPLES_PER_CLASS):
-
-#             ex = generate_example(label, source, mask_mode, mixed)
-
-#             out.append(ex)
-
-#     random.shuffle(out)
-
-#     Path(path).parent.mkdir(parents=True, exist_ok=True)
-
-#     with open(path, "w") as f:
-#         for ex in out:
-#             f.write(json.dumps(ex) + "\n")
-
-#     print("wrote", path, len(out))
-
-
-# ============================================================
-# MAIN
-# ============================================================
-
+# -------------------------------------------------------------------------------------------
 def main():
 
     for source in [
@@ -1633,13 +1622,15 @@ def main():
         IdentifierSource.COMMON,
     ]:
         
-        base = Path("datasets/simple3") / source.value
+        base = Path("datasets/final") / source.value
 
-        write_dataset(base / "single_definition.jsonl", source, "definition", mixed=False)
-        write_dataset(base / "single_usage.jsonl", source, "usage", mixed=False)
+        write_dataset(base / "single_definition.jsonl", source, "definition", EXAMPLES_PER_CLASS, mixed=False)
+        write_dataset(base / "single_usage.jsonl", source, "usage", EXAMPLES_PER_CLASS, mixed=False)
 
-        write_dataset(base / "mixed_definition.jsonl", source, "definition", mixed=True)
-        write_dataset(base / "mixed_usage.jsonl", source, "usage", mixed=True)
+        write_dataset(base / "mixed_definition.jsonl", source, "definition", EXAMPLES_PER_CLASS, mixed=True)
+        write_dataset(base / "mixed_usage.jsonl", source, "usage", EXAMPLES_PER_CLASS, mixed=True)
+        write_dataset(base / "steering_definition.jsonl", source, "definition", STEERING_EXAMPLES_PER_CLASS, mixed=True)
+        write_dataset(base / "steering_usage.jsonl", source, "usage", STEERING_EXAMPLES_PER_CLASS, mixed=True)
 
 
 if __name__ == "__main__":

@@ -147,8 +147,17 @@ def save_average_to_csv(averaged_results, id, contrastive_id, alpha, base_path="
     print(f"Saved CSV: {save_path}")
 
 
-def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=50.0):
-    data = read_steering_dataset(path)
+def steer_prompts_from_file(def_path: str, use_path: str, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, part="FULL", alpha=50.0):
+
+    # rly stupid way of doing this but ok
+    if part == "FULL":
+        data = read_fim_dataset(def_path)
+        data2 = read_fim_dataset(use_path)
+        data.update(data2)
+    elif part == "DEF":
+        data = read_fim_dataset(def_path)
+    elif part == "CALL":
+        data = read_fim_dataset(use_path)
     ids = [0, 1, 2]
     
     averages = defaultdict(lambda: defaultdict(lambda: {
@@ -241,12 +250,6 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
 
 def main():
 
-
-
-#     prompt = get_prompt(prompt_prefix, prompt_suffix)
-
-#     print(prompt)
-
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
@@ -263,17 +266,22 @@ def main():
     # data_call = "training_data/call_FIM_data.txt"ls
     # probe_save_dir = "probes_stored/probes_realistic"
 
-    data_def = "datasets/simple3/letters/mixed_definition.jsonl"
-    data_call = "datasets/simple3/letters/mixed_usage.jsonl"
+    identifier_mode = "letters"
+    identifier_mode = "common"
+    identifier_mode = "tokenizer"
+    part = "FULL"
+
+    data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
+    data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
 
     # for the baseline we need a separate save directory
-    probe_save_dir = "probes_stored/probes_new_simple_data3"
+    probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
     # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = "letters mixed simple3"
-    dataset_specifier_fullname = "letters mixed simple3"
+    dataset_specifier = f"{identifier_mode}"
+    dataset_specifier_fullname = f"{identifier_mode}"
 
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline!!
@@ -312,10 +320,22 @@ def main():
 
     # use the first path for the realistic name dataset and the second path for both letter-name datasets
     # steering_path = "training_data/steering_data_300_realistic.txt"
-    steering_path = "training_data/steering_data_300_final.txt"
-    alphas = [100.0]
-    for alpha in alphas:
-        steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    # steering_path = "training_data/steering_data_300_final.txt"
+
+    # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+    # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+
+    for mode in ["letters", "common", "tokenizer"]:
+            
+        steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+        steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+
+        dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
+        dataset_specifier_fullname = dataset_specifier
+
+        alphas = [100.0]
+        for alpha in alphas:
+            steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 
 
