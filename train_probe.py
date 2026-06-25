@@ -101,8 +101,8 @@ def save_accuracies_to_csv(
     for layer in results:
         train = results[layer]["train_acc"]
         test = results[layer]["test_acc"]
-    accuracies["train"].append(train)
-    accuracies["test"].append(test)
+        accuracies["train"].append(train)
+        accuracies["test"].append(test)
    
     save_dir = os.path.join(base_path, f"accuracies_{probe_name}")
     os.makedirs(save_dir, exist_ok=True)
@@ -127,6 +127,7 @@ def probe_all_layers(
     for layer in range(n_layers):
         result = probe_layer(
             extractor=extractor,
+            prompts=prompts,
             labels=labels,
             layer=layer,
             save_dir=save_dir,
@@ -271,31 +272,31 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-    data_def = "training_data/def_FIM_data_final.txt"
-    data_call = "training_data/call_FIM_data_final.txt"
-    probe_save_dir = "probes_stored/probes_final" 
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    # probe_save_dir = "probes_stored/probes_final" 
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final"
     # data_def = "training_data/def_FIM_data_nocont.txt"
     # data_call = "training_data/call_FIM_data_nocont.txt"
-    # probe_save_dir = "probes_stored/probes_no_cont"
-    # data_def = "training_data/def_FIM_data.txt"
-    # data_call = "training_data/call_FIM_data.txt"
+    probe_save_dir = "probes_stored/probes_no_cont"
+    data_def = "training_data/def_FIM_data.txt"
+    data_call = "training_data/call_FIM_data.txt"
     # probe_save_dir = "probes_stored/probes_realistic"
 
-    data_def = "datasets/letters/mixed_definition.jsonl"
-    data_call = "datasets/letters/mixed_usage.jsonl"
-    probe_save_dir = "probes_stored/probes_new_data_set"
+    # data_def = "datasets/letters/mixed_definition.jsonl"
+    # data_call = "datasets/letters/mixed_usage.jsonl"
+    # probe_save_dir = "probes_stored/probes_new_data_set"
 
     # for the baseline we need a separate save directory
-    probe_save_dir = "probes_stored/probes_final_baseline_fixed"
+    #  probe_save_dir = "probes_stored/probes_final_baseline_fixed"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
     # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = "letters mixed"
-    dataset_specifier_fullname = "letters mixed"
+    dataset_specifier = "letters_not_mixed"
+    dataset_specifier_fullname = "letters_not_mixed"
 
     model, tokenizer = load_model()
     model = randomize_model_weights(model) # use this line for the baseline!!
@@ -328,11 +329,7 @@ def main():
 
     # save accuracies
     save_accuracies_to_csv(results, dataset_specifier)
-<<<<<<< HEAD
-
-=======
     
->>>>>>> d0fa1615d0eefd2cbef1da79cf3930595dc5d481
     # plot the probe accuracies
     save_dir = "figures/probe_accuracy"
     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
