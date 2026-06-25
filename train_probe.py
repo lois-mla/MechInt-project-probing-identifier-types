@@ -294,9 +294,9 @@ def main():
     data_def = "training_data/def_FIM_data_final_only_correct.txt"
     data_call = "training_data/call_FIM_data_final_only_correct.txt"
     probe_save_dir = "probes_stored/probes_final_only_correct"
-    identifier_mode = "letters"
+    # identifier_mode = "letters"
     # identifier_mode = "common"
-    # identifier_mode = "tokenizer"
+    identifier_mode = "tokenizer"
     part = "FULL"
 
     data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
