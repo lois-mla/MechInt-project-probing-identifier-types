@@ -3,12 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 0edc877fa4c213077fe241e75c246d79dd15a0bb
 # ==========================================
 # 2. PLOTTING SCRIPT
 # ==========================================
@@ -16,14 +10,7 @@ import os
 # Dictionary mapping the label you want in the box to the CSV file path
 # Update these paths to point to your actual generated CSV files
 file_paths = {
-<<<<<<< HEAD
-    'LEN': 'mock_LEN.csv',
-    'AST': 'mock_AST.csv',
-    'CPX': 'mock_CPX.csv',
-    'TYP': 'mock_TYP.csv'
-=======
     'letters mix': 'accuracies/acc_letters_mixed/acc_letters_mixed.csv',
->>>>>>> 0edc877fa4c213077fe241e75c246d79dd15a0bb
 }
 
 num_plots = len(file_paths)
@@ -107,8 +94,4 @@ plt.show()
 # Cleanup mock files (optional)
 for cat in mock_categories:
     if os.path.exists(f'mock_{cat}.csv'):
-<<<<<<< HEAD
         os.remove(f'mock_{cat}.csv')
-=======
-        os.remove(f'mock_{cat}.csv')
->>>>>>> 0edc877fa4c213077fe241e75c246d79dd15a0bb
