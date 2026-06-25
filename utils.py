@@ -449,8 +449,8 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str, save_path: s
         
         with open(save_path, "w", encoding="utf-8") as f:
             for entry in correct_examples:
-                # Reconstruct the exact structural block layout from the raw text files
-                f.write(f"{entry['prefix']}FIM{entry['suffix']}>>>{entry['correct']}\n#####\n\n")
+                # FIXED: Added '\n' right before '>>>' to match your parser's exact split behavior
+                f.write(f"{entry['prefix']}FIM{entry['suffix']}\n>>>{entry['correct']}\n#####\n\n")
                 
         print(f"Saved {len(correct_examples)} correct examples in raw text format to: {save_path}\n")
     
