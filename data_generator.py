@@ -205,59 +205,36 @@ class IdentifierContext:
 # ============================================================
 # VARIABLE DEFINITIONS (SIMPLE / COMMON)
 # ============================================================
-
-# ============================================================
-# VARIABLE DEFINITIONS (UNAMBIGUOUS)
-# ============================================================
-
 VAR_DEFINITION_TEMPLATES = [
 
-    # identity assignment (strongest signal)
+    # scalars (pure literal signal)
     {"tpl": "<FIM> = {int1}", "type": "int"},
     {"tpl": "<FIM> = {float1}", "type": "float"},
     {"tpl": "<FIM> = '{str1}'", "type": "str"},
     {"tpl": "<FIM> = True", "type": "bool"},
     {"tpl": "<FIM> = False", "type": "bool"},
 
-    # STRUCTURAL containers ONLY (no arithmetic ambiguity)
-    {"tpl": "<FIM> = list([{int1}, {int2}])", "type": "list_int"},
-    {"tpl": "<FIM> = tuple([{int1}, {int2}])", "type": "tuple_int"},
-    {"tpl": "<FIM> = dict(key='{str1}', value={int1})", "type": "dict"},
-
-    {"tpl": "<FIM> = list()", "type": "list_int"},
-    {"tpl": "<FIM> = dict()", "type": "dict"},
+    # containers (make constructor EXPLICIT and unique)
+    {"tpl": "<FIM> = list([1, 2])", "type": "list_int"},
+    {"tpl": "<FIM> = tuple([1, 2])", "type": "tuple_int"},
+    {"tpl": "<FIM> = dict(x=1)", "type": "dict"},
 ]
-
-
-# ============================================================
-# FUNCTION DEFINITIONS (UNAMBIGUOUS)
-# ============================================================
 
 FUNC_DEFINITION_TEMPLATES = [
 
-    {"tpl": """def <FIM>():
-    return {int1}""", "args": 0},
+    {"tpl": "def <FIM>():\n    return 0", "args": 0},
 
-    {"tpl": """def <FIM>(x):
-    return x""", "args": 1},
+    {"tpl": "def <FIM>(x):\n    return x", "args": 1},
 
-    {"tpl": """def <FIM>(x):
-    return x + {int1}""", "args": 1},
+    {"tpl": "def <FIM>(x):\n    return x + 1", "args": 1},
 
-    {"tpl": """def <FIM>(x):
-    return x * {int1}""", "args": 1},
+    {"tpl": "def <FIM>(x):\n    return x * 2", "args": 1},
 
-    {"tpl": """def <FIM>(x, y):
-    return x + y""", "args": 2},
+    {"tpl": "def <FIM>(x, y):\n    return x + y", "args": 2},
 
-    {"tpl": """def <FIM>(x, y):
-    return x * y""", "args": 2},
+    {"tpl": "def <FIM>(x, y):\n    return x * y", "args": 2},
 ]
 
-
-# ============================================================
-# CLASS DEFINITIONS (UNAMBIGUOUS)
-# ============================================================
 
 CLASS_DEFINITION_TEMPLATES = [
 
@@ -281,23 +258,26 @@ CLASS_DEFINITION_TEMPLATES = [
     pass""", "args": 0},
 ]
 
-
-# ============================================================
-# VARIABLE USAGE (STRICTLY NON-CALL POSITION)
-# ============================================================
 VAR_TEMPLATES = [
 
-    # pure evaluation contexts
+    # scalar usage
     {"tpl": "print(<FIM>)",
      "types": ["int", "float", "str", "bool"]},
 
-    {"tpl": "log_value = str(<FIM>)",
+    {"tpl": "x = <FIM>",
      "types": ["int", "float", "str", "bool"]},
 
-    {"tpl": "if bool(<FIM>):\n    pass",
-     "types": ["int", "float", "str", "bool"]},
+    {"tpl": "if <FIM>:\n    pass",
+     "types": ["bool"]},
 
-    # container-only contexts
+    # numeric-only arithmetic (STRICT)
+    {"tpl": "x = <FIM> + 1",
+     "types": ["int", "float"]},
+
+    {"tpl": "x = <FIM> * 2",
+     "types": ["int", "float"]},
+
+    # container-only contexts (VERY IMPORTANT: no overlap)
     {"tpl": "len_value = len(<FIM>)",
      "types": ["list_int", "tuple_int", "dict", "str"]},
 
@@ -307,52 +287,183 @@ VAR_TEMPLATES = [
     {"tpl": "<FIM>.append(1)",
      "types": ["list_int"]},
 
-    {"tpl": "first = <FIM>[0]",
-     "types": ["list_int", "tuple_int", "str"]},
-
     {"tpl": "<FIM>['k'] = 1",
      "types": ["dict"]},
-
-    {"tpl": "assert <FIM> is not None",
-     "types": ["int", "float", "str", "bool", "list_int", "tuple_int", "dict"]},
 ]
 
-# ============================================================
-# FUNCTION USAGE (STRICT CALL CONTEXT ONLY)
-# ============================================================
 FUNC_TEMPLATES = [
 
-    {"tpl": "<FIM>()", "args": 0},
+    {"tpl": "result = <FIM>()", "args": 0},
 
-    {"tpl": "<FIM>({int1})", "args": 1},
+    {"tpl": "result = <FIM>(1)", "args": 1},
 
-    {"tpl": "<FIM>({var2}, {var3})", "args": 2},
+    {"tpl": "result = <FIM>(a, b)", "args": 2},
 
-    {"tpl": "print(<FIM>())", "args": 0},
+    {"tpl": "print(<FIM>(1))", "args": 1},
 
-    {"tpl": "return <FIM>({var1})", "args": 1},
-
-    {"tpl": "result = <FIM>({int1})", "args": 1},
+    {"tpl": "return <FIM>(x)", "args": 1},
 ]
 
-
-# ============================================================
-# CLASS USAGE (STRICTLY INSTANTIATION / TYPE CONTEXT)
-# ============================================================
 CLASS_TEMPLATES = [
 
     {"tpl": "obj = <FIM>()", "ctor_args": 0},
 
-    {"tpl": "obj = <FIM>({int1})", "ctor_args": 1},
+    {"tpl": "obj = <FIM>(1)", "ctor_args": 1},
 
     {"tpl": "instance = <FIM>()", "ctor_args": 0},
-
-    {"tpl": "type(obj) is <FIM>", "ctor_args": None},
 
     {"tpl": "isinstance(obj, <FIM>)", "ctor_args": None},
 
     {"tpl": "class Child(<FIM>):\n    pass", "ctor_args": None},
 ]
+
+# # ============================================================
+# # VARIABLE DEFINITIONS (UNAMBIGUOUS)
+# # ============================================================
+
+# VAR_DEFINITION_TEMPLATES = [
+
+#     # identity assignment (strongest signal)
+#     {"tpl": "<FIM> = {int1}", "type": "int"},
+#     {"tpl": "<FIM> = {float1}", "type": "float"},
+#     {"tpl": "<FIM> = '{str1}'", "type": "str"},
+#     {"tpl": "<FIM> = True", "type": "bool"},
+#     {"tpl": "<FIM> = False", "type": "bool"},
+
+#     # STRUCTURAL containers ONLY (no arithmetic ambiguity)
+#     {"tpl": "<FIM> = list([{int1}, {int2}])", "type": "list_int"},
+#     {"tpl": "<FIM> = tuple([{int1}, {int2}])", "type": "tuple_int"},
+#     {"tpl": "<FIM> = dict(key='{str1}', value={int1})", "type": "dict"},
+
+#     {"tpl": "<FIM> = list()", "type": "list_int"},
+#     {"tpl": "<FIM> = dict()", "type": "dict"},
+# ]
+
+
+# # ============================================================
+# # FUNCTION DEFINITIONS (UNAMBIGUOUS)
+# # ============================================================
+
+# FUNC_DEFINITION_TEMPLATES = [
+
+#     {"tpl": """def <FIM>():
+#     return {int1}""", "args": 0},
+
+#     {"tpl": """def <FIM>(x):
+#     return x""", "args": 1},
+
+#     {"tpl": """def <FIM>(x):
+#     return x + {int1}""", "args": 1},
+
+#     {"tpl": """def <FIM>(x):
+#     return x * {int1}""", "args": 1},
+
+#     {"tpl": """def <FIM>(x, y):
+#     return x + y""", "args": 2},
+
+#     {"tpl": """def <FIM>(x, y):
+#     return x * y""", "args": 2},
+# ]
+
+
+# # ============================================================
+# # CLASS DEFINITIONS (UNAMBIGUOUS)
+# # ============================================================
+
+# CLASS_DEFINITION_TEMPLATES = [
+
+#     {"tpl": """class <FIM>:
+#     pass""", "args": 0},
+
+#     {"tpl": """class <FIM>:
+#     def __init__(self):
+#         pass""", "args": 0},
+
+#     {"tpl": """class <FIM>:
+#     def __init__(self, x):
+#         self.x = x""", "args": 1},
+
+#     {"tpl": """class <FIM>:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y""", "args": 2},
+
+#     {"tpl": """class <FIM>(Exception):
+#     pass""", "args": 0},
+# ]
+
+
+# # ============================================================
+# # VARIABLE USAGE (STRICTLY NON-CALL POSITION)
+# # ============================================================
+# VAR_TEMPLATES = [
+
+#     # pure evaluation contexts
+#     {"tpl": "print(<FIM>)",
+#      "types": ["int", "float", "str", "bool"]},
+
+#     {"tpl": "log_value = str(<FIM>)",
+#      "types": ["int", "float", "str", "bool"]},
+
+#     {"tpl": "if bool(<FIM>):\n    pass",
+#      "types": ["int", "float", "str", "bool"]},
+
+#     # container-only contexts
+#     {"tpl": "len_value = len(<FIM>)",
+#      "types": ["list_int", "tuple_int", "dict", "str"]},
+
+#     {"tpl": "for _ in <FIM>:\n    pass",
+#      "types": ["list_int", "tuple_int"]},
+
+#     {"tpl": "<FIM>.append(1)",
+#      "types": ["list_int"]},
+
+#     {"tpl": "first = <FIM>[0]",
+#      "types": ["list_int", "tuple_int", "str"]},
+
+#     {"tpl": "<FIM>['k'] = 1",
+#      "types": ["dict"]},
+
+#     {"tpl": "assert <FIM> is not None",
+#      "types": ["int", "float", "str", "bool", "list_int", "tuple_int", "dict"]},
+# ]
+
+# # ============================================================
+# # FUNCTION USAGE (STRICT CALL CONTEXT ONLY)
+# # ============================================================
+# FUNC_TEMPLATES = [
+
+#     {"tpl": "<FIM>()", "args": 0},
+
+#     {"tpl": "<FIM>({int1})", "args": 1},
+
+#     {"tpl": "<FIM>({var2}, {var3})", "args": 2},
+
+#     {"tpl": "print(<FIM>())", "args": 0},
+
+#     {"tpl": "return <FIM>({var1})", "args": 1},
+
+#     {"tpl": "result = <FIM>({int1})", "args": 1},
+# ]
+
+
+# # ============================================================
+# # CLASS USAGE (STRICTLY INSTANTIATION / TYPE CONTEXT)
+# # ============================================================
+# CLASS_TEMPLATES = [
+
+#     {"tpl": "obj = <FIM>()", "ctor_args": 0},
+
+#     {"tpl": "obj = <FIM>({int1})", "ctor_args": 1},
+
+#     {"tpl": "instance = <FIM>()", "ctor_args": 0},
+
+#     {"tpl": "type(obj) is <FIM>", "ctor_args": None},
+
+#     {"tpl": "isinstance(obj, <FIM>)", "ctor_args": None},
+
+#     {"tpl": "class Child(<FIM>):\n    pass", "ctor_args": None},
+# ]
 # VAR_DEFINITION_TEMPLATES = [
 
 #     {"tpl": """<FIM> = {int1}""", "type": "int"},
@@ -1129,10 +1240,10 @@ def main():
         IdentifierSource.COMMON,
     ]:
         
-        base = Path("datasets/unambigous") / source.value
+        base = Path("datasets/simple") / source.value
 
-        # write_dataset(base / "single_definition.jsonl", source, "definition", mixed=False)
-        # write_dataset(base / "single_usage.jsonl", source, "usage", mixed=False)
+        write_dataset(base / "single_definition.jsonl", source, "definition", mixed=False)
+        write_dataset(base / "single_usage.jsonl", source, "usage", mixed=False)
 
         write_dataset(base / "mixed_definition.jsonl", source, "definition", mixed=True)
         write_dataset(base / "mixed_usage.jsonl", source, "usage", mixed=True)
