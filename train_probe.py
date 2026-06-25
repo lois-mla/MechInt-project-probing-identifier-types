@@ -334,6 +334,43 @@ def main():
     save_dir = "figures/probe_accuracy"
     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
     plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    
+    # print("All results:", results)
+    steering_path = "training_data/steering_data_new.txt"
+    steer_prompts_from_file(steering_path, model, tokenizer, results)
+
+
+
+
+
+
+    # steering:
+
+#     prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+#     alpha = 10.0
+
+#     df = compare_steering(
+#     model=model,
+#     tokenizer=tokenizer,
+#     results=results,
+#     prompt=prompt,
+#     id=0,
+#     contrastive_id=1,
+#     alpha=alpha,
+#     resid_type="mlp_out",
+#     k=20,
+# )
+
+#     print(prompt)
+#     print("alpha: ", alpha)
+    # pd.set_option('display.max_columns', None)
+#     print(df) 
+
+    # # print best layer
+    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    # print("Best layer:", best_layer)
+    # print("Test accuracy:", results[best_layer]["test_acc"])
 
     # print("All results:", results)
 
