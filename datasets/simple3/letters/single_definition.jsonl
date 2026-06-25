@@ -1,0 +1,1500 @@
+{"text": "<FIM> = tuple([-64, 96])\nfor e in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 3.3\nq = c * 89", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w, e):\n        self.w = w\n        self.e = e\nisinstance(w, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m, j, m):\n        self.a = m\n        self.b = j\n        self.c = m\nisinstance(m, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r\nprint(r(25))", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(a, l, l):\n    return a + l + l\na = y(a, l, l)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -24\ni = o()", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-30)\nt = len(f) + -30", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s):\n        self.data = s\n\n    def get(self):\n        return self.data\nclass l(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(i):\n    return i + 85\ni = s(u)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, t, u):\n        self.a = o\n        self.b = t\n        self.c = u\no = r(36, -60, 31)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(o):\n    return o * 80\no = p(80)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass v(n):\n    pass", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = -91 * 1\np = f * -91", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = 'o' + 'l'\nk = len(z)", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(e, j, u):\n    return e\ne = w(e, j, u)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y, j, b):\n        self.a = y\n        self.b = j\n        self.c = b\nclass m(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(b, i, n):\n    return b\nb = d(b, i, n)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(w, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(j, y, k):\n    return j\nj = u(j, y, k)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'n'\no = s()", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = 'c'\nprint(e)", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(j, z, y):\n    return j + z + y\nj = q(j, z, y)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(j, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, u, i):\n        self.a = r\n        self.b = u\n        self.c = i\nisinstance(r, f)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w, j):\n        self.w = w\n        self.j = j\nclass m(z):\n    pass", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 29\nj = a()", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k):\n        self.k = k\nclass z(o):\n    pass", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'k'\nprint(s())", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, d, y):\n        self.a = o\n        self.b = d\n        self.c = y\nisinstance(o, i)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return len(p)\nprint(m(-27))", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m, y, r):\n        self.a = m\n        self.b = y\n        self.c = r\nclass o(x):\n    pass", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -76\nprint(b())", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 'e' + 'n'\nu = d", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = 87.6 * 2.0\nm = v * -67", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = -30 * 99\nprint(h)", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = (-22, 69)\nl = len(j) + -22", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n, l):\n        self.n = n\n        self.l = l\nclass e(j):\n    pass", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = {'h': -96}\nw = len(a) + -96", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, d, v):\n        self.a = p\n        self.b = d\n        self.c = v\nisinstance(p, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass f(e):\n    pass", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 82\nisinstance(c, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -48\nv = m()", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 'o' + 'h'\ny = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(h):\n    return h + -25\nprint(k(-25))", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(k, a, h):\n    return k\nk = s(k, a, h)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = 72 + 36\ny = w + 72", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 32\nprint(u())", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return q\nq = v(y)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.o = o\nclass k(x):\n    pass", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([30, 43])\nfor l in r:\n    pass", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = [-95, 34, 22]\nz = len(c) + -95", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(v):\n    return v\nv = n(n)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = 23.879 * 2.0\nv = l + -51", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = {'n': 76}\ny = list(c.keys())", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'h'\nprint(e())", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = 's'\nprint(c)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = [28, -62, -85]\nw = u[0]", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, c):\n        self.u = u\n        self.c = c\nissubclass(z, z)", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass h(e):\n    pass", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(s, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = [36, -29, 52]\nfor j in g:\n    pass", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = {'n': 90}\nw = len(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(i):\n    return i\nprint(d(-70))", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 32\ne = b()", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(w):\n    return len(w)\nw = e(-45)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = (22, 11)\nz = s[0]", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -13\nk = r()", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(j):\n    return j\nj = w(i)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([19, 32])\nfor h in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = list([-70, -55])\nfor h in v:\n    pass", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>(y, d, k):\n    return y + d + k\ny = x(y, d, k)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'w'\nj = q()", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -100\nclass t(o):\n    pass", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(n, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = list([89, 82])\nt = len(w)", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = 28\nj = n + 28", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q, f):\n        self.q = q\n        self.f = f\nclass b(h):\n    pass", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(x, e, b):\n    return x + e + b\nx = c(x, e, b)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(t):\n    return t * 60\nt = m(u)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -61\nprint(c())", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return k * -95\nk = a(-95)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nm = h()", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ng = w()", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = [-31, 13, 99]\ns = j[0]", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 54\nl = p()", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return len(k)\nk = j(44)", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass d(i):\n    pass", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f):\n        self.data = f\n\n    def get(self):\n        return self.data\nisinstance(f, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(f, z)", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return k * 82\nprint(c(82))", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z):\n        self.z = z\nisinstance(z, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, d):\n        self.data = d\n\n    def get(self):\n        return self.data\nisinstance(d, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 84\nclass g(o):\n    pass", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(o, l, n):\n    return o\no = d(o, l, n)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(l, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nz = s()", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=79)\nn = len(i)", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(a, y):\n    return a * y\na = v(-34, 38)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=7)\nf['c'] = 7", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(z, v, c):\n    return z + v + c\nz = m(z, v, c)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 22\nissubclass(m, z)", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(a, d, f):\n    return a\na = h(a, d, f)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return len(q)\nq = p(-97)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 24\nissubclass(f, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 'n'\nprint(z)", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-62)\no['f'] = -62", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return z + 21\nprint(p(21))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, x, x):\n        self.a = z\n        self.b = x\n        self.c = x\nisinstance(z, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -47\nissubclass(h, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = list([-52, -26])\nj = len(m)", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif w:\n    pass", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 15\nx = q()", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'p'\nprint(g())", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-44, -55])\nh = a[0]", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -60\nclass f(l):\n    pass", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(a, z, h):\n    return a + z + h\na = k(a, z, h)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(p, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>(y, j):\n    return y * j\ny = b(j, m)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = (-77, -89)\nfor w in p:\n    pass", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = -43 * -73\ny = s * -43", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = 'h' + 'c'\ni = r", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 't'\nf = q()", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(u, t):\n    return u * t\nprint(o(u, t))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(m, p, q):\n    return m + p + q\nm = w(m, p, q)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p):\n        self.p = p\nclass k(o):\n    pass", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(e):\n    return len(e)\ne = t(w)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u):\n        self.u = u\nisinstance(u, f)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(s, v, e):\n    return s\ns = x(s, v, e)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, u, f):\n        self.a = p\n        self.b = u\n        self.c = f\nissubclass(m, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w):\n        self.w = w\nclass d(f):\n    pass", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(y):\n    return y + -1\ny = o(-1)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -64\nw = n()", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = 'h'\nprint(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, w):\n        self.p = p\n        self.w = w\nisinstance(p, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(v, j):\n    return v * j\nprint(d(v, j))", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nm = m()", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 56\nf = j()", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 25\nisinstance(h, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif k:\n    pass", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(o)", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = 'v'\nx = len(x) + -83", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'f'\nm = y()", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g):\n        self.data = g\n\n    def get(self):\n        return self.data\nclass s(l):\n    pass", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w):\n        self.w = w\nisinstance(w, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'a'\nprint(m())", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = {'f': 93}\ns = len(a) + 93", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(i, f):\n    return i * f\ni = e(f, w)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 99\nisinstance(c, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, w):\n        self.r = r\n        self.w = w\nisinstance(r, f)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = False\no = n", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = [73, 15, -6]\ns = len(m) + 73", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -80\ng = f()", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = -61.483 * 2.0\nr = w + -41", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r * 65\nprint(a(65))", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass u(z):\n    pass", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -90\nclass y(m):\n    pass", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 'w' + 'l'\nprint(n)", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f):\n        self.f = f\nf = d(97)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nc = t()", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w, k, s):\n        self.a = w\n        self.b = k\n        self.c = s\nw = c(23, 53, 23)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j):\n        self.j = j\nisinstance(j, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 49\nprint(r())", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(w, n, w):\n    return w\nw = p(w, n, w)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=24)\nk = len(r) + 24", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif o:\n    pass", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = (-95, -13)\nx = len(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-80, -41])\nfor l in b:\n    pass", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(v):\n    return v\nprint(g(-30))", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = list([24, 34])\nd.append(24)", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, r):\n        self.o = o\n        self.r = r\nclass q(d):\n    pass", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g, d, f):\n        self.a = g\n        self.b = d\n        self.c = f\ng = c(-2, -61, 75)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(t):\n    return t + -25\nprint(w(-25))", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.data = v\n\n    def get(self):\n        return self.data\nclass l(j):\n    pass", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nm = j()", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(l, q, x):\n    return l + q + x\nl = s(l, q, x)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(h, k, n):\n    return h + k + n\nh = p(h, k, n)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = {'v': -16}\ny = len(k) + -16", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(a, y, d):\n    return a + y + d\na = v(a, y, d)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w):\n        self.data = w\n\n    def get(self):\n        return self.data\nisinstance(w, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif c:\n    pass", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nf = l()", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'c'\nt = x()", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 'q'\nq = len(u) + -73", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = 0 + -55\nw = d * 0", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -34\nclass x(c):\n    pass", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'g'\ng = r()", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l * 73\nl = w(73)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'u'\nc = k()", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(t):\n    return len(t)\nprint(f(8))", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(w):\n    return w\nw = c(96)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = {'s': 58}\nh = list(f.keys())", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y, u, v):\n        self.a = y\n        self.b = u\n        self.c = v\nisinstance(y, f)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(d, p, t):\n    return d + p + t\nd = a(d, p, t)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(t, f):\n    return t + f\nprint(x(t, f))", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 76\nprint(k())", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass a(q):\n    pass", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(d, o, n):\n    return d + o + n\nd = v(d, o, n)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(u, o)", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return k * 62\nprint(w(62))", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif o:\n    pass", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(h, f, c):\n    return h\nh = x(h, f, c)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-56, -51])\no = len(q)", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = 'k'\nw = len(o)", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = -75\nprint(k)", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w):\n        self.data = w\n\n    def get(self):\n        return self.data\nisinstance(w, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l\nl = k(p)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = 37\ni = c + 37", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 'j' + 't'\nk = e", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([63, -47])\nfor r in j:\n    pass", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = False\ne = w", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(k, t):\n    return k + t\nk = z(33, 94)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass j(c):\n    pass", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 'm' + 'e'\nr = w", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass t(j):\n    pass", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.data = m\n\n    def get(self):\n        return self.data\nm = n(-42)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif d:\n    pass", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = [95, -47, 60]\nf = len(s)", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 65\nclass n(z):\n    pass", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 58\nb = n()", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.data = n\n\n    def get(self):\n        return self.data\nn = o(-1)", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(j):\n    return j + 20\nj = h(e)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = 49.403 * 2.0\nm = y + -70", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, l):\n        self.data = l\n\n    def get(self):\n        return self.data\nissubclass(g, s)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = True\no = w", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(o, o)", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.data = n\n\n    def get(self):\n        return self.data\nisinstance(n, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = list([-81, 51])\nh = d[0]", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass z(w):\n    pass", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = 'e' + 'o'\nq = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(o):\n    return o\nprint(u(32))", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.m = m\nisinstance(m, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([22, -47])\ng = len(c) + 22", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = [-78, 27, 14]\nu = c[0]", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(n):\n    return n\nn = v(c)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g * -68\ng = m(-68)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 68 * 95\nw = d * 68", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u):\n        self.data = u\n\n    def get(self):\n        return self.data\nclass t(u):\n    pass", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = {'i': -54}\nk['i'] = -54", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = 29.268 * 2.0\no = u", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 83\nisinstance(o, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(x, i)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = 94.624\nn = z", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = 62 * 9\na = z * 62", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(n, v):\n    return n * v\nn = e(v, p)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return z * -49\nz = o(-49)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 83\na = w()", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return z + 50\nprint(g(50))", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(p, u, z):\n    return p\np = k(p, u, z)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r\nr = s(g)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(k, a):\n    return k * a\nk = p(-38, -49)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 70\nisinstance(h, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(v):\n    return v\nprint(p(-28))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = -79\nf = t + -79", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(y, j):\n    return y * j\nprint(p(y, j))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(m, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return f\nf = i(u)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-4, 63])\nt = len(l)", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(i, j):\n    return i + j\ni = n(j, z)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass r(f):\n    pass", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r):\n        self.r = r\nclass a(w):\n    pass", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(v, n, u):\n    return v\nv = l(v, n, u)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(c, u):\n    return c * u\nc = u(u, k)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(a):\n    return a\nprint(n(26))", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, t):\n        self.h = h\n        self.t = t\nclass k(p):\n    pass", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(a, p, c):\n    return a + p + c\na = o(a, p, c)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r):\n        self.data = r\n\n    def get(self):\n        return self.data\nclass j(v):\n    pass", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, e, z):\n        self.a = p\n        self.b = e\n        self.c = z\nclass g(w):\n    pass", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, y, o):\n        self.a = r\n        self.b = y\n        self.c = o\nr = p(90, -42, 68)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, g, f):\n        self.a = r\n        self.b = g\n        self.c = f\nr = v(-66, -7, 1)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f):\n        self.f = f\nf = z(63)", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, i):\n        self.i = i\ni = h(14)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s):\n        self.data = s\n\n    def get(self):\n        return self.data\ns = p(-46)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = 'i' + 'g'\nx = len(v) + -42", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 10\nprint(u())", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -17\nz = s()", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(y):\n    return y * -55\ny = p(i)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass q(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nd = b()", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass z(u):\n    pass", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, w):\n        self.z = z\n        self.w = w\nz = t(53, -67)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 't'\nm = len(d)", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(u, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'h'\np = k()", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(k, y)", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -26\nissubclass(y, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, c):\n        self.data = c\n\n    def get(self):\n        return self.data\nissubclass(q, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 57\nisinstance(p, w)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 26\nz = k()", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([97, -82])\ng = r[0]", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = 'l' + 'd'\ns = len(w)", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return len(f)\nprint(p(-75))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = {'j': -13}\nj = list(i.keys())", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'z'\nprint(f())", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(a):\n    return len(a)\na = o(77)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = 'c'\nn = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'y'\nprint(d())", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(j, p):\n    return j + p\nj = f(6, -65)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = (60, 91)\no = len(f) + 60", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, d, z, t):\n        self.a = d\n        self.b = z\n        self.c = t\nisinstance(d, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.n = n\nissubclass(q, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = (40, 2)\ny = len(c)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(b, y):\n    return b + y\nb = c(21, 33)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(e, i):\n    return e * i\nprint(f(e, i))", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(y):\n    return y * 69\nprint(x(69))", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(v, z)", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = {'a': 65}\nw = list(d.keys())", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y):\n        self.y = y\nissubclass(p, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, c):\n        self.u = u\n        self.c = c\nisinstance(u, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nz = e()", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = True\nb = u", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(n, e, a):\n    return n\nn = w(n, e, a)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = -97 + 84\nc = k * -97", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(h, e, z):\n    return h\nh = e(h, e, z)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return b + -10\nprint(m(-10))", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(i):\n    return len(i)\nprint(p(-72))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, w):\n        self.p = p\n        self.w = w\nclass k(r):\n    pass", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = 62 * -86\ny = p + 62", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = (45, 44)\nfor p in l:\n    pass", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = list([-46, 38])\np = q[0]", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h):\n        self.data = h\n\n    def get(self):\n        return self.data\nh = h(90)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k):\n        self.data = k\n\n    def get(self):\n        return self.data\nk = i(58)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v, p):\n        self.v = v\n        self.p = p\nissubclass(l, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n, d, j):\n        self.a = n\n        self.b = d\n        self.c = j\nclass u(w):\n    pass", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = 37.322\nw = r", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return p * -44\nprint(c(-44))", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g, h):\n        self.g = g\n        self.h = h\nissubclass(g, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([55, 52])\no = h[0]", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w, v):\n        self.w = w\n        self.v = v\nclass z(t):\n    pass", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif r:\n    pass", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 97\nw = j()", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(y, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g\ng = b(-18)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(w, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass c(h):\n    pass", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k, n, z):\n        self.a = k\n        self.b = n\n        self.c = z\nisinstance(k, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = 71 + 25\nm = k + 71", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f, z, m):\n        self.a = f\n        self.b = z\n        self.c = m\nisinstance(f, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(x, s):\n    return x * s\nprint(u(x, s))", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -20\nisinstance(g, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return d + -83\nd = p(-83)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -93\nm = a()", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r\nr = i(g)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-76)\nl = len(q) + -76", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'n'\nprint(t())", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -48\nj = j + -48", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'p'\nprint(m())", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q, f, d):\n        self.a = q\n        self.b = f\n        self.c = d\nq = r(-21, -26, -73)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, m):\n        self.u = u\n        self.m = m\nclass c(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = [16, 61, 91]\nw.append(16)", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -12\nc = o()", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h):\n        self.h = h\nclass b(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return d\nd = u(r)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(s):\n    return len(s)\ns = l(n)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(p, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = -25 * -75\nprint(g)", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = True\ny = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-45, 57])\ni = d[0]", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(d, x, v):\n    return d + x + v\nd = v(d, x, v)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y, a, g):\n        self.a = y\n        self.b = a\n        self.c = g\nisinstance(y, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(d, s):\n    return d * s\nprint(f(d, s))", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(s, o)", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=33)\nr = len(o)", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -76\nisinstance(w, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'a'\nprint(z())", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.n = n\nclass o(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y):\n        self.y = y\nclass z(i):\n    pass", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(i, j):\n    return i * j\ni = n(26, -70)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g):\n        self.data = g\n\n    def get(self):\n        return self.data\nissubclass(c, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = (-52, -62)\nfor z in k:\n    pass", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, c):\n        self.c = c\nisinstance(c, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = 5.657\nk = p * 63", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([77, -83])\nfor j in w:\n    pass", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = (-89, -58)\nx = len(r)", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif j:\n    pass", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k, o):\n        self.k = k\n        self.o = o\nk = t(8, 84)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.m = m\nclass o(o):\n    pass", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'b'\nprint(r())", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'r'\nprint(b())", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass n(j):\n    pass", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(u, q):\n    return u * q\nprint(j(u, q))", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(u, c):\n    return u * c\nprint(o(u, c))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = 75.928\nn = i * -17", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(w, k):\n    return w + k\nw = k(97, 77)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -42\nprint(d())", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 2\nl = r()", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'l'\ny = j()", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'e'\nprint(d())", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(m, c):\n    return m + c\nprint(a(m, c))", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 87\nv = m()", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(y, t, a):\n    return y + t + a\ny = m(y, t, a)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = -65 * -37\ns = m + -65", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = {'s': -51}\nf['s'] = -51", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(x, l, q):\n    return x + l + q\nx = d(x, l, q)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(n, c, c):\n    return n + c + c\nn = k(n, c, c)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -9\nm = o()", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r + -78\nprint(q(-78))", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = {'r': 74}\ni = len(q)", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = -8.643 * 2.0\ng = j * 23", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = (-38, -43)\nfor r in u:\n    pass", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = -7\nz = b * -7", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(v, p, q):\n    return v\nv = t(v, p, q)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, a):\n        self.p = p\n        self.a = a\nissubclass(u, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 12\ni = g()", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s):\n        self.s = s\nclass d(d):\n    pass", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-27, 37])\nu = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, k, e):\n        self.a = p\n        self.b = k\n        self.c = e\nisinstance(p, s)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = 36 + 89\nn = u", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 72\nprint(c())", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'j'\nprint(k())", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = list([-31, 59])\nn.append(-31)", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, s, u):\n        self.a = h\n        self.b = s\n        self.c = u\nh = e(-90, -90, -61)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(y, u, f):\n    return y\ny = e(y, u, f)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = -65\ne = q", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 29\nx = s(29)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l + 45\nl = p(z)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = (24, -54)\ne = len(f) + 24", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -37\na = y()", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return len(x)\nprint(q(-96))", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f):\n        self.f = f\nissubclass(h, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n, u, e):\n        self.a = n\n        self.b = u\n        self.c = e\nisinstance(n, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = 96 * 64\nm = b", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(c, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(n):\n    return n\nn = f(f)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b):\n        self.data = b\n\n    def get(self):\n        return self.data\nb = w(16)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return len(b)\nb = y(v)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([93, -63])\nm = len(s)", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return b\nprint(w(-50))", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return len(q)\nq = i(36)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q):\n        self.q = q\nisinstance(q, f)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = [-94, 0, 51]\nf.append(-94)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(z, j, o):\n    return z + j + o\nz = f(z, j, o)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(y):\n    return y + 51\ny = k(51)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -20\nv = z()", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = {'k': -74}\nm = len(s) + -74", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = {'j': -17}\no = len(q)", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(j, z):\n    return j + z\nj = k(-38, -89)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(o, v):\n    return o + v\no = p(-80, 66)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a):\n        self.a = a\nclass f(q):\n    pass", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = 'l'\nx = len(b)", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, i):\n        self.i = i\nissubclass(t, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 81\nprint(x())", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 29 + -33\nl = t", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = {'s': -6}\nx = len(l) + -6", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g + -54\ng = w(b)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = 'c' + 'p'\ng = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(u):\n    return len(u)\nu = c(d)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.v = v\nisinstance(v, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(k)", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z):\n        self.data = z\n\n    def get(self):\n        return self.data\nisinstance(z, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(p, c, h):\n    return p\np = d(p, c, h)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(f)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, d):\n        self.data = d\n\n    def get(self):\n        return self.data\nisinstance(d, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = (-12, -30)\nfor m in c:\n    pass", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 89.035\nv = f + -87", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'd'\nprint(i())", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = list([85, 63])\nb = y[0]", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(k, e):\n    return k * e\nprint(i(k, e))", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = 73 * 86\nr = r + 73", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nn = n()", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, n, z):\n        self.a = o\n        self.b = n\n        self.c = z\no = x(-7, 2, 83)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(q, k, q):\n    return q\nq = d(q, k, q)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(f, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return k * -3\nk = x(-3)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(j, w):\n    return j + w\nprint(z(j, w))", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(q, y):\n    return q * y\nq = d(16, 5)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = 'z'\np = len(n) + 98", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t):\n        self.t = t\nt = w(69)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = {'s': 57}\nz = len(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = list([-15, -77])\nj.append(-15)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = list([-84, 93])\nd.append(-84)", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = {'p': 81}\ny['p'] = 81", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u):\n        self.u = u\nu = v(100)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-42)\nh['d'] = -42", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * -11\nx = l(o)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.data = n\n\n    def get(self):\n        return self.data\nn = a(-84)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = 97 + 37\nv = k", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = list([8, -71])\ne = len(z) + 8", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q, i):\n        self.q = q\n        self.i = i\nisinstance(q, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'd'\nprint(p())", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, h, g):\n        self.a = u\n        self.b = h\n        self.c = g\nclass z(g):\n    pass", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(m)", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass n(t):\n    pass", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(r, f):\n    return r + f\nprint(p(r, f))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k):\n        self.k = k\nk = z(-61)", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, z):\n        self.r = r\n        self.z = z\nclass v(p):\n    pass", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'e'\nprint(t())", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(f, d):\n    return f + d\nf = x(-29, 47)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = False\nm = q", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'u'\nl = c()", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif m:\n    pass", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(w):\n    return w * -84\nw = b(-84)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(h, i, r):\n    return h + i + r\nh = j(h, i, r)", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 64\nclass i(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(w, z):\n    return w + z\nw = n(z, v)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(s, w)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(o):\n    return len(o)\no = e(-98)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(n, y):\n    return n + y\nn = j(83, -42)", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return d\nd = f(2)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return z\nprint(l(59))", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(d, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 88.073 * 2.0\nf = k", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(k, y, m):\n    return k + y + m\nk = q(k, y, m)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(f, a, f):\n    return f\nf = f(f, a, f)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s):\n        self.s = s\nclass g(l):\n    pass", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m, l):\n        self.m = m\n        self.l = l\nissubclass(v, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(r, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = 93.433\nq = l + 84", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'm'\nprint(y())", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f, u, s):\n        self.a = f\n        self.b = u\n        self.c = s\nissubclass(o, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.data = m\n\n    def get(self):\n        return self.data\nissubclass(b, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nprint(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k, d, j):\n        self.a = k\n        self.b = d\n        self.c = j\nclass z(x):\n    pass", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -78\nprint(a())", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(s, u):\n    return s + u\ns = g(u, g)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass n(m):\n    pass", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 29.11 * 2.0\ne = o * 41", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(r, n):\n    return r + n\nprint(p(r, n))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 9\nissubclass(m, j)", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = 'p' + 'f'\np = j", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 't'\nd = w()", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(t):\n    return t * -58\nprint(o(-58))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = -1.881 * 2.0\nz = u * 85", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return f + -90\nf = e(-90)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'o'\nq = f()", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p):\n        self.data = p\n\n    def get(self):\n        return self.data\np = n(-7)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j):\n        self.j = j\nclass k(r):\n    pass", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = -89 * -24\nprint(q)", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(y, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a, q):\n        self.a = a\n        self.q = q\na = t(-98, 75)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j, y, t):\n        self.a = j\n        self.b = y\n        self.c = t\nclass b(r):\n    pass", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-98)\no = len(f)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(a, d):\n    return a * d\na = i(-63, -35)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(o):\n    return o + 98\no = q(98)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.data = n\n\n    def get(self):\n        return self.data\nisinstance(n, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(g, e):\n    return g + e\ng = h(e, m)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = -2\ns = h + -2", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.o = o\no = m(-76)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(a, o):\n    return a + o\nprint(h(a, o))", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(u, y):\n    return u + y\nu = h(y, u)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nf = h()", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nh = k()", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=96)\nc['y'] = 96", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = [32, -66, -23]\nk = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 92\nclass o(u):\n    pass", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, i, d, y):\n        self.a = i\n        self.b = d\n        self.c = y\nclass p(w):\n    pass", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = [-91, -77, 96]\nfor c in f:\n    pass", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(o, d):\n    return o + d\no = b(-68, 10)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a):\n        self.data = a\n\n    def get(self):\n        return self.data\nclass j(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif e:\n    pass", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(w, q):\n    return w + q\nw = w(q, q)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return len(l)\nprint(l(8))", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t):\n        self.data = t\n\n    def get(self):\n        return self.data\nclass a(p):\n    pass", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = 'b' + 'e'\nf = len(t)", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, d, h, u):\n        self.a = d\n        self.b = h\n        self.c = u\nclass o(v):\n    pass", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = list([34, -8])\nz = len(s)", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(e, u, i):\n    return e + u + i\ne = w(e, u, i)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(m):\n    return m\nm = l(i)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f):\n        self.f = f\nclass k(v):\n    pass", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nr = e()", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass h(n):\n    pass", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q, f, f):\n        self.a = q\n        self.b = f\n        self.c = f\nisinstance(q, x)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = [-38, -88, 71]\nh = len(d) + -38", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -93\nprint(g())", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(y, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'w'\nprint(s())", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = list([-50, -8])\nfor h in d:\n    pass", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nx = v(-14)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, d):\n        self.d = d\nisinstance(d, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 18\na = m()", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = [11, 83, -12]\nfor t in v:\n    pass", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>(s):\n    return s * 2\nprint(i(2))", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p):\n        self.p = p\nissubclass(b, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a, i, u):\n        self.a = a\n        self.b = i\n        self.c = u\nclass i(d):\n    pass", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -72\nprint(n())", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = -77.69 * 2.0\nx = i + -35", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g):\n        self.data = g\n\n    def get(self):\n        return self.data\nclass c(t):\n    pass", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ne = n()", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(i):\n    return len(i)\nprint(d(54))", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ng = b()", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g):\n        self.data = g\n\n    def get(self):\n        return self.data\nisinstance(g, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return len(d)\nd = r(7)", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(v):\n    return len(v)\nv = h(p)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass i(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b):\n        self.b = b\nclass d(h):\n    pass", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 80\nx = x(80)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 16.835 * 2.0\nv = u + -75", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(i)", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 32\nclass x(p):\n    pass", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-39)\nt = len(n)", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 63\nprint(m())", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(j, n):\n    return j * n\nprint(l(j, n))", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z):\n        self.z = z\nissubclass(r, i)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nn = o()", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(n, x, o):\n    return n\nn = b(n, x, o)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([16, -67])\nr = len(c)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 70\nisinstance(z, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-71)\nx = list(h.keys())", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(w, r):\n    return w + r\nprint(l(w, r))", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-28)\nw = len(p)", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return len(f)\nf = u(l)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = (-91, -25)\nk = z[0]", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'x'\na = x()", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 97 + -47\nc = o + 97", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = (-65, -91)\np = len(c) + -65", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, e, z):\n        self.a = z\n        self.b = e\n        self.c = z\nissubclass(c, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(n):\n    return n\nn = t(82)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(p, f):\n    return p * f\np = m(f, o)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(o):\n    return len(o)\no = d(-97)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return p\nprint(x(83))", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(a):\n    return a + 34\nprint(b(34))", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 'p' + 'x'\nx = k", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = 17.81\nw = w * 96", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = [-59, -66, 61]\nh.append(-59)", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 80\ni = c()", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h):\n        self.data = h\n\n    def get(self):\n        return self.data\nh = u(-87)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(m, d):\n    return m * d\nm = i(59, -73)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = -23 + -99\nz = t", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(u, d):\n    return u + d\nu = q(d, e)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = -2\ns = p + -2", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(l, j):\n    return l * j\nprint(e(l, j))", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = list([25, 57])\nw = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j, y, p):\n        self.a = j\n        self.b = y\n        self.c = p\nissubclass(r, x)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-47, 88])\nu = len(c) + -47", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = [-96, 61, 31]\nc.append(-96)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 29\nprint(z())", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = 98 * 92\nc = k * 98", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(r, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(n, z):\n    return n + z\nprint(l(n, z))", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = {'b': 49}\ne['b'] = 49", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, d):\n        self.x = x\n        self.d = d\nisinstance(x, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, k):\n        self.o = o\n        self.k = k\nisinstance(o, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(a, r):\n    return a + r\na = z(r, d)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = False\nt = t", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = [-43, 62, 80]\ns = x[0]", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 29\nt = c", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 17\nprint(z())", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([31, -100])\nb = i[0]", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, p, n):\n        self.a = u\n        self.b = p\n        self.c = n\nclass r(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 61.155\nn = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(x, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = {'z': 52}\ns = len(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(v, u, b):\n    return v + u + b\nv = v(v, u, b)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>(e):\n    return e\ne = c(87)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.n = n\nissubclass(z, w)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, k, b):\n        self.a = o\n        self.b = k\n        self.c = b\nclass t(g):\n    pass", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = -25.008 * 2.0\no = z + -94", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(r, y):\n    return r * y\nprint(b(r, y))", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(p, t):\n    return p + t\nprint(o(p, t))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass p(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(w):\n    return len(w)\nw = d(19)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = [5, -89, -15]\ng = x[0]", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(w, d, u):\n    return w + d + u\nw = e(w, d, u)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = [85, -2, 2]\nw = len(h)", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(m):\n    return m * -59\nm = s(-59)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = -26.221\nx = v * 79", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=12)\nt['w'] = 12", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 't' + 'o'\nprint(l)", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif h:\n    pass", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = 37\nt = t * 37", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 68 * -26\nprint(u)", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = (-19, -8)\nl = z[0]", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nz = z()", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q, g):\n        self.q = q\n        self.g = g\nclass v(t):\n    pass", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k, o, h):\n        self.a = k\n        self.b = o\n        self.c = h\nissubclass(l, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 91 * -73\no = h * 91", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = False\ne = t", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(x, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, p, s):\n        self.a = o\n        self.b = p\n        self.c = s\nisinstance(o, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(z, k, e):\n    return z + k + e\nz = i(z, k, e)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = 68 * 11\nn = c * 68", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([99, -49])\np = len(f)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b, q, g):\n        self.a = b\n        self.b = q\n        self.c = g\nissubclass(u, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -99\nk = d()", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(i):\n    return i + -90\ni = b(z)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(i, z, j):\n    return i\ni = s(i, z, j)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(w):\n    return w\nprint(t(81))", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = [83, -13, -48]\np = len(e) + 83", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(k, t):\n    return k * t\nk = g(77, 19)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n, q, u):\n        self.a = n\n        self.b = q\n        self.c = u\nisinstance(n, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(o, z, n):\n    return o + z + n\no = m(o, z, n)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = list([-79, 97])\nc = f[0]", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(g, t):\n    return g + t\ng = n(t, o)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(t, x, a):\n    return t\nt = e(t, x, a)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = {'n': 44}\nl = len(w)", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(s):\n    return s + -9\nprint(o(-9))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(i):\n    return i\ni = h(e)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(i, d):\n    return i * d\ni = h(d, r)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = 63 * 24\nw = j * 63", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z):\n        self.z = z\nz = c(-86)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(q, v, l):\n    return q + v + l\nq = t(q, v, l)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = list([-47, -88])\nr.append(-47)", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = -17.288 * 2.0\nr = v", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = {'s': -28}\ng = len(f)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(c, k, x):\n    return c\nc = m(c, k, x)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = (-20, 5)\ni = len(z) + -20", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = -48\ns = s", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif p:\n    pass", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.v = v\nisinstance(v, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q):\n        self.data = q\n\n    def get(self):\n        return self.data\nq = y(25)", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(u):\n    return u * 2\nu = u(x)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = list([25, 82])\nt = len(p)", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'h'\ne = g()", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(d, z):\n    return d * z\nd = a(-95, -19)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 91\nl = o()", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a):\n        self.data = a\n\n    def get(self):\n        return self.data\nissubclass(z, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nb = n()", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass x(l):\n    pass", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return k * 29\nk = h(i)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-59, -1])\np = len(m)", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(w):\n    return w\nprint(y(-23))", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(z, a):\n    return z * a\nz = z(a, p)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=78)\na = list(e.keys())", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return len(z)\nz = a(v)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(j, t, k):\n    return j\nj = s(j, t, k)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -86\nl = x()", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = {'k': -43}\nc = len(o) + -43", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(d)", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u):\n        self.data = u\n\n    def get(self):\n        return self.data\nclass j(e):\n    pass", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = 89 + -90\ns = v * 89", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = -70\nm = v + -70", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -19\nissubclass(p, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 95\nisinstance(s, q)", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(x, s, v):\n    return x + s + v\nx = d(x, s, v)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = 77\ng = t + 77", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(f, v, s):\n    return f + v + s\nf = y(f, v, s)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = True\nl = u", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return d\nd = n(h)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = 'p'\ng = len(j) + 58", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -31\nisinstance(m, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = -3 + -63\nprint(z)", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-5)\ni = len(o)", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = 77 * 97\no = t", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, c, k, l):\n        self.a = c\n        self.b = k\n        self.c = l\nissubclass(r, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass e(w):\n    pass", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nx = o()", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif f:\n    pass", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g * 54\nprint(z(54))", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(w, f):\n    return w * f\nprint(k(w, f))", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return len(x)\nx = u(-93)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = [23, 80, -93]\nr.append(23)", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(f, d):\n    return f * d\nf = q(d, e)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = -51.935\nw = q * 25", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(i, z, w):\n    return i + z + w\ni = v(i, z, w)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g):\n        self.g = g\ng = j(-91)", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'u'\nprint(b())", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = (1, -39)\no = len(h) + 1", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return p\np = k(u)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(j, f):\n    return j + f\nj = r(-69, -76)", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'o'\nprint(m())", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(d, r, f):\n    return d + r + f\nd = l(d, r, f)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z):\n        self.data = z\n\n    def get(self):\n        return self.data\nissubclass(j, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nx = z(m)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = -24 + -60\nf = v + -24", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z):\n        self.data = z\n\n    def get(self):\n        return self.data\nissubclass(t, s)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 7\nprint(q())", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, m, t):\n        self.a = o\n        self.b = m\n        self.c = t\no = u(-28, 97, -78)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 79\nm = t()", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -76 + 42\nv = z + -76", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, s, w):\n        self.a = o\n        self.b = s\n        self.c = w\no = v(21, -56, -97)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = -89\nb = w + -89", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 75\nissubclass(c, w)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = list([68, 25])\nb = d[0]", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = 93\nj = j * 93", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(h, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -75\nu = i * -75", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif t:\n    pass", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 'o' + 'n'\np = len(h)", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, s):\n        self.u = u\n        self.s = s\nu = t(35, -41)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -81 + -45\nr = q + -81", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = list([34, -92])\ny = len(p)", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-41, -84])\ng = l[0]", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r):\n        self.r = r\nclass k(q):\n    pass", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'd'\nprint(i())", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, d, n):\n        self.d = d\n        self.n = n\nisinstance(d, q)", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.o = o\nisinstance(o, s)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(t)", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l * -76\nl = x(-76)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g, j, u):\n        self.a = g\n        self.b = j\n        self.c = u\nclass d(k):\n    pass", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -83\nj = f()", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(v, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ny = a()", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s):\n        self.s = s\nissubclass(q, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif w:\n    pass", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(e):\n    return len(e)\ne = k(s)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y, f, q):\n        self.a = y\n        self.b = f\n        self.c = q\nisinstance(y, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -88\nz = b()", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = -10 * 39\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(i)", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(k)", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(c, l, u):\n    return c\nc = w(c, l, u)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.data = x\n\n    def get(self):\n        return self.data\nx = x(-61)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t, c, x):\n        self.a = t\n        self.b = c\n        self.c = x\nisinstance(t, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m, r, x):\n        self.a = m\n        self.b = r\n        self.c = x\nisinstance(m, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -72\nprint(o())", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -94\nm = z()", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f):\n        self.f = f\nf = z(-77)", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-16, -80])\ny = len(l)", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(j, n):\n    return j * n\nj = m(n, i)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 93\nclass u(r):\n    pass", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = True\nv = f", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(y):\n    return y\ny = y(67)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -98 * -55\nr = e * -98", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = (9, 55)\nfor l in q:\n    pass", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(d, z, f):\n    return d\nd = z(d, z, f)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = -13 + -71\ns = q + -13", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u):\n        self.data = u\n\n    def get(self):\n        return self.data\nu = p(64)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -71\nclass a(f):\n    pass", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'g'\nprint(u())", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r + 7\nr = z(h)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(d, y):\n    return d * y\nd = z(y, y)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = -46.999 * 2.0\nm = c * 20", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(b, g, x):\n    return b\nb = n(b, g, x)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(z, q):\n    return z + q\nprint(j(z, q))", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, i):\n        self.o = o\n        self.i = i\nisinstance(o, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return q + 9\nprint(v(9))", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = 'r'\ni = u", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(y, p):\n    return y * p\nprint(d(y, p))", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(o):\n    return len(o)\nprint(t(87))", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -93.836 * 2.0\nh = j * -3", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(i):\n    return len(i)\ni = y(n)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = True\nw = o", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return f\nf = w(j)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return len(p)\nprint(o(4))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, e, e):\n        self.a = p\n        self.b = e\n        self.c = e\np = q(28, 29, -86)", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v, z, d):\n        self.a = v\n        self.b = z\n        self.c = d\nisinstance(v, y)", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(u, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -16\nprint(q())", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -71\nb = d()", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = [47, 75, -42]\nz = len(i) + 47", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = -78\nd = e * -78", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(i, u):\n    return i + u\ni = t(71, 68)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j):\n        self.data = j\n\n    def get(self):\n        return self.data\nj = g(29)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b, i, c):\n        self.a = b\n        self.b = i\n        self.c = c\nisinstance(b, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(s):\n    return s * 31\nprint(s(31))", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return len(f)\nf = n(-25)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(w):\n    return w + 28\nw = f(28)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, r, k):\n        self.a = o\n        self.b = r\n        self.c = k\nclass i(u):\n    pass", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(d, i):\n    return d + i\nprint(s(d, i))", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(h, g, f):\n    return h\nh = c(h, g, f)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = {'s': -73}\nw = list(j.keys())", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s):\n        self.s = s\nclass p(j):\n    pass", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = {'o': 98}\nm['o'] = 98", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(j):\n    return j\nj = x(t)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'd'\no = b()", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 'q' + 'p'\nz = len(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(u, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -43\nclass a(r):\n    pass", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, b, j):\n        self.a = o\n        self.b = b\n        self.c = j\no = n(16, 84, 51)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = 'e'\ny = len(w) + -31", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(h, s):\n    return h * s\nh = m(0, -5)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = -12 * 33\nf = w * -12", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(y, n):\n    return y + n\ny = e(95, 100)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z):\n        self.z = z\nisinstance(z, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 2 + 25\nprint(b)", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ny = n()", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.v = v\nisinstance(v, i)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, d):\n        self.data = d\n\n    def get(self):\n        return self.data\nclass y(g):\n    pass", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j, g, m):\n        self.a = j\n        self.b = g\n        self.c = m\nissubclass(p, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = (8, -4)\nfor j in t:\n    pass", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k):\n        self.data = k\n\n    def get(self):\n        return self.data\nissubclass(w, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'u'\nprint(z())", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(l, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(f, m):\n    return f + m\nf = g(m, k)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = {'g': 48}\nr = len(c)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(g, i):\n    return g + i\ng = k(90, -40)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, s):\n        self.p = p\n        self.s = s\np = n(-62, -45)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = [60, 6, -4]\nfor y in m:\n    pass", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, u, c):\n        self.a = z\n        self.b = u\n        self.c = c\nclass p(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([13, -22])\na = len(p)", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(a, h):\n    return a * h\nprint(t(a, h))", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(v):\n    return v\nprint(s(45))", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 17\nprint(d())", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'l'\ns = i()", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return b * 31\nb = r(31)", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s):\n        self.s = s\nisinstance(s, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nl = u()", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q):\n        self.q = q\nq = b(22)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'v'\nprint(b())", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-31)\nk['q'] = -31", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.data = m\n\n    def get(self):\n        return self.data\nm = f(-28)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m, b, d):\n        self.a = m\n        self.b = b\n        self.c = d\nclass u(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 'h' + 'n'\nj = len(b) + 92", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(n, f, n):\n    return n + f + n\nn = z(n, f, n)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass r(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = [-94, 55, 68]\nr.append(-94)", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 40\ns = x()", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return b\nb = q(u)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(t, v, p):\n    return t + v + p\nt = p(t, v, p)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 83\nj = f()", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'r'\nz = x()", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -72\nisinstance(d, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = {'h': 96}\ni['h'] = 96", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w, s):\n        self.w = w\n        self.s = s\nisinstance(w, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(j):\n    return len(j)\nj = b(f)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -68\nprint(s())", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return len(p)\np = l(y)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a):\n        self.a = a\nissubclass(f, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.o = o\nissubclass(y, i)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ny = s()", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, w, m):\n        self.a = h\n        self.b = w\n        self.c = m\nclass p(k):\n    pass", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif g:\n    pass", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f, x):\n        self.f = f\n        self.x = x\nissubclass(t, q)", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g, u):\n        self.g = g\n        self.u = u\nissubclass(f, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return z\nprint(z(49))", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = list([32, -36])\nm = len(m)", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -45\nprint(i())", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(d, e, h):\n    return d\nd = g(d, e, h)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 14.455\nr = g * -94", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(p, d, k):\n    return p + d + k\np = k(p, d, k)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = 't' + 'u'\na = len(c) + -7", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -100\nclass p(g):\n    pass", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([39, -45])\nh = r[0]", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o, j):\n        self.o = o\n        self.j = j\nclass v(t):\n    pass", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, r):\n        self.r = r\n        self.r = r\nisinstance(r, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 'w' + 'e'\ng = len(b) + -3", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(r, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.m = m\nissubclass(b, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(j, x):\n    return j * x\nj = w(x, a)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(c, h):\n    return c * h\nc = f(-40, -67)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = 6\nprint(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nx = a()", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif i:\n    pass", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=46)\nd = len(d) + 46", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(v, k):\n    return v + k\nv = m(k, z)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 'z'\ni = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, i, b, a):\n        self.a = i\n        self.b = b\n        self.c = a\ni = c(-88, 14, 50)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(z)", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([74, 93])\no = len(z) + 74", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = -83.987\nd = a + 90", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, n):\n        self.r = r\n        self.n = n\nr = s(-75, -79)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -22\nissubclass(t, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = 78 + 85\nn = u", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(t, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=12)\ng = len(t) + 12", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -37\nprint(o)", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 17\nclass d(g):\n    pass", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([9, 67])\np = len(j) + 9", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 85\nprint(g())", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -2\np = k()", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(c):\n    return c\nc = e(d)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(c):\n    return len(c)\nc = o(13)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = -18 + -39\nh = q * -18", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(b, q):\n    return b * q\nb = x(-16, -66)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 'f' + 'v'\nprint(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = 94 + 60\nw = h + 94", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = -76.489 * 2.0\na = b * -27", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 'u'\np = len(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = 6 + 61\np = p * 6", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass z(m):\n    pass", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 'b'\ne = len(l) + 89", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass i(i):\n    pass", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(u, c):\n    return u * c\nu = z(-91, -26)", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nb = x()", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nw = m()", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = (74, -15)\nx = len(e) + 74", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r + 64\nr = s(64)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q):\n        self.q = q\nissubclass(g, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = (-26, -92)\no = a[0]", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return len(d)\nd = l(c)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q):\n        self.data = q\n\n    def get(self):\n        return self.data\nissubclass(f, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(k, p):\n    return k + p\nk = s(2, 21)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -61\nk = n()", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(z, i):\n    return z * i\nprint(q(z, i))", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(e):\n    return e + 86\ne = g(a)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 56\nj = v + 56", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = list([98, -3])\np.append(98)", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(m):\n    return m * 9\nm = a(i)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass k(f):\n    pass", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(v, s):\n    return v * s\nv = h(94, -75)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = 0 * 50\nu = q + 0", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-28, 66])\nfor g in h:\n    pass", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = -41 * -2\nn = k", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j):\n        self.j = j\nj = y(-92)", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t, l, h):\n        self.a = t\n        self.b = l\n        self.c = h\nissubclass(p, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(p, n, q):\n    return p\np = w(p, n, q)", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, c):\n        self.c = c\nissubclass(e, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = -72\nm = l + -72", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif o:\n    pass", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(n, w):\n    return n + w\nn = g(w, i)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(l, x):\n    return l + x\nl = j(x, b)", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = False\ni = u", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.data = n\n\n    def get(self):\n        return self.data\nissubclass(g, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = -63.217 * 2.0\nn = r * 56", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(i, p, e):\n    return i + p + e\ni = c(i, p, e)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(p, x)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = (-80, 99)\nn = u[0]", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = 34 * 8\nprint(h)", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.data = x\n\n    def get(self):\n        return self.data\nisinstance(x, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(q, m):\n    return q + m\nq = s(m, p)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = [-42, 50, -44]\nc.append(-42)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.v = v\nissubclass(j, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = list([-65, -21])\nn = len(e) + -65", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, l):\n        self.h = h\n        self.l = l\nclass p(k):\n    pass", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, f, k):\n        self.a = h\n        self.b = f\n        self.c = k\nisinstance(h, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 53 + 22\nn = n * 53", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(k, y):\n    return k * y\nprint(d(k, y))", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'd'\nx = c()", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nr = a()", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(u):\n    return len(u)\nu = c(0)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif j:\n    pass", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = -8.217\nprint(q)", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ng = j()", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(g, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(o, x, i):\n    return o + x + i\no = t(o, x, i)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a, v):\n        self.a = a\n        self.v = v\na = m(29, 11)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 69\nx = o()", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(a, o):\n    return a + o\na = k(o, j)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(c, p):\n    return c * p\nprint(d(c, p))", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j):\n        self.data = j\n\n    def get(self):\n        return self.data\nclass m(k):\n    pass", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(l, o, w):\n    return l\nl = f(l, o, w)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(e, o):\n    return e * o\ne = d(-12, -27)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = -50.356\nq = w + -63", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a, t, b):\n        self.a = a\n        self.b = t\n        self.c = b\nclass y(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=71)\nd = list(x.keys())", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass e(p):\n    pass", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -98\nh = s()", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = (-28, -79)\ne = len(l)", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y):\n        self.y = y\ny = u(-13)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-48, 92])\nfor t in e:\n    pass", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = (-56, -49)\nq = c[0]", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(j, w, i):\n    return j\nj = a(j, w, i)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 82\nprint(o(82))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(w, x, f):\n    return w\nw = u(w, x, f)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(b)", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(b, u, m):\n    return b\nb = e(b, u, m)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = 'g'\nprint(h)", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b):\n        self.b = b\nb = a(-23)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = 50.847\nprint(r)", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = list([96, 46])\nu = len(y) + 96", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-25, -95])\nk = len(f)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = 2.812 * 2.0\nprint(i)", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q, o):\n        self.q = q\n        self.o = o\nclass l(j):\n    pass", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.data = x\n\n    def get(self):\n        return self.data\nx = x(43)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r\nprint(z(69))", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(i, p):\n    return i * p\nprint(u(i, p))", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'x'\nprint(r())", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass x(l):\n    pass", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 30\nissubclass(a, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, e):\n        self.e = e\nclass g(c):\n    pass", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=65)\nj = len(w)", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -73\nr = d()", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = True\nq = c", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return len(p)\np = g(-19)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(h, k):\n    return h * k\nh = d(92, 48)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(i, f, g):\n    return i\ni = l(i, f, g)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = (10, 15)\nn = len(u) + 10", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t, a):\n        self.t = t\n        self.a = a\nissubclass(h, s)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(m, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = 37\nn = r + 37", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a):\n        self.a = a\nisinstance(a, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y, v, c):\n        self.a = y\n        self.b = v\n        self.c = c\nisinstance(y, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([19, -81])\nx = len(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = list([21, -1])\nu = len(y) + 21", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(y, d):\n    return y + d\ny = p(d, i)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = (-97, -56)\nd = len(t) + -97", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 'p'\no = len(e) + 100", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-86)\nt['s'] = -86", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 72\nb = o()", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\na = p()", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(z, e, b):\n    return z\nz = g(z, e, b)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 49.069\nprint(k)", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(u)", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.data = n\n\n    def get(self):\n        return self.data\nn = p(98)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = 'd'\nv = g", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(x, u):\n    return x * u\nprint(v(x, u))", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j):\n        self.j = j\nj = q(25)", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = 'k' + 'p'\nt = a", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = (80, -3)\ne = n[0]", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nr = f()", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(z, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = (22, 39)\nfor k in a:\n    pass", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = (91, -20)\nq = len(g)", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([12, 87])\nfor x in h:\n    pass", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.data = m\n\n    def get(self):\n        return self.data\nclass f(p):\n    pass", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -10\nissubclass(q, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = -64 * 55\nprint(z)", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-85, -30])\ne = d[0]", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u):\n        self.u = u\nisinstance(u, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = 26 * -4\nz = o * 26", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = -80\np = t + -80", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b, v):\n        self.b = b\n        self.v = v\nb = k(34, -35)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, e):\n        self.data = e\n\n    def get(self):\n        return self.data\ne = x(10)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(v):\n    return v + -31\nv = u(-31)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -13\nclass r(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, a):\n        self.p = p\n        self.a = a\nissubclass(h, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(q, b):\n    return q * b\nq = l(62, -100)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -27\nclass t(e):\n    pass", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = -32.413\nb = g * 100", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = -70\nz = c", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 75 + 52\nprint(f)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = 47\nh = r", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r\nr = f(91)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=18)\nf = len(b) + 18", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([88, -65])\nz = j[0]", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b, d, a):\n        self.a = b\n        self.b = d\n        self.c = a\nb = f(-44, 79, 81)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass w(g):\n    pass", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = {'u': -71}\nt = len(q)", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(c, f):\n    return c * f\nc = m(f, h)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, h):\n        self.z = z\n        self.h = h\nclass m(f):\n    pass", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(r, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s, x):\n        self.s = s\n        self.x = x\nissubclass(z, w)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-2)\ns['w'] = -2", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = {'f': -40}\ne = len(y) + -40", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(z, g, h):\n    return z\nz = y(z, g, h)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, a):\n    return x * a\nprint(n(x, a))", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(z, j):\n    return z * j\nprint(z(z, j))", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -59\nt = x()", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -3.697\ng = w * -16", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'm'\nprint(o())", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y, m, s):\n        self.a = y\n        self.b = m\n        self.c = s\nisinstance(y, x)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = (83, 15)\nfor a in y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(s, q, t):\n    return s\ns = v(s, q, t)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = 88 + -53\nprint(u)", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b):\n        self.b = b\nb = i(26)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j, p):\n        self.j = j\n        self.p = p\nj = c(25, -74)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(s, q)", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = 92.353 * 2.0\nd = q * -3", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, q, i):\n        self.a = p\n        self.b = q\n        self.c = i\np = h(43, 81, 0)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(x, w)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = -63\nv = e + -63", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nl = y()", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(t, d):\n    return t + d\nt = h(d, m)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(j, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = -2.562 * 2.0\nprint(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return len(b)\nprint(f(-97))", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r):\n        self.data = r\n\n    def get(self):\n        return self.data\nisinstance(r, j)", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(b, k, o):\n    return b + k + o\nb = h(b, k, o)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = 65.398\nc = s", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass y(a):\n    pass", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, q):\n        self.z = z\n        self.q = q\nz = m(77, 72)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(k, s):\n    return k + s\nk = h(92, 3)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(v, i):\n    return v + i\nprint(b(v, i))", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -52\nr = b()", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 93.763\nh = p", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return z + -77\nz = n(-77)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, s):\n        self.x = x\n        self.s = s\nclass c(a):\n    pass", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = -27.913 * 2.0\nv = w", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = 'u' + 'r'\nw = e", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return q\nq = l(j)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = list([-77, 3])\nu = len(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m):\n        self.data = m\n\n    def get(self):\n        return self.data\nm = o(26)", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = -72 + -61\nprint(e)", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n):\n        self.data = n\n\n    def get(self):\n        return self.data\nisinstance(n, o)", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.data = o\n\n    def get(self):\n        return self.data\nclass b(v):\n    pass", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif a:\n    pass", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a):\n        self.a = a\nissubclass(j, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'q'\nprint(n())", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-49)\nw = list(t.keys())", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass i(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -30 * 7\ni = p * -30", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 38\nissubclass(y, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(u, s, r):\n    return u + s + r\nu = y(u, s, r)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = {'k': -93}\no = len(u) + -93", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([98, 17])\nfor p in p:\n    pass", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = {'v': 94}\nr = len(c)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 42\nn = y()", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([93, 95])\nw = len(k)", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = False\nk = f", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(m, f):\n    return m * f\nm = j(-49, -31)", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(l)", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = 'u' + 'c'\nh = len(d)", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(m, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = -13 * -29\nd = a * -13", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r, x):\n        self.r = r\n        self.x = x\nclass t(d):\n    pass", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = 'f' + 'x'\nq = len(n)", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(v, i, q):\n    return v\nv = e(v, i, q)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(c):\n    return c + 18\nc = p(d)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 33\nu = g()", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 11.617 * 2.0\ny = u * -51", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nv = e()", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(l, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.data = v\n\n    def get(self):\n        return self.data\nissubclass(k, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return len(d)\nd = k(-99)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return q + 87\nprint(k(87))", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = list([43, 65])\nfor d in d:\n    pass", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = -71.964\no = k", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = 19.903\nh = p + -51", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return len(l)\nprint(p(-35))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass p(d):\n    pass", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, j, l):\n        self.j = j\n        self.l = l\nisinstance(j, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'o'\nprint(o())", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = 'w'\ne = len(t) + 15", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'i'\nc = i()", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(u):\n    return u\nu = g(o)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nprint(o)", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = -71.973\nx = b", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = -29.782 * 2.0\ng = l + -95", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -93\nisinstance(t, g)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g\ng = s(-40)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g * 92\nprint(f(92))", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass n(e):\n    pass", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(g, s)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nissubclass(p, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, p, r):\n        self.a = p\n        self.b = p\n        self.c = r\np = e(52, 33, 43)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(b, j):\n    return b + j\nprint(o(b, j))", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(z, h):\n    return z * h\nprint(w(z, h))", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'm'\nj = l()", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = (82, -21)\no = len(g) + 82", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = {'z': 52}\nc = len(v) + 52", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = 53.407 * 2.0\nk = i + 29", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w):\n        self.w = w\nissubclass(k, f)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, c):\n        self.c = c\nissubclass(x, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return len(q)\nq = c(-8)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 64\nn = n + 64", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = False\nt = j", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t):\n        self.t = t\nissubclass(e, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 'h'\nz = len(h) + 58", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = {'z': -96}\nb = list(j.keys())", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -7\nprint(o())", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nb = h()", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g + -81\nprint(v(-81))", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m, l):\n        self.m = m\n        self.l = l\nclass z(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n, a, k):\n        self.a = n\n        self.b = a\n        self.c = k\nisinstance(n, f)", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif l:\n    pass", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(m, k, d):\n    return m + k + d\nm = p(m, k, d)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return b\nprint(v(-28))", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = (-3, 52)\nfor n in u:\n    pass", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(b):\n    return b\nb = r(g)", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([55, 90])\nz = len(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass n(n):\n    pass", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, k):\n        self.h = h\n        self.k = k\nisinstance(h, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = 'i'\nprint(m)", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=96)\nq = len(q) + 96", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = -20\nm = r", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b):\n        self.data = b\n\n    def get(self):\n        return self.data\nisinstance(b, m)", "label": 2, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l\nprint(p(-6))", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v, k):\n        self.v = v\n        self.k = k\nisinstance(v, y)", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, l, o, c):\n        self.a = l\n        self.b = o\n        self.c = c\nl = p(-7, -93, -6)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=64)\nc['j'] = 64", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 46\nisinstance(n, k)", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = 'o'\nm = len(f)", "label": 0, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = False\nh = r", "label": 0, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(x, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, l):\n        self.l = l\nisinstance(l, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'f'\nc = l()", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 8\nissubclass(n, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(a, j):\n    return a + j\na = x(j, i)", "label": 1, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 57 * 51\nh = l + 57", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(m, v, g):\n    return m + v + g\nm = h(m, v, g)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = True\nd = d", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return len(d)\nd = m(79)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = -99.64 * 2.0\nm = s + -68", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(l, n, o):\n    return l\nl = p(l, n, o)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r + -32\nr = a(-32)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -44\nprint(b())", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = (33, -73)\nq = len(k)", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w, u):\n        self.w = w\n        self.u = u\nclass m(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = True\nh = p", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = -73.824\no = q + -39", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'j'\nr = w()", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = [-99, -16, 19]\nfor e in i:\n    pass", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q):\n        self.q = q\nissubclass(l, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = 'b' + 'v'\nu = len(g)", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(q, w, p):\n    return q\nq = y(q, w, p)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v, x):\n        self.v = v\n        self.x = x\nclass f(o):\n    pass", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = 20.505 * 2.0\nj = i * -66", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nx = t(m)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * -42\nx = f(-42)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass c(f):\n    pass", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.data = o\n\n    def get(self):\n        return self.data\nisinstance(o, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = list([55, 62])\no = len(i)", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "<FIM> = 'l' + 'j'\nprint(b)", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 78.449\nb = z", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return len(f)\nf = b(-27)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nz = z()", "label": 2, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'q'\nprint(g())", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(d):\n    return len(d)\nprint(b(43))", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 68\nx = a()", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, p, j):\n        self.p = p\n        self.j = j\nclass f(d):\n    pass", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = (-16, 34)\nfor t in p:\n    pass", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = 18 + -88\nprint(c)", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return len(l)\nl = s(-77)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, e, j, k):\n        self.a = e\n        self.b = j\n        self.c = k\nissubclass(l, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(g, j, n):\n    return g + j + n\ng = q(g, j, n)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = -15 + 74\nc = w + -15", "label": 0, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\ng = a", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l\nl = s(n)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(v, m, w):\n    return v\nv = h(v, m, w)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'm'\nc = y()", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * -64\nx = y(e)", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, r, f):\n        self.a = z\n        self.b = r\n        self.c = f\nclass f(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-27)\ni = list(j.keys())", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = -38.106 * 2.0\np = h * -41", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, l, o):\n        self.l = l\n        self.o = o\nclass f(e):\n    pass", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, s, m, u):\n        self.a = s\n        self.b = m\n        self.c = u\nclass h(j):\n    pass", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(k, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return z\nprint(w(11))", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g):\n        self.g = g\nclass k(v):\n    pass", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = 'r'\nn = i", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 37\nclass o(w):\n    pass", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, m, a):\n        self.m = m\n        self.a = a\nm = s(87, 77)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(y, j, r):\n    return y + j + r\ny = e(y, j, r)", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "def <FIM>(t, x, i):\n    return t + x + i\nt = d(t, x, i)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.o = o\nisinstance(o, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-48, -32])\nw = len(p)", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = [-61, -57, 68]\nq.append(-61)", "label": 0, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w, i, s):\n        self.a = w\n        self.b = i\n        self.c = s\nw = r(83, 44, 93)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return g\ng = t(42)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n, y, t):\n        self.a = n\n        self.b = y\n        self.c = t\nisinstance(n, s)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = -55.136\nx = p", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'd'\nr = l()", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -45\nissubclass(m, h)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(h):\n    return h + -87\nh = a(-87)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "<FIM> = list([-62, 89])\nv.append(-62)", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>(p):\n    return len(p)\np = a(j)", "label": 1, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'm'\nprint(f())", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(a, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = [-33, -58, 85]\ns.append(-33)", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b, d, b):\n        self.a = b\n        self.b = d\n        self.c = b\nb = t(63, -19, -38)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass a(b):\n    pass", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(v):\n    return v * 29\nv = o(29)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = -93 * -14\nt = z + -93", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = [-36, -10, -32]\ne.append(-36)", "label": 0, "target": "e", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 23\nz = o()", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(x, c)", "label": 2, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(r):\n    return r + -34\nr = d(i)", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, i, f):\n        self.i = i\n        self.f = f\nissubclass(a, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = {'r': 2}\nk['r'] = 2", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = list([-27, -9])\ni = len(i) + -27", "label": 0, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l\nl = i(2)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.data = x\n\n    def get(self):\n        return self.data\nissubclass(u, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, a, a, h):\n        self.a = a\n        self.b = a\n        self.c = h\nclass n(x):\n    pass", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 28 + -44\nq = l * 28", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(t, o, b):\n    return t + o + b\nt = o(t, o, b)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t, d, c):\n        self.a = t\n        self.b = d\n        self.c = c\nissubclass(w, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = (54, -36)\nfor s in t:\n    pass", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -29\nprint(n)", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'e'\nx = y()", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(c):\n    return c\nprint(e(75))", "label": 1, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = {'c': -42}\ns = len(h)", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=-15)\ns = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nw = e()", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = list([-87, -22])\ne = u[0]", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = list([-98, 70])\nj.append(-98)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(j, c, b):\n    return j + c + b\nj = g(j, c, b)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = -40\no = p * -40", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, e):\n        self.data = e\n\n    def get(self):\n        return self.data\ne = g(78)", "label": 2, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return len(k)\nk = i(n)", "label": 1, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(u, p):\n    return u + p\nu = n(p, d)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.data = x\n\n    def get(self):\n        return self.data\nclass g(e):\n    pass", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = list([5, -10])\nb = len(s)", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = (57, 11)\nfor c in o:\n    pass", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "<FIM> = 11.084\ne = m", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = (63, 92)\nj = len(b) + 63", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.data = v\n\n    def get(self):\n        return self.data\nissubclass(t, i)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(w, e, v):\n    return w\nw = v(w, e, v)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, n, z):\n        self.n = n\n        self.z = z\nclass k(x):\n    pass", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -17\nv = d()", "label": 1, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = {'x': 44}\na = len(l) + 44", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, v):\n        self.data = v\n\n    def get(self):\n        return self.data\nissubclass(k, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, t):\n        self.u = u\n        self.t = t\nisinstance(u, i)", "label": 2, "target": "i", "mask_mode": "definition"}
+{"text": "def <FIM>(q):\n    return q\nq = u(t)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = 98 * -72\nw = k", "label": 0, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=1)\nm = list(l.keys())", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -71\ns = t()", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, b, q, o):\n        self.a = b\n        self.b = q\n        self.c = o\nissubclass(f, w)", "label": 2, "target": "w", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, z, p):\n        self.a = h\n        self.b = z\n        self.c = p\nh = s(84, -57, -7)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = 'd'\nc = len(l)", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return k * -84\nprint(f(-84))", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l + -32\nprint(r(-32))", "label": 1, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif b:\n    pass", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(g, r):\n    return g + r\ng = f(-73, -17)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nd = k()", "label": 2, "target": "k", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\na = y()", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(t):\n    return len(t)\nt = t(n)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "def <FIM>(l):\n    return l + -19\nl = q(m)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, e):\n        self.e = e\ne = a(41)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nj = a()", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "def <FIM>(w, v):\n    return w + v\nprint(l(w, v))", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass z(x):\n    pass", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = (-77, -71)\nq = len(z)", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, k, b, e):\n        self.a = k\n        self.b = b\n        self.c = e\nk = j(-46, 97, 85)", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = -35.427\nr = z * -46", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "def <FIM>(c):\n    return len(c)\nc = m(46)", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 13 + 67\nr = b + 13", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 21.415 * 2.0\ng = b * 69", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return k * -39\nprint(t(-39))", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 43 + 22\nn = u + 43", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = {'t': 3}\nt = len(c) + 3", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([28, 35])\nt = o[0]", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 24\na = h()", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y):\n        self.data = y\n\n    def get(self):\n        return self.data\nissubclass(g, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(h, r, n):\n    return h\nh = o(h, r, n)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'w'\nl = m()", "label": 1, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 66.988\ne = g + -48", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([41, -85])\nv = len(z) + 41", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, r):\n        self.r = r\nissubclass(z, e)", "label": 2, "target": "e", "mask_mode": "definition"}
+{"text": "<FIM> = 19\nprint(l)", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif c:\n    pass", "label": 0, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass t(p):\n    pass", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f, g):\n        self.f = f\n        self.g = g\nf = h(46, 46)", "label": 2, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(s, n)", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(l, m):\n    return l * m\nprint(g(l, m))", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(o, i, h):\n    return o + i + h\no = n(o, i, h)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, u, i, d):\n        self.a = u\n        self.b = i\n        self.c = d\nisinstance(u, b)", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'x'\nprint(z())", "label": 1, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w):\n        self.w = w\nclass u(n):\n    pass", "label": 2, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = 15\nisinstance(v, p)", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = dict(k=47)\nd['w'] = 47", "label": 0, "target": "d", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nz = s()", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = 'i'\ne = n", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(o, a)", "label": 2, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass c(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(i, c, q):\n    return i\ni = v(i, c, q)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y):\n        self.y = y\nisinstance(y, q)", "label": 2, "target": "q", "mask_mode": "definition"}
+{"text": "def <FIM>(m, y, u):\n    return m\nm = k(m, y, u)", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "def <FIM>(t, t):\n    return t * t\nt = u(3, 68)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(g, j, n):\n    return g + j + n\ng = s(g, j, n)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = -25\ns = v * -25", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "<FIM> = [93, 13, 56]\nfor r in v:\n    pass", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -68\nissubclass(e, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ni = p()", "label": 2, "target": "p", "mask_mode": "definition"}
+{"text": "<FIM> = 'w'\nprint(n)", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(q, w, j):\n    return q + w + j\nq = h(q, w, j)", "label": 1, "target": "h", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ne = j()", "label": 2, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(n):\n    return n\nprint(y(91))", "label": 1, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -60.04 * 2.0\nv = h * -7", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "<FIM> = 49.547\nn = l", "label": 0, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = 'k'\nx = t", "label": 0, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = 't'\nj = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = list([-73, 96])\nu = len(z)", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, g, n):\n        self.g = g\n        self.n = n\nissubclass(n, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nissubclass(o, d)", "label": 2, "target": "d", "mask_mode": "definition"}
+{"text": "<FIM> = (-75, -51)\nfor a in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(v, o, e):\n    return v + o + e\nv = p(v, o, e)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nissubclass(n, u)", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(v, x)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, l):\n        self.l = l\nl = s(94)", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "<FIM> = -40 + 37\nprint(b)", "label": 0, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = 'z' + 'y'\nh = len(n) + 25", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -44\nprint(o())", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'f'\nc = c()", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, f, e):\n        self.f = f\n        self.e = e\nf = x(12, -83)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 41 * -97\no = z + 41", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass k(r):\n    pass", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-27, 8])\nv = m[0]", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "<FIM> = 23\nprint(v)", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, w):\n        self.data = w\n\n    def get(self):\n        return self.data\nclass c(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -89 * -41\nx = z * -89", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "<FIM> = 85.297\nz = u + 77", "label": 0, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return f * -87\nf = g(-87)", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>(k):\n    return len(k)\nprint(w(68))", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([-99, 40])\nu = len(p) + -99", "label": 0, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -89\nprint(u())", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "def <FIM>(w, b):\n    return w + b\nprint(f(w, b))", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, z, x, y):\n        self.a = z\n        self.b = x\n        self.c = y\nisinstance(z, x)", "label": 2, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(e, x):\n    return e + x\ne = l(15, 89)", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "def <FIM>(w, x, d):\n    return w\nw = c(w, x, d)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'j'\nprint(j())", "label": 1, "target": "j", "mask_mode": "definition"}
+{"text": "<FIM> = -21 * 84\nc = n + -21", "label": 0, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, t):\n        self.data = t\n\n    def get(self):\n        return self.data\nclass r(y):\n    pass", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(u):\n    return u * 31\nprint(n(31))", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "def <FIM>(j):\n    return j + 46\nj = c(e)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(b, t, p):\n    return b\nb = q(b, t, p)", "label": 1, "target": "q", "mask_mode": "definition"}
+{"text": "<FIM> = 'f' + 'c'\nq = len(m)", "label": 0, "target": "m", "mask_mode": "definition"}
+{"text": "def <FIM>(f):\n    return f + -48\nf = c(-48)", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "def <FIM>(y, e):\n    return y + e\nprint(l(y, e))", "label": 1, "target": "l", "mask_mode": "definition"}
+{"text": "<FIM> = -83 * -77\nx = v * -83", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, q):\n        self.q = q\nclass u(f):\n    pass", "label": 2, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = {'o': -42}\nk = len(j)", "label": 0, "target": "j", "mask_mode": "definition"}
+{"text": "def <FIM>(t, a, r):\n    return t + a + r\nt = p(t, a, r)", "label": 1, "target": "p", "mask_mode": "definition"}
+{"text": "def <FIM>(h):\n    return h\nh = n(s)", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, o):\n        self.data = o\n\n    def get(self):\n        return self.data\nissubclass(z, r)", "label": 2, "target": "r", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'o'\nj = k()", "label": 1, "target": "k", "mask_mode": "definition"}
+{"text": "<FIM> = True\nz = h", "label": 0, "target": "h", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(c(-84))", "label": 1, "target": "c", "mask_mode": "definition"}
+{"text": "<FIM> = 10.421 * 2.0\nf = s * 93", "label": 0, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(q, t, e):\n    return q\nq = v(q, t, e)", "label": 1, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, h, d):\n        self.h = h\n        self.d = d\nisinstance(h, t)", "label": 2, "target": "t", "mask_mode": "definition"}
+{"text": "<FIM> = -38 + -98\nw = z * -38", "label": 0, "target": "z", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, y, x):\n        self.y = y\n        self.x = x\nissubclass(e, l)", "label": 2, "target": "l", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass a(s):\n    pass", "label": 2, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(z):\n    return len(z)\nz = b(c)", "label": 1, "target": "b", "mask_mode": "definition"}
+{"text": "def <FIM>(e):\n    return e + 42\ne = o(42)", "label": 1, "target": "o", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -63\ni = u()", "label": 2, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        self.value = -14\nissubclass(d, v)", "label": 2, "target": "v", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nh = b()", "label": 2, "target": "b", "mask_mode": "definition"}
+{"text": "<FIM> = {'y': -69}\nh = len(g)", "label": 0, "target": "g", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 'c'\nq = w()", "label": 1, "target": "w", "mask_mode": "definition"}
+{"text": "def <FIM>(j, m, c):\n    return j + m + c\nj = u(j, m, c)", "label": 1, "target": "u", "mask_mode": "definition"}
+{"text": "<FIM> = True\nj = v", "label": 0, "target": "v", "mask_mode": "definition"}
+{"text": "def <FIM>(q, h, u):\n    return q\nq = t(q, h, u)", "label": 1, "target": "t", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(q, o)", "label": 2, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>(e, l, l):\n    return e + l + l\ne = s(e, l, l)", "label": 1, "target": "s", "mask_mode": "definition"}
+{"text": "def <FIM>(s):\n    return len(s)\nprint(n(15))", "label": 1, "target": "n", "mask_mode": "definition"}
+{"text": "<FIM> = 'a' + 'k'\nd = len(a)", "label": 0, "target": "a", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nt = y()", "label": 2, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(g):\n    return len(g)\ng = f(b)", "label": 1, "target": "f", "mask_mode": "definition"}
+{"text": "<FIM> = 'x' + 'e'\np = len(o)", "label": 0, "target": "o", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return -71\nprint(g())", "label": 1, "target": "g", "mask_mode": "definition"}
+{"text": "<FIM> = 32.147\nm = y", "label": 0, "target": "y", "mask_mode": "definition"}

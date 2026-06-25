@@ -263,18 +263,17 @@ def main():
     # data_call = "training_data/call_FIM_data.txt"ls
     # probe_save_dir = "probes_stored/probes_realistic"
 
-    data_def = "datasets/simple2/letters/mixed_definition.jsonl"
-    data_call = "datasets/simple2/letters/mixed_usage.jsonl"
-    probe_save_dir = "probes_stored/probes_new_data_set"
+    data_def = "datasets/simple3/letters/mixed_definition.jsonl"
+    data_call = "datasets/simple3/letters/mixed_usage.jsonl"
 
     # for the baseline we need a separate save directory
-    probe_save_dir = "probes_stored/probes_new_simple_data2"
+    probe_save_dir = "probes_stored/probes_new_simple_data3"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
     # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = "letters mixed simple2"
-    dataset_specifier_fullname = "letters mixed simple2"
+    dataset_specifier = "letters mixed simple3"
+    dataset_specifier_fullname = "letters mixed simple3"
 
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline!!

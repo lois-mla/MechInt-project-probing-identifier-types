@@ -317,24 +317,187 @@ class IdentifierContext:
 #     {"tpl": "class Child(<FIM>):\n    pass", "ctor_args": None},
 # ]
 
+# VAR_DEFINITION_TEMPLATES = [
+
+#     {"tpl": "<FIM> = {int1}", "type": "int"},
+#     {"tpl": "<FIM> = {float1}", "type": "float"},
+#     {"tpl": "<FIM> = '{str1}'", "type": "str"},
+#     {"tpl": "<FIM> = True", "type": "bool"},
+#     {"tpl": "<FIM> = False", "type": "bool"},
+
+#     {"tpl": "<FIM> = list([{int1}, {int2}])", "type": "list_int"},
+#     {"tpl": "<FIM> = tuple([{int1}, {int2}])", "type": "tuple_int"},
+#     {"tpl": "<FIM> = dict(k='{str1}')", "type": "dict"},
+# ]
+
+
+# FUNC_DEFINITION_TEMPLATES = [
+
+#     {"tpl": """def <FIM>():
+#     return {int1}""",
+#      "args": 0},
+
+#     {"tpl": """def <FIM>({var1}):
+#     return {var1}""",
+#      "args": 1},
+
+#     {"tpl": """def <FIM>({var1}):
+#     return {var1} + {int1}""",
+#      "args": 1},
+
+#     {"tpl": """def <FIM>({var1}):
+#     return {var1} * {int1}""",
+#      "args": 1},
+
+#     {"tpl": """def <FIM>({var1}, {var2}):
+#     return {var1} + {var2}""",
+#      "args": 2},
+
+#     {"tpl": """def <FIM>({var1}, {var2}):
+#     return {var1} * {var2}""",
+#      "args": 2},
+# ]
+
+
+# CLASS_DEFINITION_TEMPLATES = [
+
+#     {"tpl": """class <FIM>:
+#     pass""",
+#      "args": 0},
+
+#     {"tpl": """class <FIM>:
+#     def __init__(self):
+#         pass""",
+#      "args": 0},
+
+#     {"tpl": """class <FIM>:
+#     def __init__(self, {var1}):
+#         self.{var1} = {var1}""",
+#      "args": 1},
+
+#     {"tpl": """class <FIM>:
+#     def __init__(self, {var1}, {var2}):
+#         self.{var1} = {var1}
+#         self.{var2} = {var2}""",
+#      "args": 2},
+# ]
+
+
+# VAR_TEMPLATES = [
+
+#     {"tpl": """print(<FIM>)""",
+#      "types": ["int", "float", "str", "bool"]},
+
+#     {"tpl": """{var1} = <FIM>""",
+#      "types": ["int", "float", "str", "bool"]},
+
+#     {"tpl": """if <FIM>:
+#     pass""",
+#      "types": ["bool"]},
+
+#     {"tpl": """{var1} = <FIM> + {int1}""",
+#      "types": ["int", "float"]},
+
+#     {"tpl": """{var1} = <FIM> * {int1}""",
+#      "types": ["int", "float"]},
+
+#     {"tpl": """{var1} = len(<FIM>)""",
+#      "types": ["list_int", "tuple_int", "dict", "str"]},
+
+#     {"tpl": """for {var1} in <FIM>:
+#     pass""",
+#      "types": ["list_int", "tuple_int"]},
+
+#     {"tpl": """<FIM>.append({int1})""",
+#      "types": ["list_int"]},
+
+#     {"tpl": """<FIM>['{str1}'] = {int1}""",
+#      "types": ["dict"]},
+# ]
+
+
+# FUNC_TEMPLATES = [
+
+#     {"tpl": """{var1} = <FIM>()""",
+#      "args": 0},
+
+#     {"tpl": """{var1} = <FIM>({int1})""",
+#      "args": 1},
+
+#     {"tpl": """{var1} = <FIM>({var2}, {var3})""",
+#      "args": 2},
+
+#     {"tpl": """print(<FIM>({int1}))""",
+#      "args": 1},
+
+#     {"tpl": """{var1} = <FIM>({var2})""",
+#      "args": 1},
+# ]
+
+
+# CLASS_TEMPLATES = [
+
+#     {"tpl": """{var1} = <FIM>()""",
+#      "ctor_args": 0},
+
+#     {"tpl": """{var1} = <FIM>({int1})""",
+#      "ctor_args": 1},
+
+#     {"tpl": """{var1} = <FIM>({int1}, {int2})""",
+#      "ctor_args": 2},
+
+#     {"tpl": """isinstance({var1}, <FIM>)""",
+#      "ctor_args": None},
+
+#     {"tpl": """class {cls1}(<FIM>):
+#     pass""",
+#      "ctor_args": None},
+# ]
+
+
+
+# ============================================================
+# VARIABLE DEFINITIONS
+# ============================================================
+
 VAR_DEFINITION_TEMPLATES = [
 
     {"tpl": "<FIM> = {int1}", "type": "int"},
+    {"tpl": "<FIM> = {int1} + {int2}", "type": "int"},
+    {"tpl": "<FIM> = {int1} * {int2}", "type": "int"},
+
     {"tpl": "<FIM> = {float1}", "type": "float"},
+    {"tpl": "<FIM> = {float1} * 2.0", "type": "float"},
+
     {"tpl": "<FIM> = '{str1}'", "type": "str"},
+    {"tpl": "<FIM> = '{str1}' + '{str2}'", "type": "str"},
+
     {"tpl": "<FIM> = True", "type": "bool"},
     {"tpl": "<FIM> = False", "type": "bool"},
 
+    {"tpl": "<FIM> = [{int1}, {int2}, {int3}]", "type": "list_int"},
     {"tpl": "<FIM> = list([{int1}, {int2}])", "type": "list_int"},
+
+    {"tpl": "<FIM> = ({int1}, {int2})", "type": "tuple_int"},
     {"tpl": "<FIM> = tuple([{int1}, {int2}])", "type": "tuple_int"},
-    {"tpl": "<FIM> = dict(k='{str1}')", "type": "dict"},
+
+    {"tpl": "<FIM> = {{'{str1}': {int1}}}", "type": "dict"},
+    {"tpl": "<FIM> = dict(k={int1})", "type": "dict"},
 ]
 
+
+# ============================================================
+# FUNCTION DEFINITIONS
+# ============================================================
 
 FUNC_DEFINITION_TEMPLATES = [
 
     {"tpl": """def <FIM>():
     return {int1}""",
+     "args": 0},
+
+    {"tpl": """def <FIM>():
+    return '{str1}'""",
      "args": 0},
 
     {"tpl": """def <FIM>({var1}):
@@ -349,6 +512,10 @@ FUNC_DEFINITION_TEMPLATES = [
     return {var1} * {int1}""",
      "args": 1},
 
+    {"tpl": """def <FIM>({var1}):
+    return len({var1})""",
+     "args": 1},
+
     {"tpl": """def <FIM>({var1}, {var2}):
     return {var1} + {var2}""",
      "args": 2},
@@ -356,8 +523,20 @@ FUNC_DEFINITION_TEMPLATES = [
     {"tpl": """def <FIM>({var1}, {var2}):
     return {var1} * {var2}""",
      "args": 2},
+
+    {"tpl": """def <FIM>({var1}, {var2}, {var3}):
+    return {var1}""",
+     "args": 3},
+
+    {"tpl": """def <FIM>({var1}, {var2}, {var3}):
+    return {var1} + {var2} + {var3}""",
+     "args": 3},
 ]
 
+
+# ============================================================
+# CLASS DEFINITIONS
+# ============================================================
 
 CLASS_DEFINITION_TEMPLATES = [
 
@@ -380,79 +559,156 @@ CLASS_DEFINITION_TEMPLATES = [
         self.{var1} = {var1}
         self.{var2} = {var2}""",
      "args": 2},
+
+    {"tpl": """class <FIM>:
+    def __init__(self):
+        self.value = {int1}""",
+     "args": 0},
+
+    {"tpl": """class <FIM>:
+    def __init__(self, {var1}):
+        self.data = {var1}
+
+    def get(self):
+        return self.data""",
+     "args": 1},
+
+    {"tpl": """class <FIM>:
+    def __init__(self, {var1}, {var2}, {var3}):
+        self.a = {var1}
+        self.b = {var2}
+        self.c = {var3}""",
+     "args": 3},
 ]
 
 
+# ============================================================
+# VARIABLE USAGE
+# ============================================================
+
 VAR_TEMPLATES = [
 
-    {"tpl": """print(<FIM>)""",
+    {"tpl": "print(<FIM>)",
      "types": ["int", "float", "str", "bool"]},
 
-    {"tpl": """{var1} = <FIM>""",
+    {"tpl": "{var1} = <FIM>",
      "types": ["int", "float", "str", "bool"]},
 
-    {"tpl": """if <FIM>:
-    pass""",
+    {"tpl": "if <FIM>:\n    pass",
      "types": ["bool"]},
 
-    {"tpl": """{var1} = <FIM> + {int1}""",
+    {"tpl": "{var1} = <FIM> + {int1}",
      "types": ["int", "float"]},
 
-    {"tpl": """{var1} = <FIM> * {int1}""",
+    {"tpl": "{var1} = <FIM> * {int1}",
      "types": ["int", "float"]},
 
-    {"tpl": """{var1} = len(<FIM>)""",
+    {"tpl": "{var1} = len(<FIM>)",
      "types": ["list_int", "tuple_int", "dict", "str"]},
 
-    {"tpl": """for {var1} in <FIM>:
-    pass""",
+    {"tpl": "{var1} = len(<FIM>) + {int1}",
+     "types": ["list_int", "tuple_int", "dict", "str"]},
+
+    {"tpl": "for {var1} in <FIM>:\n    pass",
      "types": ["list_int", "tuple_int"]},
 
-    {"tpl": """<FIM>.append({int1})""",
+    {"tpl": "{var1} = <FIM>[0]",
+     "types": ["list_int", "tuple_int"]},
+
+    {"tpl": "<FIM>.append({int1})",
      "types": ["list_int"]},
 
-    {"tpl": """<FIM>['{str1}'] = {int1}""",
+    {"tpl": "<FIM>['{str1}'] = {int1}",
+     "types": ["dict"]},
+
+    {"tpl": "{var1} = list(<FIM>.keys())",
      "types": ["dict"]},
 ]
 
 
+# ============================================================
+# FUNCTION USAGE
+# ============================================================
+
 FUNC_TEMPLATES = [
 
-    {"tpl": """{var1} = <FIM>()""",
+    {"tpl": "{var1} = <FIM>()",
      "args": 0},
 
-    {"tpl": """{var1} = <FIM>({int1})""",
+    {"tpl": "{var1} = <FIM>({int1})",
      "args": 1},
 
-    {"tpl": """{var1} = <FIM>({var2}, {var3})""",
+    {"tpl": "{var1} = <FIM>({var2})",
+     "args": 1},
+
+    {"tpl": "{var1} = <FIM>({var2}, {var3})",
      "args": 2},
 
-    {"tpl": """print(<FIM>({int1}))""",
+    {"tpl": "{var1} = <FIM>({var1}, {var2}, {var3})",
+     "args": 3},
+
+    {"tpl": "print(<FIM>())",
+     "args": 0},
+
+    {"tpl": "print(<FIM>({int1}))",
      "args": 1},
 
-    {"tpl": """{var1} = <FIM>({var2})""",
-     "args": 1},
+    {"tpl": "print(<FIM>({var1}, {var2}))",
+     "args": 2},
+
+    {"tpl": "{var1} = <FIM>({int1}, {int2})",
+     "args": 2},
 ]
 
+
+# ============================================================
+# CLASS USAGE
+# ============================================================
 
 CLASS_TEMPLATES = [
 
-    {"tpl": """{var1} = <FIM>()""",
+    {"tpl": "{var1} = <FIM>()",
      "ctor_args": 0},
 
-    {"tpl": """{var1} = <FIM>({int1})""",
+    {"tpl": "{var1} = <FIM>({int1})",
      "ctor_args": 1},
 
-    {"tpl": """{var1} = <FIM>({int1}, {int2})""",
+    {"tpl": "{var1} = <FIM>({int1}, {int2})",
      "ctor_args": 2},
 
-    {"tpl": """isinstance({var1}, <FIM>)""",
+    {"tpl": "{var1} = <FIM>({int1}, {int2}, {int3})",
+     "ctor_args": 3},
+
+    {"tpl": "isinstance({var1}, <FIM>)",
      "ctor_args": None},
 
-    {"tpl": """class {cls1}(<FIM>):
-    pass""",
+    {"tpl": "issubclass({cls1}, <FIM>)",
+     "ctor_args": None},
+
+    {"tpl": "class {cls1}(<FIM>):\n    pass",
      "ctor_args": None},
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # # ============================================================
 # # VARIABLE DEFINITIONS (UNAMBIGUOUS)
@@ -1377,7 +1633,7 @@ def main():
         IdentifierSource.COMMON,
     ]:
         
-        base = Path("datasets/simple2") / source.value
+        base = Path("datasets/simple3") / source.value
 
         write_dataset(base / "single_definition.jsonl", source, "definition", mixed=False)
         write_dataset(base / "single_usage.jsonl", source, "usage", mixed=False)
