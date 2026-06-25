@@ -1,3 +1,7 @@
+import matplotlib
+# This MUST come before importing pyplot or seaborn
+matplotlib.use('Agg') 
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -91,5 +95,4 @@ cbar_ax.tick_params(labelsize=12, right=True, direction='out')
 # plt.suptitle("Linear Probe Accuracies", y=1.05, fontsize=14)
 plt.savefig("accuracies/accuracies_heatmap.png", dpi=300, bbox_inches='tight')
 print("Heatmap successfully saved as 'accuracies_heatmap.png'")
-plt.show()
 
