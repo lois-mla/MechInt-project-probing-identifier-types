@@ -149,6 +149,6 @@ def read_fim_dataset(path: str) -> List[Dict]:
             print("------------------------------------------")
 
 
-# read_fim_dataset("datasets/letters/mixed_definition.jsonl")
+# read_fim_dataset("datasets/simple/letters/mixed_definition.jsonl")
 
-evaluate_dataset("datasets/simple/letters/mixed_definition.jsonl")
+evaluate_dataset("datasets/simple/letters/mixed_usage.jsonl")
