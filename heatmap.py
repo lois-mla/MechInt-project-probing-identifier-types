@@ -21,15 +21,17 @@ file_paths = {
 
 num_plots = len(file_paths)
 
+# Made figure slightly wider for better proportions
 fig, axes = plt.subplots(
     nrows=num_plots, 
     ncols=1, 
-    figsize=(8, 1.5 * num_plots),
+    figsize=(10, 1.8 * num_plots),
     sharex=True, 
-    gridspec_kw={'hspace': 0.4}
+    gridspec_kw={'hspace': 0.3} # Tighter vertical spacing
 )
 
-cbar_ax = fig.add_axes([0.92, 0.15, 0.03, 0.7]) 
+# Shared colorbar axis: [left, bottom, width, height]
+cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7]) 
 
 for i, (label_box, file_path) in enumerate(file_paths.items()):
     print(f"Status: Processing '{label_box}' from {file_path}...")
@@ -41,39 +43,46 @@ for i, (label_box, file_path) in enumerate(file_paths.items()):
     # Draw the heatmap
     sns.heatmap(
         df, 
-        #ax=ax, 
+        ax=ax,             # FIXED: Re-enabled explicitly targeting the subplot
         cmap="Greens",     
         vmin=0,            
-        #cbar=(i == 0),     
-        #cbar_ax=cbar_ax if i == 0 else None,
-        cbar_ax = ax
-        linewidths=0       
+        vmax=100,          # Enforces the 0-100 scale
+        cbar=(i == 0),     # Only attach to the first iteration
+        cbar_ax=cbar_ax if i == 0 else None,
+        linewidths=0,
+        cbar_kws={'ticks': [0, 20, 40, 60, 80, 100]} # Match reference image ticks
     )
     
     # Styling the Y-axis
     ax.set_ylabel('') 
-    ax.tick_params(axis='y', left=True, rotation=0, labelsize=10)
+    # Remove the little tick marks but keep the text, horizontal rotation
+    ax.tick_params(axis='y', left=False, rotation=0, labelsize=11)
     
     # Adding the Left Box Label
     ax.text(
-        x=-0.22, 
-        y=0.25,  
+        x=-0.25, # Push left
+        y=0.5,   # Vertically centered
         s=label_box, 
         transform=ax.transAxes,
-        fontsize=10,
+        fontsize=11,
         ha='right', 
         va='center',
-        bbox=dict(facecolor='lightgrey', edgecolor='black', boxstyle='square,pad=0.3', alpha=0.5)
+        # Styled to match the neat grey boxes in the reference
+        bbox=dict(facecolor='#f4f4f4', edgecolor='grey', boxstyle='square,pad=0.4')
     )
 
     # Styling the X-axis
     ax.set_xlabel('')
     if i == num_plots - 1:
-        ax.tick_params(axis='x', bottom=False, top=False, labelbottom=True, rotation=0, labelsize=10)
+        # Bottom plot: hide tick marks, show labels flat
+        ax.tick_params(axis='x', bottom=False, labelbottom=True, rotation=0, labelsize=11)
     else:
-        ax.tick_params(axis='x', bottom=False, top=False, labelbottom=False)
+        # Upper plots: completely hide
+        ax.tick_params(axis='x', bottom=False, labelbottom=False)
 
-cbar_ax.tick_params(labelsize=12, right=True, direction='out')
+# Styling the Colorbar
+cbar_ax.tick_params(labelsize=12, right=True, length=5, direction='out')
+cbar_ax.spines['outline'].set_visible(False) # Removes the box around the colorbar
 
 print("Status: Plot generated, attempting to save...")
 
