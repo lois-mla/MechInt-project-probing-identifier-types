@@ -248,11 +248,11 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-    # data_def = "training_data/def_FIM_data_final.txt"
-    # data_call = "training_data/call_FIM_data_final.txt"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
     probe_save_dir = "probes_stored/probes_final" 
-    data_def = "training_data/def_FIM_data_nocont.txt"
-    data_call = "training_data/call_FIM_data_nocont.txt"
+    #data_def = "training_data/def_FIM_data_nocont.txt"
+    #data_call = "training_data/call_FIM_data_nocont.txt"
     # probe_save_dir = "probes_stored/probes_no_cont"
     # data_def = "training_data/def_FIM_data.txt"
     # data_call = "training_data/call_FIM_data.txt"
@@ -268,13 +268,25 @@ def main():
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline!!
 
-# --- NEW: Evaluate Base Accuracy ---
+# --- NEW: Evaluate Base Accuracy and save the datasets with only the correct examples---
     print("--- Testing First Token Accuracy (Definitions) ---")
-    evaluate_first_token_accuracy(model, tokenizer, data_def)
-    
+    evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_final_only_correct.txt")
+
     print("--- Testing First Token Accuracy (Calls) ---")
-    evaluate_first_token_accuracy(model, tokenizer, data_call)
+    evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_final_only_correct.txt")
+
+    data_def = "training_data/def_FIM_data_nocont.txt"
+    data_call = "training_data/call_FIM_data_nocont.txt"
+
+    print("--- Testing First Token Accuracy (Definitions) ---")
+    evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_nocont_only_correct.txt")
+
+    print("--- Testing First Token Accuracy (Calls) ---")
+    evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_nocont_only_correct.txt")
+
+
     # -----------------------------------
+    
 
     # prompts, labels = load_dataset(data_def, data_call)
     # device = "cuda"

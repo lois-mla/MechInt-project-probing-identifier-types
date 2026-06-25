@@ -376,11 +376,12 @@ def load_probe(path, device="cuda"):
 
     return probe
 
-def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
+def evaluate_first_token_accuracy(model, tokenizer, data_path: str, save_path: str = None):
     """
     Evaluates how often the decoded top-1 next token prediction matches 
     the decoded first token of the correct target string.
     Prints execution logs for the first 10 and last 10 examples.
+    Saves all correctly predicted items back into the original raw text format.
     """
     print(f"\nEvaluating first-token accuracy on: {data_path}")
     
@@ -394,6 +395,7 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
     
     correct_predictions = 0
     total_predictions = total_examples
+    correct_examples = []  # List to store the correct dataset entries
 
     for i, item in enumerate(data):
         # 1. Construct the prompt
@@ -425,8 +427,6 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
 
         # --- DEBUG PRINT FOR FIRST 10 & LAST 10 ---
         if i in indices_to_print:
-            # We show the last 100 characters of the input so you can see the immediate context
-            
             print(f"--- Example {i+1} / {total_examples} ---")
             print(f"Input: '{prompt}'")
             print(f"Ground Truth: '{target_str}'")
@@ -436,8 +436,88 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
         # 6. Compare the decoded strings instead of the raw IDs
         if predicted_str == target_str:
             correct_predictions += 1
+            correct_examples.append(item)  # Capture the successful dataset entry
 
     accuracy = correct_predictions / total_predictions if total_predictions > 0 else 0
     print(f"First-Token Accuracy: {accuracy * 100:.2f}% ({correct_predictions}/{total_predictions})\n")
     
+    # 7. Save the dataset of correct examples in the original raw text format
+    if save_path and correct_examples:
+        # Create directories if they don't exist
+        if os.path.dirname(save_path):
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        
+        with open(save_path, "w", encoding="utf-8") as f:
+            for entry in correct_examples:
+                # Reconstruct the exact structural block layout from the raw text files
+                f.write(f"{entry['prefix']}FIM{entry['suffix']}>>>{entry['correct']}\n#####\n\n")
+                
+        print(f"Saved {len(correct_examples)} correct examples in raw text format to: {save_path}\n")
+    
     return accuracy
+
+# def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
+#     """
+#     Evaluates how often the decoded top-1 next token prediction matches 
+#     the decoded first token of the correct target string.
+#     Prints execution logs for the first 10 and last 10 examples.
+#     """
+#     print(f"\nEvaluating first-token accuracy on: {data_path}")
+    
+#     data = read_fim_dataset(data_path)
+#     total_examples = len(data)
+    
+#     # Identify which indices to inspect (prevents overlapping prints if total < 20)
+#     indices_to_print = set(range(min(10, total_examples))).union(
+#         set(range(max(0, total_examples - 10), total_examples))
+#     )
+    
+#     correct_predictions = 0
+#     total_predictions = total_examples
+
+#     for i, item in enumerate(data):
+#         # 1. Construct the prompt
+#         prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+        
+#         # 2. Tokenize prompt
+#         input_ids = tokenizer.encode(prompt, return_tensors="pt").to(model.cfg.device)
+
+#         # 3. Tokenize target
+#         # Splitting by \nID: bypasses the minor bug in read_fim_dataset
+#         target_text_raw = item["correct"].split("\nID:")[0].strip()
+#         target_tokens = tokenizer.encode(target_text_raw, add_special_tokens=False)
+        
+#         if not target_tokens:
+#             total_predictions -= 1
+#             continue
+            
+#         target_token_id = target_tokens[0]
+
+#         # 4. Forward pass
+#         with torch.no_grad():
+#             logits = model(input_ids)
+#             next_token_logits = logits[0, -1, :]
+#             predicted_token_id = torch.argmax(next_token_logits).item()
+
+#         # 5. Decode BOTH tokens to strings and strip whitespace/SentencePiece artifacts
+#         predicted_str = tokenizer.decode([predicted_token_id]).strip()
+#         target_str = tokenizer.decode([target_token_id]).strip()
+
+#         # --- DEBUG PRINT FOR FIRST 10 & LAST 10 ---
+#         if i in indices_to_print:
+#             # We show the last 100 characters of the input so you can see the immediate context
+            
+#             print(f"--- Example {i+1} / {total_examples} ---")
+#             print(f"Input: '{prompt}'")
+#             print(f"Ground Truth: '{target_str}'")
+#             print(f"Prediction:   '{predicted_str}'")
+#             print("-" * 40)
+
+#         # 6. Compare the decoded strings instead of the raw IDs
+#         if predicted_str == target_str:
+#             correct_predictions += 1
+
+#     accuracy = correct_predictions / total_predictions if total_predictions > 0 else 0
+#     print(f"First-Token Accuracy: {accuracy * 100:.2f}% ({correct_predictions}/{total_predictions})\n")
+    
+#     return accuracy
