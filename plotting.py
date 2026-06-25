@@ -1,3 +1,12 @@
+"""
+This file contains functions for making several kinds of plots relating to the probing and steering experiments.
+The file contains the following functions:
+- plot_delta_logprob: Plots the change in log probability for each layer.
+- plot_rank: Plots the change in rank for each layer.
+- plot_average_gap: Plots the average gap between different types of shifts for each layer.
+- plot_probe_accuracies: Plots the training and testing accuracies of the linear probes for each layer.
+"""
+
 import matplotlib.pyplot as plt
 import os
 
