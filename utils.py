@@ -26,19 +26,90 @@ model = AutoModelForCausalLM.from_pretrained(
     # torch_dtype="float16"
 )
 
-print(tokenizer.special_tokens_map)
-print(tokenizer.additional_special_tokens)
+# print(tokenizer.special_tokens_map)
+# print(tokenizer.additional_special_tokens)
 
-print(tokenizer.convert_tokens_to_ids("▁<PRE>"))  # correct
-print(tokenizer.convert_tokens_to_ids("▁<MID>"))  # correct
-print(tokenizer.convert_tokens_to_ids("▁<SUF>"))  # correct
+# print(tokenizer.convert_tokens_to_ids("▁<PRE>"))  # correct
+# print(tokenizer.convert_tokens_to_ids("▁<MID>"))  # correct
+# print(tokenizer.convert_tokens_to_ids("▁<SUF>"))  # correct
 
 # def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 #     """
 #     Reads a file where:
 #       - datapoints are separated by '#####'
 #       - each datapoint contains one 'FIM' and one '>>>'
+# def read_fim_dataset(path: str) -> List[Dict[str, str]]:
+#     """
+#     Reads a file where:
+#       - datapoints are separated by '#####'
+#       - each datapoint contains one 'FIM' and one '>>>'
 
+#     Returns a list of dicts:
+#         {   "identifier_type": int
+#             "prefix":  '',
+#             "suffix":  '',
+#             "correct": ''
+#         }
+#     """
+#     text = Path(path).read_text(encoding="utf-8")
+#     blocks = text.split("#####")
+
+#     examples = []
+
+#     for block in blocks:
+#         block = block.strip()
+#         if not block:
+#             continue
+
+#         if block.count("FIM") != 1:
+#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
+
+#         if block.count(">>>") != 1:
+#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
+
+#         # Split at FIM
+#         before_fim, rest = block.split("FIM", 1)
+
+#         # Split rest at >>>
+#         middle, after_arrow = rest.split("\n>>>", 1)
+
+#         correct, ID = after_arrow.split("\nID:")
+
+#         prefix = before_fim
+#         suffix = middle
+#         correct = after_arrow
+
+#         examples.append({
+#             "identifier_type": int(ID),
+#             "prefix": prefix,
+#             "suffix": suffix,
+#             "correct": correct})
+
+#     return examples
+
+def read_fim_dataset(path: str) -> List[Dict]:
+    """
+    Reads the new JSONL FIM dataset format:
+
+    Each line is:
+        {
+            "text": "... <FIM> ...",
+            "label": int,
+            "target": str,
+            "mask_mode": "definition" | "usage",
+            "mixed": optional bool
+        }
+
+    Returns:
+        List of dicts with:
+        {
+            "identifier_type": int,
+            "prefix": str,
+            "suffix": str,
+            "correct": str,
+            "mask_mode": str
+        }
+    """
 #     Returns a list of dicts:
 #         {   "identifier_type": int
 #             "prefix":  '',
@@ -120,6 +191,9 @@ def read_fim_dataset(path: str) -> List[Dict]:
             label = ex["label"]
             target = ex["target"]
             mask_mode = ex.get("mask_mode", "unknown")
+            variable = ex.get("var")
+            function = ex.get("fun")
+            class_ = ex.get("cls")
 
             if "<FIM>" not in text:
                 raise ValueError(f"Missing <FIM> in example:\n{text}")
@@ -134,10 +208,16 @@ def read_fim_dataset(path: str) -> List[Dict]:
                 "prefix": prefix,
                 "suffix": suffix,
                 "correct": target,
-                "mask_mode": mask_mode
+                "mask_mode": mask_mode,
+                "var": variable,
+                "fun": function,
+                "cls": class_,
             })
 
+            # print(examples[0])
+
     return examples
+
 
 def strip_string(s: str, to_strip: str) -> str:
     s = s.strip()
@@ -222,6 +302,8 @@ def get_prompts_and_IDS(data):
         prompts.append(prompt)
         ids.append(item["identifier_type"])
 
+    print (prompts[0], ids[0])
+
     return prompts, ids
 
 
@@ -236,6 +318,7 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     )
 
     return model, tokenizer
+
 
 def randomize_model_weights(model):
     """Iterates through all model parameters and randomizes them."""

@@ -170,8 +170,17 @@ def save_average_to_csv(averaged_results, id, contrastive_id, alpha, base_path="
     print(f"Saved CSV: {save_path}")
 
 
-def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=50.0):
-    data = read_steering_dataset(path)
+def steer_prompts_from_file(def_path: str, use_path: str, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, part="FULL", alpha=50.0):
+
+    # rly stupid way of doing this but ok
+    if part == "FULL":
+        data1 = read_fim_dataset(def_path)
+        data2 = read_fim_dataset(use_path)
+        data = data1 + data2
+    elif part == "DEF":
+        data = read_fim_dataset(def_path)
+    elif part == "CALL":
+        data = read_fim_dataset(use_path)
     ids = [0, 1, 2]
     
     averages = defaultdict(lambda: defaultdict(lambda: {
@@ -184,7 +193,7 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
     }))
 
     for id in ids:
-        data_per_id = [d for d in data if int(d["ID"]) == id]
+        data_per_id = [d for d in data if int(d["identifier_type"]) == id]
 
         for prompt_dic in data_per_id:
             prompt_prefix = prompt_dic["prefix"]
@@ -264,11 +273,6 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
 
 def main():
 
-
-#     prompt = get_prompt(prompt_prefix, prompt_suffix)
-
-#     print(prompt)
-
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
@@ -285,7 +289,7 @@ def main():
     #data_call = "training_data/call_FIM_data_nocont.txt"
     # probe_save_dir = "probes_stored/probes_no_cont"
     # data_def = "training_data/def_FIM_data.txt"
-    # data_call = "training_data/call_FIM_data.txt"
+    # data_call = "training_data/call_FIM_data.txt"ls
     # probe_save_dir = "probes_stored/probes_realistic"
 
 
@@ -293,20 +297,28 @@ def main():
     # data_def = "training_data/def_FIM_data_final_only_correct.txt"
     # data_call = "training_data/call_FIM_data_final_only_correct.txt"
     # probe_save_dir = "probes_stored/probes_final_only_correct"
+    
+    identifier_mode = "letters"
+    # identifier_mode = "common"
+    identifier_mode = "tokenizer"
+    part = "FULL"
 
-    """
-    New datasets with json files 
-    """
-    data_def_json = "datasets/letters/mixed_definition.jsonl"
-    data_call_json = "datasets/letters/mixed_usage.jsonl"
+    data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
+    data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
 
     # for the baseline we need a separate save directory
     # probe_save_dir = "probes_stored/probes_final_baseline"
+    probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # specify the name of the chosen dataset for saving the file and plot titles
-    
-    dataset_specifier = "mixed_letter_only_correct"
-    dataset_specifier_fullname = "mixed letter dataset only correct"
+    dataset_specifier = "cont_baseline"
+    dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = "cont_only_correct"
+    dataset_specifier_fullname = "contrastive dataset only correct"
+    # dataset_specifier = "cont_baseline"
+    # dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = f"{identifier_mode}"
+    dataset_specifier_fullname = f"{identifier_mode}"
 
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
@@ -336,8 +348,9 @@ def main():
     # data_call = "datasets/letters/mixed_call_only_correct.jsonl"
     # probe_save_dir = "probes_stored/probes_letter_mixed_only_correct"
 
-    # prompts, labels = load_dataset(data_def, data_call)
-    # device = "cuda"
+    # model = randomize_model_weights(model) # use this line for the baseline!!
+    prompts, labels = load_dataset(data_def, data_call)
+    device = "cuda"
 
     # extractor = ResidualActivationExtractor(
     #     model=model,
@@ -372,12 +385,24 @@ def main():
 
     # # print("All results:", results)
 
-    # # use the first path for the realistic name dataset and the second path for both letter-name datasets
-    # # steering_path = "training_data/steering_data_300_realistic.txt"
+    # use the first path for the realistic name dataset and the second path for both letter-name datasets
+    # steering_path = "training_data/steering_data_300_realistic.txt"
     # steering_path = "training_data/steering_data_300_final.txt"
-    # alphas = [100.0]
-    # for alpha in alphas:
-    #     steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+
+    # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+    # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+
+    for mode in ["letters", "common", "tokenizer"]:
+            
+        steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+        steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+
+        dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
+        dataset_specifier_fullname = dataset_specifier
+
+        alphas = [100.0]
+        for alpha in alphas:
+            steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 
 
