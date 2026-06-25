@@ -11,6 +11,7 @@ import os
 # Update these paths to point to your actual generated CSV files
 file_paths = {
     'letters mix': 'accuracies/acc_letters_mixed/acc_letters_mixed.csv',
+    'letters not mix': 'accuracies/accuracies_letters_not_mixed/accuracies_letters_not_mixed.csv'
 }
 
 num_plots = len(file_paths)
@@ -91,7 +92,3 @@ cbar_ax.tick_params(labelsize=12, right=True, direction='out')
 
 plt.show()
 
-# Cleanup mock files (optional)
-for cat in mock_categories:
-    if os.path.exists(f'mock_{cat}.csv'):
-        os.remove(f'mock_{cat}.csv')
