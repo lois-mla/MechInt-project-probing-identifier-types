@@ -174,9 +174,9 @@ def steer_prompts_from_file(def_path: str, use_path: str, model, tokenizer, resu
 
     # rly stupid way of doing this but ok
     if part == "FULL":
-        data = read_fim_dataset(def_path)
+        data1 = read_fim_dataset(def_path)
         data2 = read_fim_dataset(use_path)
-        data.update(data2)
+        data = data1 + data2
     elif part == "DEF":
         data = read_fim_dataset(def_path)
     elif part == "CALL":
@@ -291,9 +291,10 @@ def main():
 
 
     # new probe data and save dir for the contrastive dataset with only correct predicted examples
-    data_def = "training_data/def_FIM_data_final_only_correct.txt"
-    data_call = "training_data/call_FIM_data_final_only_correct.txt"
-    probe_save_dir = "probes_stored/probes_final_only_correct"
+    # data_def = "training_data/def_FIM_data_final_only_correct.txt"
+    # data_call = "training_data/call_FIM_data_final_only_correct.txt"
+    # probe_save_dir = "probes_stored/probes_final_only_correct"
+    
     identifier_mode = "letters"
     # identifier_mode = "common"
     # identifier_mode = "tokenizer"
