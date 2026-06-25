@@ -212,19 +212,20 @@ class IdentifierContext:
 
 VAR_DEFINITION_TEMPLATES = [
 
-    {"tpl": """<FIM> = {int1}""", "type": "int"},
-    {"tpl": """<FIM> = {float1}""", "type": "float"},
-    {"tpl": """<FIM> = '{str1}'""", "type": "str"},
-    {"tpl": """<FIM> = True""", "type": "bool"},
-    {"tpl": """<FIM> = False""", "type": "bool"},
+    # identity assignment (strongest signal)
+    {"tpl": "<FIM> = {int1}", "type": "int"},
+    {"tpl": "<FIM> = {float1}", "type": "float"},
+    {"tpl": "<FIM> = '{str1}'", "type": "str"},
+    {"tpl": "<FIM> = True", "type": "bool"},
+    {"tpl": "<FIM> = False", "type": "bool"},
 
-    {"tpl": """<FIM> = [{int1}, {int2}]""", "type": "list_int"},
-    {"tpl": """<FIM> = []""", "type": "list_int"},
+    # STRUCTURAL containers ONLY (no arithmetic ambiguity)
+    {"tpl": "<FIM> = list([{int1}, {int2}])", "type": "list_int"},
+    {"tpl": "<FIM> = tuple([{int1}, {int2}])", "type": "tuple_int"},
+    {"tpl": "<FIM> = dict(key='{str1}', value={int1})", "type": "dict"},
 
-    {"tpl": """<FIM> = ({int1}, {int2})""", "type": "tuple_int"},
-
-    {"tpl": """<FIM> = {{'{str1}': {int1}}}""", "type": "dict"},
-    {"tpl": """<FIM> = {{}}""", "type": "dict"},
+    {"tpl": "<FIM> = list()", "type": "list_int"},
+    {"tpl": "<FIM> = dict()", "type": "dict"},
 ]
 
 
@@ -284,95 +285,73 @@ CLASS_DEFINITION_TEMPLATES = [
 # ============================================================
 # VARIABLE USAGE (STRICTLY NON-CALL POSITION)
 # ============================================================
-
 VAR_TEMPLATES = [
 
-    {"tpl": """print(<FIM>)""", "types": ["int", "float", "str", "bool"]},
+    # pure evaluation contexts
+    {"tpl": "print(<FIM>)",
+     "types": ["int", "float", "str", "bool"]},
 
-    {"tpl": """result = <FIM>""",
-     "types": ["int", "float", "str", "bool", "list_int", "tuple_int", "dict"]},
+    {"tpl": "log_value = str(<FIM>)",
+     "types": ["int", "float", "str", "bool"]},
 
-    {"tpl": """if <FIM>:
-    pass""",
-     "types": ["int", "float", "str", "bool", "list_int", "tuple_int", "dict"]},
+    {"tpl": "if bool(<FIM>):\n    pass",
+     "types": ["int", "float", "str", "bool"]},
 
-    {"tpl": """result = <FIM> + {int1}""",
-     "types": ["int", "float"]},
-
-    {"tpl": """result = <FIM> * {int1}""",
-     "types": ["int", "float"]},
-
-    {"tpl": """if <FIM> > {int1}:
-    pass""",
-     "types": ["int", "float"]},
-
-    {"tpl": """result = len(<FIM>)""",
+    # container-only contexts
+    {"tpl": "len_value = len(<FIM>)",
      "types": ["list_int", "tuple_int", "dict", "str"]},
 
-    {"tpl": """for x in <FIM>:
-    pass""",
+    {"tpl": "for _ in <FIM>:\n    pass",
      "types": ["list_int", "tuple_int"]},
 
-    {"tpl": """<FIM>.append({int1})""", "types": ["list_int"]},
+    {"tpl": "<FIM>.append(1)",
+     "types": ["list_int"]},
 
-    {"tpl": """a, b = <FIM>""", "types": ["tuple_int"]},
+    {"tpl": "first = <FIM>[0]",
+     "types": ["list_int", "tuple_int", "str"]},
 
-    {"tpl": """<FIM>['{str1}'] = {int1}""", "types": ["dict"]},
+    {"tpl": "<FIM>['k'] = 1",
+     "types": ["dict"]},
 
-    {"tpl": """assert <FIM> is not None""",
+    {"tpl": "assert <FIM> is not None",
      "types": ["int", "float", "str", "bool", "list_int", "tuple_int", "dict"]},
 ]
-
 
 # ============================================================
 # FUNCTION USAGE (STRICT CALL CONTEXT ONLY)
 # ============================================================
-
 FUNC_TEMPLATES = [
 
-    {"tpl": """result = <FIM>()""", "args": 0},
+    {"tpl": "<FIM>()", "args": 0},
 
-    {"tpl": """result = <FIM>({int1})""", "args": 1},
+    {"tpl": "<FIM>({int1})", "args": 1},
 
-    {"tpl": """result = <FIM>({var2}, {var3})""", "args": 2},
+    {"tpl": "<FIM>({var2}, {var3})", "args": 2},
 
-    {"tpl": """print(<FIM>())""", "args": 0},
+    {"tpl": "print(<FIM>())", "args": 0},
 
-    {"tpl": """print(<FIM>({int1}))""", "args": 1},
+    {"tpl": "return <FIM>({var1})", "args": 1},
 
-    {"tpl": """return <FIM>({var1})""", "args": 1},
-
-    {"tpl": """x = <FIM>({int1})""", "args": 1},
-
-    {"tpl": """y = <FIM>({var1}, {var2})""", "args": 2},
+    {"tpl": "result = <FIM>({int1})", "args": 1},
 ]
 
 
 # ============================================================
 # CLASS USAGE (STRICTLY INSTANTIATION / TYPE CONTEXT)
 # ============================================================
-
 CLASS_TEMPLATES = [
 
-    {"tpl": """obj = <FIM>()""", "ctor_args": 0},
+    {"tpl": "obj = <FIM>()", "ctor_args": 0},
 
-    {"tpl": """obj = <FIM>({int1})""", "ctor_args": 1},
+    {"tpl": "obj = <FIM>({int1})", "ctor_args": 1},
 
-    {"tpl": """obj = <FIM>({int1}, {int2})""", "ctor_args": 2},
+    {"tpl": "instance = <FIM>()", "ctor_args": 0},
 
-    {"tpl": """instance = <FIM>()""", "ctor_args": 0},
+    {"tpl": "type(obj) is <FIM>", "ctor_args": None},
 
-    {"tpl": """instance = <FIM>({int1})""", "ctor_args": 1},
+    {"tpl": "isinstance(obj, <FIM>)", "ctor_args": None},
 
-    {"tpl": """instance = <FIM>({int1}, {int2})""", "ctor_args": 2},
-
-    {"tpl": """if isinstance(obj, <FIM>):
-    pass""", "ctor_args": None},
-
-    {"tpl": """class Child(<FIM>):
-    pass""", "ctor_args": None},
-
-    {"tpl": """raise <FIM>()""", "ctor_args": 0},
+    {"tpl": "class Child(<FIM>):\n    pass", "ctor_args": None},
 ]
 # VAR_DEFINITION_TEMPLATES = [
 
@@ -867,7 +846,35 @@ def generate_mixed_example(ctx, identifier_type, mask_mode="usage"):
     }
 
 
-def write_mixed_dataset(path, source, mask_mode):
+def generate_single_example(ctx, identifier_type, mask_mode="usage"):
+
+    ids = ctx.identifiers()
+
+    if identifier_type == 0:
+        var_def, var_use = sample_pair(VAR_DEFINITION_TEMPLATES, VAR_TEMPLATES, 0)
+        def_s, use_s = instantiate_single(var_def["tpl"], var_use, ids["var"], ctx, mask_mode=mask_mode)
+        target = ids["var"]
+    elif identifier_type == 1:
+        func_def, func_use = sample_pair(FUNC_DEFINITION_TEMPLATES, FUNC_TEMPLATES, 1)
+        def_s, use_s = instantiate_single(func_def["tpl"], func_use, ids["func"], ctx, mask_mode=mask_mode)
+        target = ids["func"]
+    else: 
+        cls_def, cls_use = sample_pair(CLASS_DEFINITION_TEMPLATES, CLASS_TEMPLATES, 2)
+        def_s, use_s = instantiate_single(cls_def["tpl"], cls_use, ids["cls"], ctx, mask_mode=mask_mode)
+        target = ids["cls"]
+
+    text = '\n'.join([def_s, use_s])
+
+    return {
+        "text": text,
+        "label": identifier_type,
+        "target": target,
+        "mask_mode": mask_mode,
+    }
+
+
+
+def write_dataset(path, source, mask_mode, mixed=True):
 
     out = []
 
@@ -884,7 +891,10 @@ def write_mixed_dataset(path, source, mask_mode):
 
             ctx = IdentifierContext(source)
 
-            ex = generate_mixed_example(ctx, identifier_type, mask_mode)
+            if mixed == True:
+                ex = generate_mixed_example(ctx, identifier_type, mask_mode)
+            else:
+                ex = generate_single_example(ctx, identifier_type, mask_mode)
 
             # check for fim
             if ex["text"].count("<FIM>") != 1:
@@ -1121,11 +1131,11 @@ def main():
         
         base = Path("datasets/unambigous") / source.value
 
-        # write_dataset(base / "single_definition.jsonl", source, "definition")
-        # write_dataset(base / "single_usage.jsonl", source, "usage")
+        # write_dataset(base / "single_definition.jsonl", source, "definition", mixed=False)
+        # write_dataset(base / "single_usage.jsonl", source, "usage", mixed=False)
 
-        write_mixed_dataset(base / "mixed_definition.jsonl", source, "definition")
-        write_mixed_dataset(base / "mixed_usage.jsonl", source, "usage")
+        write_dataset(base / "mixed_definition.jsonl", source, "definition", mixed=True)
+        write_dataset(base / "mixed_usage.jsonl", source, "usage", mixed=True)
 
 
 if __name__ == "__main__":

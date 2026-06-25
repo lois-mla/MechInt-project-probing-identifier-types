@@ -54,7 +54,7 @@ def predict_identifier(
         skip_special_tokens=False,
     )
 
-    print(tokenizer.decode(outputs[0]))
+    # print(tokenizer.decode(outputs[0]))
 
     prediction = extract_identifier(generated)
 
