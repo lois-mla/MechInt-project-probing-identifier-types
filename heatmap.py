@@ -4,11 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 0edc877fa4c213077fe241e75c246d79dd15a0bb
 # ==========================================
 # 2. PLOTTING SCRIPT
 # ==========================================
