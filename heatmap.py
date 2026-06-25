@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+
+
+
 # ==========================================
 # 2. PLOTTING SCRIPT
 # ==========================================
@@ -13,6 +16,8 @@ file_paths = {
     'letters mix': 'accuracies/acc_letters_mixed/acc_letters_mixed.csv',
     'letters not mix': 'accuracies/accuracies_letters_not_mixed/accuracies_letters_not_mixed.csv'
 }
+
+
 
 num_plots = len(file_paths)
 
