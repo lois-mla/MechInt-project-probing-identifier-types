@@ -1539,6 +1539,9 @@ def generate_mixed_example(ctx, identifier_type, mask_mode="usage"):
         "label": identifier_type,
         "target": target,
         "mask_mode": mask_mode,
+        "var": ids["var"],
+        "fun": ids["func"],
+        "cls": ids["cls"],
     }
 
 

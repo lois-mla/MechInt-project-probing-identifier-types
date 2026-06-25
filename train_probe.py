@@ -193,7 +193,7 @@ def steer_prompts_from_file(def_path: str, use_path: str, model, tokenizer, resu
     }))
 
     for id in ids:
-        data_per_id = [d for d in data if int(d["ID"]) == id]
+        data_per_id = [d for d in data if int(d["identifier_type"]) == id]
 
         for prompt_dic in data_per_id:
             prompt_prefix = prompt_dic["prefix"]
