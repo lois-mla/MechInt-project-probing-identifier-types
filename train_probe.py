@@ -248,8 +248,8 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-    # data_def = "training_data/def_FIM_data_final.txt"
-    # data_call = "training_data/call_FIM_data_final.txt"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
     #probe_save_dir = "probes_stored/probes_final" 
     #data_def = "training_data/def_FIM_data_nocont.txt"
     #data_call = "training_data/call_FIM_data_nocont.txt"
@@ -260,9 +260,9 @@ def main():
 
 
     # new probe data and save dir for the contrastive dataset with only correct predicted examples
-    data_def = "training_data/def_FIM_data_final_only_correct.txt"
-    data_call = "training_data/call_FIM_data_final_only_correct.txt"
-    probe_save_dir = "probes_stored/probes_final_only_correct"
+    # data_def = "training_data/def_FIM_data_final_only_correct.txt"
+    # data_call = "training_data/call_FIM_data_final_only_correct.txt"
+    # probe_save_dir = "probes_stored/probes_final_only_correct"
 
     # for the baseline we need a separate save directory
     # probe_save_dir = "probes_stored/probes_final_baseline"
@@ -274,65 +274,65 @@ def main():
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
 
-# --- NEW: Evaluate Base Accuracy and save the datasets with only the correct examples---
-    # print("--- Testing First Token Accuracy (Definitions) ---")
-    # evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_final_only_correct.txt")
+    #--- NEW: Evaluate Base Accuracy and save the datasets with only the correct examples---
+    print("--- Testing First Token Accuracy (Definitions) ---")
+    evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_final_only_correct.txt")
 
-    # print("--- Testing First Token Accuracy (Calls) ---")
-    # evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_final_only_correct.txt")
+    print("--- Testing First Token Accuracy (Calls) ---")
+    evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_final_only_correct.txt")
 
-    # data_def = "training_data/def_FIM_data_nocont.txt"
-    # data_call = "training_data/call_FIM_data_nocont.txt"
+    data_def = "training_data/def_FIM_data_nocont.txt"
+    data_call = "training_data/call_FIM_data_nocont.txt"
 
-    # print("--- Testing First Token Accuracy (Definitions) ---")
-    # evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_nocont_only_correct.txt")
+    print("--- Testing First Token Accuracy (Definitions) ---")
+    evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_nocont_only_correct.txt")
 
-    # print("--- Testing First Token Accuracy (Calls) ---")
-    # evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_nocont_only_correct.txt")
+    print("--- Testing First Token Accuracy (Calls) ---")
+    evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_nocont_only_correct.txt")
 
 
     # -----------------------------------
     
 
-    prompts, labels = load_dataset(data_def, data_call)
-    device = "cuda"
+    # prompts, labels = load_dataset(data_def, data_call)
+    # device = "cuda"
 
-    extractor = ResidualActivationExtractor(
-        model=model,
-        tokenizer=tokenizer,
-        device=device,
-        batch_size=8,
-    )
+    # extractor = ResidualActivationExtractor(
+    #     model=model,
+    #     tokenizer=tokenizer,
+    #     device=device,
+    #     batch_size=8,
+    # )
 
-    n_layers = model.cfg.n_layers
+    # n_layers = model.cfg.n_layers
 
-    results = probe_all_layers(
-        extractor=extractor,
-        prompts=prompts,
-        labels=labels,
-        n_layers=n_layers,
-        save_dir=probe_save_dir
+    # results = probe_all_layers(
+    #     extractor=extractor,
+    #     prompts=prompts,
+    #     labels=labels,
+    #     n_layers=n_layers,
+    #     save_dir=probe_save_dir
         
-    )
+    # )
 
-    # print best layer
-    best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    print("Best layer:", best_layer)
-    print("Test accuracy:", results[best_layer]["test_acc"])
+    # # print best layer
+    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    # print("Best layer:", best_layer)
+    # print("Test accuracy:", results[best_layer]["test_acc"])
 
-    # plot the probe accuracies
-    save_dir = "figures/probe_accuracy"
-    filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
-    plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    # # plot the probe accuracies
+    # save_dir = "figures/probe_accuracy"
+    # filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
+    # plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
-    # print("All results:", results)
+    # # print("All results:", results)
 
-    # use the first path for the realistic name dataset and the second path for both letter-name datasets
-    # steering_path = "training_data/steering_data_300_realistic.txt"
-    steering_path = "training_data/steering_data_300_final.txt"
-    alphas = [100.0]
-    for alpha in alphas:
-        steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    # # use the first path for the realistic name dataset and the second path for both letter-name datasets
+    # # steering_path = "training_data/steering_data_300_realistic.txt"
+    # steering_path = "training_data/steering_data_300_final.txt"
+    # alphas = [100.0]
+    # for alpha in alphas:
+    #     steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 
 
