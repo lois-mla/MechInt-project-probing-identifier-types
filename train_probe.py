@@ -102,8 +102,8 @@ def save_accuracies_to_csv(
     for layer in results:
         train = results[layer]["train_acc"]
         test = results[layer]["test_acc"]
-    accuracies["train"].append(train)
-    accuracies["test"].append(test)
+        accuracies["train"].append(train)
+        accuracies["test"].append(test)
    
     save_dir = os.path.join(base_path, f"accuracies_{probe_name}")
     os.makedirs(save_dir, exist_ok=True)

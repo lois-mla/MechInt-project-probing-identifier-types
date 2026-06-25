@@ -191,9 +191,9 @@ def read_fim_dataset(path: str) -> List[Dict]:
             label = ex["label"]
             target = ex["target"]
             mask_mode = ex.get("mask_mode", "unknown")
-            variable = ex.get("var")
-            function = ex.get("fun")
-            class_ = ex.get("cls")
+            variable = ex.get("0")
+            function = ex.get("1")
+            class_ = ex.get("2")
 
             if "<FIM>" not in text:
                 raise ValueError(f"Missing <FIM> in example:\n{text}")
