@@ -97,13 +97,12 @@ def save_accuracies_to_csv(
     probe_name,
     base_path = "accuracies"
 ):
-    accuracies = {"train": [],
-    		  "test": []}
+    accuracies = {"train": [], "test": []}
     for layer in results:
         train = results[layer]["train_acc"]
         test = results[layer]["test_acc"]
-	accuracies["train"].append(train)
-	accuracies["test"].append(test)
+    accuracies["train"].append(train)
+    accuracies["test"].append(test)
    
     save_dir = os.path.join(base_path, f"accuracies_{probe_name}")
     os.makedirs(save_dir, exist_ok=True)
@@ -128,15 +127,12 @@ def probe_all_layers(
     for layer in range(n_layers):
         result = probe_layer(
             extractor=extractor,
-            prompts=prompts,
             labels=labels,
             layer=layer,
             save_dir=save_dir,
         )
 
         results[layer] = result
-	result["train_acc"]
-	result["test_acc"]
     return results
 
 
@@ -232,7 +228,6 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
                 for metric, values in vals.items()
             }
 
-    # Save plots + CSV
     for (id, contrastive_id) in final_averages.keys():
         plot_average_gap(
             final_averages,
@@ -260,6 +255,8 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
             base_path=f"figures/{dataset_specifier}_{alpha}"
         )
 
+
+    
     return final_averages
 
 
@@ -323,10 +320,14 @@ def main():
         
     )
 
+
     # print best layer
     best_layer = max(results, key=lambda k: results[k]["test_acc"])
     print("Best layer:", best_layer)
     print("Test accuracy:", results[best_layer]["test_acc"])
+
+    # save accuracies
+    save_accuracies_to_csv(results, dataset_specifier)
 
     # plot the probe accuracies
     save_dir = "figures/probe_accuracy"
