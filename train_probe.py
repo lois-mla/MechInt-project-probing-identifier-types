@@ -325,46 +325,46 @@ def main():
     dataset_specifier_fullname = "letter mixed only correct"
 
     model, tokenizer = load_model()
-    model = randomize_model_weights(model) # use this line for the baseline!!
+    # model = randomize_model_weights(model) # use this line for the baseline!!
     device = "cuda"
     n_layers = model.cfg.n_layers
 
-    for identifier_mode in ['letters', 'common', 'tokenizer']:
-        data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
-        data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
+    # for identifier_mode in ['letters', 'common', 'tokenizer']:
+    #     data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
+    #     data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
 
-        # for the baseline we need a separate save directory
-        # probe_save_dir = "probes_stored/probes_final_baseline"
-        probe_save_dir = f"probes_stored/{identifier_mode}_baseline"
-        dataset_specifier = f"{identifier_mode}_baseline"
-        dataset_specifier_fullname = f"{identifier_mode}_baseline"
+    #     # for the baseline we need a separate save directory
+    #     # probe_save_dir = "probes_stored/probes_final_baseline"
+    #     probe_save_dir = f"probes_stored/{identifier_mode}_baseline"
+    #     dataset_specifier = f"{identifier_mode}_baseline"
+    #     dataset_specifier_fullname = f"{identifier_mode}_baseline"
 
-        prompts, labels = load_dataset(data_def, data_call)
+    #     prompts, labels = load_dataset(data_def, data_call)
 
-        extractor = ResidualActivationExtractor(
-            model=model,
-            tokenizer=tokenizer,
-            device=device,
-            batch_size=8,
-        )
+    #     extractor = ResidualActivationExtractor(
+    #         model=model,
+    #         tokenizer=tokenizer,
+    #         device=device,
+    #         batch_size=8,
+    #     )
 
 
-        results = probe_all_layers(
-            extractor=extractor,
-            prompts=prompts,
-            labels=labels,
-            n_layers=n_layers,
-            save_dir=probe_save_dir
+    #     results = probe_all_layers(
+    #         extractor=extractor,
+    #         prompts=prompts,
+    #         labels=labels,
+    #         n_layers=n_layers,
+    #         save_dir=probe_save_dir
             
-        )
+    #     )
 
-        # print best layer
-        best_layer = max(results, key=lambda k: results[k]["test_acc"])
-        print("Best layer:", best_layer)
-        print("Test accuracy:", results[best_layer]["test_acc"])
+    #     # print best layer
+    #     best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    #     print("Best layer:", best_layer)
+    #     print("Test accuracy:", results[best_layer]["test_acc"])
 
-        # save accuracies
-        save_accuracies_to_csv(results, dataset_specifier)
+    #     # save accuracies
+    #     save_accuracies_to_csv(results, dataset_specifier)
 
 
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
@@ -397,58 +397,58 @@ def main():
 
 
     # # model = randomize_model_weights(model) # use this line for the baseline!!
-    # prompts, labels = load_dataset(data_def, data_call)
+    prompts, labels = load_dataset(data_def, data_call)
 
-    # extractor = ResidualActivationExtractor(
-    #     model=model,
-    #     tokenizer=tokenizer,
-    #     device=device,
-    #     batch_size=8,
-    # )
+    extractor = ResidualActivationExtractor(
+        model=model,
+        tokenizer=tokenizer,
+        device=device,
+        batch_size=8,
+    )
 
 
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    #     save_dir=probe_save_dir
+    results = probe_all_layers(
+        extractor=extractor,
+        prompts=prompts,
+        labels=labels,
+        n_layers=n_layers,
+        save_dir=probe_save_dir
         
-    # )
+    )
 
-    # # print best layer
-    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    # print("Best layer:", best_layer)
-    # print("Test accuracy:", results[best_layer]["test_acc"])
+    # print best layer
+    best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    print("Best layer:", best_layer)
+    print("Test accuracy:", results[best_layer]["test_acc"])
 
-    # # save accuracies
-    # save_accuracies_to_csv(results, dataset_specifier)
+    # save accuracies
+    save_accuracies_to_csv(results, dataset_specifier)
     
-    # # plot the probe accuracies
-    # save_dir = "figures/probe_accuracy"
-    # filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
-    # plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    # plot the probe accuracies
+    save_dir = "figures/probe_accuracy"
+    filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
+    plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
-    # print("All results:", results)
+    print("All results:", results)
 
     # use the first path for the realistic name dataset and the second path for both letter-name datasets
     # steering_path = "training_data/steering_data_300_realistic.txt"
     # steering_path = "training_data/steering_data_300_final.txt"
 
-    # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
-    # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+    steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+    steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
 
-    # for mode in ["letters", "common", "tokenizer"]:
+    for mode in ["letters", "common", "tokenizer"]:
             
-    #     steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
-    #     steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+        steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+        steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
 
-    #     dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
-    #     dataset_specifier_fullname = dataset_specifier
+        dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
+        dataset_specifier_fullname = dataset_specifier
 
-    #     alphas = [100.0]
-    #     for alpha in alphas:
-    #         steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+        alphas = [100.0]
+        for alpha in alphas:
+            steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 
 
