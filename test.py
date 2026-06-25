@@ -12,11 +12,11 @@ def build_fim_prompt(text: str) -> str:
     prefix, suffix = text.split("<FIM>")
 
     return (
-        "<PRE>"
+        "▁<PRE>"
         + prefix
-        + "<SUF>"
+        + "▁<SUF>"
         + suffix
-        + "<MID>"
+        + "▁<MID>"
     )
 
 
@@ -33,10 +33,10 @@ def predict_identifier(
     model,
     tokenizer,
     example,
-    max_new_tokens=8,
+    max_new_tokens=20,
 ):
     prompt = build_fim_prompt(example["text"])
-
+    print(prompt)
     inputs = tokenizer(
         prompt,
         return_tensors="pt"
@@ -54,6 +54,8 @@ def predict_identifier(
         skip_special_tokens=False,
     )
 
+    print(tokenizer.decode(outputs[0]))
+
     prediction = extract_identifier(generated)
 
     return prediction, generated
@@ -64,6 +66,8 @@ def evaluate_dataset(
     model_name="codellama/CodeLlama-7b-hf",
 ):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    print(tokenizer.special_tokens_map)
+    # tokenizer.additional_special_tokens
 
     model = AutoModelForCausalLM.from_pretrained(
         model_name,

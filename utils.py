@@ -137,6 +137,8 @@ def read_fim_dataset(path: str) -> List[Dict]:
                 "mask_mode": mask_mode
             })
 
+            print(examples[0])
+
     return examples
 
 
@@ -222,6 +224,8 @@ def get_prompts_and_IDS(data):
         prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
         prompts.append(prompt)
         ids.append(item["identifier_type"])
+
+    print (prompts[0], ids[0])
 
     return prompts, ids
 
