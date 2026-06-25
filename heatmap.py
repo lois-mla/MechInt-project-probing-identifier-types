@@ -20,12 +20,13 @@ file_paths = {
 
 num_plots = len(file_paths)
 
+# TWEAK 1: Reduced the height multiplier (from 1.8 to 0.8) to make stripes narrower
 fig, axes = plt.subplots(
     nrows=num_plots, 
     ncols=1, 
-    figsize=(10, 1.8 * num_plots),
+    figsize=(10, 0.8 * num_plots),
     sharex=True, 
-    gridspec_kw={'hspace': 0.3} 
+    gridspec_kw={'hspace': 0.4} 
 )
 
 cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7]) 
@@ -37,11 +38,13 @@ for i, (label_box, file_path) in enumerate(file_paths.items()):
     # 1. READ THE CSV
     df = pd.read_csv(file_path, index_col=0)
     
-    # 2. ROTATE THE DATA (Transpose rows to columns)
+    # 2. ROTATE THE DATA
     df = df.T
     
-    # 3. SCALE THE DATA (Convert 0.33 to 33.0 for the colorbar)
-    # This checks if your max value is 1.0 or less, and multiplies by 100 if true
+    # TWEAK 2: Force the X-axis columns to be sequential layer numbers (0, 1, 2...)
+    df.columns = range(len(df.columns))
+    
+    # 3. SCALE THE DATA
     if df.max().max() <= 1.0:
         df = df * 100
     
@@ -49,9 +52,9 @@ for i, (label_box, file_path) in enumerate(file_paths.items()):
     sns.heatmap(
         df, 
         ax=ax,             
-        cmap="Greens",     
+        cmap="crest",     
         vmin=0,            
-        vmax=100,          
+        # vmax=100,          
         cbar=(i == 0),     
         cbar_ax=cbar_ax if i == 0 else None,
         linewidths=0,
@@ -60,11 +63,13 @@ for i, (label_box, file_path) in enumerate(file_paths.items()):
     
     # Styling the Y-axis
     ax.set_ylabel('') 
-    ax.tick_params(axis='y', left=False, rotation=0, labelsize=11)
+    # TWEAK 3: Hide the leftover 'test' column name so the left side is completely clean
+    ax.tick_params(axis='y', left=False, labelleft=False)
     
     # Adding the Left Box Label
+    # Nudged x to -0.1 so it sits nicely next to the narrower heatmap
     ax.text(
-        x=-0.25, 
+        x=-0.1, 
         y=0.5,   
         s=label_box, 
         transform=ax.transAxes,
