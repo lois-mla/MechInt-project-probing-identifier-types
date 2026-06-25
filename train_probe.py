@@ -276,45 +276,45 @@ def main():
     evaluate_first_token_accuracy(model, tokenizer, data_call)
     # -----------------------------------
 
-    prompts, labels = load_dataset(data_def, data_call)
-    device = "cuda"
+    # prompts, labels = load_dataset(data_def, data_call)
+    # device = "cuda"
 
-    extractor = ResidualActivationExtractor(
-        model=model,
-        tokenizer=tokenizer,
-        device=device,
-        batch_size=8,
-    )
+    # extractor = ResidualActivationExtractor(
+    #     model=model,
+    #     tokenizer=tokenizer,
+    #     device=device,
+    #     batch_size=8,
+    # )
 
-    n_layers = model.cfg.n_layers
+    # n_layers = model.cfg.n_layers
 
-    results = probe_all_layers(
-        extractor=extractor,
-        prompts=prompts,
-        labels=labels,
-        n_layers=n_layers,
-        save_dir=probe_save_dir
+    # results = probe_all_layers(
+    #     extractor=extractor,
+    #     prompts=prompts,
+    #     labels=labels,
+    #     n_layers=n_layers,
+    #     save_dir=probe_save_dir
         
-    )
+    # )
 
-    # print best layer
-    best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    print("Best layer:", best_layer)
-    print("Test accuracy:", results[best_layer]["test_acc"])
+    # # print best layer
+    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    # print("Best layer:", best_layer)
+    # print("Test accuracy:", results[best_layer]["test_acc"])
 
-    # plot the probe accuracies
-    save_dir = "figures/probe_accuracy"
-    filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
-    plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    # # plot the probe accuracies
+    # save_dir = "figures/probe_accuracy"
+    # filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
+    # plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
-    # print("All results:", results)
+    # # print("All results:", results)
 
-    # use the first path for the realistic name dataset and the second path for both letter-name datasets
-    # steering_path = "training_data/steering_data_300_realistic.txt"
-    steering_path = "training_data/steering_data_300_final.txt"
-    alphas = [100.0]
-    for alpha in alphas:
-        steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    # # use the first path for the realistic name dataset and the second path for both letter-name datasets
+    # # steering_path = "training_data/steering_data_300_realistic.txt"
+    # steering_path = "training_data/steering_data_300_final.txt"
+    # alphas = [100.0]
+    # for alpha in alphas:
+    #     steer_prompts_from_file(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 
 
