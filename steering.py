@@ -31,9 +31,9 @@ def get_contrastive_steering_vector(
     """
     neg - pos steering direction.
     """
-    print(neg_class, pos_class, type(neg_class), type(pos_class))
+    # print(neg_class, pos_class, type(neg_class), type(pos_class))
     W = probe.linear.weight.detach()
-    print(W, type(W))
+    # print(W, type(W))
     s = W[neg_class] - W[pos_class]
 
     if normalize:
