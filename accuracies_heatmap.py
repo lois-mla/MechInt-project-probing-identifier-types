@@ -10,8 +10,8 @@ import os
 # Dictionary mapping the label you want in the box to the CSV file path
 # Update these paths to point to your actual generated CSV files
 file_paths = {
-        "letters mixed": "acc_letters_mixed"
-        "letters not mixed": "accuracies_letters_not_mixed" 
+        "letters mixed": "accuracies/acc_letters_mixed/acc_letters_mixed.csv"
+        "letters not mixed": "accuracies/accuracies_letters_not_mixed/accuracies_letters_not_mixed.csv" 
         }
 
 num_plots = len(file_paths)
