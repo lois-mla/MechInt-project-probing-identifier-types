@@ -324,8 +324,8 @@ def main():
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
 
     # evaluate base accuracy for the mixed letters datafile and save the datasets with only correct examples
-    evaluate_first_token_accuracy_jsonl(model, tokenizer, data_def_json, "datasets/letters/mixed_definition_only_correct.jsonl")
-    evaluate_first_token_accuracy_jsonl(model, tokenizer, data_call_json, "datasets/letters/mixed_usage_only_correct.jsonl")
+    evaluate_first_token_accuracy_jsonl(model, tokenizer,"datasets/final/letters/mixed_definition.jsonl" , "datasets/final/letters/mixed_definition_only_correct.jsonl")
+    evaluate_first_token_accuracy_jsonl(model, tokenizer, "datasets/final/letters/mixed_usage.jsonl", "datasets/final/letters/mixed_usage_only_correct.jsonl")
 
 
     # #--- NEW: Evaluate Base Accuracy and save the datasets with only the correct examples---
@@ -349,8 +349,8 @@ def main():
     # probe_save_dir = "probes_stored/probes_letter_mixed_only_correct"
 
     # model = randomize_model_weights(model) # use this line for the baseline!!
-    prompts, labels = load_dataset(data_def, data_call)
-    device = "cuda"
+    # prompts, labels = load_dataset(data_def, data_call)
+    # device = "cuda"
 
     # extractor = ResidualActivationExtractor(
     #     model=model,
@@ -392,17 +392,17 @@ def main():
     # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
     # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
 
-    for mode in ["letters", "common", "tokenizer"]:
+    # for mode in ["letters", "common", "tokenizer"]:
             
-        steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
-        steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+    #     steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+    #     steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
 
-        dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
-        dataset_specifier_fullname = dataset_specifier
+    #     dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
+    #     dataset_specifier_fullname = dataset_specifier
 
-        alphas = [100.0]
-        for alpha in alphas:
-            steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    #     alphas = [100.0]
+    #     for alpha in alphas:
+    #         steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 
 
