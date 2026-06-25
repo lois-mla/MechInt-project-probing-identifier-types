@@ -303,12 +303,12 @@ def main():
     # identifier_mode = "tokenizer"
     # part = "FULL"
 
-    data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
-    data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
+    data_def = f"datasets/final/{identifier_mode}/mixed_definition_only_correct.jsonl"
+    data_call = f"datasets/final/{identifier_mode}/mixed_usage_only_correct.jsonl"
 
     # for the baseline we need a separate save directory
     # probe_save_dir = "probes_stored/probes_final_baseline"
-    probe_save_dir = f"probes_stored/{identifier_mode}"
+    # probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
@@ -317,14 +317,15 @@ def main():
     # # dataset_specifier_fullname = "contrastive dataset only correct"
     # # dataset_specifier = "cont_baseline"
     # # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = f"{identifier_mode}"
-    dataset_specifier_fullname = f"{identifier_mode}"
+    # dataset_specifier = f"{identifier_mode}"
+    # dataset_specifier_fullname = f"{identifier_mode}"
 
-    # probe_save_dir = f"probes_stored/probes_{identifier_mode}"
-    # dataset_specifier = "letter_mixed_only_correct_baseline"
-    # dataset_specifier_fullname = "letter mixed only correct_baseline"
+    probe_save_dir = f"probes_stored/probes_{identifier_mode}_only_correct"
+    dataset_specifier = "letter_mixed_only_correct"
+    dataset_specifier_fullname = "letter mixed only correct"
 
     model, tokenizer = load_model()
+    model = randomize_model_weights(model) # use this line for the baseline!!
     device = "cuda"
     n_layers = model.cfg.n_layers
 
@@ -334,9 +335,9 @@ def main():
 
         # for the baseline we need a separate save directory
         # probe_save_dir = "probes_stored/probes_final_baseline"
-        probe_save_dir = f"probes_stored/{identifier_mode}"
-        dataset_specifier = f"{identifier_mode}"
-        dataset_specifier_fullname = f"{identifier_mode}"
+        probe_save_dir = f"probes_stored/{identifier_mode}_baseline"
+        dataset_specifier = f"{identifier_mode}_baseline"
+        dataset_specifier_fullname = f"{identifier_mode}_baseline"
 
         prompts, labels = load_dataset(data_def, data_call)
 
