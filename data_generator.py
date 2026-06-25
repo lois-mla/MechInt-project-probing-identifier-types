@@ -290,7 +290,7 @@ class IdentifierContext:
             self.cls_pool = COMMON_CLASSES
 
         else:
-            pool = build_tokenizer_pool()
+            pool = vocab
             self.var_pool = pool
             self.func_pool = pool
             self.cls_pool = pool
@@ -352,7 +352,7 @@ class IdentifierContext:
         elif self.source == IdentifierSource.COMMON:
             return random.choice(COMMON_VARIABLES)
         else:
-            pool = build_tokenizer_pool()
+            pool = vocab
             return random.choice(pool)
 
 # ============================================================

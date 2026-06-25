@@ -91,10 +91,6 @@ def probe_layer(
         "test_acc": test_acc,
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 def probe_all_layers(
     extractor,
     prompts,
@@ -114,12 +110,7 @@ def probe_all_layers(
         )
 
         results[layer] = result
-<<<<<<< HEAD
-        # result["train_acc"]
-        # result["test_acc"]
-=======
 
->>>>>>> main
     return results
 
 
@@ -260,12 +251,9 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-<<<<<<< HEAD
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final" 
-=======
->>>>>>> main
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     #probe_save_dir = "probes_stored/probes_final" 
@@ -276,7 +264,11 @@ def main():
     # data_call = "training_data/call_FIM_data.txt"ls
     # probe_save_dir = "probes_stored/probes_realistic"
 
-<<<<<<< HEAD
+
+    # new probe data and save dir for the contrastive dataset with only correct predicted examples
+    data_def = "training_data/def_FIM_data_final_only_correct.txt"
+    data_call = "training_data/call_FIM_data_final_only_correct.txt"
+    probe_save_dir = "probes_stored/probes_final_only_correct"
     identifier_mode = "letters"
     identifier_mode = "common"
     identifier_mode = "tokenizer"
@@ -286,29 +278,16 @@ def main():
     data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
 
     # for the baseline we need a separate save directory
-    probe_save_dir = f"probes_stored/{identifier_mode}"
-
-    # specify the name of the chosen dataset for saving the file and plot titles
-    # dataset_specifier = "cont_baseline"
-    # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = f"{identifier_mode}"
-    dataset_specifier_fullname = f"{identifier_mode}"
-
-    model, tokenizer = load_model()
-    # model = randomize_model_weights(model) # use this line for the baseline!!
-=======
-
-    # new probe data and save dir for the contrastive dataset with only correct predicted examples
-    data_def = "training_data/def_FIM_data_final_only_correct.txt"
-    data_call = "training_data/call_FIM_data_final_only_correct.txt"
-    probe_save_dir = "probes_stored/probes_final_only_correct"
-
-    # for the baseline we need a separate save directory
     # probe_save_dir = "probes_stored/probes_final_baseline"
+    probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     dataset_specifier = "cont_only_correct"
     dataset_specifier_fullname = "contrastive dataset only correct"
+    # dataset_specifier = "cont_baseline"
+    # dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = f"{identifier_mode}"
+    dataset_specifier_fullname = f"{identifier_mode}"
 
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
@@ -332,7 +311,7 @@ def main():
 
     
 
->>>>>>> main
+    # model = randomize_model_weights(model) # use this line for the baseline!!
     prompts, labels = load_dataset(data_def, data_call)
     device = "cuda"
 
