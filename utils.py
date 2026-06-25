@@ -426,9 +426,9 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
         # --- DEBUG PRINT FOR FIRST 10 & LAST 10 ---
         if i in indices_to_print:
             # We show the last 100 characters of the input so you can see the immediate context
-            prompt_tail = prompt[-100:].replace('\n', '\\n')
+            
             print(f"--- Example {i+1} / {total_examples} ---")
-            print(f"Input (tail): '{prompt_tail}'")
+            print(f"Input: '{prompt}'")
             print(f"Ground Truth: '{target_str}'")
             print(f"Prediction:   '{predicted_str}'")
             print("-" * 40)
