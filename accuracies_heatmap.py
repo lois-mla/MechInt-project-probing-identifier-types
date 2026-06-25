@@ -10,11 +10,9 @@ import os
 # Dictionary mapping the label you want in the box to the CSV file path
 # Update these paths to point to your actual generated CSV files
 file_paths = {
-    'LEN': 'mock_LEN.csv',
-    'AST': 'mock_AST.csv',
-    'CPX': 'mock_CPX.csv',
-    'TYP': 'mock_TYP.csv'
-}
+        "letters mixed": "acc_letters_mixed"
+        "letters not mixed": "accuracies_letters_not_mixed" 
+        }
 
 num_plots = len(file_paths)
 
@@ -94,7 +92,3 @@ cbar_ax.tick_params(labelsize=12, right=True, direction='out')
 
 plt.show()
 
-# Cleanup mock files (optional)
-for cat in mock_categories:
-    if os.path.exists(f'mock_{cat}.csv'):
-        os.remove(f'mock_{cat}.csv')
