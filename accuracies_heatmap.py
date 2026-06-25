@@ -10,7 +10,7 @@ import os
 # Dictionary mapping the label you want in the box to the CSV file path
 # Update these paths to point to your actual generated CSV files
 file_paths = {
-        "letters mixed": "accuracies/acc_letters_mixed/acc_letters_mixed.csv"
+        "letters mixed": "accuracies/acc_letters_mixed/acc_letters_mixed.csv",
         "letters not mixed": "accuracies/accuracies_letters_not_mixed/accuracies_letters_not_mixed.csv" 
         }
 
@@ -89,6 +89,7 @@ cbar_ax.tick_params(labelsize=12, right=True, direction='out')
 
 # Optional: Add a master figure title
 # plt.suptitle("Linear Probe Accuracies", y=1.05, fontsize=14)
-
+plt.savefig("accuracies/accuracies_heatmap.png", dpi=300, bbox_inches='tight')
+print("Heatmap successfully saved as 'accuracies_heatmap.png'")
 plt.show()
 
