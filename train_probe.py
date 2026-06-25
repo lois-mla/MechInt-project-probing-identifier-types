@@ -328,7 +328,11 @@ def main():
 
     # save accuracies
     save_accuracies_to_csv(results, dataset_specifier)
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> d0fa1615d0eefd2cbef1da79cf3930595dc5d481
     # plot the probe accuracies
     save_dir = "figures/probe_accuracy"
     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
