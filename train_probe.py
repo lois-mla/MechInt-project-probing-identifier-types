@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 
-from utils import load_random_model, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
+from utils import evaluate_first_token_accuracy, load_random_model, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
 from steering import compare_steering_with_gap
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -91,7 +91,10 @@ def probe_layer(
         "test_acc": test_acc,
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 def probe_all_layers(
     extractor,
     prompts,
@@ -111,8 +114,12 @@ def probe_all_layers(
         )
 
         results[layer] = result
+<<<<<<< HEAD
         # result["train_acc"]
         # result["test_acc"]
+=======
+
+>>>>>>> main
     return results
 
 
@@ -253,19 +260,23 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
+<<<<<<< HEAD
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final" 
+=======
+>>>>>>> main
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
-    # probe_save_dir = "probes_stored/probes_final"
-    # data_def = "training_data/def_FIM_data_nocont.txt"
-    # data_call = "training_data/call_FIM_data_nocont.txt"
+    #probe_save_dir = "probes_stored/probes_final" 
+    #data_def = "training_data/def_FIM_data_nocont.txt"
+    #data_call = "training_data/call_FIM_data_nocont.txt"
     # probe_save_dir = "probes_stored/probes_no_cont"
     # data_def = "training_data/def_FIM_data.txt"
     # data_call = "training_data/call_FIM_data.txt"ls
     # probe_save_dir = "probes_stored/probes_realistic"
 
+<<<<<<< HEAD
     identifier_mode = "letters"
     identifier_mode = "common"
     identifier_mode = "tokenizer"
@@ -285,6 +296,43 @@ def main():
 
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline!!
+=======
+
+    # new probe data and save dir for the contrastive dataset with only correct predicted examples
+    data_def = "training_data/def_FIM_data_final_only_correct.txt"
+    data_call = "training_data/call_FIM_data_final_only_correct.txt"
+    probe_save_dir = "probes_stored/probes_final_only_correct"
+
+    # for the baseline we need a separate save directory
+    # probe_save_dir = "probes_stored/probes_final_baseline"
+
+    # specify the name of the chosen dataset for saving the file and plot titles
+    dataset_specifier = "cont_only_correct"
+    dataset_specifier_fullname = "contrastive dataset only correct"
+
+    model, tokenizer = load_model()
+    # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
+
+    # #--- NEW: Evaluate Base Accuracy and save the datasets with only the correct examples---
+    # print("--- Testing First Token Accuracy (Definitions) ---")
+    # evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_final_only_correct.txt")
+
+    # print("--- Testing First Token Accuracy (Calls) ---")
+    # evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_final_only_correct.txt")
+
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
+
+    # print("--- Testing First Token Accuracy (Definitions) ---")
+    # evaluate_first_token_accuracy(model, tokenizer, data_def, "training_data/def_FIM_data_nocont_only_correct.txt")
+
+    # print("--- Testing First Token Accuracy (Calls) ---")
+    # evaluate_first_token_accuracy(model, tokenizer, data_call, "training_data/call_FIM_data_nocont_only_correct.txt")
+
+
+    
+
+>>>>>>> main
     prompts, labels = load_dataset(data_def, data_call)
     device = "cuda"
 
