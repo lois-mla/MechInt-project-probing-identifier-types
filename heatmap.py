@@ -52,7 +52,7 @@ for i, (label_box, file_path) in enumerate(file_paths.items()):
     sns.heatmap(
         df, 
         ax=ax,             
-        cmap="crest",     
+        cmap="vlag",     
         vmin=0,            
         # vmax=100,          
         cbar=(i == 0),     
