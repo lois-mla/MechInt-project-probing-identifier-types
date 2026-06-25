@@ -33,111 +33,111 @@ print(tokenizer.convert_tokens_to_ids("▁<PRE>"))  # correct
 print(tokenizer.convert_tokens_to_ids("▁<MID>"))  # correct
 print(tokenizer.convert_tokens_to_ids("▁<SUF>"))  # correct
 
-def read_fim_dataset(path: str) -> List[Dict[str, str]]:
-    """
-    Reads a file where:
-      - datapoints are separated by '#####'
-      - each datapoint contains one 'FIM' and one '>>>'
-
-    Returns a list of dicts:
-        {   "identifier_type": int
-            "prefix":  '',
-            "suffix":  '',
-            "correct": ''
-        }
-    """
-    text = Path(path).read_text(encoding="utf-8")
-    blocks = text.split("#####")
-
-    examples = []
-
-    for block in blocks:
-        block = block.strip()
-        if not block:
-            continue
-
-        if block.count("FIM") != 1:
-            raise ValueError("Block must contain exactly one 'FIM':\n" + block)
-
-        if block.count(">>>") != 1:
-            raise ValueError("Block must contain exactly one '>>>' :\n" + block)
-
-        # Split at FIM
-        before_fim, rest = block.split("FIM", 1)
-
-        # Split rest at >>>
-        middle, after_arrow = rest.split("\n>>>", 1)
-
-        correct, ID = after_arrow.split("\nID:")
-
-        prefix = before_fim
-        suffix = middle
-        correct = after_arrow
-
-        examples.append({
-            "identifier_type": int(ID),
-            "prefix": prefix,
-            "suffix": suffix,
-            "correct": correct})
-
-    return examples
-
-# def read_fim_dataset(path: str) -> List[Dict]:
+# def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 #     """
-#     Reads the new JSONL FIM dataset format:
+#     Reads a file where:
+#       - datapoints are separated by '#####'
+#       - each datapoint contains one 'FIM' and one '>>>'
 
-#     Each line is:
-#         {
-#             "text": "... <FIM> ...",
-#             "label": int,
-#             "target": str,
-#             "mask_mode": "definition" | "usage",
-#             "mixed": optional bool
-#         }
-
-#     Returns:
-#         List of dicts with:
-#         {
-#             "identifier_type": int,
-#             "prefix": str,
-#             "suffix": str,
-#             "correct": str,
-#             "mask_mode": str
+#     Returns a list of dicts:
+#         {   "identifier_type": int
+#             "prefix":  '',
+#             "suffix":  '',
+#             "correct": ''
 #         }
 #     """
+#     text = Path(path).read_text(encoding="utf-8")
+#     blocks = text.split("#####")
 
 #     examples = []
 
-#     with Path(path).open("r", encoding="utf-8") as f:
-#         for line in f:
-#             line = line.strip()
-#             if not line:
-#                 continue
+#     for block in blocks:
+#         block = block.strip()
+#         if not block:
+#             continue
 
-#             ex = json.loads(line)
+#         if block.count("FIM") != 1:
+#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
 
-#             text = ex["text"]
-#             label = ex["label"]
-#             target = ex["target"]
-#             mask_mode = ex.get("mask_mode", "unknown")
+#         if block.count(">>>") != 1:
+#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
 
-#             if "<FIM>" not in text:
-#                 raise ValueError(f"Missing <FIM> in example:\n{text}")
+#         # Split at FIM
+#         before_fim, rest = block.split("FIM", 1)
 
-#             if text.count("<FIM>") != 1:
-#                 raise ValueError(f"More than one <FIM> in example:\n{text}")
+#         # Split rest at >>>
+#         middle, after_arrow = rest.split("\n>>>", 1)
 
-#             prefix, suffix = text.split("<FIM>")
+#         correct, ID = after_arrow.split("\nID:")
 
-#             examples.append({
-#                 "identifier_type": int(label),
-#                 "prefix": prefix,
-#                 "suffix": suffix,
-#                 "correct": target,
-#                 "mask_mode": mask_mode
-#             })
+#         prefix = before_fim
+#         suffix = middle
+#         correct = after_arrow
+
+#         examples.append({
+#             "identifier_type": int(ID),
+#             "prefix": prefix,
+#             "suffix": suffix,
+#             "correct": correct})
 
 #     return examples
+
+def read_fim_dataset(path: str) -> List[Dict]:
+    """
+    Reads the new JSONL FIM dataset format:
+
+    Each line is:
+        {
+            "text": "... <FIM> ...",
+            "label": int,
+            "target": str,
+            "mask_mode": "definition" | "usage",
+            "mixed": optional bool
+        }
+
+    Returns:
+        List of dicts with:
+        {
+            "identifier_type": int,
+            "prefix": str,
+            "suffix": str,
+            "correct": str,
+            "mask_mode": str
+        }
+    """
+
+    examples = []
+
+    with Path(path).open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+
+            ex = json.loads(line)
+
+            text = ex["text"]
+            label = ex["label"]
+            target = ex["target"]
+            mask_mode = ex.get("mask_mode", "unknown")
+
+            if "<FIM>" not in text:
+                raise ValueError(f"Missing <FIM> in example:\n{text}")
+
+            if text.count("<FIM>") != 1:
+                raise ValueError(f"More than one <FIM> in example:\n{text}")
+
+            prefix, suffix = text.split("<FIM>")
+
+            examples.append({
+                "identifier_type": int(label),
+                "prefix": prefix,
+                "suffix": suffix,
+                "correct": target,
+                "mask_mode": mask_mode
+            })
+
+    return examples
 
 def strip_string(s: str, to_strip: str) -> str:
     s = s.strip()
@@ -453,6 +453,94 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str, save_path: s
                 f.write(f"{entry['prefix']}FIM{entry['suffix']}\n>>>{entry['correct']}\n#####\n\n")
                 
         print(f"Saved {len(correct_examples)} correct examples in raw text format to: {save_path}\n")
+    
+    return accuracy
+
+def evaluate_first_token_accuracy_jsonl(model, tokenizer, data_path: str, save_path: str = None):
+    """
+    Evaluates how often the decoded top-1 next token prediction matches 
+    the decoded first token of the correct target string for JSONL datasets.
+    Prints execution logs for the first 10 and last 10 examples.
+    Saves all correctly predicted items back into the original JSONL format.
+    """
+    print(f"\nEvaluating first-token accuracy on (JSONL): {data_path}")
+    
+    # Uses your JSONL version of read_fim_dataset
+    data = read_fim_dataset(data_path)
+    total_examples = len(data)
+    
+    # Identify which indices to inspect (prevents overlapping prints if total < 20)
+    indices_to_print = set(range(min(10, total_examples))).union(
+        set(range(max(0, total_examples - 10), total_examples))
+    )
+    
+    correct_predictions = 0
+    total_predictions = total_examples
+    correct_examples = []  # List to store the correct dataset entries
+
+    for i, item in enumerate(data):
+        # 1. Construct the prompt
+        prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+        
+        # 2. Tokenize prompt
+        input_ids = tokenizer.encode(prompt, return_tensors="pt").to(model.cfg.device)
+
+        # 3. Tokenize target 
+        # In JSONL, item["correct"] holds just the clean token string (e.g. "Config")
+        target_text_raw = item["correct"].strip()
+        target_tokens = tokenizer.encode(target_text_raw, add_special_tokens=False)
+        
+        if not target_tokens:
+            total_predictions -= 1
+            continue
+            
+        target_token_id = target_tokens[0]
+
+        # 4. Forward pass
+        with torch.no_grad():
+            logits = model(input_ids)
+            next_token_logits = logits[0, -1, :]
+            predicted_token_id = torch.argmax(next_token_logits).item()
+
+        # 5. Decode BOTH tokens to strings and strip whitespace/SentencePiece artifacts
+        predicted_str = tokenizer.decode([predicted_token_id]).strip()
+        target_str = tokenizer.decode([target_token_id]).strip()
+
+        # --- DEBUG PRINT FOR FIRST 10 & LAST 10 ---
+        if i in indices_to_print:
+            print(f"--- Example {i+1} / {total_examples} ---")
+            print(f"Input: '{prompt}'")
+            print(f"Ground Truth: '{target_str}'")
+            print(f"Prediction:   '{predicted_str}'")
+            print("-" * 40)
+
+        # 6. Compare the decoded strings instead of the raw IDs
+        if predicted_str == target_str:
+            correct_predictions += 1
+            correct_examples.append(item)  # Capture the successful dataset entry
+
+    accuracy = correct_predictions / total_predictions if total_predictions > 0 else 0
+    print(f"First-Token Accuracy: {accuracy * 100:.2f}% ({correct_predictions}/{total_predictions})\n")
+    
+    # 7. Save the dataset of correct examples in the original JSONL format
+    if save_path and correct_examples:
+        # Create directories if they don't exist
+        if os.path.dirname(save_path):
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        
+        with open(save_path, "w", encoding="utf-8") as f:
+            for entry in correct_examples:
+                # Reconstruct the line dictionary exactly matching the input specifications
+                line_dict = {
+                    "text": f"{entry['prefix']}<FIM>{entry['suffix']}",
+                    "label": entry["identifier_type"],
+                    "target": entry["correct"],
+                    "mask_mode": entry["mask_mode"]
+                }
+                # Write as a single line tracking valid json
+                f.write(json.dumps(line_dict, ensure_ascii=False) + "\n")
+                
+        print(f"Saved {len(correct_examples)} correct examples in JSONL format to: {save_path}\n")
     
     return accuracy
 
