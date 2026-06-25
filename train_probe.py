@@ -320,9 +320,9 @@ def main():
     # dataset_specifier = f"{identifier_mode}"
     # dataset_specifier_fullname = f"{identifier_mode}"
 
-    probe_save_dir = f"probes_stored/probes_{identifier_mode}_only_correct"
-    dataset_specifier = "letter_mixed_only_correct"
-    dataset_specifier_fullname = "letter mixed only correct"
+    probe_save_dir = f"probes_stored/probes_{identifier_mode}_only_correct_baseline"
+    dataset_specifier = "letter_mixed_only_correct_baseline"
+    dataset_specifier_fullname = "letter mixed only correct_baseline"
 
     model, tokenizer = load_model()
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
@@ -352,7 +352,7 @@ def main():
     # data_call = "datasets/letters/mixed_call_only_correct.jsonl"
     # probe_save_dir = "probes_stored/probes_letter_mixed_only_correct"
 
-    # model = randomize_model_weights(model) # use this line for the baseline!!
+    model = randomize_model_weights(model) # use this line for the baseline!!
     prompts, labels = load_dataset(data_def, data_call)
     device = "cuda"
 
