@@ -312,7 +312,9 @@ def main():
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
 
     # evaluate base accuracy for the mixed letters datafile and save the datasets with only correct examples
-    evaluate_first_token_accuracy_jsonl(model, tokenizer, data_def_json, data_call_json, "datasets/letters/mixed_definition_only_correct.jsonl", "datasets/letters/mixed_call_only_correct.jsonl")
+    evaluate_first_token_accuracy_jsonl(model, tokenizer, data_def_json, "datasets/letters/mixed_definition_only_correct.jsonl")
+    evaluate_first_token_accuracy_jsonl(model, tokenizer, data_call_json, "datasets/letters/mixed_call_only_correct.jsonl")
+
 
     # #--- NEW: Evaluate Base Accuracy and save the datasets with only the correct examples---
     # print("--- Testing First Token Accuracy (Definitions) ---")
