@@ -91,6 +91,31 @@ def probe_layer(
         "test_acc": test_acc,
     }
 
+
+def save_accuracies_to_csv(
+    results,
+    probe_name,
+    base_path = "accuracies"
+):
+    accuracies = {"train": [],
+    		  "test": []}
+    for layer in results:
+        train = results[layer]["train_acc"]
+        test = results[layer]["test_acc"]
+    accuracies["train"].append(train)
+    accuracies["test"].append(test)
+   
+    save_dir = os.path.join(base_path, f"accuracies_{probe_name}")
+    os.makedirs(save_dir, exist_ok=True)
+
+    save_path = os.path.join(save_dir, f"accuracies_{probe_name}.csv")
+    pd.DataFrame(accuracies).to_csv(save_path, index=False)
+    print(f"Saved CSV: {save_path}")
+
+
+
+
+
 def probe_all_layers(
     extractor,
     prompts,
@@ -240,7 +265,6 @@ def steer_prompts_from_file(path: str, model, tokenizer, results, dataset_specif
 def main():
 
 
-
 #     prompt = get_prompt(prompt_prefix, prompt_suffix)
 
 #     print(prompt)
@@ -248,6 +272,11 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = "probes_stored/probes_final" 
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     #probe_save_dir = "probes_stored/probes_final" 
@@ -268,6 +297,8 @@ def main():
     # probe_save_dir = "probes_stored/probes_final_baseline"
 
     # specify the name of the chosen dataset for saving the file and plot titles
+    dataset_specifier = "cont_baseline"
+    dataset_specifier_fullname = "contrastive dataset baseline"
     dataset_specifier = "cont_only_correct"
     dataset_specifier_fullname = "contrastive dataset only correct"
 
@@ -319,6 +350,9 @@ def main():
     print("Best layer:", best_layer)
     print("Test accuracy:", results[best_layer]["test_acc"])
 
+    # save accuracies
+    save_accuracies_to_csv(results, dataset_specifier)
+    
     # plot the probe accuracies
     save_dir = "figures/probe_accuracy"
     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
