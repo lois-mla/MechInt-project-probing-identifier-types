@@ -11,7 +11,7 @@ import os
 print("Status: Imports successful.")
 
 # ==========================================
-# 2. PLOTTING SCRIPT
+# PLOTTING SCRIPT
 # ==========================================
 
 file_paths = {
@@ -41,12 +41,12 @@ for i, (label_box, file_path) in enumerate(file_paths.items()):
     # Draw the heatmap
     sns.heatmap(
         df, 
-        ax=ax, 
+        #ax=ax, 
         cmap="Greens",     
         vmin=0,            
-        vmax=100,          
-        cbar=(i == 0),     
-        cbar_ax=cbar_ax if i == 0 else None, 
+        #cbar=(i == 0),     
+        #cbar_ax=cbar_ax if i == 0 else None,
+        cbar_ax = ax
         linewidths=0       
     )
     
@@ -78,7 +78,7 @@ cbar_ax.tick_params(labelsize=12, right=True, direction='out')
 print("Status: Plot generated, attempting to save...")
 
 # ==========================================
-# 3. SAVE AND SHOW
+# SAVE AND SHOW
 # ==========================================
 
 # SAFEGUARD: Create the 'accuracies' directory if it doesn't exist
