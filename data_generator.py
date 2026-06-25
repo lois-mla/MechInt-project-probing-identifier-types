@@ -215,6 +215,9 @@ for s in tok.get_vocab():
     if s in BAD_IDENTIFIERS:
         continue
 
+    if not s.isascii():
+        continue
+
     # must tokenize to exactly one token
     ids = tok.encode(s, add_special_tokens=False)
 
