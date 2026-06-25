@@ -376,30 +376,29 @@ def load_probe(path, device="cuda"):
 
     return probe
 
-def evaluate_first_token_accuracy(model, tokenizer, data_path: str, num_debug: int = 10):
+def evaluate_first_token_accuracy(model, tokenizer, data_path: str):
     """
-    Evaluates how often the model's top-1 next token prediction matches 
-    the first token of the correct target string.
+    Evaluates how often the decoded top-1 next token prediction matches 
+    the decoded first token of the correct target string.
     """
     print(f"\nEvaluating first-token accuracy on: {data_path}")
-    print(f"\nDebugging first-token accuracy on: {data_path}")
     
     data = read_fim_dataset(data_path)
     
     correct_predictions = 0
     total_predictions = len(data)
 
-    for i, item in enumerate(data):
+    for item in data:
         # 1. Construct the prompt
         prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
         
         # 2. Tokenize prompt
         input_ids = tokenizer.encode(prompt, return_tensors="pt").to(model.cfg.device)
 
-        # 3. Tokenize target (using strip() as we did previously)
-        target_text_raw = item["correct"]
-        target_text_stripped = target_text_raw.strip()
-        target_tokens = tokenizer.encode(target_text_stripped, add_special_tokens=False)
+        # 3. Tokenize target
+        # Splitting by \nID: bypasses the minor bug in read_fim_dataset
+        target_text_raw = item["correct"].split("\nID:")[0].strip()
+        target_tokens = tokenizer.encode(target_text_raw, add_special_tokens=False)
         
         if not target_tokens:
             total_predictions -= 1
@@ -413,25 +412,15 @@ def evaluate_first_token_accuracy(model, tokenizer, data_path: str, num_debug: i
             next_token_logits = logits[0, -1, :]
             predicted_token_id = torch.argmax(next_token_logits).item()
 
-        # 5. Debug Print for the first N examples
-        if i < num_debug:
-            # We'll print just the last 60 characters of the prompt to keep the console clean
-            prompt_tail = prompt[-60:].replace('\n', '\\n') 
-            predicted_str = tokenizer.decode([predicted_token_id])
-            target_str = tokenizer.decode([target_token_id])
-            
-            print(f"--- Example {i+1} ---")
-            print(f"Prompt tail:  '{prompt_tail}'")
-            print(f"Target (raw): {repr(target_text_raw)}")
-            print(f"Target token: {target_token_id} -> {repr(target_str)}")
-            print(f"Pred token:   {predicted_token_id} -> {repr(predicted_str)}")
-            print("-------------------")
+        # 5. Decode BOTH tokens to strings and strip whitespace/SentencePiece artifacts
+        predicted_str = tokenizer.decode([predicted_token_id]).strip()
+        target_str = tokenizer.decode([target_token_id]).strip()
 
-        # 6. Compare
-        if predicted_token_id == target_token_id:
+        # 6. Compare the decoded strings instead of the raw IDs
+        if predicted_str == target_str:
             correct_predictions += 1
 
     accuracy = correct_predictions / total_predictions if total_predictions > 0 else 0
-    print(f"\nFirst-Token Accuracy: {accuracy * 100:.2f}% ({correct_predictions}/{total_predictions})\n")
+    print(f"First-Token Accuracy: {accuracy * 100:.2f}% ({correct_predictions}/{total_predictions})\n")
     
     return accuracy
