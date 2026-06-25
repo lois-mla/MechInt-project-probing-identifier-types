@@ -298,7 +298,7 @@ def main():
     New datasets with json files 
     """
     data_def_json = "datasets/letters/mixed_definition.jsonl"
-    data_call_json = "datasets/letters/mixed_call.jsonl"
+    data_call_json = "datasets/letters/mixed_usage.jsonl"
 
     # for the baseline we need a separate save directory
     # probe_save_dir = "probes_stored/probes_final_baseline"
@@ -313,7 +313,7 @@ def main():
 
     # evaluate base accuracy for the mixed letters datafile and save the datasets with only correct examples
     evaluate_first_token_accuracy_jsonl(model, tokenizer, data_def_json, "datasets/letters/mixed_definition_only_correct.jsonl")
-    evaluate_first_token_accuracy_jsonl(model, tokenizer, data_call_json, "datasets/letters/mixed_call_only_correct.jsonl")
+    evaluate_first_token_accuracy_jsonl(model, tokenizer, data_call_json, "datasets/letters/mixed_usage_only_correct.jsonl")
 
 
     # #--- NEW: Evaluate Base Accuracy and save the datasets with only the correct examples---
