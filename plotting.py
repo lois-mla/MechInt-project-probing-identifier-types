@@ -1,5 +1,17 @@
+"""
+This file contains functions for making several kinds of plots relating to the probing and steering experiments.
+The file contains the following functions:
+- plot_delta_logprob: Plots the change in log probability for each layer.
+- plot_rank: Plots the change in rank for each layer.
+- plot_average_gap: Plots the average gap between different types of shifts for each layer.
+- plot_probe_accuracies: Plots the training and testing accuracies of the linear probes for each layer.
+"""
+
 import matplotlib.pyplot as plt
 import os
+import pandas as pd
+import numpy as np
+from matplotlib.colors import TwoSlopeNorm
 
 def plot_delta_logprob(metrics_df, title=None):
     layer_rows = metrics_df.drop(index="baseline")
@@ -151,3 +163,134 @@ def plot_probe_accuracies(
     plt.close()
 
     print(f"Saved plot to {save_path}")
+
+
+def load_matrix(file_paths, metric="prob_gap"):
+    layers = None
+    all_rows = []
+
+    for fp in file_paths:
+        df = pd.read_csv(fp)
+
+        if layers is None:
+            layers = df["layer"].values
+
+        all_rows.append(df[metric].values)
+
+    return layers, np.stack(all_rows, axis=0)  # (files, layers)
+def plot_grouped_heatmap(
+    file_paths,
+    id,
+    contr_id,
+    group_size=3,
+    metric="prob_gap",
+    save_path="figures/prob_gap_heatmap.png",
+    figsize=(10, 6),
+):
+
+    layers, matrix = load_matrix(file_paths, metric)
+
+    n_files, n_layers = matrix.shape
+
+    small_labels = ["letters", "tokenizer", "common"]
+    big_labels = ["letters", "tokenizer", "common", "correct"]
+
+    # ---- build matrix with gaps ----
+    new_matrix = []
+    new_y_labels = []
+
+    for i in range(n_files):
+        new_matrix.append(matrix[i])
+
+        # repeating within-group labels
+        new_y_labels.append(small_labels[i % group_size])
+
+        # gap between big groups
+        if (i + 1) % group_size == 0 and (i + 1) < n_files:
+            new_matrix.append(np.full(n_layers, np.nan))
+            new_y_labels.append("")
+
+    new_matrix = np.array(new_matrix)
+
+    # ---- plot ----
+    fig, ax = plt.subplots(figsize=figsize)
+
+    norm = TwoSlopeNorm(vmin=-0.1, vcenter=0.0, vmax=0.17)
+
+    im = ax.imshow(
+        new_matrix,
+        aspect="auto",
+        cmap="coolwarm",
+        norm=norm,
+        interpolation="nearest"
+    )
+
+    # ---- x axis ----
+    clean_layers = [str(l).replace("layer_", "") for l in layers]
+
+    ax.set_xticks(np.arange(n_layers))
+    ax.set_xticklabels(clean_layers, rotation=90, fontsize=6)
+
+    # ---- y axis (small labels only) ----
+    ax.set_yticks(np.arange(len(new_y_labels)))
+    ax.set_yticklabels(new_y_labels, fontsize=6)
+
+    ax.set_xlabel("Layers")
+    # ax.set_ylabel("Files")
+    ax.set_title(f"Full probability shift steering from {id} to {contr_id}")
+
+    # ---- BIG GROUP LABELS ----
+    for g in range(n_files // group_size):
+        center = g * (group_size + 0.7) + 1.5
+        ax.text(
+            -3.3,              # x-position (left of heatmap)
+            center,            # y-position
+            big_labels[g],
+            va="center",
+            ha="center",
+            rotation=90,       
+            fontsize=8,
+            fontweight="bold"
+        )
+
+    plt.colorbar(im, ax=ax, label="probability")
+
+    plt.tight_layout()
+
+    os.makedirs(os.path.dirname(save_path) or ".", exist_ok=True)
+    plt.savefig(save_path, dpi=300, bbox_inches="tight")
+    plt.close()
+
+    print(f"Saved heatmap to {save_path}")
+
+for id in range(3):
+    for contr_id in range(3):
+        if id == contr_id:
+            continue
+
+        base = f"id_{id}_contr_id_{contr_id}"
+
+        path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+        path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+        path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+        path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path10 = f"figures/corrected_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path11 = f"figures/corrected_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path12 = f"figures/corrected_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+        file_paths = [path1, path2, path3, path4, path5, path6, path7, path8, path9, path10, path11, path12]
+        save_path = f"figures/steering_heatmaps/{base}.png"
+        metric = "prob_contr"
+
+        plot_grouped_heatmap(file_paths, id, contr_id, metric=metric, group_size=3, save_path=save_path)

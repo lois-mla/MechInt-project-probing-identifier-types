@@ -1,0 +1,1500 @@
+{"text": "<FIM> = dict(x=1)\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -97.68\nx = value * 2", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 36\nx = result * 2", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Model(1)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -94\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\ndata['k'] = 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -54\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nvalue['k'] = 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Config(1)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 'result'\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 46\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 'state'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 59\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 28.039\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -99\nx = data + 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 45\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -90.28\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -74.231\nx = x + 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 28.049\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = -46\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\ny['k'] = 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Model(1)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -0.291\nx = result * 2", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 3\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\ndata.append(1)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Manager(1)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 21.981\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\ny.append(1)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Dataset(1)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 33.129\nx = y * 2", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -86\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 80.078\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -65\nx = x + 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -90.632\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = User(1)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 15.328\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 14.557\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 31.301\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nresult['k'] = 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nx.append(1)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 63.403\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -83\nx = state * 2", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -23.6\nx = result + 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 73.747\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\ny.append(1)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nx.append(1)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Dataset(1)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -56.931\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 19.083\nx = data + 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nx['k'] = 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -40\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 31.739\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -8\nx = data + 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nstate.append(1)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -52.873\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 19.818\nx = value * 2", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 24.321\nx = state + 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Manager(1)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 'state'\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 32\nx = value * 2", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nvalue.append(1)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -10.246\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 100\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nstate.append(1)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -44\nx = data + 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = User(1)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\ndata['k'] = 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -32.516\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nx.append(1)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 11\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -82.978\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 2\nx = data + 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -41.066\nx = y * 2", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 12.708\nx = result * 2", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nstate.append(1)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -79\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nvalue['k'] = 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 23\nx = result + 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nresult.append(1)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -8.377\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 36.731\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -49.61\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -88\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 2.379\nx = y * 2", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\ndata['k'] = 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -71.193\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 3.309\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 35\nx = state * 2", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -95.926\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Model(1)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 89\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 56\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = -41.84\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = User(1)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 59.834\nx = y * 2", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 4.36\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -97.806\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\ny['k'] = 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 49.946\nx = y * 2", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 'state'\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -17\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 51.066\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = 27\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -31\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nstate.append(1)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Config(1)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 51\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 18.568\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -96\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -69\nx = value * 2", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 7\nx = state * 2", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 40\nx = state + 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Manager(1)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -8.415\nx = x + 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = User(1)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 'value'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -39\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 10\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 'state'\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nvalue.append(1)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 86.14\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Config(1)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -8\nx = x * 2", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 7.509\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = -67\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Model(1)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 38.148\nx = x + 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 73\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\ndata.append(1)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = -100\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -9.147\nx = x + 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\ny.append(1)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nx['k'] = 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Dataset(1)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nresult.append(1)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 72.457\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nx.append(1)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nx = result", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 30.267\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nvalue['k'] = 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nvalue['k'] = 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -8\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nvalue['k'] = 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 35\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 4.877\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nx['k'] = 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 46\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -23.411\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -0.16\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 35.823\nx = result + 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -63.947\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = User(1)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 4.853\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 'result'\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = -5.648\nx = x * 2", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -16\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Dataset(1)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 36\nx = x + 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Manager(1)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 98.204\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nx['k'] = 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = 76\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 12.446\nx = value * 2", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -90\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 'y'\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 54\nx = result * 2", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nstate.append(1)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = 82.438\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif state:\n    pass", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -66\nx = state + 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = 'result'\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 99\nx = result + 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = run(1)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 'result'\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 97\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Manager(1)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -100\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 36\nx = result + 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Manager(1)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = -85.13\nx = value * 2", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = -81.976\nx = data * 2", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\ny.append(1)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 'data'\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn run(x)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = -54.304\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = -41\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nx['k'] = 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -33.402\nx = x * 2", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 'result'\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nstate.append(1)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nstate.append(1)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Dataset):\n    pass", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = process()", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nstate['k'] = 1", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nfor _ in result:\n    pass", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(parse(1))", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 'state'\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = run()", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = User()", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\ndata['k'] = 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = data", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = 64.53\nx = data + 1", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in y:\n    pass", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = True\nif x:\n    pass", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "<FIM> = list([1, 2])\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = -79\nx = result * 2", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Config(1)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = -53\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = False\nif value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = compute()", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 23\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in data:\n    pass", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "<FIM> = 96.746\nx = y + 1", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Config):\n    pass", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(User):\n    pass", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = -62.816\nx = value + 1", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nlen_value = len(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn load(x)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nclass Child(Manager):\n    pass", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = -82\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = 'x'\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, User)", "label": 2, "target": "User", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nclass Child(Model):\n    pass", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "<FIM> = 'result'\nlen_value = len(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = x", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\ninstance = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nx['k'] = 1", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = load(1)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nprint(load(1))", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "<FIM> = -3\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = -57.555\nprint(y)", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "<FIM> = tuple([1, 2])\nfor _ in value:\n    pass", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = 0.668\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nreturn process(x)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(result)", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = 52.971\nprint(data)", "label": 0, "target": "data", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nresult = parse(1)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "<FIM> = -96\nx = result + 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(process(1))", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = load(a, b)", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    pass\nobj = Dataset()", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self):\n        pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = parse(a, b)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = load()", "label": 1, "target": "load", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(value)", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x * 2\nreturn parse(x)", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Model)", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Manager(1)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "<FIM> = True\nx = y", "label": 0, "target": "y", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nreturn compute(x)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = False\nprint(state)", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Manager()", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Model()", "label": 2, "target": "Model", "mask_mode": "definition"}
+{"text": "def <FIM>():\n    return 0\nresult = parse()", "label": 1, "target": "parse", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Config)", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nisinstance(obj, Manager)", "label": 2, "target": "Manager", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = compute(a, b)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = False\nx = state", "label": 0, "target": "state", "mask_mode": "definition"}
+{"text": "<FIM> = True\nprint(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = 2\nx = value", "label": 0, "target": "value", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(compute(1))", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nlen_value = len(x)", "label": 0, "target": "x", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\nresult['k'] = 1", "label": 0, "target": "result", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\nisinstance(obj, Dataset)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = compute(1)", "label": 1, "target": "compute", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x\nresult = process(1)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x + y\nresult = run(a, b)", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "def <FIM>(x, y):\n    return x * y\nresult = process(a, b)", "label": 1, "target": "process", "mask_mode": "definition"}
+{"text": "class <FIM>:\n    def __init__(self, x):\n        self.x = x\nobj = Dataset(1)", "label": 2, "target": "Dataset", "mask_mode": "definition"}
+{"text": "class <FIM>(Exception):\n    pass\nobj = Config()", "label": 2, "target": "Config", "mask_mode": "definition"}
+{"text": "def <FIM>(x):\n    return x + 1\nprint(run(1))", "label": 1, "target": "run", "mask_mode": "definition"}
+{"text": "<FIM> = dict(x=1)\ndata['k'] = 1", "label": 0, "target": "data", "mask_mode": "definition"}
