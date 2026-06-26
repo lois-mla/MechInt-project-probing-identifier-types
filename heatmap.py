@@ -12,10 +12,18 @@ print("Status: Imports successful.")
 # ==========================================
 # PLOTTING SCRIPT
 # ==========================================
-
+'''
 file_paths = {
         "letters mixed": "accuracies/acc_letters_mixed/acc_letters_mixed.csv",
         "letters not mixed": "accuracies/accuracies_letters_not_mixed/accuracies_letters_not_mixed.csv" 
+        }
+'''
+
+file_paths = {
+        "letters": "accuracies_letters/accuracies_letters.csv",
+        "random tokens": "accuracies_tokenizer/accuracies_tokenizer.csv",
+        "common names": "accuracies/accuracies_common/accuracies_common.csv",
+        "letters only correct": "accuracies_letter_mixed_only_correct/accuracies_letter_mixed_only_correct.csv"
         }
 
 num_plots = len(file_paths)
