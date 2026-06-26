@@ -332,7 +332,7 @@ def main():
     # model = randomize_model_weights(model) # use this line exacfor the baseline!!
     device = "cuda"
     n_layers = model.cfg.n_layers
-    resid_type = "mlp_out" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post
+    resid_type = "mlp.hook_post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out
 
     for identifier_mode in ['letters', 'common', 'tokenizer']:
         data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
