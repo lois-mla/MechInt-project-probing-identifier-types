@@ -1,106 +1,112 @@
+import matplotlib
+matplotlib.use('Agg') 
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-
+print("Status: Imports successful.")
 
 # ==========================================
-# 2. PLOTTING SCRIPT
+# PLOTTING SCRIPT
 # ==========================================
-
-# Dictionary mapping the label you want in the box to the CSV file path
-# Update these paths to point to your actual generated CSV files
+'''
 file_paths = {
-    'letters mix': 'accuracies/acc_letters_mixed/acc_letters_mixed.csv',
-}
+        "letters mixed": "accuracies/acc_letters_mixed/acc_letters_mixed.csv",
+        "letters not mixed": "accuracies/accuracies_letters_not_mixed/accuracies_letters_not_mixed.csv" 
+        }
+'''
 
-
+file_paths = {
+        "letters": "accuracies/accuracies_letters/accuracies_letters.csv",
+        "random tokens": "accuracies/accuracies_tokenizer/accuracies_tokenizer.csv",
+        "common names": "accuracies/accuracies_common/accuracies_common.csv",
+        "letters only correct": "accuracies/accuracies_letter_mixed_only_correct/accuracies_letter_mixed_only_correct.csv"
+        }
 
 num_plots = len(file_paths)
 
-# Set up the figure and axes. 
-# gridspec_kw is used to control the vertical space between heatmaps
+# TWEAK 1: Reduced the height multiplier (from 1.8 to 0.8) to make stripes narrower
 fig, axes = plt.subplots(
     nrows=num_plots, 
     ncols=1, 
-    figsize=(8, 1.5 * num_plots), # Scales figure height based on number of inputs
+    figsize=(10, 0.8 * num_plots),
     sharex=True, 
-    gridspec_kw={'hspace': 0.4}
+    gridspec_kw={'hspace': 0.4} 
 )
 
-# Add a dedicated axis on the far right for the shared colorbar
-# [left, bottom, width, height]
-cbar_ax = fig.add_axes([0.92, 0.15, 0.03, 0.7]) 
+cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7]) 
 
 for i, (label_box, file_path) in enumerate(file_paths.items()):
+    print(f"Status: Processing '{label_box}' from {file_path}...")
     ax = axes[i]
     
-    # Read the CSV. Assuming the first column contains the 'Train'/'Test' indices
+    # 1. READ THE CSV
     df = pd.read_csv(file_path, index_col=0)
+    
+    # 2. ROTATE THE DATA
+    df = df.T
+    
+    # TWEAK 2: Force the X-axis columns to be sequential layer numbers (0, 1, 2...)
+    df.columns = range(len(df.columns))
+    
+    # 3. SCALE THE DATA
+    if df.max().max() <= 1.0:
+        df = df * 100
     
     # Draw the heatmap
     sns.heatmap(
         df, 
-        ax=ax, 
-        cmap="Greens",     # Matches the green gradient in the image
-        vmin=0,            # Force scale to start at 0
-        vmax=100,          # Force scale to end at 100
-        cbar=(i == 0),     # Only attach colorbar to the first loop...
-        cbar_ax=cbar_ax if i == 0 else None, # ...and place it in the shared axis
-        linewidths=0       # No gridlines between cells
+        ax=ax,             
+        cmap="vlag",     
+        vmin=0,            
+        # vmax=100,          
+        cbar=(i == 0),     
+        cbar_ax=cbar_ax if i == 0 else None,
+        linewidths=0,
+        cbar_kws={'ticks': [0, 20, 40, 60, 80, 100]} 
     )
     
-    # -------------------------
     # Styling the Y-axis
-    # -------------------------
-    ax.set_ylabel('') # Remove default ylabel
-    ax.tick_params(axis='y', left=True, rotation=0, labelsize=10)
+    ax.set_ylabel('') 
+    # TWEAK 3: Hide the leftover 'test' column name so the left side is completely clean
+    ax.tick_params(axis='y', left=False, labelleft=False)
     
-    # -------------------------
     # Adding the Left Box Label
-    # -------------------------
-    # Adjust 'x' (-0.2) if the box overlaps with your y-axis labels
-    # y=0.75 aligns it roughly with the top row (Train)
+    # Nudged x to -0.1 so it sits nicely next to the narrower heatmap
     ax.text(
-        x=-0.22, 
-        y=0.25,  
+        x=-0.1, 
+        y=0.5,   
         s=label_box, 
         transform=ax.transAxes,
-        fontsize=10,
+        fontsize=11,
         ha='right', 
         va='center',
-        bbox=dict(facecolor='lightgrey', edgecolor='black', boxstyle='square,pad=0.3', alpha=0.5)
+        bbox=dict(facecolor='#f4f4f4', edgecolor='grey', boxstyle='square,pad=0.4')
     )
 
-    # -------------------------
     # Styling the X-axis
-    # -------------------------
     ax.set_xlabel('')
     if i == num_plots - 1:
-        # Only show bottom x-axis ticks/labels for the last plot
-        ax.tick_params(axis='x', bottom=False, top=False, labelbottom=True, rotation=0, labelsize=10)
+        ax.tick_params(axis='x', bottom=False, labelbottom=True, rotation=0, labelsize=11)
     else:
-        # Hide x-axis completely for upper plots
-        ax.tick_params(axis='x', bottom=False, top=False, labelbottom=False)
+        ax.tick_params(axis='x', bottom=False, labelbottom=False)
 
-# -------------------------
-# Formatting the Colorbar
-# -------------------------
-# Set font size for the colorbar and add tick marks pointing outward
-cbar_ax.tick_params(labelsize=12, right=True, direction='out')
+# Styling the Colorbar
+cbar_ax.tick_params(labelsize=12, right=True, length=5, direction='out')
+cbar_ax.spines['outline'].set_visible(False) 
 
-# Optional: Add a master figure title
-# plt.suptitle("Linear Probe Accuracies", y=1.05, fontsize=14)
+print("Status: Plot generated, attempting to save...")
 
-plt.show()
+# ==========================================
+# SAVE AND SHOW
+# ==========================================
 
-# Cleanup mock files (optional)
-for cat in mock_categories:
-    if os.path.exists(f'mock_{cat}.csv'):
+output_dir = "accuracies"
+os.makedirs(output_dir, exist_ok=True)
+save_path = os.path.join(output_dir, "accuracies_heatmap.png")
 
-        os.remove(f'mock_{cat}.csv')
-
-        os.remove(f'mock_{cat}.csv')
-
+plt.savefig(save_path, dpi=300, bbox_inches='tight')
+print(f"SUCCESS! Heatmap saved as '{save_path}'")
