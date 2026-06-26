@@ -297,18 +297,18 @@ def main():
     # data_def = "training_data/def_FIM_data_final_only_correct.txt"
     # data_call = "training_data/call_FIM_data_final_only_correct.txt"
     # probe_save_dir = "probes_stored/probes_final_only_correct"
-    
+
     identifier_mode = "letters"
     # identifier_mode = "common"
     # identifier_mode = "tokenizer"
-    part = "FULL"
+    # part = "FULL"
 
     data_def = f"datasets/final/{identifier_mode}/mixed_definition_only_correct.jsonl"
     data_call = f"datasets/final/{identifier_mode}/mixed_usage_only_correct.jsonl"
 
     # for the baseline we need a separate save directory
     # probe_save_dir = "probes_stored/probes_final_baseline"
-    #probe_save_dir = f"probes_stored/{identifier_mode}"
+    # probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
@@ -322,9 +322,51 @@ def main():
 
     probe_save_dir = f"probes_stored/probes_{identifier_mode}_only_correct_baseline"
     dataset_specifier = "letter_mixed_only_correct_baseline"
-    dataset_specifier_fullname = "letter mixed only correct_baseline"
+    dataset_specifier_fullname = "letter mixed only correct baseline"
 
     model, tokenizer = load_model()
+    model = randomize_model_weights(model) # use this line for the baseline!!
+    device = "cuda"
+    n_layers = model.cfg.n_layers
+
+    # for identifier_mode in ['letters', 'common', 'tokenizer']:
+    #     data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
+    #     data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
+
+    #     # for the baseline we need a separate save directory
+    #     # probe_save_dir = "probes_stored/probes_final_baseline"
+    #     probe_save_dir = f"probes_stored/{identifier_mode}_baseline"
+    #     dataset_specifier = f"{identifier_mode}_baseline"
+    #     dataset_specifier_fullname = f"{identifier_mode}_baseline"
+
+    #     prompts, labels = load_dataset(data_def, data_call)
+
+    #     extractor = ResidualActivationExtractor(
+    #         model=model,
+    #         tokenizer=tokenizer,
+    #         device=device,
+    #         batch_size=8,
+    #     )
+
+
+    #     results = probe_all_layers(
+    #         extractor=extractor,
+    #         prompts=prompts,
+    #         labels=labels,
+    #         n_layers=n_layers,
+    #         save_dir=probe_save_dir
+            
+    #     )
+
+    #     # print best layer
+    #     best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    #     print("Best layer:", best_layer)
+    #     print("Test accuracy:", results[best_layer]["test_acc"])
+
+    #     # save accuracies
+    #     save_accuracies_to_csv(results, dataset_specifier)
+
+
     # model = randomize_model_weights(model) # use this line for the baseline only!!!!!!!
 
     # evaluate base accuracy for the mixed letters datafile and save the datasets with only correct examples
@@ -352,9 +394,10 @@ def main():
     # data_call = "datasets/letters/mixed_call_only_correct.jsonl"
     # probe_save_dir = "probes_stored/probes_letter_mixed_only_correct"
 
-    model = randomize_model_weights(model) # use this line for the baseline!!
+
+
+    # # model = randomize_model_weights(model) # use this line for the baseline!!
     prompts, labels = load_dataset(data_def, data_call)
-    device = "cuda"
 
     extractor = ResidualActivationExtractor(
         model=model,
@@ -363,7 +406,6 @@ def main():
         batch_size=8,
     )
 
-    n_layers = model.cfg.n_layers
 
     results = probe_all_layers(
         extractor=extractor,
@@ -382,16 +424,16 @@ def main():
     # save accuracies
     save_accuracies_to_csv(results, dataset_specifier)
     
-    # plot the probe accuracies
-    save_dir = "figures/probe_accuracy"
-    filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
-    plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    # # plot the probe accuracies
+    # save_dir = "figures/probe_accuracy"
+    # filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
+    # plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
     # print("All results:", results)
 
-    # use the first path for the realistic name dataset and the second path for both letter-name datasets
-    # steering_path = "training_data/steering_data_300_realistic.txt"
-    # steering_path = "training_data/steering_data_300_final.txt"
+    # # use the first path for the realistic name dataset and the second path for both letter-name datasets
+    # # steering_path = "training_data/steering_data_300_realistic.txt"
+    # # steering_path = "training_data/steering_data_300_final.txt"
 
     # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
     # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
