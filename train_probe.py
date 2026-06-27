@@ -496,8 +496,9 @@ def main():
         plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
         # ---------- cross - steering -----------------------
-        # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
-        # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+        steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+        steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+        steering_path = None
 
         for mode in ["letters", "common", "tokenizer"]:
                 
@@ -509,7 +510,10 @@ def main():
 
             alphas = [100.0]
             for alpha in alphas:
-                steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
+                if steering_path is None:
+                    steer_prompts_from_file_old(steering_path_def, steering_path_use, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
+                else:
+                    steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
 
 
 
@@ -577,7 +581,7 @@ def main():
     
     # print("All results:", results)
     steering_path = "training_data/steering_data_new.txt"
-    steer_prompts_from_file(steering_path, model, tokenizer, results)
+    steer_prompts_from_file_new(steering_path, model, tokenizer, results)
 
 
 
