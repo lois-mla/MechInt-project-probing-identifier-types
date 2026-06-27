@@ -34,7 +34,7 @@ class ResidualActivationExtractor:
         self,
         prompts: List[str],
         layer: int,
-        resid_type: str = "resid_mid",
+        resid_type: str, # NOTE: used to say resid_mid by default!!!
     ) -> torch.Tensor:
         """
         Returns: [N, d_model] tensor of activations at <MID>.
