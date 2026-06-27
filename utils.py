@@ -15,6 +15,7 @@ from typing import List, Dict
 from linearprobe_new import LinearProbe
 import os
 import json
+import gc
 
 model_id = "codellama/CodeLlama-7b-hf"
 
@@ -346,6 +347,10 @@ def randomize_model_weights(model):
     return model
 
 def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
+    # Clear out any residual memory from previous runs/cells
+    gc.collect()
+    torch.cuda.empty_cache()
+
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     tokenizer.pad_token = tokenizer.eos_token
 
@@ -358,7 +363,9 @@ def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     # 2. Force the device in the config
     cfg.device = device
 
-    # 3. Initialize a blank model with randomized weights based on that config
+    # 3. Initialize blank model (weights will be randomly initialized)
+    # Using 'code_llama' tokenizers can sometimes conflict during initialization,
+    # so we pass the config and tokenizer cleanly.
     model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
 
     return model, tokenizer
