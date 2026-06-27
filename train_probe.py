@@ -280,10 +280,34 @@ def main():
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final" 
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    # probe_save_dir = "probes_stored/probes_final"
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
+    probe_save_dir = "probes_stored/probes_no_cont"
+    data_def = "training_data/def_FIM_data.txt"
+    data_call = "training_data/call_FIM_data.txt"
+    # probe_save_dir = "probes_stored/probes_realistic"
+
+    # data_def = "datasets/letters/mixed_definition.jsonl"
+    # data_call = "datasets/letters/mixed_usage.jsonl"
+    # probe_save_dir = "probes_stored/probes_new_data_set"
+
+    # for the baseline we need a separate save directory
+    #  probe_save_dir = "probes_stored/probes_final_baseline_fixed"
+
+    # specify the name of the chosen dataset for saving the file and plot titles
+    # dataset_specifier = "cont_baseline"
+    # dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = "letters_not_mixed"
+    dataset_specifier_fullname = "letters_not_mixed"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = "probes_stored/probes_final" 
     # data_def = "training_data/def_FIM_data_nocont.txt"
     # data_call = "training_data/call_FIM_data_nocont.txt"
     # data_def = "training_data/def_FIM_data_final.txt"
@@ -453,10 +477,47 @@ def main():
     # # save accuracies
     # save_accuracies_to_csv(results, dataset_specifier)
     
-    # # plot the probe accuracies
-    # save_dir = "figures/probe_accuracy"
-    # filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
-    # plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    # plot the probe accuracies
+    save_dir = "figures/probe_accuracy"
+    filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
+    plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    
+    # print("All results:", results)
+    steering_path = "training_data/steering_data_new.txt"
+    steer_prompts_from_file(steering_path, model, tokenizer, results)
+
+
+
+
+
+
+    # steering:
+
+#     prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+#     alpha = 10.0
+
+#     df = compare_steering(
+#     model=model,
+#     tokenizer=tokenizer,
+#     results=results,
+#     prompt=prompt,
+#     id=0,
+#     contrastive_id=1,
+#     alpha=alpha,
+#     resid_type="mlp_out",
+#     k=20,
+# )
+
+#     print(prompt)
+#     print("alpha: ", alpha)
+    # pd.set_option('display.max_columns', None)
+#     print(df) 
+
+    # # print best layer
+    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    # print("Best layer:", best_layer)
+    # print("Test accuracy:", results[best_layer]["test_acc"])
 
     # print("All results:", results)
 
