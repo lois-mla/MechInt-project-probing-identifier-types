@@ -215,7 +215,7 @@ def plot_grouped_heatmap(
     # ---- plot ----
     fig, ax = plt.subplots(figsize=figsize)
 
-    norm = TwoSlopeNorm(vmin=-0.1, vcenter=0.0, vmax=0.17)
+    norm = TwoSlopeNorm(vmin=-0.1, vcenter=0.0, vmax=0.10)
 
     im = ax.imshow(
         new_matrix,
@@ -292,5 +292,6 @@ for id in range(3):
         file_paths = [path1, path2, path3, path4, path5, path6, path7, path8, path9, path10, path11, path12]
         save_path = f"figures/steering_heatmaps/{base}.png"
         metric = "prob_contr"
+        metric = "prob_gap"
 
         plot_grouped_heatmap(file_paths, id, contr_id, metric=metric, group_size=3, save_path=save_path)
