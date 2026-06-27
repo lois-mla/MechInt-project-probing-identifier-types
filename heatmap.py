@@ -20,10 +20,10 @@ file_paths = {
 '''
 
 file_paths = {
-        "letters": "accuracies_letters/accuracies_letters.csv",
-        "random tokens": "accuracies_tokenizer/accuracies_tokenizer.csv",
+        "letters": "accuracies/accuracies_letters/accuracies_letters.csv",
+        "random tokens": "accuracies/accuracies_tokenizer/accuracies_tokenizer.csv",
         "common names": "accuracies/accuracies_common/accuracies_common.csv",
-        "letters only correct": "accuracies_letter_mixed_only_correct/accuracies_letter_mixed_only_correct.csv"
+        "letters only correct": "accuracies/accuracies_letter_mixed_only_correct/accuracies_letter_mixed_only_correct.csv"
         }
 
 num_plots = len(file_paths)

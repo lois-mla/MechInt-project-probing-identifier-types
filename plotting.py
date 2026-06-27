@@ -282,12 +282,12 @@ for id in range(3):
         path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
         path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path10 = f"figures/corrected_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path11 = f"figures/corrected_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path12 = f"figures/corrected_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
         file_paths = [path1, path2, path3, path4, path5, path6, path7, path8, path9, path10, path11, path12]
         save_path = f"figures/steering_heatmaps/{base}.png"
