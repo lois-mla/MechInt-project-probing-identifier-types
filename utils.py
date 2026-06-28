@@ -363,6 +363,10 @@ def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     # so we pass the config and tokenizer cleanly.
     model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
 
+    # Sanity check: Print the mean and standard deviation of the embedding matrix
+    print("Embedding Weights Mean:", model.W_E.mean().item())
+    print("Embedding Weights Std:", model.W_E.std().item())
+
     return model, tokenizer
 
 def load_dataset(data_def, data_call, part="FULL"):
