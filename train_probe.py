@@ -503,7 +503,7 @@ def main():
         filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}_{resid_type}.png"
         plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
-        steering_path = "training_data/steering_data_new.txt"
+        steering_path = "training_data/steering_data_300_final.txt"
         alpha = 100.0
         steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
