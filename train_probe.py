@@ -284,8 +284,8 @@ def main():
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final" 
-    # data_def = "training_data/def_FIM_data_nocont.txt"
-    # data_call = "training_data/call_FIM_data_nocont.txt"
+    data_def = "training_data/def_FIM_data_nocont.txt"
+    data_call = "training_data/call_FIM_data_nocont.txt"
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     #probe_save_dir = "probes_stored/probes_final" 
@@ -315,8 +315,8 @@ def main():
     # # probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # # specify the name of the chosen dataset for saving the file and plot titles
-    dataset_specifier = "cont_baseline_resid_post"
-    dataset_specifier_fullname = "contrastive dataset baseline residual post"
+    dataset_specifier = "nocont_baseline_resid_post"
+    dataset_specifier_fullname = "non-contrastive dataset baseline residual post"
     # # # dataset_specifier = "cont_only_correct"
     # # # dataset_specifier_fullname = "contrastive dataset only correct"
     # # # dataset_specifier = "cont_baseline"
@@ -334,8 +334,8 @@ def main():
     n_layers = model.cfg.n_layers
     resid_type = "resid_post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out
 
-    data_def = "training_data/def_FIM_data_final.txt"
-    data_call = "training_data/call_FIM_data_final.txt"
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
     probe_save_dir = f"probes_stored/probes_{dataset_specifier}_{resid_type}_baseline"
 
     # for identifier_mode in ['letters', 'common', 'tokenizer']:
