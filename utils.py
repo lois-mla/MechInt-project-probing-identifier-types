@@ -38,185 +38,185 @@ model = AutoModelForCausalLM.from_pretrained(
 #     Reads a file where:
 #       - datapoints are separated by '#####'
 #       - each datapoint contains one 'FIM' and one '>>>'
-# def read_fim_dataset(path: str) -> List[Dict[str, str]]:
-#     """
-#     Reads a file where:
-#       - datapoints are separated by '#####'
-#       - each datapoint contains one 'FIM' and one '>>>'
-
-#     Returns a list of dicts:
-#         {   "identifier_type": int
-#             "prefix":  '',
-#             "suffix":  '',
-#             "correct": ''
-#         }
-#     """
-#     text = Path(path).read_text(encoding="utf-8")
-#     blocks = text.split("#####")
-
-#     examples = []
-
-#     for block in blocks:
-#         block = block.strip()
-#         if not block:
-#             continue
-
-#         if block.count("FIM") != 1:
-#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
-
-#         if block.count(">>>") != 1:
-#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
-
-#         # Split at FIM
-#         before_fim, rest = block.split("FIM", 1)
-
-#         # Split rest at >>>
-#         middle, after_arrow = rest.split("\n>>>", 1)
-
-#         correct, ID = after_arrow.split("\nID:")
-
-#         prefix = before_fim
-#         suffix = middle
-#         correct = after_arrow
-
-#         examples.append({
-#             "identifier_type": int(ID),
-#             "prefix": prefix,
-#             "suffix": suffix,
-#             "correct": correct})
-
-#     return examples
-
-def read_fim_dataset(path: str) -> List[Dict]:
+def read_fim_dataset(path: str) -> List[Dict[str, str]]:
     """
-    Reads the new JSONL FIM dataset format:
+    Reads a file where:
+      - datapoints are separated by '#####'
+      - each datapoint contains one 'FIM' and one '>>>'
 
-    Each line is:
-        {
-            "text": "... <FIM> ...",
-            "label": int,
-            "target": str,
-            "mask_mode": "definition" | "usage",
-            "mixed": optional bool
-        }
-
-    Returns:
-        List of dicts with:
-        {
-            "identifier_type": int,
-            "prefix": str,
-            "suffix": str,
-            "correct": str,
-            "mask_mode": str
+    Returns a list of dicts:
+        {   "identifier_type": int
+            "prefix":  '',
+            "suffix":  '',
+            "correct": ''
         }
     """
-#     Returns a list of dicts:
-#         {   "identifier_type": int
-#             "prefix":  '',
-#             "suffix":  '',
-#             "correct": ''
-#         }
-#     """
-#     text = Path(path).read_text(encoding="utf-8")
-#     blocks = text.split("#####")
-
-#     examples = []
-
-#     for block in blocks:
-#         block = block.strip()
-#         if not block:
-#             continue
-
-#         if block.count("FIM") != 1:
-#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
-
-#         if block.count(">>>") != 1:
-#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
-
-#         # Split at FIM
-#         before_fim, rest = block.split("FIM", 1)
-
-#         # Split rest at >>>
-#         middle, after_arrow = rest.split("\n>>>", 1)
-
-#         correct, ID = after_arrow.split("\nID:")
-
-#         prefix = before_fim
-#         suffix = middle
-#         correct = after_arrow
-
-#         examples.append({
-#             "identifier_type": int(ID),
-#             "prefix": prefix,
-#             "suffix": suffix,
-#             "correct": correct})
-
-#     return examples
-
-def read_fim_dataset(path: str) -> List[Dict]:
-    """
-    Reads the new JSONL FIM dataset format:
-
-    Each line is:
-        {
-            "text": "... <FIM> ...",
-            "label": int,
-            "target": str,
-            "mask_mode": "definition" | "usage",
-            "mixed": optional bool
-        }
-
-    Returns:
-        List of dicts with:
-        {
-            "identifier_type": int,
-            "prefix": str,
-            "suffix": str,
-            "correct": str,
-            "mask_mode": str
-        }
-    """
+    text = Path(path).read_text(encoding="utf-8")
+    blocks = text.split("#####")
 
     examples = []
 
-    with Path(path).open("r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
+    for block in blocks:
+        block = block.strip()
+        if not block:
+            continue
 
-            ex = json.loads(line)
+        if block.count("FIM") != 1:
+            raise ValueError("Block must contain exactly one 'FIM':\n" + block)
 
-            text = ex["text"]
-            label = ex["label"]
-            target = ex["target"]
-            mask_mode = ex.get("mask_mode", "unknown")
-            variable = ex.get("0")
-            function = ex.get("1")
-            class_ = ex.get("2")
+        if block.count(">>>") != 1:
+            raise ValueError("Block must contain exactly one '>>>' :\n" + block)
 
-            if "<FIM>" not in text:
-                raise ValueError(f"Missing <FIM> in example:\n{text}")
+        # Split at FIM
+        before_fim, rest = block.split("FIM", 1)
 
-            if text.count("<FIM>") != 1:
-                raise ValueError(f"More than one <FIM> in example:\n{text}")
+        # Split rest at >>>
+        middle, after_arrow = rest.split("\n>>>", 1)
 
-            prefix, suffix = text.split("<FIM>")
+        correct, ID = after_arrow.split("\nID:")
 
-            examples.append({
-                "identifier_type": int(label),
-                "prefix": prefix,
-                "suffix": suffix,
-                "correct": target,
-                "mask_mode": mask_mode,
-                "0": variable,
-                "1": function,
-                "2": class_,
-            })
+        prefix = before_fim
+        suffix = middle
+        correct = after_arrow
 
-            # print(examples[0])
+        examples.append({
+            "identifier_type": int(ID),
+            "prefix": prefix,
+            "suffix": suffix,
+            "correct": correct})
 
     return examples
+
+# def read_fim_dataset(path: str) -> List[Dict]:
+#     """
+#     Reads the new JSONL FIM dataset format:
+
+#     Each line is:
+#         {
+#             "text": "... <FIM> ...",
+#             "label": int,
+#             "target": str,
+#             "mask_mode": "definition" | "usage",
+#             "mixed": optional bool
+#         }
+
+#     Returns:
+#         List of dicts with:
+#         {
+#             "identifier_type": int,
+#             "prefix": str,
+#             "suffix": str,
+#             "correct": str,
+#             "mask_mode": str
+#         }
+#     """
+#     Returns a list of dicts:
+#         {   "identifier_type": int
+#             "prefix":  '',
+#             "suffix":  '',
+#             "correct": ''
+#         }
+#     """
+#     text = Path(path).read_text(encoding="utf-8")
+#     blocks = text.split("#####")
+
+#     examples = []
+
+#     for block in blocks:
+#         block = block.strip()
+#         if not block:
+#             continue
+
+#         if block.count("FIM") != 1:
+#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
+
+#         if block.count(">>>") != 1:
+#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
+
+#         # Split at FIM
+#         before_fim, rest = block.split("FIM", 1)
+
+#         # Split rest at >>>
+#         middle, after_arrow = rest.split("\n>>>", 1)
+
+#         correct, ID = after_arrow.split("\nID:")
+
+#         prefix = before_fim
+#         suffix = middle
+#         correct = after_arrow
+
+#         examples.append({
+#             "identifier_type": int(ID),
+#             "prefix": prefix,
+#             "suffix": suffix,
+#             "correct": correct})
+
+#     return examples
+
+# def read_fim_dataset(path: str) -> List[Dict]:
+#     """
+#     Reads the new JSONL FIM dataset format:
+
+#     Each line is:
+#         {
+#             "text": "... <FIM> ...",
+#             "label": int,
+#             "target": str,
+#             "mask_mode": "definition" | "usage",
+#             "mixed": optional bool
+#         }
+
+#     Returns:
+#         List of dicts with:
+#         {
+#             "identifier_type": int,
+#             "prefix": str,
+#             "suffix": str,
+#             "correct": str,
+#             "mask_mode": str
+#         }
+#     """
+
+#     examples = []
+
+#     with Path(path).open("r", encoding="utf-8") as f:
+#         for line in f:
+#             line = line.strip()
+#             if not line:
+#                 continue
+
+#             ex = json.loads(line)
+
+#             text = ex["text"]
+#             label = ex["label"]
+#             target = ex["target"]
+#             mask_mode = ex.get("mask_mode", "unknown")
+#             variable = ex.get("0")
+#             function = ex.get("1")
+#             class_ = ex.get("2")
+
+#             if "<FIM>" not in text:
+#                 raise ValueError(f"Missing <FIM> in example:\n{text}")
+
+#             if text.count("<FIM>") != 1:
+#                 raise ValueError(f"More than one <FIM> in example:\n{text}")
+
+#             prefix, suffix = text.split("<FIM>")
+
+#             examples.append({
+#                 "identifier_type": int(label),
+#                 "prefix": prefix,
+#                 "suffix": suffix,
+#                 "correct": target,
+#                 "mask_mode": mask_mode,
+#                 "0": variable,
+#                 "1": function,
+#                 "2": class_,
+#             })
+
+#             # print(examples[0])
+
+#     return examples
 
 
 def strip_string(s: str, to_strip: str) -> str:
