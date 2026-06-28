@@ -17,15 +17,15 @@ import os
 import json
 import gc
 
-model_id = "codellama/CodeLlama-7b-hf"
+# model_id = "codellama/CodeLlama-7b-hf"
 
-# Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    device_map="auto",
-    # torch_dtype="float16"
-)
+# # Load tokenizer and model
+# tokenizer = AutoTokenizer.from_pretrained(model_id)
+# model = AutoModelForCausalLM.from_pretrained(
+#     model_id,
+#     device_map="auto",
+#     # torch_dtype="float16"
+# )
 
 # print(tokenizer.special_tokens_map)
 # print(tokenizer.additional_special_tokens)
@@ -417,29 +417,29 @@ def train_test_split(
     )
 
     
-def fill_in_middle(file):
+# def fill_in_middle(file):
 
-    data = read_fim_dataset(file)
+#     data = read_fim_dataset(file)
 
-    for item in data:
-        prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+#     for item in data:
+#         prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
         
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+#         inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-        # Generate the missing middle
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=10,
-            do_sample=False,
-            # early_stopping=False,
-            # eos_token_id=None,   # allow generation past EOS prediction
-            # temperature=0.7,
-        )
+#         # Generate the missing middle
+#         outputs = model.generate(
+#             **inputs,
+#             max_new_tokens=10,
+#             do_sample=False,
+#             # early_stopping=False,
+#             # eos_token_id=None,   # allow generation past EOS prediction
+#             # temperature=0.7,
+#         )
 
-        print("begin")
-        # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-        print(tokenizer.decode(outputs[0]))
-        print("end")
+#         print("begin")
+#         # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+#         print(tokenizer.decode(outputs[0]))
+#         print("end")
 
 
 def save_probe(probe, path, d_model, num_classes):
