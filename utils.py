@@ -358,12 +358,28 @@ def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     # 2. Force the device in the config
     cfg.device = device
 
-    # 3. Initialize blank model (weights will be randomly initialized)
-    # Using 'code_llama' tokenizers can sometimes conflict during initialization,
-    # so we pass the config and tokenizer cleanly.
+    # 3. Initialize blank model (tensors are allocated, but often zeroed)
     model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
 
-    # Sanity check: Print the mean and standard deviation of the embedding matrix
+    # 4. Explicitly randomize the weights
+    with torch.no_grad():
+        count = 0
+        for name, param in model.named_parameters():
+            # Catch standard TransformerLens weight matrices
+            if "W_" in name or "weight" in name:
+                torch.nn.init.normal_(param, mean=0.0, std=0.02)
+                count += 1
+            # Catch biases and zero them out
+            elif "b_" in name or "bias" in name:
+                torch.nn.init.zeros_(param)
+                count += 1
+            # Catch LayerNorm scales
+            elif name.endswith(".w") or "scale" in name:
+                torch.nn.init.ones_(param)
+                
+    print(f"Randomized {count} weight matrices.")
+
+    # Sanity check: This should now show a std of ~0.02!
     print("Embedding Weights Mean:", model.W_E.mean().item())
     print("Embedding Weights Std:", model.W_E.std().item())
 
