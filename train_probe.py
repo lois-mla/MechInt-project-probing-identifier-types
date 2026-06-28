@@ -378,7 +378,6 @@ def main():
     # probe_save_dir = "probes_stored/probes_final" 
     data_def = "training_data/def_FIM_data_final.txt"
     data_call = "training_data/call_FIM_data_final.txt"
-    probe_save_dir = "probes_stored/probes_final2"
     # data_def = "training_data/def_FIM_data_nocont.txt"
     # data_call = "training_data/call_FIM_data_nocont.txt"
     # probe_save_dir = "probes_stored/probes_no_cont"
@@ -454,6 +453,8 @@ def main():
     identifier_mode = "old_data"
 
     for resid_type in ["resid_post", "mlp_out", "resid_mid"]:
+        probe_save_dir = f"probes_stored/probes_final2_{resid_type}"
+
     # for identifier_mode in ['letters', 'common', 'tokenizer']:
         # data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
         # data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
