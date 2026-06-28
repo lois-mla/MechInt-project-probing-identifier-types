@@ -505,7 +505,7 @@ def main():
 
         steering_path = "training_data/steering_data_new.txt"
         alpha = 100.0
-        steer_prompts_from_file_old(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+        steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
     # # ---------- cross - steering -----------------------
     # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
@@ -651,9 +651,9 @@ def main():
     #     alphas = [100.0]
     #     for alpha in alphas:
     #         if steering_path is not None:
-    #             steer_prompts_from_file_old(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    #             steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
     #         else:
-    #             steer_prompts_from_file_new(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    #             steer_prompts_from_file_new(steering_path_def, steering_path_use, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 if __name__ == "__main__":
     main()
