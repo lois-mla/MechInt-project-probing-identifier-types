@@ -165,6 +165,91 @@ def plot_probe_accuracies(
 
     print(f"Saved plot to {save_path}")
 
+def plot_probe_accuracies_from_csv(
+    results_csv_path,
+    baseline_csv_path,
+    save_dir="figures/probe_accuracy",
+    filename="linear_probe_accuracy_per_layer.png",
+    dataset_specifier="realistic"
+):
+    """
+    Plot train and test accuracy per layer, configured for a 2-column LaTeX 
+    layout with the legend placed above the plot to avoid obstructing data.
+    """
+    os.makedirs(save_dir, exist_ok=True)
+
+    # --- PUBLICATION FORMATTING ---
+    plt.rcParams.update({
+        'font.size': 11,          
+        'axes.labelsize': 11,     
+        'xtick.labelsize': 10,    
+        'ytick.labelsize': 10,
+        'legend.fontsize': 10,
+        'figure.figsize': (3.5, 2.5), 
+        'figure.dpi': 300         
+    })
+    # ------------------------------
+
+    # Load both CSV files
+    df_results = pd.read_csv(results_csv_path)
+    df_baseline = pd.read_csv(baseline_csv_path)
+
+    # Use the DataFrame index as the layer numbers
+    layers = df_results.index.tolist()
+
+    # Extract accuracies
+    train_accs = df_results["train"].tolist()
+    test_accs = df_results["test"].tolist()
+    
+    train_baseline_accs = df_baseline["train"].tolist()
+    test_baseline_accs = df_baseline["test"].tolist()
+
+    plt.figure()
+
+    # Plot main accuracy curves (solid lines, thicker for visibility)
+    train_line = plt.plot(layers, train_accs, label="Train acc", linestyle="-", linewidth=1.5)
+    test_line = plt.plot(layers, test_accs, label="Test acc", linestyle="-", linewidth=1.5)
+
+    # Capture colors to match main lines with baseline lines
+    train_color = train_line[0].get_color()
+    test_color = test_line[0].get_color()
+
+    # Plot baseline curves (dotted lines, matching colors)
+    plt.plot(layers, train_baseline_accs, color=train_color, linestyle=":", linewidth=1.5, label="Train base")
+    plt.plot(layers, test_baseline_accs, color=test_color, linestyle=":", linewidth=1.5, label="Test base")
+
+    # Set axis labels and fixed y-limit
+    plt.xlabel("Layer")
+    plt.ylabel("Accuracy")
+    plt.ylim(0.2, 1.1) # Adjusted slightly based on your image to give breathing room at the bottom
+    
+    # Hide the 1.1 tick 
+    current_ticks = plt.gca().get_yticks()
+    filtered_ticks = [tick for tick in current_ticks if tick < 1.05]
+    plt.yticks(filtered_ticks)
+    
+    # Place legend outside, centered above the plot, in 2 columns
+    plt.legend(
+        loc="lower center", 
+        bbox_to_anchor=(0.5, 1.02), 
+        ncol=2, 
+        frameon=False, # Removing the box makes it look cleaner when placed outside
+        columnspacing=1.0
+    ) 
+
+    # Tight layout (pad handles standard spacing)
+    plt.tight_layout()
+
+    save_path = os.path.join(save_dir, filename)
+    
+    # bbox_inches="tight" is CRITICAL here so the external legend isn't cropped out
+    plt.savefig(save_path, bbox_inches="tight")
+    plt.close()
+    
+    plt.rcdefaults() 
+
+    print(f"Saved plot to {save_path}")
+
 
 def load_matrix(file_paths, metric="prob_gap"):
     layers = None
@@ -338,42 +423,53 @@ def plot_heatmap(
 
     print(f"Saved heatmap to {save_path}")
 
-for id in range(3):
-#     for contr_id in range(3):
-#         if id == contr_id:
-#             continue
+plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
+                               "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
+                               save_dir="figures/probe_accuracies_with_baseline/", 
+                               filename="linear_probe_accuracy_cont_resid_post.png")
 
-#         base = f"id_{id}_contr_id_{contr_id}"
-
-        # path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-
-        # path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-
-        # path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-
-        # # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-
-        path0 = f"figures/old_data_attn_out_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path1 = f"figures/old_data_resid_mid_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path2 = f"figures/old_data_mlp_out_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
-
-        file_paths = [path0, path1, path2, path3]
-        labels = ["attn_out", "resid_mid", "mlp_out", "resid_post"]
-        # metric = "prob_contr"
-        metric = "prob_gap"
-        save_path = f"figures/steering_heatmaps_compare_location/{base}_{metric}.png"
+plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
+                               "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
+                               save_dir="figures/probe_accuracies_with_baseline/", 
+                               filename="linear_probe_accuracy_nocont_resid_post.png")
 
 
-        plot_heatmap(file_paths, id, contr_id, metric=metric, labels=labels, save_path=save_path, vmin=-0.05, vmax=0.3)
+# for id in range(3):
+# #     for contr_id in range(3):
+# #         if id == contr_id:
+# #             continue
+
+# #         base = f"id_{id}_contr_id_{contr_id}"
+
+#         # path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+#         # path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+#         # path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+#         # # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+#         path0 = f"figures/old_data_attn_out_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path1 = f"figures/old_data_resid_mid_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path2 = f"figures/old_data_mlp_out_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+#         file_paths = [path0, path1, path2, path3]
+#         labels = ["attn_out", "resid_mid", "mlp_out", "resid_post"]
+#         # metric = "prob_contr"
+#         metric = "prob_gap"
+#         save_path = f"figures/steering_heatmaps_compare_location/{base}_{metric}.png"
+
+
+#         plot_heatmap(file_paths, id, contr_id, metric=metric, labels=labels, save_path=save_path, vmin=-0.05, vmax=0.3)
