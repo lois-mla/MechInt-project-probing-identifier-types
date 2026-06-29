@@ -263,9 +263,9 @@ def plot_grouped_heatmap(
     plt.savefig(save_path, dpi=300, bbox_inches="tight")
     plt.close()
 
-    print(f"Saved heatmap to {save_path}")
+#     print(f"Saved heatmap to {save_path}")
 
-
+# 
 
 def load_matrix(file_paths, metric="probability"):
     layers = None
@@ -339,11 +339,11 @@ def plot_heatmap(
     print(f"Saved heatmap to {save_path}")
 
 for id in range(3):
-    for contr_id in range(3):
-        if id == contr_id:
-            continue
+#     for contr_id in range(3):
+#         if id == contr_id:
+#             continue
 
-        base = f"id_{id}_contr_id_{contr_id}"
+#         base = f"id_{id}_contr_id_{contr_id}"
 
         # path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
         # path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"

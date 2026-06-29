@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 
-from utils import evaluate_first_token_accuracy_jsonl, evaluate_first_token_accuracy, load_random_model, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
+from utils import evaluate_first_token_accuracy_jsonl, evaluate_first_token_accuracy, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
 from steering import compare_steering_with_gap
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -432,8 +432,8 @@ def main():
     # # probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # # specify the name of the chosen dataset for saving the file and plot titles
-    # # dataset_specifier = "cont_baseline"
-    # # dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = "2_nocont_baseline_resid_post_w_initial_embed"
+    dataset_specifier_fullname = "non contrastive dataset baseline residual post with initial embed"
     # # # dataset_specifier = "cont_only_correct"
     # # # dataset_specifier_fullname = "contrastive dataset only correct"
     # # # dataset_specifier = "cont_baseline"
@@ -445,8 +445,8 @@ def main():
     # dataset_specifier = "letter_mixed_only_correct_baseline"
     # dataset_specifier_fullname = "letter mixed only correct baseline"
 
-    model, tokenizer = load_model()
-    # model = randomize_model_weights(model) # use this line exacfor the baseline!!
+    model, tokenizer = load_model() # baseline vibessss
+    model = randomize_model_weights(model, skip_embeddings=True) # use this line exacfor the baseline!!
     device = "cuda"
     n_layers = model.cfg.n_layers
     resid_type = "post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out
@@ -469,33 +469,33 @@ def main():
         dataset_specifier_fullname = f"{identifier_mode}_{resid_type}"
 
 
-        prompts, labels = load_dataset(data_def, data_call)
+    #     prompts, labels = load_dataset(data_def, data_call)
 
-        extractor = ResidualActivationExtractor(
-            model=model,
-            tokenizer=tokenizer,
-            device=device,
-            batch_size=8,
-        )
+    #     extractor = ResidualActivationExtractor(
+    #         model=model,
+    #         tokenizer=tokenizer,
+    #         device=device,
+    #         batch_size=8,
+    #     )
 
 
-        results = probe_all_layers(
-            extractor=extractor,
-            prompts=prompts,
-            labels=labels,
-            n_layers=n_layers,
-            resid_type=resid_type,
-            save_dir=probe_save_dir
+    #     results = probe_all_layers(
+    #         extractor=extractor,
+    #         prompts=prompts,
+    #         labels=labels,
+    #         n_layers=n_layers,
+    #         resid_type=resid_type,
+    #         save_dir=probe_save_dir
             
-        )
+    #     )
 
-        # print best layer
-        best_layer = max(results, key=lambda k: results[k]["test_acc"])
-        print("Best layer:", best_layer)
-        print("Test accuracy:", results[best_layer]["test_acc"])
+    #     # print best layer
+    #     best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    #     print("Best layer:", best_layer)
+    #     print("Test accuracy:", results[best_layer]["test_acc"])
 
-        # save accuracies
-        save_accuracies_to_csv(results, dataset_specifier)
+    #     # save accuracies
+    #     save_accuracies_to_csv(results, dataset_specifier)
 
         alphas = [100.0]
 
@@ -560,32 +560,33 @@ def main():
 
 
     # # # model = randomize_model_weights(model) # use this line for the baseline!!
-    # prompts, labels = load_dataset(data_def, data_call)
+    prompts, labels = load_dataset(data_def, data_call)
 
-    # extractor = ResidualActivationExtractor(
-    #     model=model,
-    #     tokenizer=tokenizer,
-    #     device=device,
-    #     batch_size=8,
-    # )
+    extractor = ResidualActivationExtractor(
+        model=model,
+        tokenizer=tokenizer,
+        device=device,
+        batch_size=8,
+    )
 
 
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    #     save_dir=probe_save_dir
-        
-    # )
+    results = probe_all_layers(
+        extractor=extractor,
+        prompts=prompts,
+        labels=labels,
+        n_layers=n_layers,
+        resid_type=resid_type,
+        save_dir=probe_save_dir
+    )
 
-    # # print best layer
-    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    # print("Best layer:", best_layer)
-    # print("Test accuracy:", results[best_layer]["test_acc"])
 
-    # # save accuracies
-    # save_accuracies_to_csv(results, dataset_specifier)
+    # print best layer
+    best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    print("Best layer:", best_layer)
+    print("Test accuracy:", results[best_layer]["test_acc"])
+
+    # save accuracies
+    save_accuracies_to_csv(results, dataset_specifier)
     
     # plot the probe accuracies
     # save_dir = "figures/probe_accuracy"
