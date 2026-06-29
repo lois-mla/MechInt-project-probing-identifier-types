@@ -221,7 +221,7 @@ def plot_probe_accuracies_from_csv(
     # Set axis labels and fixed y-limit
     plt.xlabel("Layer")
     plt.ylabel("Accuracy")
-    plt.ylim(0.0, 1.1) # Adjusted slightly based on your image to give breathing room at the bottom
+    plt.ylim(0.2, 1.1) # Adjusted slightly based on your image to give breathing room at the bottom
     
     # Hide the 1.1 tick 
     current_ticks = plt.gca().get_yticks()
