@@ -428,6 +428,12 @@ plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accura
                                save_dir="figures/probe_accuracies_with_baseline/", 
                                filename="linear_probe_accuracy_cont_resid_post.png")
 
+plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
+                               "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
+                               save_dir="figures/probe_accuracies_with_baseline/", 
+                               filename="linear_probe_accuracy_nocont_resid_post.png")
+
+
 # for id in range(3):
 # #     for contr_id in range(3):
 # #         if id == contr_id:
