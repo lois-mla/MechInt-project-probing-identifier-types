@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 
-from utils import evaluate_first_token_accuracy_jsonl, evaluate_first_token_accuracy, load_random_model, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
+from utils import evaluate_first_token_accuracy_jsonl, evaluate_first_token_accuracy, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
 from steering import compare_steering_with_gap
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -315,7 +315,7 @@ def main():
     # # probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # # specify the name of the chosen dataset for saving the file and plot titles
-    dataset_specifier = "nocont_baseline_resid_post_w_initial_embed"
+    dataset_specifier = "2_nocont_baseline_resid_post_w_initial_embed"
     dataset_specifier_fullname = "non contrastive dataset baseline residual post with initial embed"
     # # # dataset_specifier = "cont_only_correct"
     # # # dataset_specifier_fullname = "contrastive dataset only correct"
