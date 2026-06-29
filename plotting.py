@@ -207,7 +207,7 @@ def plot_probe_accuracies_from_csv(
     # Set axis labels and fixed y-limit
     plt.xlabel("Layer")
     plt.ylabel("Accuracy")
-    plt.ylim(0.3, 1.0)
+    plt.ylim(0.3, 1.1)
     
     # plt.title(f"Linear probe accuracy per layer ({dataset_specifier})")
     plt.legend()
