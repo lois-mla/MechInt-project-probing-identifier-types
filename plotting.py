@@ -168,24 +168,25 @@ def plot_probe_accuracies(
 def plot_probe_accuracies_from_csv(
     results_csv_path,
     baseline_csv_path,
-    save_dir,
-    filename,
+    save_dir="figures/probe_accuracy",
+    filename="linear_probe_accuracy_per_layer.png",
+    dataset_specifier="realistic"
 ):
     """
-    Plot train and test accuracy per layer from a results CSV and a baseline CSV.
+    Plot train and test accuracy per layer, configured for a 2-column LaTeX 
+    layout with the legend placed above the plot to avoid obstructing data.
     """
     os.makedirs(save_dir, exist_ok=True)
 
     # --- PUBLICATION FORMATTING ---
-    # Update global parameters to match typical LaTeX document text
     plt.rcParams.update({
-        'font.size': 11,          # Standard LaTeX font size
-        'axes.labelsize': 11,     # X and Y axis label size
-        'xtick.labelsize': 10,    # Tick label sizes (slightly smaller is normal)
+        'font.size': 11,          
+        'axes.labelsize': 11,     
+        'xtick.labelsize': 10,    
         'ytick.labelsize': 10,
         'legend.fontsize': 10,
-        'figure.figsize': (3.5, 2.5), # (width, height) in inches. 3.5 is standard for 2-column papers.
-        'figure.dpi': 300         # High resolution for crisp saving
+        'figure.figsize': (3.5, 2.5), 
+        'figure.dpi': 300         
     })
     # ------------------------------
 
@@ -205,38 +206,47 @@ def plot_probe_accuracies_from_csv(
 
     plt.figure()
 
-    # Plot main accuracy curves (solid lines)
-    train_line = plt.plot(layers, train_accs, label="Train accuracy", linestyle="-")
-    test_line = plt.plot(layers, test_accs, label="Test accuracy", linestyle="-")
+    # Plot main accuracy curves (solid lines, thicker for visibility)
+    train_line = plt.plot(layers, train_accs, label="Train acc", linestyle="-", linewidth=1.5)
+    test_line = plt.plot(layers, test_accs, label="Test acc", linestyle="-", linewidth=1.5)
 
     # Capture colors to match main lines with baseline lines
     train_color = train_line[0].get_color()
     test_color = test_line[0].get_color()
 
     # Plot baseline curves (dotted lines, matching colors)
-    plt.plot(layers, train_baseline_accs, color=train_color, linestyle=":", label="Train baseline")
-    plt.plot(layers, test_baseline_accs, color=test_color, linestyle=":", label="Test baseline")
+    plt.plot(layers, train_baseline_accs, color=train_color, linestyle=":", linewidth=1.5, label="Train base")
+    plt.plot(layers, test_baseline_accs, color=test_color, linestyle=":", linewidth=1.5, label="Test base")
 
     # Set axis labels and fixed y-limit
     plt.xlabel("Layer")
     plt.ylabel("Accuracy")
-    plt.ylim(0.3, 1.1)
-
-    # Hide the 1.1 tick by explicitly setting y-ticks to everything 1.0 or below
-    # (We use 1.05 to safely account for any floating point math quirks)
+    plt.ylim(0.2, 1.1) # Adjusted slightly based on your image to give breathing room at the bottom
+    
+    # Hide the 1.1 tick 
     current_ticks = plt.gca().get_yticks()
     filtered_ticks = [tick for tick in current_ticks if tick < 1.05]
     plt.yticks(filtered_ticks)
     
-    # plt.title(f"Linear probe accuracy per layer ({dataset_specifier})")
-    plt.legend()
+    # Place legend outside, centered above the plot, in 2 columns
+    plt.legend(
+        loc="lower center", 
+        bbox_to_anchor=(0.5, 1.02), 
+        ncol=2, 
+        frameon=False, # Removing the box makes it look cleaner when placed outside
+        columnspacing=1.0
+    ) 
 
-    # Tight layout ensures labels don't get cut off when saving at this specific size
+    # Tight layout (pad handles standard spacing)
     plt.tight_layout()
 
     save_path = os.path.join(save_dir, filename)
-    plt.savefig(save_path)
+    
+    # bbox_inches="tight" is CRITICAL here so the external legend isn't cropped out
+    plt.savefig(save_path, bbox_inches="tight")
     plt.close()
+    
+    plt.rcdefaults() 
 
     print(f"Saved plot to {save_path}")
 
