@@ -391,8 +391,8 @@ def plot_heatmap(
 
     print(f"Saved heatmap to {save_path}")
 
-plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post", 
-                               "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
+plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
+                               "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
                                save_dir="figures/probe_accuracies_with_baseline/", 
                                filename="linear_probe_accuracy_cont_resid_post.png")
 
