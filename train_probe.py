@@ -276,7 +276,7 @@ def steer_prompts_from_file_new(def_path: str, use_path: str, model, tokenizer, 
 
 
 
-def steer_prompts_from_file_old(path: str, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=50.0):
+def steer_prompts_from_file_old(path: str, model, tokenizer, results, resid_type: str, dataset_specifier, dataset_specifier_fullname, alpha=50.0):
     data = read_steering_dataset(path)
     ids = [0, 1, 2]
 
@@ -314,7 +314,7 @@ def steer_prompts_from_file_old(path: str, model, tokenizer, results, dataset_sp
                     token=token,
                     contrastive_token=contrastive_token,
                     alpha=alpha,
-                    resid_type="mlp_out", # HERE YOU CHOOSE THE LOCATION TO STEER IN
+                    resid_type=resid_type, # HERE YOU CHOOSE THE LOCATION TO STEER IN
                     k=20,
                 )
 
@@ -376,14 +376,13 @@ def main():
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final" 
-    # data_def = "training_data/def_FIM_data_final.txt"
-    # data_call = "training_data/call_FIM_data_final.txt"
-    # probe_save_dir = "probes_stored/probes_final"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
     # data_def = "training_data/def_FIM_data_nocont.txt"
     # data_call = "training_data/call_FIM_data_nocont.txt"
-    probe_save_dir = "probes_stored/probes_no_cont"
-    data_def = "training_data/def_FIM_data.txt"
-    data_call = "training_data/call_FIM_data.txt"
+    # probe_save_dir = "probes_stored/probes_no_cont"
+    # data_def = "training_data/def_FIM_data.txt"
+    # data_call = "training_data/call_FIM_data.txt"
     # probe_save_dir = "probes_stored/probes_realistic"
 
     # data_def = "datasets/letters/mixed_definition.jsonl"
@@ -395,12 +394,13 @@ def main():
 
     # specify the name of the chosen dataset for saving the file and plot titles
     # dataset_specifier = "cont_baseline"
-    # dataset_specifier_fullname = "contrastive dataset baseline"
-    dataset_specifier = "letters_not_mixed"
-    dataset_specifier_fullname = "letters_not_mixed"
-    data_def = "training_data/def_FIM_data_final.txt"
-    data_call = "training_data/call_FIM_data_final.txt"
-    probe_save_dir = "probes_stored/probes_final" 
+    # # dataset_specifier_fullname = "contrastive dataset baseline"
+    # dataset_specifier = "letters_not_mixed"
+    # dataset_specifier_fullname = "letters_not_mixed"
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    # probe_save_dir = "probes_stored/probes_final" 
+
     # data_def = "training_data/def_FIM_data_nocont.txt"
     # data_call = "training_data/call_FIM_data_nocont.txt"
     # data_def = "training_data/def_FIM_data_final.txt"
@@ -449,22 +449,25 @@ def main():
     model = randomize_model_weights(model, skip_embeddings=True) # use this line exacfor the baseline!!
     device = "cuda"
     n_layers = model.cfg.n_layers
-    resid_type = "resid_post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out
+    resid_type = "post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out
+    identifier_mode = "old_data"
 
-    # data_def = "training_data/def_FIM_data_final.txt"
-    # data_call = "training_data/call_FIM_data_final.txt"
-    probe_save_dir = f"probes_stored/probes_{dataset_specifier}_{resid_type}_baseline"
-    
+    for resid_type in ["attn_out", "post"]:
+        probe_save_dir = f"probes_stored/probes_final2_{resid_type}"
 
     # for identifier_mode in ['letters', 'common', 'tokenizer']:
-    #     data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
-    #     data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
+        # data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
+        # data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
 
-    #     # for the baseline we need a separate save directory
-    #     # probe_save_dir = "probes_stored/probes_final_baseline"
-    #     probe_save_dir = f"probes_stored/{identifier_mode}_{resid_type}"
-    #     dataset_specifier = f"{identifier_mode}_{resid_type}"
-    #     dataset_specifier_fullname = f"{identifier_mode}_{resid_type}"
+        # # for the baseline we need a separate save directory
+        # # probe_save_dir = "probes_stored/probes_final_baseline"
+        # probe_save_dir = f"probes_stored/{identifier_mode}_{resid_type}"
+        # dataset_specifier = f"{identifier_mode}_{resid_type}"
+        # dataset_specifier_fullname = f"{identifier_mode}_{resid_type}"
+
+        dataset_specifier = f"{identifier_mode}_{resid_type}"
+        dataset_specifier_fullname = f"{identifier_mode}_{resid_type}"
+
 
     #     prompts, labels = load_dataset(data_def, data_call)
 
@@ -494,30 +497,36 @@ def main():
     #     # save accuracies
     #     save_accuracies_to_csv(results, dataset_specifier)
 
+        alphas = [100.0]
 
-    #     # plot the probe accuracies
-    #     save_dir = "figures/probe_accuracy"
-    #     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}_{resid_type}.png"
-    #     plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+        # plot the probe accuracies
+        save_dir = "figures/probe_accuracy_old_data"
+        filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}_{resid_type}.png"
+        plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
-    #     # ---------- cross - steering -----------------------
-    #     # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
-    #     # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+        steering_path = "training_data/steering_data_300_final.txt"
+        alpha = 100.0
+        steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
-    #     for mode in ["letters", "common", "tokenizer"]:
-                
-    #         steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
-    #         steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+    # # ---------- cross - steering -----------------------
+    # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+    # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+    # steering_path = None
 
-    #         dataset_specifier = f"{identifier_mode}_probe_{mode}_steering_{resid_type}"
-    #         dataset_specifier_fullname = dataset_specifier
+    # for mode in ["letters", "common", "tokenizer"]:
+            
+    #     steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+    #     steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
 
-            alphas = [100.0]
-            for alpha in alphas:
-                if steering_path is None:
-                    steer_prompts_from_file_old(steering_path_def, steering_path_use, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
-                else:
-                    steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
+    #     dataset_specifier = f"{identifier_mode}_probe_{mode}_steering_{resid_type}"
+    #     dataset_specifier_fullname = dataset_specifier
+
+    #     alphas = [100.0]
+    #     for alpha in alphas:
+    #         if steering_path is None:
+    #             steer_prompts_from_file_old(steering_path_def, steering_path_use, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
+    #         else:
+    #             steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
 
 
 
@@ -580,13 +589,13 @@ def main():
     save_accuracies_to_csv(results, dataset_specifier)
     
     # plot the probe accuracies
-    save_dir = "figures/probe_accuracy"
-    filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
-    plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    # save_dir = "figures/probe_accuracy"
+    # filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
+    # plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
     
-    # print("All results:", results)
-    steering_path = "training_data/steering_data_new.txt"
-    steer_prompts_from_file_new(steering_path, model, tokenizer, results)
+    # # print("All results:", results)
+    # steering_path = "training_data/steering_data_new.txt"
+    # steer_prompts_from_file_new(steering_path, model, tokenizer, results)
 
 
 
@@ -628,25 +637,25 @@ def main():
     # steering_path = "training_data/steering_data_300_final.txt"
 
     # IF USING NEW DATA SET STEERING_PATH TO NONE!!!!!!!!!!!!!!!!!!
-    steering_path = None
-    steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
-    steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+    # steering_path = None
+    # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+    # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
 
 
-    for mode in ["letters", "common", "tokenizer"]:
+    # for mode in ["letters", "common", "tokenizer"]:
             
-        steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
-        steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+    #     steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+    #     steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
 
-        dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
-        dataset_specifier_fullname = dataset_specifier
+    #     dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
+    #     dataset_specifier_fullname = dataset_specifier
 
-        alphas = [100.0]
-        for alpha in alphas:
-            if steering_path is not None:
-                steer_prompts_from_file_old(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
-            else:
-                steer_prompts_from_file_new(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    #     alphas = [100.0]
+    #     for alpha in alphas:
+    #         if steering_path is not None:
+    #             steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+    #         else:
+    #             steer_prompts_from_file_new(steering_path_def, steering_path_use, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 if __name__ == "__main__":
     main()

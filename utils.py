@@ -152,7 +152,18 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 # def read_fim_dataset(path: str) -> List[Dict]:
 #     """
 #     Reads the new JSONL FIM dataset format:
+# def read_fim_dataset(path: str) -> List[Dict]:
+#     """
+#     Reads the new JSONL FIM dataset format:
 
+#     Each line is:
+#         {
+#             "text": "... <FIM> ...",
+#             "label": int,
+#             "target": str,
+#             "mask_mode": "definition" | "usage",
+#             "mixed": optional bool
+#         }
 #     Each line is:
 #         {
 #             "text": "... <FIM> ...",
@@ -180,7 +191,21 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 #             line = line.strip()
 #             if not line:
 #                 continue
+#     with Path(path).open("r", encoding="utf-8") as f:
+#         for line in f:
+#             line = line.strip()
+#             if not line:
+#                 continue
 
+#             ex = json.loads(line)
+
+#             text = ex["text"]
+#             label = ex["label"]
+#             target = ex["target"]
+#             mask_mode = ex.get("mask_mode", "unknown")
+#             variable = ex.get("0")
+#             function = ex.get("1")
+#             class_ = ex.get("2")
 #             ex = json.loads(line)
 
 #             text = ex["text"]
@@ -193,7 +218,26 @@ def read_fim_dataset(path: str) -> List[Dict[str, str]]:
 
 #             if "<FIM>" not in text:
 #                 raise ValueError(f"Missing <FIM> in example:\n{text}")
+#             if "<FIM>" not in text:
+#                 raise ValueError(f"Missing <FIM> in example:\n{text}")
 
+#             if text.count("<FIM>") != 1:
+#                 raise ValueError(f"More than one <FIM> in example:\n{text}")
+
+#             prefix, suffix = text.split("<FIM>")
+
+#             examples.append({
+#                 "identifier_type": int(label),
+#                 "prefix": prefix,
+#                 "suffix": suffix,
+#                 "correct": target,
+#                 "mask_mode": mask_mode,
+#                 "0": variable,
+#                 "1": function,
+#                 "2": class_,
+#             })
+
+#             # print(examples[0])
 #             if text.count("<FIM>") != 1:
 #                 raise ValueError(f"More than one <FIM> in example:\n{text}")
 
