@@ -316,7 +316,7 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     return model, tokenizer
 
 
-def randomize_model_weights(model, skip_embeddings=True):
+def randomize_model_weights(model, skip_embeddings: bool):
     """
     Iterates through all model parameters and randomizes them.
     If skip_embeddings is True, the token embeddings (W_E) are left unchanged.
@@ -351,49 +351,49 @@ def randomize_model_weights(model, skip_embeddings=True):
         
     return model
 
-def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
-    # Clear out any residual memory from previous runs/cells
-    gc.collect()
-    torch.cuda.empty_cache()
+# def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
+#     # Clear out any residual memory from previous runs/cells
+#     gc.collect()
+#     torch.cuda.empty_cache()
 
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
-    tokenizer.pad_token = tokenizer.eos_token
+#     tokenizer = AutoTokenizer.from_pretrained(model_id)
+#     tokenizer.pad_token = tokenizer.eos_token
 
-    # 1. Get the configuration for the model architecture
-    cfg = transformer_lens.loading_from_pretrained.get_pretrained_model_config(
-        model_id,
-        torch_dtype=torch.float16,
-    )
+#     # 1. Get the configuration for the model architecture
+#     cfg = transformer_lens.loading_from_pretrained.get_pretrained_model_config(
+#         model_id,
+#         torch_dtype=torch.float16,
+#     )
     
-    # 2. Force the device in the config
-    cfg.device = device
+#     # 2. Force the device in the config
+#     cfg.device = device
 
-    # 3. Initialize blank model (tensors are allocated, but often zeroed)
-    model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
+#     # 3. Initialize blank model (tensors are allocated, but often zeroed)
+#     model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
 
-    # 4. Explicitly randomize the weights
-    with torch.no_grad():
-        count = 0
-        for name, param in model.named_parameters():
-            # Catch standard TransformerLens weight matrices
-            if "W_" in name or "weight" in name:
-                torch.nn.init.normal_(param, mean=0.0, std=0.02)
-                count += 1
-            # Catch biases and zero them out
-            elif "b_" in name or "bias" in name:
-                torch.nn.init.zeros_(param)
-                count += 1
-            # Catch LayerNorm scales
-            elif name.endswith(".w") or "scale" in name:
-                torch.nn.init.ones_(param)
+#     # 4. Explicitly randomize the weights
+#     with torch.no_grad():
+#         count = 0
+#         for name, param in model.named_parameters():
+#             # Catch standard TransformerLens weight matrices
+#             if "W_" in name or "weight" in name:
+#                 torch.nn.init.normal_(param, mean=0.0, std=0.02)
+#                 count += 1
+#             # Catch biases and zero them out
+#             elif "b_" in name or "bias" in name:
+#                 torch.nn.init.zeros_(param)
+#                 count += 1
+#             # Catch LayerNorm scales
+#             elif name.endswith(".w") or "scale" in name:
+#                 torch.nn.init.ones_(param)
                 
-    print(f"Randomized {count} weight matrices.")
+#     print(f"Randomized {count} weight matrices.")
 
-    # Sanity check: This should now show a std of ~0.02!
-    print("Embedding Weights Mean:", model.W_E.mean().item())
-    print("Embedding Weights Std:", model.W_E.std().item())
+#     # Sanity check: This should now show a std of ~0.02!
+#     print("Embedding Weights Mean:", model.W_E.mean().item())
+#     print("Embedding Weights Std:", model.W_E.std().item())
 
-    return model, tokenizer
+#     return model, tokenizer
 
 def load_dataset(data_def, data_call, part="FULL"):
     def_fim_dict = read_fim_dataset(data_def)
