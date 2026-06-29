@@ -12,6 +12,7 @@ import os
 import pandas as pd
 import numpy as np
 from matplotlib.colors import TwoSlopeNorm
+from matplotlib.colors import Normalize
 
 def plot_delta_logprob(metrics_df, title=None):
     layer_rows = metrics_df.drop(index="baseline")
@@ -178,6 +179,7 @@ def load_matrix(file_paths, metric="prob_gap"):
         all_rows.append(df[metric].values)
 
     return layers, np.stack(all_rows, axis=0)  # (files, layers)
+
 def plot_grouped_heatmap(
     file_paths,
     id,
@@ -263,6 +265,79 @@ def plot_grouped_heatmap(
 
     print(f"Saved heatmap to {save_path}")
 
+
+
+def load_matrix(file_paths, metric="probability"):
+    layers = None
+    all_rows = []
+
+    for fp in file_paths:
+        df = pd.read_csv(fp)
+
+        if layers is None:
+            layers = df["layer"].values
+
+        all_rows.append(df[metric].values)
+
+    return layers, np.stack(all_rows, axis=0)
+
+
+def plot_heatmap(
+    file_paths, id, contr_id,
+    title="Probability per layer",
+    metric="probability",
+    labels=None,
+    save_path="figures/probability_heatmap.png",
+    figsize=(8, 5),
+    vmin=None,
+    vmax=None,
+    cmap="viridis",
+):
+    layers, matrix = load_matrix(file_paths, metric)
+
+    if labels is None:
+        labels = [os.path.splitext(os.path.basename(fp))[0] for fp in file_paths]
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+    norm = None
+    if vmin is not None or vmax is not None:
+        norm = Normalize(
+            vmin=vmin if vmin is not None else np.min(matrix),
+            vmax=vmax if vmax is not None else np.max(matrix),
+        )
+
+    im = ax.imshow(
+        matrix,
+        aspect="auto",
+        cmap=cmap,
+        interpolation="nearest",
+        norm=norm,
+    )
+
+    # x-axis: layers
+    clean_layers = [str(l).replace("layer_", "") for l in layers]
+    ax.set_xticks(np.arange(len(clean_layers)))
+    ax.set_xticklabels(clean_layers, rotation=90)
+
+    # y-axis: filenames (or custom labels)
+    ax.set_yticks(np.arange(len(labels)))
+    ax.set_yticklabels(labels)
+
+    ax.set_xlabel("Layer")
+    ax.set_ylabel("Dataset")
+    ax.set_title(f"{title} {id} to {contr_id} {metric}")
+
+    plt.colorbar(im, ax=ax, label=metric)
+
+    plt.tight_layout()
+
+    os.makedirs(os.path.dirname(save_path) or ".", exist_ok=True)
+    plt.savefig(save_path, dpi=300, bbox_inches="tight")
+    plt.close()
+
+    print(f"Saved heatmap to {save_path}")
+
 for id in range(3):
     for contr_id in range(3):
         if id == contr_id:
@@ -270,28 +345,34 @@ for id in range(3):
 
         base = f"id_{id}_contr_id_{contr_id}"
 
-        path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        file_paths = [path1, path2, path3, path4, path5, path6, path7, path8, path9, path10, path11, path12]
-        save_path = f"figures/steering_heatmaps/{base}.png"
+        path1 = f"figures/old_data_resid_mid_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path2 = f"figures/old_data_mlp_out_100.0/{base}/avg_gap_alpha_100.0.csv"
+        path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+        file_paths = [path1, path2, path3]
+        labels = ["resid_mid", "mlp_out", "resid_post"]
         metric = "prob_contr"
-        metric = "prob_gap"
+        # metric = "prob_gap"
+        save_path = f"figures/steering_heatmaps_compare_location/{base}_{metric}.png"
 
-        plot_grouped_heatmap(file_paths, id, contr_id, metric=metric, group_size=3, save_path=save_path)
+
+        plot_heatmap(file_paths, id, contr_id, metric=metric, labels=labels, save_path=save_path, vmin=-0.05, vmax=0.3)
