@@ -176,6 +176,19 @@ def plot_probe_accuracies_from_csv(
     """
     os.makedirs(save_dir, exist_ok=True)
 
+    # --- PUBLICATION FORMATTING ---
+    # Update global parameters to match typical LaTeX document text
+    plt.rcParams.update({
+        'font.size': 11,          # Standard LaTeX font size
+        'axes.labelsize': 11,     # X and Y axis label size
+        'xtick.labelsize': 10,    # Tick label sizes (slightly smaller is normal)
+        'ytick.labelsize': 10,
+        'legend.fontsize': 10,
+        'figure.figsize': (3.5, 2.5), # (width, height) in inches. 3.5 is standard for 2-column papers.
+        'figure.dpi': 300         # High resolution for crisp saving
+    })
+    # ------------------------------
+
     # Load both CSV files
     df_results = pd.read_csv(results_csv_path)
     df_baseline = pd.read_csv(baseline_csv_path)
@@ -217,6 +230,9 @@ def plot_probe_accuracies_from_csv(
     
     # plt.title(f"Linear probe accuracy per layer ({dataset_specifier})")
     plt.legend()
+
+    # Tight layout ensures labels don't get cut off when saving at this specific size
+    plt.tight_layout()
 
     save_path = os.path.join(save_dir, filename)
     plt.savefig(save_path)
