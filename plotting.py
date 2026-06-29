@@ -208,6 +208,12 @@ def plot_probe_accuracies_from_csv(
     plt.xlabel("Layer")
     plt.ylabel("Accuracy")
     plt.ylim(0.3, 1.1)
+
+    # Hide the 1.1 tick by explicitly setting y-ticks to everything 1.0 or below
+    # (We use 1.05 to safely account for any floating point math quirks)
+    current_ticks = plt.gca().get_yticks()
+    filtered_ticks = [tick for tick in current_ticks if tick < 1.05]
+    plt.yticks(filtered_ticks)
     
     # plt.title(f"Linear probe accuracy per layer ({dataset_specifier})")
     plt.legend()
