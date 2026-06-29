@@ -364,14 +364,15 @@ for id in range(3):
         # path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
         # path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
+        path0 = f"figures/old_data_attn_out_100.0/{base}/avg_gap_alpha_100.0.csv"
         path1 = f"figures/old_data_resid_mid_100.0/{base}/avg_gap_alpha_100.0.csv"
         path2 = f"figures/old_data_mlp_out_100.0/{base}/avg_gap_alpha_100.0.csv"
         path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        file_paths = [path1, path2, path3]
-        labels = ["resid_mid", "mlp_out", "resid_post"]
-        metric = "prob_contr"
-        # metric = "prob_gap"
+        file_paths = [path0, path1, path2, path3]
+        labels = ["attn_out", "resid_mid", "mlp_out", "resid_post"]
+        # metric = "prob_contr"
+        metric = "prob_gap"
         save_path = f"figures/steering_heatmaps_compare_location/{base}_{metric}.png"
 
 
