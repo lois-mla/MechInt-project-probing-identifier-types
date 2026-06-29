@@ -215,7 +215,7 @@ def plot_grouped_heatmap(
     # ---- plot ----
     fig, ax = plt.subplots(figsize=figsize)
 
-    norm = TwoSlopeNorm(vmin=-0.1, vcenter=0.0, vmax=0.17)
+    norm = TwoSlopeNorm(vmin=-0.1, vcenter=0.0, vmax=0.10)
 
     im = ax.imshow(
         new_matrix,

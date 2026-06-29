@@ -626,6 +626,7 @@ dependencies:
       - einops==0.8.1
       - fancy-einsum==0.0.3
       - jaxtyping==0.2.36
+      - seaborn>=0.13.2
 
       - tqdm==4.67.1
       - rich==14.2.0

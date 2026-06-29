@@ -174,7 +174,7 @@ def save_average_to_csv(averaged_results, id, contrastive_id, alpha, base_path="
     print(f"Saved CSV: {save_path}")
 
 
-def steer_prompts_from_file(def_path: str, use_path: str, model, tokenizer, results, resid_type: str, dataset_specifier, dataset_specifier_fullname, part="FULL", alpha=50.0):
+def steer_prompts_from_file_new(def_path: str, use_path: str, model, tokenizer, results, resid_type: str, dataset_specifier, dataset_specifier_fullname, part="FULL", alpha=50.0):
 
     # rly stupid way of doing this but ok
     if part == "FULL":
@@ -275,17 +275,134 @@ def steer_prompts_from_file(def_path: str, use_path: str, model, tokenizer, resu
     return final_averages
 
 
+
+def steer_prompts_from_file_old(path: str, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=50.0):
+    data = read_steering_dataset(path)
+    ids = [0, 1, 2]
+
+    averages = defaultdict(lambda: defaultdict(lambda: {
+        "prob_gap": [],
+        "prob_contr": [],
+        "prob_true": [],
+        "log_gap": [],
+        "log_contr": [],
+        "log_true": [],
+    }))
+
+    for id in ids:
+        data_per_id = [d for d in data if int(d["ID"]) == id]
+
+        for prompt_dic in data_per_id:
+            prompt_prefix = prompt_dic["prefix"]
+            prompt_suffix = prompt_dic["suffix"]
+            prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+            for contrastive_id in ids:
+                if contrastive_id == id:
+                    continue
+
+                token = prompt_dic[str(id)]
+                contrastive_token = prompt_dic[str(contrastive_id)]
+
+                _, gap_differences = compare_steering_with_gap(
+                    model=model,
+                    tokenizer=tokenizer,
+                    results=results,
+                    prompt=prompt,
+                    id=id,
+                    contrastive_id=contrastive_id,
+                    token=token,
+                    contrastive_token=contrastive_token,
+                    alpha=alpha,
+                    resid_type="mlp_out", # HERE YOU CHOOSE THE LOCATION TO STEER IN
+                    k=20,
+                )
+
+                key = (id, contrastive_id)
+
+                for layer, vals in gap_differences.items():
+                    for key_metric in vals:
+                        averages[key][layer][key_metric].append(vals[key_metric])
+
+
+    # Compute final averages 
+    final_averages = {}
+
+    for key, layer_dict in averages.items():
+        final_averages[key] = {}
+
+        for layer, vals in layer_dict.items():
+            final_averages[key][layer] = {
+                metric: np.mean(values)
+                for metric, values in vals.items()
+            }
+
+    # Save plots + CSV
+    for (id, contrastive_id) in final_averages.keys():
+        plot_average_gap(
+            final_averages,
+            id,
+            contrastive_id,
+            alpha=alpha,
+            use_logprob=True,
+            base_path=f"figures/{dataset_specifier}_{alpha}",
+            dataset_specifier_fullname=dataset_specifier_fullname
+        )
+        plot_average_gap(
+            final_averages,
+            id,
+            contrastive_id,
+            alpha=alpha,
+            use_logprob=False,
+            base_path=f"figures/{dataset_specifier}_{alpha}",
+            dataset_specifier_fullname=dataset_specifier_fullname
+        )
+        save_average_to_csv(
+            final_averages,
+            id,
+            contrastive_id,
+            alpha=alpha,
+            base_path=f"figures/{dataset_specifier}_{alpha}"
+        )
+
+    return final_averages
+
+
 def main():
 
     # first three lines; contrastive letter-name dataset
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
-
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final" 
-    data_def = "training_data/def_FIM_data_nocont.txt"
-    data_call = "training_data/call_FIM_data_nocont.txt"
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    # probe_save_dir = "probes_stored/probes_final"
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
+    probe_save_dir = "probes_stored/probes_no_cont"
+    data_def = "training_data/def_FIM_data.txt"
+    data_call = "training_data/call_FIM_data.txt"
+    # probe_save_dir = "probes_stored/probes_realistic"
+
+    # data_def = "datasets/letters/mixed_definition.jsonl"
+    # data_call = "datasets/letters/mixed_usage.jsonl"
+    # probe_save_dir = "probes_stored/probes_new_data_set"
+
+    # for the baseline we need a separate save directory
+    #  probe_save_dir = "probes_stored/probes_final_baseline_fixed"
+
+    # specify the name of the chosen dataset for saving the file and plot titles
+    # dataset_specifier = "cont_baseline"
+    # dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = "letters_not_mixed"
+    dataset_specifier_fullname = "letters_not_mixed"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = "probes_stored/probes_final" 
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     #probe_save_dir = "probes_stored/probes_final" 
@@ -395,9 +512,12 @@ def main():
     #         dataset_specifier = f"{identifier_mode}_probe_{mode}_steering_{resid_type}"
     #         dataset_specifier_fullname = dataset_specifier
 
-    #         alphas = [100.0]
-    #         for alpha in alphas:
-    #             steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
+            alphas = [100.0]
+            for alpha in alphas:
+                if steering_path is None:
+                    steer_prompts_from_file_old(steering_path_def, steering_path_use, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
+                else:
+                    steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type=resid_type, dataset_specifier=dataset_specifier, dataset_specifier_fullname=dataset_specifier_fullname, alpha=alpha)
 
 
 
@@ -463,6 +583,43 @@ def main():
     save_dir = "figures/probe_accuracy"
     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}.png"
     plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    
+    # print("All results:", results)
+    steering_path = "training_data/steering_data_new.txt"
+    steer_prompts_from_file_new(steering_path, model, tokenizer, results)
+
+
+
+
+
+
+    # steering:
+
+#     prompt = get_prompt(prompt_prefix, prompt_suffix)
+
+#     alpha = 10.0
+
+#     df = compare_steering(
+#     model=model,
+#     tokenizer=tokenizer,
+#     results=results,
+#     prompt=prompt,
+#     id=0,
+#     contrastive_id=1,
+#     alpha=alpha,
+#     resid_type="mlp_out",
+#     k=20,
+# )
+
+#     print(prompt)
+#     print("alpha: ", alpha)
+    # pd.set_option('display.max_columns', None)
+#     print(df) 
+
+    # # print best layer
+    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    # print("Best layer:", best_layer)
+    # print("Test accuracy:", results[best_layer]["test_acc"])
 
     # print("All results:", results)
 
@@ -470,22 +627,26 @@ def main():
     # steering_path = "training_data/steering_data_300_realistic.txt"
     # steering_path = "training_data/steering_data_300_final.txt"
 
-    # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
-    # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
+    # IF USING NEW DATA SET STEERING_PATH TO NONE!!!!!!!!!!!!!!!!!!
+    steering_path = None
+    steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+    steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
 
-    # for mode in ["letters", "common", "tokenizer"]:
+
+    for mode in ["letters", "common", "tokenizer"]:
             
-    #     steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
-    #     steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+        steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+        steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
 
-    #     dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
-    #     dataset_specifier_fullname = dataset_specifier
+        dataset_specifier = f"{identifier_mode}_probe_{mode}_steering"
+        dataset_specifier_fullname = dataset_specifier
 
-    #     alphas = [100.0]
-    #     for alpha in alphas:
-    #         steer_prompts_from_file(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
-
-
+        alphas = [100.0]
+        for alpha in alphas:
+            if steering_path is not None:
+                steer_prompts_from_file_old(steering_path, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
+            else:
+                steer_prompts_from_file_new(steering_path_def, steering_path_use, model, tokenizer, results, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
 if __name__ == "__main__":
     main()
