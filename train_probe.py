@@ -281,11 +281,11 @@ def main():
     # next three lines; non-contrastive letter-name dataset
     # last three lines; contrastive realistic-name dataset
 
-    # data_def = "training_data/def_FIM_data_final.txt"
-    # data_call = "training_data/call_FIM_data_final.txt"
+    data_def = "training_data/def_FIM_data_final.txt"
+    data_call = "training_data/call_FIM_data_final.txt"
     # probe_save_dir = "probes_stored/probes_final" 
-    data_def = "training_data/def_FIM_data_nocont.txt"
-    data_call = "training_data/call_FIM_data_nocont.txt"
+    # data_def = "training_data/def_FIM_data_nocont.txt"
+    # data_call = "training_data/call_FIM_data_nocont.txt"
     # data_def = "training_data/def_FIM_data_final.txt"
     # data_call = "training_data/call_FIM_data_final.txt"
     #probe_save_dir = "probes_stored/probes_final" 
@@ -315,8 +315,8 @@ def main():
     # # probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # # specify the name of the chosen dataset for saving the file and plot titles
-    dataset_specifier = "nocont_baseline_resid_post"
-    dataset_specifier_fullname = "non-contrastive dataset baseline residual post"
+    dataset_specifier = "cont_baseline_resid_post_w_initial_embed"
+    dataset_specifier_fullname = "contrastive dataset baseline residual post with initial embed"
     # # # dataset_specifier = "cont_only_correct"
     # # # dataset_specifier_fullname = "contrastive dataset only correct"
     # # # dataset_specifier = "cont_baseline"
@@ -328,8 +328,8 @@ def main():
     # dataset_specifier = "letter_mixed_only_correct_baseline"
     # dataset_specifier_fullname = "letter mixed only correct baseline"
 
-    model, tokenizer = load_random_model() # baseline vibessss
-    # model = randomize_model_weights(model) # use this line exacfor the baseline!!
+    model, tokenizer = load_model() # baseline vibessss
+    model = randomize_model_weights(model, skip_embeddings=True) # use this line exacfor the baseline!!
     device = "cuda"
     n_layers = model.cfg.n_layers
     resid_type = "resid_post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out

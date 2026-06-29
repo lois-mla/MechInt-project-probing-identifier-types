@@ -316,11 +316,20 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     return model, tokenizer
 
 
-def randomize_model_weights(model):
-    """Iterates through all model parameters and randomizes them."""
+def randomize_model_weights(model, skip_embeddings=True):
+    """
+    Iterates through all model parameters and randomizes them.
+    If skip_embeddings is True, the token embeddings (W_E) are left unchanged.
+    """
     with torch.no_grad():
         count = 0
         for name, param in model.named_parameters():
+            
+            # --- NEW: Skip the embedding matrix if requested ---
+            if skip_embeddings and "W_E" in name:
+                continue
+            # ---------------------------------------------------
+
             # Catch standard TransformerLens weight matrices (W_E, W_Q, W_in, etc.) 
             # and any lingering standard 'weight' matrices
             if "W_" in name or "weight" in name:
@@ -332,13 +341,14 @@ def randomize_model_weights(model):
                 torch.nn.init.zeros_(param)
                 count += 1
                 
-            # Catch --- (usually named 'w' or 'scale')
+            # Catch LayerNorms (usually named 'w' or 'scale')
             # Initialize them to 1.0 (standard for normal scale)
             elif name.endswith(".w") or "scale" in name:
                 torch.nn.init.ones_(param)
+                count += 1 # Added count here so LayerNorms are tallied too!
             
-        # print the amount of weights changed
         print(f"Randomized {count} weights")
+        
     return model
 
 def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
