@@ -15,16 +15,17 @@ from typing import List, Dict
 from linearprobe_new import LinearProbe
 import os
 import json
+import gc
 
-model_id = "codellama/CodeLlama-7b-hf"
+# model_id = "codellama/CodeLlama-7b-hf"
 
-# Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    device_map="auto",
-    # torch_dtype="float16"
-)
+# # Load tokenizer and model
+# tokenizer = AutoTokenizer.from_pretrained(model_id)
+# model = AutoModelForCausalLM.from_pretrained(
+#     model_id,
+#     device_map="auto",
+#     # torch_dtype="float16"
+# )
 
 # print(tokenizer.special_tokens_map)
 # print(tokenizer.additional_special_tokens)
@@ -33,190 +34,185 @@ model = AutoModelForCausalLM.from_pretrained(
 # print(tokenizer.convert_tokens_to_ids("▁<MID>"))  # correct
 # print(tokenizer.convert_tokens_to_ids("▁<SUF>"))  # correct
 
-# def read_fim_dataset(path: str) -> List[Dict[str, str]]:
-#     """
-#     Reads a file where:
-#       - datapoints are separated by '#####'
-#       - each datapoint contains one 'FIM' and one '>>>'
-# def read_fim_dataset(path: str) -> List[Dict[str, str]]:
-#     """
-#     Reads a file where:
-#       - datapoints are separated by '#####'
-#       - each datapoint contains one 'FIM' and one '>>>'
-
-#     Returns a list of dicts:
-#         {   "identifier_type": int
-#             "prefix":  '',
-#             "suffix":  '',
-#             "correct": ''
-#         }
-#     """
-#     text = Path(path).read_text(encoding="utf-8")
-#     blocks = text.split("#####")
-
-#     examples = []
-
-#     for block in blocks:
-#         block = block.strip()
-#         if not block:
-#             continue
-
-#         if block.count("FIM") != 1:
-#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
-
-#         if block.count(">>>") != 1:
-#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
-
-#         # Split at FIM
-#         before_fim, rest = block.split("FIM", 1)
-
-#         # Split rest at >>>
-#         middle, after_arrow = rest.split("\n>>>", 1)
-
-#         correct, ID = after_arrow.split("\nID:")
-
-#         prefix = before_fim
-#         suffix = middle
-#         correct = after_arrow
-
-#         examples.append({
-#             "identifier_type": int(ID),
-#             "prefix": prefix,
-#             "suffix": suffix,
-#             "correct": correct})
-
-#     return examples
-
-def read_fim_dataset(path: str) -> List[Dict]:
+def read_fim_dataset(path: str) -> List[Dict[str, str]]:
     """
-    Reads the new JSONL FIM dataset format:
+    Reads a file where:
+      - datapoints are separated by '#####'
+      - each datapoint contains one 'FIM' and one '>>>'
 
-    Each line is:
-        {
-            "text": "... <FIM> ...",
-            "label": int,
-            "target": str,
-            "mask_mode": "definition" | "usage",
-            "mixed": optional bool
-        }
-
-    Returns:
-        List of dicts with:
-        {
-            "identifier_type": int,
-            "prefix": str,
-            "suffix": str,
-            "correct": str,
-            "mask_mode": str
+    Returns a list of dicts:
+        {   "identifier_type": int
+            "prefix":  '',
+            "suffix":  '',
+            "correct": ''
         }
     """
-#     Returns a list of dicts:
-#         {   "identifier_type": int
-#             "prefix":  '',
-#             "suffix":  '',
-#             "correct": ''
-#         }
-#     """
-#     text = Path(path).read_text(encoding="utf-8")
-#     blocks = text.split("#####")
-
-#     examples = []
-
-#     for block in blocks:
-#         block = block.strip()
-#         if not block:
-#             continue
-
-#         if block.count("FIM") != 1:
-#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
-
-#         if block.count(">>>") != 1:
-#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
-
-#         # Split at FIM
-#         before_fim, rest = block.split("FIM", 1)
-
-#         # Split rest at >>>
-#         middle, after_arrow = rest.split("\n>>>", 1)
-
-#         correct, ID = after_arrow.split("\nID:")
-
-#         prefix = before_fim
-#         suffix = middle
-#         correct = after_arrow
-
-#         examples.append({
-#             "identifier_type": int(ID),
-#             "prefix": prefix,
-#             "suffix": suffix,
-#             "correct": correct})
-
-#     return examples
-
-def read_fim_dataset(path: str) -> List[Dict]:
-    """
-    Reads the new JSONL FIM dataset format:
-
-    Each line is:
-        {
-            "text": "... <FIM> ...",
-            "label": int,
-            "target": str,
-            "mask_mode": "definition" | "usage",
-            "mixed": optional bool
-        }
-
-    Returns:
-        List of dicts with:
-        {
-            "identifier_type": int,
-            "prefix": str,
-            "suffix": str,
-            "correct": str,
-            "mask_mode": str
-        }
-    """
+    text = Path(path).read_text(encoding="utf-8")
+    blocks = text.split("#####")
 
     examples = []
 
-    with Path(path).open("r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
+    for block in blocks:
+        block = block.strip()
+        if not block:
+            continue
 
-            ex = json.loads(line)
+        if block.count("FIM") != 1:
+            raise ValueError("Block must contain exactly one 'FIM':\n" + block)
 
-            text = ex["text"]
-            label = ex["label"]
-            target = ex["target"]
-            mask_mode = ex.get("mask_mode", "unknown")
-            variable = ex.get("0")
-            function = ex.get("1")
-            class_ = ex.get("2")
+        if block.count(">>>") != 1:
+            raise ValueError("Block must contain exactly one '>>>' :\n" + block)
 
-            if "<FIM>" not in text:
-                raise ValueError(f"Missing <FIM> in example:\n{text}")
+        # Split at FIM
+        before_fim, rest = block.split("FIM", 1)
 
-            if text.count("<FIM>") != 1:
-                raise ValueError(f"More than one <FIM> in example:\n{text}")
+        # Split rest at >>>
+        middle, after_arrow = rest.split("\n>>>", 1)
 
-            prefix, suffix = text.split("<FIM>")
+        correct, ID = after_arrow.split("\nID:")
 
-            examples.append({
-                "identifier_type": int(label),
-                "prefix": prefix,
-                "suffix": suffix,
-                "correct": target,
-                "mask_mode": mask_mode,
-                "0": variable,
-                "1": function,
-                "2": class_,
-            })
+        prefix = before_fim
+        suffix = middle
+        correct = after_arrow
 
-            # print(examples[0])
+        examples.append({
+            "identifier_type": int(ID),
+            "prefix": prefix,
+            "suffix": suffix,
+            "correct": correct})
 
     return examples
+
+# def read_fim_dataset(path: str) -> List[Dict]:
+#     """
+#     Reads the new JSONL FIM dataset format:
+
+#     Each line is:
+#         {
+#             "text": "... <FIM> ...",
+#             "label": int,
+#             "target": str,
+#             "mask_mode": "definition" | "usage",
+#             "mixed": optional bool
+#         }
+
+#     Returns:
+#         List of dicts with:
+#         {
+#             "identifier_type": int,
+#             "prefix": str,
+#             "suffix": str,
+#             "correct": str,
+#             "mask_mode": str
+#         }
+#     """
+#     Returns a list of dicts:
+#         {   "identifier_type": int
+#             "prefix":  '',
+#             "suffix":  '',
+#             "correct": ''
+#         }
+#     """
+#     text = Path(path).read_text(encoding="utf-8")
+#     blocks = text.split("#####")
+
+#     examples = []
+
+#     for block in blocks:
+#         block = block.strip()
+#         if not block:
+#             continue
+
+#         if block.count("FIM") != 1:
+#             raise ValueError("Block must contain exactly one 'FIM':\n" + block)
+
+#         if block.count(">>>") != 1:
+#             raise ValueError("Block must contain exactly one '>>>' :\n" + block)
+
+#         # Split at FIM
+#         before_fim, rest = block.split("FIM", 1)
+
+#         # Split rest at >>>
+#         middle, after_arrow = rest.split("\n>>>", 1)
+
+#         correct, ID = after_arrow.split("\nID:")
+
+#         prefix = before_fim
+#         suffix = middle
+#         correct = after_arrow
+
+#         examples.append({
+#             "identifier_type": int(ID),
+#             "prefix": prefix,
+#             "suffix": suffix,
+#             "correct": correct})
+
+#     return examples
+
+# def read_fim_dataset(path: str) -> List[Dict]:
+#     """
+#     Reads the new JSONL FIM dataset format:
+
+#     Each line is:
+#         {
+#             "text": "... <FIM> ...",
+#             "label": int,
+#             "target": str,
+#             "mask_mode": "definition" | "usage",
+#             "mixed": optional bool
+#         }
+
+#     Returns:
+#         List of dicts with:
+#         {
+#             "identifier_type": int,
+#             "prefix": str,
+#             "suffix": str,
+#             "correct": str,
+#             "mask_mode": str
+#         }
+#     """
+
+#     examples = []
+
+#     with Path(path).open("r", encoding="utf-8") as f:
+#         for line in f:
+#             line = line.strip()
+#             if not line:
+#                 continue
+
+#             ex = json.loads(line)
+
+#             text = ex["text"]
+#             label = ex["label"]
+#             target = ex["target"]
+#             mask_mode = ex.get("mask_mode", "unknown")
+#             variable = ex.get("0")
+#             function = ex.get("1")
+#             class_ = ex.get("2")
+
+#             if "<FIM>" not in text:
+#                 raise ValueError(f"Missing <FIM> in example:\n{text}")
+
+#             if text.count("<FIM>") != 1:
+#                 raise ValueError(f"More than one <FIM> in example:\n{text}")
+
+#             prefix, suffix = text.split("<FIM>")
+
+#             examples.append({
+#                 "identifier_type": int(label),
+#                 "prefix": prefix,
+#                 "suffix": suffix,
+#                 "correct": target,
+#                 "mask_mode": mask_mode,
+#                 "0": variable,
+#                 "1": function,
+#                 "2": class_,
+#             })
+
+#             # print(examples[0])
+
+#     return examples
 
 
 def strip_string(s: str, to_strip: str) -> str:
@@ -320,11 +316,20 @@ def load_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
     return model, tokenizer
 
 
-def randomize_model_weights(model):
-    """Iterates through all model parameters and randomizes them."""
+def randomize_model_weights(model, skip_embeddings: bool):
+    """
+    Iterates through all model parameters and randomizes them.
+    If skip_embeddings is True, the token embeddings (W_E) are left unchanged.
+    """
     with torch.no_grad():
         count = 0
         for name, param in model.named_parameters():
+            
+            # --- NEW: Skip the embedding matrix if requested ---
+            if skip_embeddings and "W_E" in name:
+                continue
+            # ---------------------------------------------------
+
             # Catch standard TransformerLens weight matrices (W_E, W_Q, W_in, etc.) 
             # and any lingering standard 'weight' matrices
             if "W_" in name or "weight" in name:
@@ -336,32 +341,59 @@ def randomize_model_weights(model):
                 torch.nn.init.zeros_(param)
                 count += 1
                 
-            # Catch --- (usually named 'w' or 'scale')
+            # Catch LayerNorms (usually named 'w' or 'scale')
             # Initialize them to 1.0 (standard for normal scale)
             elif name.endswith(".w") or "scale" in name:
                 torch.nn.init.ones_(param)
+                count += 1 # Added count here so LayerNorms are tallied too!
             
-        # print the amount of weights changed
         print(f"Randomized {count} weights")
+        
     return model
 
-def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
-    tokenizer.pad_token = tokenizer.eos_token
+# def load_random_model(model_id="codellama/CodeLlama-7b-hf", device="cuda"):
+#     # Clear out any residual memory from previous runs/cells
+#     gc.collect()
+#     torch.cuda.empty_cache()
 
-    # 1. Get the configuration for the model architecture
-    cfg = transformer_lens.loading_from_pretrained.get_pretrained_model_config(
-        model_id,
-        torch_dtype=torch.float16,
-    )
+#     tokenizer = AutoTokenizer.from_pretrained(model_id)
+#     tokenizer.pad_token = tokenizer.eos_token
+
+#     # 1. Get the configuration for the model architecture
+#     cfg = transformer_lens.loading_from_pretrained.get_pretrained_model_config(
+#         model_id,
+#         torch_dtype=torch.float16,
+#     )
     
-    # 2. Force the device in the config
-    cfg.device = device
+#     # 2. Force the device in the config
+#     cfg.device = device
 
-    # 3. Initialize a blank model with randomized weights based on that config
-    model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
+#     # 3. Initialize blank model (tensors are allocated, but often zeroed)
+#     model = transformer_lens.HookedTransformer(cfg, tokenizer=tokenizer)
 
-    return model, tokenizer
+#     # 4. Explicitly randomize the weights
+#     with torch.no_grad():
+#         count = 0
+#         for name, param in model.named_parameters():
+#             # Catch standard TransformerLens weight matrices
+#             if "W_" in name or "weight" in name:
+#                 torch.nn.init.normal_(param, mean=0.0, std=0.02)
+#                 count += 1
+#             # Catch biases and zero them out
+#             elif "b_" in name or "bias" in name:
+#                 torch.nn.init.zeros_(param)
+#                 count += 1
+#             # Catch LayerNorm scales
+#             elif name.endswith(".w") or "scale" in name:
+#                 torch.nn.init.ones_(param)
+                
+#     print(f"Randomized {count} weight matrices.")
+
+#     # Sanity check: This should now show a std of ~0.02!
+#     print("Embedding Weights Mean:", model.W_E.mean().item())
+#     print("Embedding Weights Std:", model.W_E.std().item())
+
+#     return model, tokenizer
 
 def load_dataset(data_def, data_call, part="FULL"):
     def_fim_dict = read_fim_dataset(data_def)
@@ -410,29 +442,29 @@ def train_test_split(
     )
 
     
-def fill_in_middle(file):
+# def fill_in_middle(file):
 
-    data = read_fim_dataset(file)
+#     data = read_fim_dataset(file)
 
-    for item in data:
-        prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
+#     for item in data:
+#         prompt = get_prompt(prefix=item["prefix"], suffix=item["suffix"])
         
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+#         inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-        # Generate the missing middle
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=10,
-            do_sample=False,
-            # early_stopping=False,
-            # eos_token_id=None,   # allow generation past EOS prediction
-            # temperature=0.7,
-        )
+#         # Generate the missing middle
+#         outputs = model.generate(
+#             **inputs,
+#             max_new_tokens=10,
+#             do_sample=False,
+#             # early_stopping=False,
+#             # eos_token_id=None,   # allow generation past EOS prediction
+#             # temperature=0.7,
+#         )
 
-        print("begin")
-        # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-        print(tokenizer.decode(outputs[0]))
-        print("end")
+#         print("begin")
+#         # print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+#         print(tokenizer.decode(outputs[0]))
+#         print("end")
 
 
 def save_probe(probe, path, d_model, num_classes):

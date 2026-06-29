@@ -261,37 +261,36 @@ def plot_grouped_heatmap(
     plt.savefig(save_path, dpi=300, bbox_inches="tight")
     plt.close()
 
-    print(f"Saved heatmap to {save_path}")
+#     print(f"Saved heatmap to {save_path}")
 
-for id in range(3):
-    for contr_id in range(3):
-        if id == contr_id:
-            continue
+# for id in range(3):
+#     for contr_id in range(3):
+#         if id == contr_id:
+#             continue
 
-        base = f"id_{id}_contr_id_{contr_id}"
+#         base = f"id_{id}_contr_id_{contr_id}"
 
-        path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-        path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+#         path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-        file_paths = [path1, path2, path3, path4, path5, path6, path7, path8, path9, path10, path11, path12]
-        save_path = f"figures/steering_heatmaps/{base}.png"
-        metric = "prob_contr"
-        metric = "prob_gap"
+#         file_paths = [path1, path2, path3, path4, path5, path6, path7, path8, path9, path10, path11, path12]
+#         save_path = f"figures/steering_heatmaps/{base}.png"
+#         metric = "prob_contr"
 
-        plot_grouped_heatmap(file_paths, id, contr_id, metric=metric, group_size=3, save_path=save_path)
+#         plot_grouped_heatmap(file_paths, id, contr_id, metric=metric, group_size=3, save_path=save_path)

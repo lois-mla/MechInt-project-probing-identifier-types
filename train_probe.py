@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 
-from utils import evaluate_first_token_accuracy_jsonl, evaluate_first_token_accuracy, load_random_model, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
+from utils import evaluate_first_token_accuracy_jsonl, evaluate_first_token_accuracy, randomize_model_weights, read_steering_dataset, read_fim_dataset, get_prompt, get_prompts_and_IDS, train_test_split, load_dataset, load_model, save_probe, load_probe
 from steering import compare_steering_with_gap
 from linearprobe_new import (
     ResidualActivationExtractor,
@@ -432,8 +432,8 @@ def main():
     # # probe_save_dir = f"probes_stored/{identifier_mode}"
 
     # # specify the name of the chosen dataset for saving the file and plot titles
-    # # dataset_specifier = "cont_baseline"
-    # # dataset_specifier_fullname = "contrastive dataset baseline"
+    dataset_specifier = "2_nocont_baseline_resid_post_w_initial_embed"
+    dataset_specifier_fullname = "non contrastive dataset baseline residual post with initial embed"
     # # # dataset_specifier = "cont_only_correct"
     # # # dataset_specifier_fullname = "contrastive dataset only correct"
     # # # dataset_specifier = "cont_baseline"
@@ -445,68 +445,72 @@ def main():
     # dataset_specifier = "letter_mixed_only_correct_baseline"
     # dataset_specifier_fullname = "letter mixed only correct baseline"
 
-    model, tokenizer = load_model()
-    # model = randomize_model_weights(model) # use this line exacfor the baseline!!
+    model, tokenizer = load_model() # baseline vibessss
+    model = randomize_model_weights(model, skip_embeddings=True) # use this line exacfor the baseline!!
     device = "cuda"
     n_layers = model.cfg.n_layers
-    resid_type = "post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out
+    resid_type = "resid_post" # NOTE: HERE YOU CHOOSE THE LOCATION TO PROBE IN # want to try mlp.hook_post, did mlp_out
 
-    for identifier_mode in ['letters', 'common', 'tokenizer']:
-        data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
-        data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
+    # data_def = "training_data/def_FIM_data_final.txt"
+    # data_call = "training_data/call_FIM_data_final.txt"
+    probe_save_dir = f"probes_stored/probes_{dataset_specifier}_{resid_type}_baseline"
+    
 
-        # for the baseline we need a separate save directory
-        # probe_save_dir = "probes_stored/probes_final_baseline"
-        probe_save_dir = f"probes_stored/{identifier_mode}_{resid_type}"
-        dataset_specifier = f"{identifier_mode}_{resid_type}"
-        dataset_specifier_fullname = f"{identifier_mode}_{resid_type}"
+    # for identifier_mode in ['letters', 'common', 'tokenizer']:
+    #     data_def = f"datasets/final/{identifier_mode}/mixed_definition.jsonl"
+    #     data_call = f"datasets/final/{identifier_mode}/mixed_usage.jsonl"
 
-        prompts, labels = load_dataset(data_def, data_call)
+    #     # for the baseline we need a separate save directory
+    #     # probe_save_dir = "probes_stored/probes_final_baseline"
+    #     probe_save_dir = f"probes_stored/{identifier_mode}_{resid_type}"
+    #     dataset_specifier = f"{identifier_mode}_{resid_type}"
+    #     dataset_specifier_fullname = f"{identifier_mode}_{resid_type}"
 
-        extractor = ResidualActivationExtractor(
-            model=model,
-            tokenizer=tokenizer,
-            device=device,
-            batch_size=8,
-        )
+    #     prompts, labels = load_dataset(data_def, data_call)
+
+    #     extractor = ResidualActivationExtractor(
+    #         model=model,
+    #         tokenizer=tokenizer,
+    #         device=device,
+    #         batch_size=8,
+    #     )
 
 
-        results = probe_all_layers(
-            extractor=extractor,
-            prompts=prompts,
-            labels=labels,
-            n_layers=n_layers,
-            resid_type=resid_type,
-            save_dir=probe_save_dir
+    #     results = probe_all_layers(
+    #         extractor=extractor,
+    #         prompts=prompts,
+    #         labels=labels,
+    #         n_layers=n_layers,
+    #         resid_type=resid_type,
+    #         save_dir=probe_save_dir
             
-        )
+    #     )
 
-        # print best layer
-        best_layer = max(results, key=lambda k: results[k]["test_acc"])
-        print("Best layer:", best_layer)
-        print("Test accuracy:", results[best_layer]["test_acc"])
+    #     # print best layer
+    #     best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    #     print("Best layer:", best_layer)
+    #     print("Test accuracy:", results[best_layer]["test_acc"])
 
-        # save accuracies
-        save_accuracies_to_csv(results, dataset_specifier)
+    #     # save accuracies
+    #     save_accuracies_to_csv(results, dataset_specifier)
 
 
-        # plot the probe accuracies
-        save_dir = "figures/probe_accuracy"
-        filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}_{resid_type}.png"
-        plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
+    #     # plot the probe accuracies
+    #     save_dir = "figures/probe_accuracy"
+    #     filename = f"linear_probe_accuracy_per_layer_{dataset_specifier}_{resid_type}.png"
+    #     plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
-        # ---------- cross - steering -----------------------
-        steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
-        steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
-        steering_path = None
+    #     # ---------- cross - steering -----------------------
+    #     # steering_path_def = f"datasets/final/{identifier_mode}/steering_definition.jsonl"
+    #     # steering_path_use = f"datasets/final/{identifier_mode}/steering_usage.jsonl"
 
-        for mode in ["letters", "common", "tokenizer"]:
+    #     for mode in ["letters", "common", "tokenizer"]:
                 
-            steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
-            steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
+    #         steering_path_def = f"datasets/final/{mode}/steering_definition.jsonl"
+    #         steering_path_use = f"datasets/final/{mode}/steering_usage.jsonl"
 
-            dataset_specifier = f"{identifier_mode}_probe_{mode}_steering_{resid_type}"
-            dataset_specifier_fullname = dataset_specifier
+    #         dataset_specifier = f"{identifier_mode}_probe_{mode}_steering_{resid_type}"
+    #         dataset_specifier_fullname = dataset_specifier
 
             alphas = [100.0]
             for alpha in alphas:
@@ -547,32 +551,33 @@ def main():
 
 
     # # # model = randomize_model_weights(model) # use this line for the baseline!!
-    # prompts, labels = load_dataset(data_def, data_call)
+    prompts, labels = load_dataset(data_def, data_call)
 
-    # extractor = ResidualActivationExtractor(
-    #     model=model,
-    #     tokenizer=tokenizer,
-    #     device=device,
-    #     batch_size=8,
-    # )
+    extractor = ResidualActivationExtractor(
+        model=model,
+        tokenizer=tokenizer,
+        device=device,
+        batch_size=8,
+    )
 
 
-    # results = probe_all_layers(
-    #     extractor=extractor,
-    #     prompts=prompts,
-    #     labels=labels,
-    #     n_layers=n_layers,
-    #     save_dir=probe_save_dir
-        
-    # )
+    results = probe_all_layers(
+        extractor=extractor,
+        prompts=prompts,
+        labels=labels,
+        n_layers=n_layers,
+        resid_type=resid_type,
+        save_dir=probe_save_dir
+    )
 
-    # # print best layer
-    # best_layer = max(results, key=lambda k: results[k]["test_acc"])
-    # print("Best layer:", best_layer)
-    # print("Test accuracy:", results[best_layer]["test_acc"])
 
-    # # save accuracies
-    # save_accuracies_to_csv(results, dataset_specifier)
+    # print best layer
+    best_layer = max(results, key=lambda k: results[k]["test_acc"])
+    print("Best layer:", best_layer)
+    print("Test accuracy:", results[best_layer]["test_acc"])
+
+    # save accuracies
+    save_accuracies_to_csv(results, dataset_specifier)
     
     # plot the probe accuracies
     save_dir = "figures/probe_accuracy"
