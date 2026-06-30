@@ -438,7 +438,7 @@ def plot_dual_heatmap(
 ):
     """
     Plots two steering heatmaps horizontally side-by-side with shared axes,
-    clean tick frequencies, and (a) / (b) integrated directly into the X-axis labels.
+    clean tick frequencies, and (a) / (b) positioned precisely between the 0 and 5 ticks.
     """
     # Load matrices for both sides
     layers_left, matrix_left = load_matrix(file_paths_left, metric)
@@ -483,19 +483,32 @@ def plot_dual_heatmap(
     ax1.set_xticklabels(ax1_labels, rotation=0)  
     ax1.set_yticks(np.arange(len(labels)))
     ax1.set_yticklabels(labels)
-    
-    # Integrated label: places (a) cleanly to the left of "Layer"
-    ax1.set_xlabel(r"$\mathbf{(a)}$ Layer", labelpad=5) 
 
     # Plot Right Heatmap
     im2 = ax2.imshow(matrix_right, aspect="auto", cmap=cmap, interpolation="nearest", norm=norm)
     ax2.set_xticks(ax2_ticks)
     ax2.set_xticklabels(ax2_labels, rotation=0)  
-    
-    # Integrated label: places (b) cleanly to the left of "Layer"
-    ax2.set_xlabel(r"$\mathbf{(b)}$ Layer", labelpad=5)
 
-    # Bring the plots closer together since we no longer need a large gutter gap
+    # ---- TARGETED AXIS LABEL POSITIONING ----
+    # 0.09 coordinate maps perfectly inside the gutter space between the 0 and 5 ticks
+    # -0.32 places the labels cleanly right below the tick numbers
+    label_x = 0.09  
+    label_y = -0.32 
+
+    # Left subplot labels
+    ax1.text(label_x, label_y, r"$\mathbf{(a)}$", transform=ax1.transAxes, 
+             fontsize=10, ha="center", va="baseline")
+    ax1.text(0.5, label_y, "Layer", transform=ax1.transAxes, 
+             fontsize=9.5, ha="center", va="baseline")
+    
+    # Right subplot labels
+    ax2.text(label_x, label_y, r"$\mathbf{(b)}$", transform=ax2.transAxes, 
+             fontsize=10, ha="center", va="baseline")
+    ax2.text(0.5, label_y, "Layer", transform=ax2.transAxes, 
+             fontsize=9.5, ha="center", va="baseline")
+    # -----------------------------------------
+
+    # Bring the plots closer together
     plt.subplots_adjust(wspace=0.06) 
 
     # Add a single shared colorbar on the right side
@@ -503,7 +516,7 @@ def plot_dual_heatmap(
     cbar.set_label("prob increase target", size=9.5)  
     cbar.ax.tick_params(labelsize=8.5)
 
-    # Save output image file
+    # Save output image file (bbox_inches="tight" ensures the new labels aren't cut off)
     os.makedirs(os.path.dirname(save_path) or ".", exist_ok=True)
     plt.savefig(save_path, bbox_inches="tight")
     plt.close()
