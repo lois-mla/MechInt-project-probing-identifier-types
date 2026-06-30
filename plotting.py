@@ -429,7 +429,7 @@ def plot_dual_heatmap(
     file_paths_right,
     id_left, contr_id_left,
     id_right, contr_id_right,
-    metric="prob_contr",  # Matches the 'prob_contr' label seen in your reference image
+    metric="prob_contr",  
     labels=None,
     save_path="figures/combined_steering_heatmaps.png",
     vmin=None,
@@ -438,7 +438,7 @@ def plot_dual_heatmap(
 ):
     """
     Plots two steering heatmaps horizontally side-by-side, sharing a single 
-    Y-axis, a single colorbar, and using compact publication fonts.
+    Y-axis, a single colorbar, clean x-ticks, with no dataset y-label.
     """
     # Load matrices for both sides
     layers_left, matrix_left = load_matrix(file_paths_left, metric)
@@ -448,51 +448,56 @@ def plot_dual_heatmap(
         labels = [os.path.splitext(os.path.basename(fp))[0] for fp in file_paths_left]
 
     # --- PUBLICATION FORMATTING ---
-    # Set slightly smaller fonts so rotated layer labels are crisp and readable
     plt.rcParams.update({
         'font.size': 9.5,          
         'axes.labelsize': 9.5,     
-        'xtick.labelsize': 7.5,    # Made slightly smaller for 90-degree layer values
+        'xtick.labelsize': 8.5,    
         'ytick.labelsize': 8.5,
         'figure.dpi': 300         
     })
     
-    # figsize (width, height): 6.8 inches spans across a standard 2-column page layout
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.2), sharey=True)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.0), sharey=True)
     # ------------------------------
 
-    # Compute a uniform color scale mapping across both matrices if not explicitly provided
+    # Compute a uniform color scale mapping across both matrices
     global_vmin = vmin if vmin is not None else min(np.min(matrix_left), np.min(matrix_right))
     global_vmax = vmax if vmax is not None else max(np.max(matrix_left), np.max(matrix_right))
     norm = Normalize(vmin=global_vmin, vmax=global_vmax)
 
+    # Parse layer string values into integers to handle layout distribution mapping
+    clean_layers_left = [int(str(l).replace("layer_", "")) for l in layers_left]
+    clean_layers_right = [int(str(l).replace("layer_", "")) for l in layers_right]
+
+    # Select step interval ticks to completely avoid text overlapping on the X-axis
+    tick_vals = [0, 5, 10, 15, 20, 25, 30]
+    
+    ax1_ticks = [i for i, l in enumerate(clean_layers_left) if l in tick_vals]
+    ax1_labels = [str(clean_layers_left[i]) for i in ax1_ticks]
+    
+    ax2_ticks = [i for i, l in enumerate(clean_layers_right) if l in tick_vals]
+    ax2_labels = [str(clean_layers_right[i]) for i in ax2_ticks]
+
     # Plot Left Heatmap
     im1 = ax1.imshow(matrix_left, aspect="auto", cmap=cmap, interpolation="nearest", norm=norm)
-    clean_layers_left = [str(l).replace("layer_", "") for l in layers_left]
-    ax1.set_xticks(np.arange(len(clean_layers_left)))
-    ax1.set_xticklabels(clean_layers_left, rotation=90)
+    ax1.set_xticks(ax1_ticks)
+    ax1.set_xticklabels(ax1_labels, rotation=0)  
     ax1.set_yticks(np.arange(len(labels)))
     ax1.set_yticklabels(labels)
     ax1.set_xlabel("Layer")
-    ax1.set_ylabel("Dataset")
-    ax1.set_title(f"(a) {id_left} $\\rightarrow$ {contr_id_left}", fontsize=9.5, pad=8)
+    # ax1.set_ylabel("Dataset") -> Removed as requested
 
     # Plot Right Heatmap
     im2 = ax2.imshow(matrix_right, aspect="auto", cmap=cmap, interpolation="nearest", norm=norm)
-    clean_layers_right = [str(l).replace("layer_", "") for l in layers_right]
-    ax2.set_xticks(np.arange(len(clean_layers_right)))
-    ax2.set_xticklabels(clean_layers_right, rotation=90)
+    ax2.set_xticks(ax2_ticks)
+    ax2.set_xticklabels(ax2_labels, rotation=0)  
     ax2.set_xlabel("Layer")
-    # sharey=True automatically hides tick labels on the right axis to keep things clean
-    ax2.set_title(f"(b) {id_right} $\\rightarrow$ {contr_id_right}", fontsize=9.5, pad=8)
 
     # Adjust layout spacing to leave a small white gap between subplots
     plt.subplots_adjust(wspace=0.08)
 
     # Add a single shared colorbar on the right side
-    # Passing ax=[ax1, ax2] scales the layout components uniformly
     cbar = fig.colorbar(im2, ax=[ax1, ax2], orientation='vertical', fraction=0.02, pad=0.03)
-    cbar.set_label(metric, size=9.5)
+    cbar.set_label("prob increase target", size=9.5)  # Updated axis label name
     cbar.ax.tick_params(labelsize=8.5)
 
     # Save output image file
