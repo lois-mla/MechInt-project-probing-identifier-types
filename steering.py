@@ -270,6 +270,90 @@ def compare_steering_with_gap(
     return df, gap_differences
 
 
+def compare_steering_with_gap_non_contr(
+    model,
+    tokenizer,
+    results,
+    prompt: str,
+    id: int,
+    contrastive_id: int,
+    token: str,
+    contrastive_token: str,
+    alpha: float = 10.0,
+    resid_type: str = "mlp_out",
+    k: int = 10,
+):
+    device = "cuda"
+    model = model.to(device)
+    tokens = model.to_tokens(prompt).to(device)
+
+    token_id = get_first_token_id(tokenizer, token)
+    contrastive_token_id = get_first_token_id(tokenizer, contrastive_token)
+    
+    table = {}
+    gap_differences = {}
+
+    # ----- Baseline -----
+    with torch.no_grad():
+        logits_base = model(tokens)
+
+    table["baseline"] = get_topk_dict(logits_base, tokenizer, k)
+
+    base_token = get_token_metrics(logits_base, token_id)
+    base_contr = get_token_metrics(logits_base, contrastive_token_id)
+
+    # ----- Steered layers -----
+    for layer, result in results.items():
+        probe = result["probe"]
+
+        steering_vec = get_class_steering_vector(
+            probe,
+            class_id=id,
+        )
+
+        with torch.no_grad():
+            logits_steered = run_with_last_token_steering(
+                model=model,
+                tokenizer=tokenizer,
+                prompt=prompt,
+                steering_vector=steering_vec,
+                alpha=alpha,
+                layer=layer,
+                resid_type=resid_type,
+            )
+
+        layer_name = f"layer_{layer}"
+        table[layer_name] = get_topk_dict(logits_steered, tokenizer, k)
+
+        steered_token = get_token_metrics(logits_steered, token_id)
+        steered_contr = get_token_metrics(logits_steered, contrastive_token_id)
+
+        # ----- PROB TERMS -----
+        prob_contr_shift = steered_contr["prob"] - base_contr["prob"]
+        prob_true_shift = -steered_token["prob"] + base_token["prob"]
+        prob_gap_shift = prob_contr_shift + prob_true_shift
+
+        # ----- LOGPROB TERMS -----
+        log_contr_shift = steered_contr["log_prob"] - base_contr["log_prob"]
+        log_true_shift = -steered_token["log_prob"] + base_token["log_prob"]
+        log_gap_shift = log_contr_shift + log_true_shift
+
+        gap_differences[layer_name] = {
+            "prob_gap": prob_gap_shift,
+            "prob_contr": prob_contr_shift,
+            "prob_true": prob_true_shift,
+            "log_gap": log_gap_shift,
+            "log_contr": log_contr_shift,
+            "log_true": log_true_shift,
+        }
+
+        del steering_vec
+        torch.cuda.empty_cache()
+
+    df = pd.DataFrame.from_dict(table, orient="index")
+
+    return df, gap_differences
+
 
 def decode_output(model, logits, tokens):
     # take argmax for simplicity

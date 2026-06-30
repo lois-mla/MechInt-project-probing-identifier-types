@@ -281,6 +281,14 @@ def load_matrix(file_paths, metric="probability"):
 
     return layers, np.stack(all_rows, axis=0)
 
+plt.rcParams.update({
+    "font.size": 14,       # Default font size
+    "axes.labelsize": 14,
+    "axes.titlesize": 18,
+    "xtick.labelsize": 12,
+    "ytick.labelsize": 12,
+    "legend.fontsize": 12,
+})
 
 def plot_heatmap(
     file_paths, id, contr_id,
@@ -288,7 +296,7 @@ def plot_heatmap(
     metric="probability",
     labels=None,
     save_path="figures/probability_heatmap.png",
-    figsize=(8, 5),
+    figsize=(10, 3),
     vmin=None,
     vmax=None,
     cmap="viridis",
@@ -326,7 +334,7 @@ def plot_heatmap(
 
     ax.set_xlabel("Layer")
     ax.set_ylabel("Dataset")
-    ax.set_title(f"{title} {id} to {contr_id} {metric}")
+    # ax.set_title(f"{title} {id} to {contr_id} {metric}")
 
     plt.colorbar(im, ax=ax, label=metric)
 
@@ -339,11 +347,11 @@ def plot_heatmap(
     print(f"Saved heatmap to {save_path}")
 
 for id in range(3):
-#     for contr_id in range(3):
-#         if id == contr_id:
-#             continue
+    for contr_id in range(3):
+        if id == contr_id:
+            continue
 
-#         base = f"id_{id}_contr_id_{contr_id}"
+        base = f"id_{id}_contr_id_{contr_id}"
 
         # path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
         # path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
@@ -371,8 +379,8 @@ for id in range(3):
 
         file_paths = [path0, path1, path2, path3]
         labels = ["attn_out", "resid_mid", "mlp_out", "resid_post"]
-        # metric = "prob_contr"
-        metric = "prob_gap"
+        metric = "prob_contr"
+        # metric = "prob_gap"
         save_path = f"figures/steering_heatmaps_compare_location/{base}_{metric}.png"
 
 
