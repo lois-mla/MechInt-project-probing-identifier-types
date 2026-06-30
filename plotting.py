@@ -652,7 +652,7 @@ path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
 file_paths_right = [path0, path1, path2, path3]
 
 
-plot_dual_heatmap(file_paths_left, file_paths_right, 0, 2, 1, 2, labels, save_path)
+plot_dual_heatmap(file_paths_left, file_paths_right, 0, 2, 1, 2, labels=labels, save_path=save_path)
 
 
 #         plot_heatmap(file_paths, id, contr_id, metric=metric, labels=labels, save_path=save_path, vmin=-0.05, vmax=0.3)
