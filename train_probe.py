@@ -469,25 +469,25 @@ def main():
     dataset_specifier_fullname = f"{identifier_mode}_{resid_type}"
 
 
-#     prompts, labels = load_dataset(data_def, data_call)
+    prompts, labels = load_dataset(data_def, data_call)
 
-#     extractor = ResidualActivationExtractor(
-#         model=model,
-#         tokenizer=tokenizer,
-#         device=device,
-#         batch_size=8,
-#     )
+    extractor = ResidualActivationExtractor(
+        model=model,
+        tokenizer=tokenizer,
+        device=device,
+        batch_size=8,
+    )
 
 
-#     results = probe_all_layers(
-#         extractor=extractor,
-#         prompts=prompts,
-#         labels=labels,
-#         n_layers=n_layers,
-#         resid_type=resid_type,
-#         save_dir=probe_save_dir
+    results = probe_all_layers(
+        extractor=extractor,
+        prompts=prompts,
+        labels=labels,
+        n_layers=n_layers,
+        resid_type=resid_type,
+        save_dir=probe_save_dir
         
-#     )
+    )
 
 #     # print best layer
 #     best_layer = max(results, key=lambda k: results[k]["test_acc"])
@@ -495,7 +495,7 @@ def main():
 #     print("Test accuracy:", results[best_layer]["test_acc"])
 
 #     # save accuracies
-#     save_accuracies_to_csv(results, dataset_specifier)
+    save_accuracies_to_csv(results, dataset_specifier)
 
     alphas = [100.0]
 
