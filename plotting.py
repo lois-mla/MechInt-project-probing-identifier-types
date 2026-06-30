@@ -437,8 +437,8 @@ def plot_dual_heatmap(
     cmap="viridis",
 ):
     """
-    Plots two steering heatmaps horizontally side-by-side, sharing a single 
-    Y-axis, a single colorbar, clean x-ticks, with no dataset y-label.
+    Plots two steering heatmaps horizontally side-by-side with shared axes,
+    clean tick frequencies, and perfectly placed left-side (a) and (b) labels.
     """
     # Load matrices for both sides
     layers_left, matrix_left = load_matrix(file_paths_left, metric)
@@ -484,7 +484,6 @@ def plot_dual_heatmap(
     ax1.set_yticks(np.arange(len(labels)))
     ax1.set_yticklabels(labels)
     ax1.set_xlabel("Layer")
-    # ax1.set_ylabel("Dataset") -> Removed as requested
 
     # Plot Right Heatmap
     im2 = ax2.imshow(matrix_right, aspect="auto", cmap=cmap, interpolation="nearest", norm=norm)
@@ -492,12 +491,23 @@ def plot_dual_heatmap(
     ax2.set_xticklabels(ax2_labels, rotation=0)  
     ax2.set_xlabel("Layer")
 
+    # ---- PADDING ADJUSTED SUBPLOT SUB-CAPTIONS ----
+    # transAxes positions items from 0.0 (left/bottom) to 1.0 (right/top) of that panel block
+    # (a) sits to the left of the Y-axis labels ('attn out', 'resid mid', etc.)
+    ax1.text(-0.38, 0.5, "(a)", transform=ax1.transAxes, 
+             fontsize=10, fontweight="bold", ha="right", va="center")
+    
+    # (b) sits exactly in the middle of the gutter gap separating the two heatmaps
+    ax2.text(-0.16, 0.5, "(b)", transform=ax2.transAxes, 
+             fontsize=10, fontweight="bold", ha="right", va="center")
+    # ----------------------------------------------
+
     # Adjust layout spacing to leave a small white gap between subplots
-    plt.subplots_adjust(wspace=0.08)
+    plt.subplots_adjust(wspace=0.12) # Slightly widened gap for a cleaner layout look
 
     # Add a single shared colorbar on the right side
     cbar = fig.colorbar(im2, ax=[ax1, ax2], orientation='vertical', fraction=0.02, pad=0.03)
-    cbar.set_label("prob increase target", size=9.5)  # Updated axis label name
+    cbar.set_label("prob increase target", size=9.5)  
     cbar.ax.tick_params(labelsize=8.5)
 
     # Save output image file
@@ -505,9 +515,7 @@ def plot_dual_heatmap(
     plt.savefig(save_path, bbox_inches="tight")
     plt.close()
     
-    # Reset layout properties
     plt.rcdefaults()
-
     print(f"Saved combined heatmap layout to {save_path}")
 
 
