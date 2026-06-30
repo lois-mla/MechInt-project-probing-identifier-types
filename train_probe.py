@@ -505,7 +505,7 @@ def main():
     plot_probe_accuracies(results, save_dir=save_dir, filename=filename, dataset_specifier=dataset_specifier_fullname)
 
     steering_path = "training_data/steering_data_300_final.txt"
-    alpha = 1000.0
+    alpha = 10000.0
     dataset_specifier = f"steering_away_{dataset_specifier}"
     steer_prompts_from_file_old(steering_path, model, tokenizer, results, resid_type, dataset_specifier, dataset_specifier_fullname, alpha=alpha)
 
