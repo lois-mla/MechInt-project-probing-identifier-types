@@ -368,62 +368,6 @@ def load_matrix(file_paths, metric="probability"):
     return layers, np.stack(all_rows, axis=0)
 
 
-def plot_heatmap(
-    file_paths, id, contr_id,
-    title="Probability per layer",
-    metric="probability",
-    labels=None,
-    save_path="figures/probability_heatmap.png",
-    figsize=(8, 5),
-    vmin=None,
-    vmax=None,
-    cmap="viridis",
-):
-    layers, matrix = load_matrix(file_paths, metric)
-
-    if labels is None:
-        labels = [os.path.splitext(os.path.basename(fp))[0] for fp in file_paths]
-
-    fig, ax = plt.subplots(figsize=figsize)
-
-    norm = None
-    if vmin is not None or vmax is not None:
-        norm = Normalize(
-            vmin=vmin if vmin is not None else np.min(matrix),
-            vmax=vmax if vmax is not None else np.max(matrix),
-        )
-
-    im = ax.imshow(
-        matrix,
-        aspect="auto",
-        cmap=cmap,
-        interpolation="nearest",
-        norm=norm,
-    )
-
-    # x-axis: layers
-    clean_layers = [str(l).replace("layer_", "") for l in layers]
-    ax.set_xticks(np.arange(len(clean_layers)))
-    ax.set_xticklabels(clean_layers, rotation=90)
-
-    # y-axis: filenames (or custom labels)
-    ax.set_yticks(np.arange(len(labels)))
-    ax.set_yticklabels(labels)
-
-    ax.set_xlabel("Layer")
-    ax.set_ylabel("Dataset")
-    ax.set_title(f"{title} {id} to {contr_id} {metric}")
-
-    plt.colorbar(im, ax=ax, label=metric)
-
-    plt.tight_layout()
-
-    os.makedirs(os.path.dirname(save_path) or ".", exist_ok=True)
-    plt.savefig(save_path, dpi=300, bbox_inches="tight")
-    plt.close()
-
-    print(f"Saved heatmap to {save_path}")
-
 def plot_dual_heatmap(
     file_paths_left,
     file_paths_right,
@@ -438,7 +382,7 @@ def plot_dual_heatmap(
 ):
     """
     Plots two steering heatmaps horizontally side-by-side with shared axes,
-    clean tick frequencies, and (a) / (b) positioned precisely between the 0 and 5 ticks.
+    clean tick frequencies, and standard 'Layer' x-axis titles.
     """
     # Load matrices for both sides
     layers_left, matrix_left = load_matrix(file_paths_left, metric)
@@ -483,11 +427,13 @@ def plot_dual_heatmap(
     ax1.set_xticklabels(ax1_labels, rotation=0)  
     ax1.set_yticks(np.arange(len(labels)))
     ax1.set_yticklabels(labels)
+    ax1.set_xlabel("Layer")  # <--- Restored here
 
     # Plot Right Heatmap
     im2 = ax2.imshow(matrix_right, aspect="auto", cmap=cmap, interpolation="nearest", norm=norm)
     ax2.set_xticks(ax2_ticks)
     ax2.set_xticklabels(ax2_labels, rotation=0)  
+    ax2.set_xlabel("Layer")  # <--- Restored here
 
     # Bring the plots closer together
     plt.subplots_adjust(wspace=0.06) 
