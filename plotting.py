@@ -423,15 +423,99 @@ def plot_heatmap(
 
     print(f"Saved heatmap to {save_path}")
 
-plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
-                               "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
-                               save_dir="figures/probe_accuracies_with_baseline/", 
-                               filename="linear_probe_accuracy_cont_resid_post.png")
 
-plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
-                               "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
-                               save_dir="figures/probe_accuracies_with_baseline/", 
-                               filename="linear_probe_accuracy_nocont_resid_post.png")
+def plot_single_steering_direction(
+    csv_path,
+    save_path,
+    use_logprob=False
+):
+    """
+    Plots a single steering direction graph from an input CSV file path
+    and saves it directly to an explicit output image file path.
+    """
+    # Ensure the directory for the save path exists
+    save_dir = os.path.dirname(save_path)
+    if save_dir:
+        os.makedirs(save_dir, exist_ok=True)
+
+    # --- PUBLICATION FORMATTING ---
+    plt.rcParams.update({
+        'font.size': 11,          
+        'axes.labelsize': 11,     
+        'xtick.labelsize': 10,    
+        'ytick.labelsize': 10,
+        'legend.fontsize': 9,       
+        'figure.figsize': (3.5, 2.5), 
+        'figure.dpi': 300         
+    })
+    # ------------------------------
+
+    # Load CSV data
+    df = pd.read_csv(csv_path)
+
+    # Safely convert 'layer_X' string into integers for a precise X-axis mapping
+    df['layer_num'] = df['layer'].apply(lambda x: int(x.split('_')[1]))
+    df = df.sort_values('layer_num')
+
+    layer_nums = df['layer_num'].tolist()
+    
+    prefix = "log" if use_logprob else "prob"
+    gap_vals = df[f"{prefix}_gap"].tolist()
+    contr_vals = df[f"{prefix}_contr"].tolist()
+    true_vals = df[f"{prefix}_true"].tolist()
+
+    plt.figure()
+    
+    # Neutral zero baseline line placed behind data curves
+    plt.axhline(0, color="gray", linestyle="-", linewidth=0.8, zorder=1)
+
+    # Plot data curves
+    plt.plot(layer_nums, gap_vals, label="Full shift", linewidth=1.5, zorder=2)
+    plt.plot(layer_nums, contr_vals, label=r"Prob decrease target $\downarrow$", linewidth=1.5, zorder=2)
+    plt.plot(layer_nums, true_vals, label=r"Prob decrease true $\uparrow$", linewidth=1.5, zorder=2)
+
+    # Fixed Y-axis limit (0.0 to 0.6) and tight X-axis margins
+    plt.ylim(0.0, 0.6)
+    plt.margins(x=0.02)
+
+    plt.xlabel("Layer")
+    plt.ylabel("Average shift")
+    
+    # Legend placed cleanly above the plot layout area
+    plt.legend(
+        loc="lower center", 
+        bbox_to_anchor=(0.5, 1.02), 
+        ncol=2, 
+        frameon=False,
+        columnspacing=0.8
+    )
+
+    plt.tight_layout()
+
+    # Save the plot using the exact file path string provided
+    plt.savefig(save_path, bbox_inches="tight")
+    plt.close()
+    
+    # Reset formatting defaults
+    plt.rcdefaults()
+
+    print(f"Saved plot to {save_path}")
+
+plot_single_steering_direction("figures/old_data_resid_post_100.0/id_0_contr_id_2/avg_gap_alpha_100.0.csv",
+                               "figures/old_data_resid_post_100.0/id_0_contr_id_2/avg_gap_alpha_100.0.png")
+
+plot_single_steering_direction("figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.csv",
+                               "figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.png")
+
+# plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
+#                                "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
+#                                save_dir="figures/probe_accuracies_with_baseline/", 
+#                                filename="linear_probe_accuracy_cont_resid_post.png")
+
+# plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
+#                                "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
+#                                save_dir="figures/probe_accuracies_with_baseline/", 
+#                                filename="linear_probe_accuracy_nocont_resid_post.png")
 
 
 # for id in range(3):
