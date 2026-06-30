@@ -180,11 +180,11 @@ def plot_probe_accuracies_from_csv(
 
     # --- PUBLICATION FORMATTING ---
     plt.rcParams.update({
-        'font.size': 11,          
-        'axes.labelsize': 11,     
-        'xtick.labelsize': 10,    
-        'ytick.labelsize': 10,
-        'legend.fontsize': 10,
+        'font.size': 9,    # 11      
+        'axes.labelsize': 9,   #11  
+        'xtick.labelsize': 8,   #10
+        'ytick.labelsize': 8,
+        'legend.fontsize': 8,
         'figure.figsize': (3.5, 2.5), 
         'figure.dpi': 300         
     })
@@ -430,8 +430,8 @@ def plot_single_steering_direction(
     use_logprob=False
 ):
     """
-    Plots a single steering direction graph from an input CSV file path
-    and saves it directly to an explicit output image file path.
+    Plots a single steering direction graph from an input CSV file path,
+    keeping the legend inside the plot and using compact publication fonts.
     """
     # Ensure the directory for the save path exists
     save_dir = os.path.dirname(save_path)
@@ -439,12 +439,13 @@ def plot_single_steering_direction(
         os.makedirs(save_dir, exist_ok=True)
 
     # --- PUBLICATION FORMATTING ---
+    # Scaled down all font/label sizes slightly for a more compact text footprint
     plt.rcParams.update({
-        'font.size': 11,          
-        'axes.labelsize': 11,     
-        'xtick.labelsize': 10,    
-        'ytick.labelsize': 10,
-        'legend.fontsize': 9,       
+        'font.size': 9.5,          
+        'axes.labelsize': 9.5,     
+        'xtick.labelsize': 8.5,    
+        'ytick.labelsize': 8.5,
+        'legend.fontsize': 8,       
         'figure.figsize': (3.5, 2.5), 
         'figure.dpi': 300         
     })
@@ -478,21 +479,25 @@ def plot_single_steering_direction(
     plt.ylim(-0.1, 0.6)
     plt.margins(x=0.02)
 
+    # Explicit axis tick formatting
+    plt.xticks([0, 5, 10, 15, 20, 25, 30])
+    plt.yticks([-0.1, 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6])
+
     plt.xlabel("Layer")
     plt.ylabel("Average shift")
     
-    # Legend placed cleanly above the plot layout area
+    # Legend placed inside the plot at the upper right whitespace area
+    # framealpha adds a subtle semi-transparent background to keep text readable over zero lines
     plt.legend(
-        loc="lower center", 
-        bbox_to_anchor=(0.5, 1.02), 
-        ncol=2, 
-        frameon=False,
-        columnspacing=0.8
+        loc="upper right", 
+        frameon=True,
+        framealpha=0.8,
+        edgecolor="none"  # Removes the harsh black box border for a cleaner layout
     )
 
     plt.tight_layout()
 
-    # Save the plot using the exact file path string provided
+    # Save the plot
     plt.savefig(save_path, bbox_inches="tight")
     plt.close()
     
@@ -507,15 +512,15 @@ plot_single_steering_direction("figures/old_data_resid_post_100.0/id_0_contr_id_
 plot_single_steering_direction("figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.csv",
                                "figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.png")
 
-# plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
-#                                "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
-#                                save_dir="figures/probe_accuracies_with_baseline/", 
-#                                filename="linear_probe_accuracy_cont_resid_post.png")
+plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
+                               "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
+                               save_dir="figures/probe_accuracies_with_baseline/", 
+                               filename="linear_probe_accuracy_cont_resid_post.png")
 
-# plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
-#                                "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
-#                                save_dir="figures/probe_accuracies_with_baseline/", 
-#                                filename="linear_probe_accuracy_nocont_resid_post.png")
+plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
+                               "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
+                               save_dir="figures/probe_accuracies_with_baseline/", 
+                               filename="linear_probe_accuracy_nocont_resid_post.png")
 
 
 # for id in range(3):
