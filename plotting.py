@@ -471,11 +471,11 @@ def plot_single_steering_direction(
 
     # Plot data curves
     plt.plot(layer_nums, gap_vals, label="Full shift", linewidth=1.5, zorder=2)
-    plt.plot(layer_nums, contr_vals, label=r"Prob decrease target $\downarrow$", linewidth=1.5, zorder=2)
-    plt.plot(layer_nums, true_vals, label=r"Prob decrease true $\uparrow$", linewidth=1.5, zorder=2)
+    plt.plot(layer_nums, contr_vals, label=r"Prob $\uparrow$ target", linewidth=1.5, zorder=2)
+    plt.plot(layer_nums, true_vals, label=r"Prob $\downarrow$ true", linewidth=1.5, zorder=2)
 
-    # Fixed Y-axis limit (0.0 to 0.6) and tight X-axis margins
-    plt.ylim(0.0, 0.6)
+    # Fixed Y-axis limit (-0.1 to 0.6) and tight X-axis margins
+    plt.ylim(-0.1, 0.6)
     plt.margins(x=0.02)
 
     plt.xlabel("Layer")
