@@ -7,6 +7,7 @@ The file contains the following functions:
 - plot_probe_accuracies: Plots the training and testing accuracies of the linear probes for each layer.
 """
 
+from email.mime import base
 import matplotlib.pyplot as plt
 import os
 import pandas as pd
@@ -423,6 +424,87 @@ def plot_heatmap(
 
     print(f"Saved heatmap to {save_path}")
 
+def plot_dual_heatmap(
+    file_paths_left,
+    file_paths_right,
+    id_left, contr_id_left,
+    id_right, contr_id_right,
+    metric="prob_contr",  # Matches the 'prob_contr' label seen in your reference image
+    labels=None,
+    save_path="figures/combined_steering_heatmaps.png",
+    vmin=None,
+    vmax=None,
+    cmap="viridis",
+):
+    """
+    Plots two steering heatmaps horizontally side-by-side, sharing a single 
+    Y-axis, a single colorbar, and using compact publication fonts.
+    """
+    # Load matrices for both sides
+    layers_left, matrix_left = load_matrix(file_paths_left, metric)
+    layers_right, matrix_right = load_matrix(file_paths_right, metric)
+
+    if labels is None:
+        labels = [os.path.splitext(os.path.basename(fp))[0] for fp in file_paths_left]
+
+    # --- PUBLICATION FORMATTING ---
+    # Set slightly smaller fonts so rotated layer labels are crisp and readable
+    plt.rcParams.update({
+        'font.size': 9.5,          
+        'axes.labelsize': 9.5,     
+        'xtick.labelsize': 7.5,    # Made slightly smaller for 90-degree layer values
+        'ytick.labelsize': 8.5,
+        'figure.dpi': 300         
+    })
+    
+    # figsize (width, height): 6.8 inches spans across a standard 2-column page layout
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.2), sharey=True)
+    # ------------------------------
+
+    # Compute a uniform color scale mapping across both matrices if not explicitly provided
+    global_vmin = vmin if vmin is not None else min(np.min(matrix_left), np.min(matrix_right))
+    global_vmax = vmax if vmax is not None else max(np.max(matrix_left), np.max(matrix_right))
+    norm = Normalize(vmin=global_vmin, vmax=global_vmax)
+
+    # Plot Left Heatmap
+    im1 = ax1.imshow(matrix_left, aspect="auto", cmap=cmap, interpolation="nearest", norm=norm)
+    clean_layers_left = [str(l).replace("layer_", "") for l in layers_left]
+    ax1.set_xticks(np.arange(len(clean_layers_left)))
+    ax1.set_xticklabels(clean_layers_left, rotation=90)
+    ax1.set_yticks(np.arange(len(labels)))
+    ax1.set_yticklabels(labels)
+    ax1.set_xlabel("Layer")
+    ax1.set_ylabel("Dataset")
+    ax1.set_title(f"(a) {id_left} $\\rightarrow$ {contr_id_left}", fontsize=9.5, pad=8)
+
+    # Plot Right Heatmap
+    im2 = ax2.imshow(matrix_right, aspect="auto", cmap=cmap, interpolation="nearest", norm=norm)
+    clean_layers_right = [str(l).replace("layer_", "") for l in layers_right]
+    ax2.set_xticks(np.arange(len(clean_layers_right)))
+    ax2.set_xticklabels(clean_layers_right, rotation=90)
+    ax2.set_xlabel("Layer")
+    # sharey=True automatically hides tick labels on the right axis to keep things clean
+    ax2.set_title(f"(b) {id_right} $\\rightarrow$ {contr_id_right}", fontsize=9.5, pad=8)
+
+    # Adjust layout spacing to leave a small white gap between subplots
+    plt.subplots_adjust(wspace=0.08)
+
+    # Add a single shared colorbar on the right side
+    # Passing ax=[ax1, ax2] scales the layout components uniformly
+    cbar = fig.colorbar(im2, ax=[ax1, ax2], orientation='vertical', fraction=0.02, pad=0.03)
+    cbar.set_label(metric, size=9.5)
+    cbar.ax.tick_params(labelsize=8.5)
+
+    # Save output image file
+    os.makedirs(os.path.dirname(save_path) or ".", exist_ok=True)
+    plt.savefig(save_path, bbox_inches="tight")
+    plt.close()
+    
+    # Reset layout properties
+    plt.rcdefaults()
+
+    print(f"Saved combined heatmap layout to {save_path}")
+
 
 def plot_single_steering_direction(
     csv_path,
@@ -506,59 +588,71 @@ def plot_single_steering_direction(
 
     print(f"Saved plot to {save_path}")
 
-plot_single_steering_direction("figures/old_data_resid_post_100.0/id_0_contr_id_2/avg_gap_alpha_100.0.csv",
-                               "figures/old_data_resid_post_100.0/id_0_contr_id_2/avg_gap_alpha_100.0.png")
+# plot_single_steering_direction("figures/old_data_resid_post_100.0/id_0_contr_id_2/avg_gap_alpha_100.0.csv",
+#                                "figures/old_data_resid_post_100.0/id_0_contr_id_2/avg_gap_alpha_100.0.png")
 
-plot_single_steering_direction("figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.csv",
-                               "figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.png")
+# plot_single_steering_direction("figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.csv",
+#                                "figures/old_data_resid_post_100.0/id_1_contr_id_2/avg_gap_alpha_100.0.png")
 
-plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
-                               "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
-                               save_dir="figures/probe_accuracies_with_baseline/", 
-                               filename="linear_probe_accuracy_cont_resid_post.png")
+# plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_resid_post/accuracies_old_data_resid_post.csv", 
+#                                "accuracies/accuracies_cont_baseline_resid_post_w_initial_embed/accuracies_cont_baseline_resid_post_w_initial_embed.csv", 
+#                                save_dir="figures/probe_accuracies_with_baseline/", 
+#                                filename="linear_probe_accuracy_cont_resid_post.png")
 
-plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
-                               "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
-                               save_dir="figures/probe_accuracies_with_baseline/", 
-                               filename="linear_probe_accuracy_nocont_resid_post.png")
+# plot_probe_accuracies_from_csv("accuracies/accuracies_old_data_nocont_resid_post/accuracies_old_data_nocont_resid_post.csv", 
+#                                "accuracies/accuracies_nocont_baseline_resid_post_w_initial_embed/accuracies_nocont_baseline_resid_post_w_initial_embed.csv", 
+#                                save_dir="figures/probe_accuracies_with_baseline/", 
+#                                filename="linear_probe_accuracy_nocont_resid_post.png")
 
 
 # for id in range(3):
-# #     for contr_id in range(3):
-# #         if id == contr_id:
-# #             continue
+#     for contr_id in range(3):
+#         if id == contr_id:
+#             continue
+#         base = f"id_{id}_contr_id_{contr_id}"
 
-# #         base = f"id_{id}_contr_id_{contr_id}"
+        # path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-#         # path1 = f"figures/letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path2 = f"figures/letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path3 = f"figures/letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-#         # path4 = f"figures/tokenizer_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path5 = f"figures/tokenizer_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path6 = f"figures/tokenizer_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-#         # path7 = f"figures/common_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path8 = f"figures/common_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path9 = f"figures/common_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
+        # path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-#         # # path10 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # # path11 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # # path12 = f"figures/cont_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path10 = f"figures/onlycorrect_letters_probe_letters_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path11 = f"figures/onlycorrect_letters_probe_tokenizer_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         # path12 = f"figures/onlycorrect_letters_probe_common_steering_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-#         path0 = f"figures/old_data_attn_out_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         path1 = f"figures/old_data_resid_mid_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         path2 = f"figures/old_data_mlp_out_100.0/{base}/avg_gap_alpha_100.0.csv"
-#         path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
+base = f"id_0_contr_id_2"
+path0 = f"figures/old_data_attn_out_100.0/{base}/avg_gap_alpha_100.0.csv"
+path1 = f"figures/old_data_resid_mid_100.0/{base}/avg_gap_alpha_100.0.csv"
+path2 = f"figures/old_data_mlp_out_100.0/{base}/avg_gap_alpha_100.0.csv"
+path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
 
-#         file_paths = [path0, path1, path2, path3]
-#         labels = ["attn_out", "resid_mid", "mlp_out", "resid_post"]
-#         # metric = "prob_contr"
-#         metric = "prob_gap"
-#         save_path = f"figures/steering_heatmaps_compare_location/{base}_{metric}.png"
+file_paths_left = [path0, path1, path2, path3]
+labels = ["attn out", "resid mid", "mlp out", "resid post"]
+# metric = "prob_contr"
+metric = "prob_gap"
+save_path = f"figures/steering_heatmaps_compare_location/0_2_1_2{metric}.png"
+
+base = f"id_1_contr_id_2"
+path0 = f"figures/old_data_attn_out_100.0/{base}/avg_gap_alpha_100.0.csv"
+path1 = f"figures/old_data_resid_mid_100.0/{base}/avg_gap_alpha_100.0.csv"
+path2 = f"figures/old_data_mlp_out_100.0/{base}/avg_gap_alpha_100.0.csv"
+path3 = f"figures/old_data_resid_post_100.0/{base}/avg_gap_alpha_100.0.csv"
+
+file_paths_right = [path0, path1, path2, path3]
+
+
+plot_dual_heatmap(file_paths_left, file_paths_right, 0, 2, 1, 2, labels, save_path)
 
 
 #         plot_heatmap(file_paths, id, contr_id, metric=metric, labels=labels, save_path=save_path, vmin=-0.05, vmax=0.3)
